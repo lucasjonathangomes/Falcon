@@ -1,18 +1,33 @@
 # Falcon
 
-## Equipe:
-* Lucas
+### Equipe:
+* Renato Costa de Moura Mendes (PO)
+* Lucas Jonathan Cordeiro Gomes (SM)
+* Lucas Augusto Oliveira de Souza
+* Lucas Henrique Costa de Oliveira
+* Lukas Fernando Berto
+* Leonardo Henrique Cruz Mendes
+* Igor Cerutti Lima
+* Matheus Estevam de Castro
+* Mateus Pereira Cesare
 
-## Objetivo:
+### Objetivo:
+(A definir)
 
-## Planejamento:
+### Planejamento:
+(A definir)
 
-## Figma:
+### Figma:
+(A definir)
 
-## Backlog do Produto:
+### Backlog do Produto:
+(A definir)
 
-## Backlog da Sprint:
+### Backlog da Sprint:
+(A definir)
 
-## Vídeo ou gif da aplicação:
+### Vídeo ou gif da aplicação:
+(A definir)
 
-##Tecnologias usadas:
+### Tecnologias usadas:
+Python
