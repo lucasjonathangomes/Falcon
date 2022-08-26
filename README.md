@@ -1,17 +1,18 @@
-<h1>Falcon<h1>
+# Falcon
 
-Equipe:
+## Equipe:
+* Lucas
 
-Objetivo:
+## Objetivo:
 
-Planejamento:
+## Planejamento:
 
-Figma:
+## Figma:
 
-Backlog do Produto:
+## Backlog do Produto:
 
-Backlog da Sprint:
+## Backlog da Sprint:
 
-Vídeo ou gif da aplicação:
+## Vídeo ou gif da aplicação:
 
-Tecnologias usadas:
+##Tecnologias usadas:
