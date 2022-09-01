@@ -20,10 +20,10 @@ Entregar uma ferramenta que tenha funcionabilidade de cadastrar times no program
 # https://www.figma.com/file/EMMqbatmZi5srT9ZyphiW8/TELA.API_(desenvolvendo)?node-id=0%3A1
 
 ### Backlog do Produto:
-(A definir)
+Definido (Colocar link de acesso)
 
 ### Backlog da Sprint:
-(A definir)
+Definido (Colocar link de acesso)
 
 ### Vídeo ou gif da aplicação:
 (A definir)
