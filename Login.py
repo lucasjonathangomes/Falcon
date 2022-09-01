@@ -3,9 +3,16 @@ from tkinter import Tk
 from tkinter import *
 from random import randrange, choice
 
+def Destroi_itens(lista: list):
+    for item in lista:
+        item.destroy()
+
 class Login:
     def Iniciar(self, jan):
         self.jan = jan
+
+        # self.imagem = PhotoImage(self.jan, 'C:Users/Luiz Fernando/Falcon/falcao.jfif')
+        
         self.login_name = Label(self.jan, text='Login', fg='red', font=('Arial', 100))
         self.login_name.place(x=500, y=300)
 
@@ -21,18 +28,17 @@ class Login:
         self.pasw_entry = Entry(self.jan, width=25)
         self.pasw_entry.place(x=610, y=615)
 
-        self.login_button = Button(self.jan, text='Login', font=('Arial', 15), fg='blue', command=self.Login)
+        self.login_button = Button(self.jan, text='Login', font=('Arial', 15), fg='blue', command=lambda: Destroi_itens(self.lista_de_teste))
         self.login_button.place(x=700, y=700)
 
         self.register_button = Button(self.jan, text='Registrar-se', font=('Arial', 12), fg='blue', command=self.Apertei_no_login)
         self.register_button.place(x=500, y=700)
 
-        self.lista_de_teste = [self.user, self.user_entry, self.pasw,self.pasw_entry, self.login_button, self.register_button]
+        self.lista_de_teste = [self.user, self.user_entry, self.pasw,self.pasw_entry, self.login_button, self.register_button, self.login_name]
 
     def Login(self):
         item = choice(self.lista_de_teste)
         item.destroy()
-
 
     def Apertei_no_login(self):
         x = randrange(10, 700)
