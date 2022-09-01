@@ -1,12 +1,11 @@
 # Falcon
 
 ### Equipe:
-* Renato Costa de Moura Mendes (PO)
+* Renato Costa de Moura Mendes
 * Lucas Jonathan Cordeiro Gomes (SM)
 * Lucas Augusto Oliveira de Souza
-* Lucas Henrique Costa de Oliveira
+* Lucas Henrique Costa de Oliveira (PO)
 * Lukas Fernando Berto
-* Leonardo Henrique Cruz Mendes
 * Igor Cerutti Lima
 * Matheus Estevam de Castro
 * Mateus Pereira Cesare
