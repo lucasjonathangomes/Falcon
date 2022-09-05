@@ -20,12 +20,15 @@ Entregar uma ferramenta que tenha funcionabilidade de cadastrar times no program
 (A definir)
 
 ### Figma:
+(AJUSTAR FIGMA)
+(não quer o link) 
+(Colocar o nome da seção vinculando o artefato alvo, ao inves da ferramenta) 
 # https://www.figma.com/file/EMMqbatmZi5srT9ZyphiW8/TELA.API_(desenvolvendo)?node-id=0%3A1
 
 ### Backlog do Produto:
-Definido (Colocar link de acesso)
+(Estruturar corretamente e com as prioridades, de preferencia deixar no .MD)
 
-### Backlog da Sprint:
+### Sprint Backlog:
 Definido (Colocar link de acesso)
 
 ### Vídeo ou gif da aplicação:
