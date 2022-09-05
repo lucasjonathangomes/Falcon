@@ -1,14 +1,14 @@
 # Falcon
 
 ### Equipe:
-* Lucas Henrique Costa de Oliveira (PO)
-* Lucas Jonathan Cordeiro Gomes (SM)
-* Lucas Augusto Oliveira de Souza
-* Lukas Fernando Berto
-* Igor Cerutti Lima
-* Matheus Estevam de Castro
-* Mateus Pereira Cesare
-* Renato Costa de Moura Mendes
+* PRODUCT OWNER: Lucas Henrique Costa de Oliveira 
+* SCRUM MASTER: Lucas Jonathan Cordeiro Gomes 
+* DEVELOPER: Lucas Augusto Oliveira de Souza
+* DEVELOPER: Lukas Fernando Berto
+* DEVELOPER: Igor Cerutti Lima
+* DEVELOPER: Matheus Estevam de Castro
+* DEVELOPER: Mateus Pereira Cesare
+* DEVELOPER: Renato Costa de Moura Mendes
 
 ### Objetivo:
 Entregar uma ferramenta que tenha funcionabilidade de cadastrar times no programa de treinamento para desenvolver as dinâmicas com avaliação mútua onde se encontram.(ainda tem algo faltando, alinhar com as propostas do kick off**********)
