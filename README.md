@@ -11,7 +11,7 @@
 * Renato Costa de Moura Mendes
 
 ### Objetivo:
-Entregar uma ferramenta que tenha funcionabilidade de cadastrar times no programa de treinamento para desenvolver as dinâmicas com avaliação mútua onde se encontram.(ainda tem algo falto alinhar com as propostas do kick off**********)
+Entregar uma ferramenta que tenha funcionabilidade de cadastrar times no programa de treinamento para desenvolver as dinâmicas com avaliação mútua onde se encontram.(ainda tem algo faltando, alinhar com as propostas do kick off**********)
 
 ##cronograma:
 (está faltando)
