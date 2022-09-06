@@ -18,7 +18,7 @@ https://github.com/Lucas13Costa | https://github.com/lucasjonathangomes | https:
 
 [![Git](Scripts/git.png)](https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open)
 
-<a href="[www.google.com](https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open)"><img src="Scripts/git.png" class="media-object  img-responsive img-thumbnail"></a>
+<a href="https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open"><img src="Scripts/git.png" class="media-object  img-responsive img-thumbnail"></a>
 
 ### Objetivo:
 Criar uma ferramenta que venha apoiar a PBLTeX a levantar, especificar e desenvolver uma
