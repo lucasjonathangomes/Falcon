@@ -10,6 +10,8 @@
 * DEVELOPER: Mateus Pereira Cesare
 * DEVELOPER: Renato Costa de Moura Mendes
 
+Lukas | Lucas
+
 ### Objetivo:
 Criar uma ferramenta que venha apoiar a PBLTeX a levantar, especificar e desenvolver uma
 solução computacional que viabilize a aplicação baseada na técnica de Avaliação 360º, porém incluindo uma avaliação
