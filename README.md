@@ -10,9 +10,9 @@
 * DEVELOPER: Mateus Pereira Cesare
 * DEVELOPER: Renato Costa de Moura Mendes
 
-Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto Oliveira de Souza
-------|------| --------
-PRODUCT OWNER| SCRUM MASTER| DEVELOPER
+Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto Oliveira de Souza | Lukas Fernando Berto | Igor Cerutti Lima | Matheus Estevam de Castro | Mateus Pereira Cesare | Renato Costa de Moura Mendes
+-----|-----|-----|-----|-----|-----|-----|-----|
+PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER 
 
 ### Objetivo:
 Criar uma ferramenta que venha apoiar a PBLTeX a levantar, especificar e desenvolver uma
