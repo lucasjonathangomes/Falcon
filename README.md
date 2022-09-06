@@ -15,13 +15,13 @@ Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto
 PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER 
 
 
-### **Objetivo:**
+### Objetivo:
 Criar uma ferramenta que venha apoiar a PBLTeX a levantar, especificar e desenvolver uma
 solução computacional que viabilize a aplicação baseada na técnica de Avaliação 360º, porém incluindo uma avaliação
 técnica adicional feita pelo Líder do Grupo e uma avaliação de produto/negócio
 realizada pelo Fake Client, papel desempenhado por outro instrutor da instituição.
 
-##cronograma:
+## Cronograma:
 (está faltando)
 
 ### Planejamento:
