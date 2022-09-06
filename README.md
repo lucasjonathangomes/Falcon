@@ -16,7 +16,7 @@ PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | D
 https://github.com/Lucas13Costa | https://github.com/lucasjonathangomes | https://github.com/LucasOliveira321 | https://github.com/LukasFernando |  https://github.com/IgorCerruti96 | - | https://github.com/MateusPCesare | https://github.com/RenatoCMMendes 
 
 
-![https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open](Scripts/git.png)
+![![Git](Scripts/git.png)](https://www.markdownguide.org/basic-syntax/)
 
 
 
