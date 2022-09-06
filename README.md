@@ -13,7 +13,7 @@
 Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto Oliveira de Souza | Lukas Fernando Berto | Igor Cerutti Lima | Matheus Estevam de Castro | Mateus Pereira Cesare | Renato Costa de Moura Mendes
 -----|-----|-----|-----|-----|-----|-----|-----|
 PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER 
-https://github.com/Lucas13Costa | - | https://github.com/LucasOliveira321 | - | - | - | - | - | - | https://github.com/RenatoCMMendes 
+https://github.com/Lucas13Costa | https://github.com/lucasjonathangomes | https://github.com/LucasOliveira321 | https://github.com/LukasFernando |  https://github.com/IgorCerruti96 | - | https://github.com/MateusPCesare | https://github.com/RenatoCMMendes 
 
 
 ### Objetivo:
