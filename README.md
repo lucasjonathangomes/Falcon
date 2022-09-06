@@ -16,6 +16,10 @@ PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | D
 https://github.com/Lucas13Costa | https://github.com/lucasjonathangomes | https://github.com/LucasOliveira321 | https://github.com/LukasFernando |  https://github.com/IgorCerruti96 | - | https://github.com/MateusPCesare | https://github.com/RenatoCMMendes 
 
 
+![Tux, the Linux mascot](/scripts/git.png)
+
+
+
 ### Objetivo:
 Criar uma ferramenta que venha apoiar a PBLTeX a levantar, especificar e desenvolver uma
 solução computacional que viabilize a aplicação baseada na técnica de Avaliação 360º, porém incluindo uma avaliação
