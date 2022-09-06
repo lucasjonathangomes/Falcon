@@ -27,7 +27,7 @@ realizada pelo Fake Client, papel desempenhado por outro instrutor da instituiç
 ### Planejamento:
 (A definir)
 
-### Figma:
+### Mockup:
 (AJUSTAR FIGMA)
 (não quer o link) 
 (Colocar o nome da seção vinculando o artefato alvo, ao inves da ferramenta) 
