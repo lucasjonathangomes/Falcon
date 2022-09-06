@@ -13,8 +13,6 @@
 Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto Oliveira de Souza | Lukas Fernando Berto | Igor Cerutti Lima | Matheus Estevam de Castro | Mateus Pereira Cesare | Renato Costa de Moura Mendes
 -----|-----|-----|-----|-----|-----|-----|-----|
 PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER 
------|-----|-----|-----|-----|-----|-----|-----|
-PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER 
 
 
 ### Objetivo:
