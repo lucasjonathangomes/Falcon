@@ -11,6 +11,8 @@
 * DEVELOPER: Renato Costa de Moura Mendes
 
 Lukas | Lucas
+------|------
+Dev   | PO
 
 ### Objetivo:
 Criar uma ferramenta que venha apoiar a PBLTeX a levantar, especificar e desenvolver uma
