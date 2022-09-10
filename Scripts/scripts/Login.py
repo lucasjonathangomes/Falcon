@@ -1,8 +1,5 @@
 
-import os
-from tkinter import Tk
-from tkinter import *
-from random import randrange, choice
+from support import *
 
 def Destroi_itens(lista: list):
     for item in lista:
@@ -11,13 +8,7 @@ def Destroi_itens(lista: list):
 class Login:
     def Iniciar(self, jan):
         self.jan = jan
-        
-        path = os.path.dirname(__file__)
-
-        # imagem = PhotoImage(file=f'{path}/git.png')
-        # self.img = Label(self.jan, image=imagem).pack()
-        # self.img.place(x=0, y=0)
-        
+                
         self.login_name = Label(self.jan, text='Login', fg='red', font=('Arial', 100))
         self.login_name.place(x=500, y=300)
 

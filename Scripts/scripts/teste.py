@@ -1,19 +1,11 @@
 
-import os
-from tkinter import Tk
-from tkinter import *
-from random import randrange, choice
+from support import * 
 
 jan = Tk()
 
-path = os.path(__file__)
-print(path)
-imagem = PhotoImage(file=path+'\\falcao.png')
-Label(jan, image=imagem).pack()
+img = Imagem('git.png')
+Label(jan, image=img).pack()
 
 
 jan.mainloop()
-
-
-
 
