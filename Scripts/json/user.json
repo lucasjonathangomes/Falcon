@@ -1,0 +1,14 @@
+
+{
+    "__user__": 
+    {
+        "informação": "informações"
+    },
+
+    "Lukas": 
+    {   
+        "nome": "Lukas",
+        "idade": 22, 
+        "cargo": "Desenvolvedor"
+    }
+}

@@ -1,9 +1,10 @@
 
 from support import * 
+# from Avaliacao_FK import *
 
 jan = Tk()
 
-img = Imagem('git.png')
+img = Retorna_imagem('git.png')
 Label(jan, image=img).pack()
 
 

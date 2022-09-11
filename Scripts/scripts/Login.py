@@ -1,9 +1,6 @@
 
 from support import *
 
-def Destroi_itens(lista: list):
-    for item in lista:
-        item.destroy()
 
 class Login:
     def Iniciar(self, jan):
