@@ -21,31 +21,24 @@ class Login:
         self.pasw_entry = Entry(self.jan, width=25)
         self.pasw_entry.place(x=610, y=615)
 
-        self.login_button = Button(self.jan, text='Login', font=('Arial', 15), fg='blue', command=lambda: Destroi_itens(self.lista_de_teste))
+        self.login_button = Button(self.jan, text='Login', font=('Arial', 15), fg='blue')
         self.login_button.place(x=700, y=700)
 
-        self.register_button = Button(self.jan, text='Registrar-se', font=('Arial', 12), fg='blue', command=self.Apertei_no_login)
+        self.register_button = Button(self.jan, text='Registrar-se', font=('Arial', 12), fg='blue')
         self.register_button.place(x=500, y=700)
 
         self.lista_de_teste = [self.user, self.user_entry, self.pasw,self.pasw_entry, self.login_button, self.register_button, self.login_name]
 
-    def Login(self):
-        item = choice(self.lista_de_teste)
-        item.destroy()
 
-    def Apertei_no_login(self):
-        x = randrange(10, 700)
-        y = randrange(10, 700)
-        Label(text='Apertei no botão de Login', font=('Arial', 20), fg='blue').place(x=x, y=y)
 
         
 
 
 
 
-jan = Tk()
+# jan = Tk()
 
-Login().Iniciar(jan)
+# Login().Iniciar(jan)
 
-jan.mainloop()
+# jan.mainloop()
 

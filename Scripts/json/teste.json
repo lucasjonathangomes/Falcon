@@ -1,10 +1,5 @@
-{
-    "usuario":{
-        "1":"lucas",
-        "2":"josé"
-},
-    "senha":{
-       "1":"123",
-       "2":"321"
-    }
+{"None": {"None": "None"}, "Banco de Dados 1": {"None": ["None"], 
+"FALCON": {"PO": "Lucas", "Scrum Master": "Lucas", "Desenvolvedores": ["Lucas"]}}, 
+"Banco de Dados 2": 
+{"Turma 1": "PO", "Turma 2": "Scrum"}
 }

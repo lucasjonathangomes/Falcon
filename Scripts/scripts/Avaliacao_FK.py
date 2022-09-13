@@ -3,93 +3,98 @@
 # Tela de avaliação do Fake Client
 # --------------------------------
 
-
+from tkinter import ttk
 from support import * 
-
 
 class AvaliacaoFK:
     def __init__(self, jan):
         '''Criando os elementos (Botões, Labels,...)'''
         self.jan = jan
-        json_turma = Ler_JSON('turma.json')
-
-        default = ['None']
-
-        # self.options_po = ['PO 1', 'PO 2', 'PO 3', 'PO 4', 'PO 5']
-        # self.options_sprt = ['Sprint 1', 'Sprint 2', 'Sprint 3', 'Sprint 4', 'Sprint 5']
-        # self.options_trma = ['Turma 1', 'Turma 2', 'Turma 3', 'Turma 4', 'Turma 5']
+        self.json_info = Ler_JSON('turma.json')
 
         label_nm = Label(jan, text='Avaliação Fake Client', font=('Helvetica', 30), fg='blue')
         label_nm.pack()
 
-        # self.cliced = StringVar()
-        # self.cliced.set(default[0])
-        # turma_bt = OptionMenu(jan, self.cliced, *json_turma['None'])
-        # turma_bt.pack()
+        self.info_turma = [*self.json_info]
+        self.info_time = ['None']
+        self.info_sprt = ['None']
 
-        self.info_turma = [*json_turma]
-        self.Botao_Turma()
-        self.Botao_PO()
+        self.font = ('Arial', 15)
 
+        self.Criar_labels()
 
-    # def Botao_Sprint(self, turma):
-    #     self.cliced_sprt = StringVar()
-    #     self.cliced_sprt.set(turma[0])
-    #     self.sprint = OptionMenu(jan, self.cliced_sprt, *turma)
-    #     self.sprint.pack() 
+    def Criar_labels(self):
+        ##########
+        # Sprint
+        sprints = IntVar(self.jan)
+        self.label_sprt = Label(self.jan, text='Sprint', font=self.font)
+        self.label_sprt.place(x=50, y=100)
 
-    def Botao_Turma(self):
-        self.cliced_trma = StringVar()
-        self.cliced_trma.set(self.info[0])
-        turma_bt = OptionMenu(jan, self.cliced_trma, *self.info)
-        turma_bt.pack() 
+        self.labelScale_sprt = ttk.LabeledScale(self.jan, from_=1, to=5, variable=sprints, compound='button')
+        self.labelScale_sprt.place(x=220, y=100)
+        ##########
 
-    def Botao_PO(self):
-        self.cliced_po = StringVar()
-        self.cliced_po.set(self.info[0])
-        po_bt = OptionMenu(jan, self.cliced_po, *self.info)
-        po_bt.pack()
+        ##########
+        # Turma
+        self.label_turm = Label(self.jan, text='Nome da Turma:', font=self.font)
+        self.label_turm.place(x=50, y=150)
 
-    def Button_options(self, txt):
-            Label(jan, text=txt).pack()
-            print(txt)
+        self.cliced_trma = StringVar(self.jan)
+        self.cliced_trma.set(self.info_turma[0])
+        self.label_turm_nm = OptionMenu(self.jan, self.cliced_trma, *self.info_turma, command=lambda _:self.Mudar_times(self.cliced_trma.get()))
+        self.label_turm_nm.place(x=220, y=150) 
+        ##########
 
-    
-    def Pegar_elementos_por_chave(self, key):
-        pass 
+        ##########
+        # Time
+        self.label_time = Label(self.jan, text='Nome do time:', font=self.font)
+        self.label_time.place(x=50, y=200)
 
+        self.label_time_nm = Label(self.jan, text='--', font=self.font)
+        self.label_time_nm.place(x=220, y=200)
+        ##########
+
+        ##########
+        # PO
+        self.label_po = Label(self.jan, text='Nome do PO:', font=self.font)
+        self.label_po.place(x=50, y=250)
+
+        self.label_po_nm = Label(self.jan, text='--', font=self.font)
+        self.label_po_nm.place(x=220, y=250)
+
+    def Mudar_times(self, key=None):
+        try:
+            if self.cliced_trma.get() == 'None':
+                self.option_time_nm.destroy()
+                self.label_time_nm = Label(self.jan, text='--', font=self.font)
+                self.label_time_nm.place(x=220, y=200)
+            
+            else:
+                try:
+                    self.option_time_nm.destroy()
+                except:
+                    pass 
+                self.label_time_nm.destroy()
+                self.info_time = [*self.json_info[key]]
+                self.cliced_time = StringVar(self.jan)
+                self.cliced_time.set(self.info_time[0])
+                self.option_time_nm = OptionMenu(self.jan, self.cliced_time, *self.info_time, command=lambda _: self.Mudar_PO())
+                self.option_time_nm.place(x=220, y=200)      
+
+        except:
+            pass 
         
-        
+        if key == 'None' or self.cliced_time.get() == 'None':
+            self.Mudar_PO()
 
-'''        # # Criando os botões
-        # self.cliced_trma = StringVar()
-        # self.cliced_trma.set(self.options_trma[0])
-        # turma_bt = OptionMenu(jan, self.cliced_trma, *self.options_trma, command=lambda _:self.Button_options(self.cliced_trma.get()))
-        # turma_bt.pack()
-
-        # self.cliced_po = StringVar()
-        # self.cliced_po.set(self.options_po[0])
-        # po_bt = OptionMenu(jan, self.cliced_po, *self.options_po, command=lambda _:self.Button_options(self.cliced_po.get()))
-        # po_bt.pack()
-
-        # self.cliced_sprt = StringVar()
-        # self.cliced_sprt.set(self.options_sprt[0])
-        # sprint = OptionMenu(jan, self.cliced_sprt, *self.options_sprt, command=lambda _:self.Button_options(self.cliced_sprt.get()))
-        # sprint.pack()'''
-
-
+    def Mudar_PO(self):
+        try:
+            self.label_po_nm['text'] = self.json_info[self.cliced_trma.get()][self.cliced_time.get()]['PO']
+        except:
+            self.label_po_nm['text'] = '--' 
 
 
 jan = Tk()
 AvaliacaoFK(jan)
-
-# options = ['Brasil', 'Argerntina', 'Mexico', 'Colombia', 'Chile']
-
-# cliced = StringVar()
-# cliced.set(options[0])
-
-
-
-
 jan.mainloop()
         

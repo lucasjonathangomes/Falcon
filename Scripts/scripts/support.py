@@ -5,7 +5,6 @@ from tkinter import *
 from re import findall
 import awesometkinter as atk
 from random import randrange, choice
-from tkinter import filedialog, messagebox, ttk
 
 
 def Retorna_imagem(nome):
@@ -34,8 +33,11 @@ def Ler_JSON(nome):
 def Ler_Excel():
     pass 
 
+def Salvar_JSON(nome:str, novo_json:dict):
+    with open(Caminho_ate_Scripts()+'\\json\\'+nome, 'w') as a:
+        json.dump(novo_json, a)
+
 def Caminho_ate_Scripts():
     '''Retorna o caminho completo até a pasta Scripts'''
     return findall(r'.*Scripts', os.path.dirname(__file__))[0]
-
 
