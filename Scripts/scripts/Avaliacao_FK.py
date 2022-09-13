@@ -12,6 +12,14 @@ class AvaliacaoFK:
         self.jan = jan
         self.json_info = Ler_JSON('turma.json')
 
+        self.perguntas = [
+            'Trabelho em equipe, cooperação e descentralização de conhecimento:',
+            'Iniciativa e proatividade:',
+            'Autodidaxia e agregação de conhecimento ao grupo:',
+            'Entrega de resultados e participação efetiva no projeto:',
+            'Competência técnica:'
+        ]
+
         label_nm = Label(jan, text='Avaliação Fake Client', font=('Helvetica', 30), fg='blue')
         label_nm.pack()
 
@@ -21,7 +29,13 @@ class AvaliacaoFK:
 
         self.font = ('Arial', 15)
 
+        self.frame_direito = Frame(self.jan, width=700, height=500)
+        self.frame_direito.place(x=500,y=80)
+
         self.Criar_labels()
+        self.lista_perguntas_itens = Criar_Perguntas(self.frame_direito, self.perguntas, font=('Arial', 15))
+
+        Button(self.frame_direito, text='aperte aqui', command=lambda:Destruir_itens(self.lista_perguntas_itens)).pack()
 
     def Criar_labels(self):
         ##########
@@ -94,7 +108,12 @@ class AvaliacaoFK:
             self.label_po_nm['text'] = '--' 
 
 
+        
+        
+        
+
+
 jan = Tk()
 AvaliacaoFK(jan)
 jan.mainloop()
-        
+

@@ -4,7 +4,9 @@ import json
 from tkinter import *
 from re import findall
 import awesometkinter as atk
+from tkinter import messagebox
 from random import randrange, choice
+
 
 
 def Retorna_imagem(nome):
@@ -40,4 +42,22 @@ def Salvar_JSON(nome:str, novo_json:dict):
 def Caminho_ate_Scripts():
     '''Retorna o caminho completo até a pasta Scripts'''
     return findall(r'.*Scripts', os.path.dirname(__file__))[0]
+
+def Criar_Perguntas(frame:Frame, perguntas:list, cor_fund:str|None=None, cor_letr:str|None=None, font:tuple|None=None):
+    '''
+    Cria perguntas da lista "perguntas". \n
+    Retorna a lista com os elementos (Label) que foram criados.
+    '''
+    list_label_perguntas = []
+
+    for pergunta in perguntas:
+        p = Label(frame, text=pergunta, font=font)
+        p.pack()
+        r = Entry(frame, width=5)
+        r.pack()
+        list_label_perguntas.append(p)
+        list_label_perguntas.append(r)
+    
+    return list_label_perguntas
+
 

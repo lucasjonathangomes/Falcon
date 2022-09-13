@@ -5,7 +5,7 @@ from Login import *
 
 def Main():
     jan = Tk()
-    Login().Iniciar(jan)
+    Login(jan)
     jan.mainloop()
 
 if '__name__':
