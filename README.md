@@ -21,11 +21,27 @@ https://github.com/Lucas13Costa | https://github.com/lucasjonathangomes | https:
 
 
 
-### Objetivo:
-Criar uma ferramenta que venha apoiar a PBLTeX a levantar, especificar e desenvolver uma
-solução computacional que viabilize a aplicação baseada na técnica de Avaliação 360º, porém incluindo uma avaliação
+## Desafio Proposto:
+A instituição de ensino PBLTeX, especializada em cursos práticas de ensino aplicando
+PBL (Problem Based Learning) desenvolveu uma dinâmica de **Avaliação
+Democratizada** baseada na técnica de Avaliação 360º, porém incluindo uma avaliação
 técnica adicional feita pelo Líder do Grupo e uma avaliação de produto/negócio
 realizada pelo Fake Client, papel desempenhado por outro instrutor da instituição.
+   
+A dinâmica criada considera 5 fatores chaves para a realização da avaliação:
+* Trabalho em equipe, cooperação e descentralização de conhecimento;
+* Iniciativa e proatividade;
+* Autodidaxia e agregação de conhecimento ao grupo;
+* Entrega de resultados e participação efetiva no projeto;
+* Competência Técnica.
+   
+A instituição tem experimentado algumas soluções de mercado e em uma análise Make
+or Buy feita recentemente optou pelo “make”, ou seja, construir uma solução que
+viabilize a aplicação dessa dinâmica.
+   
+O desafio do seu grupo é apoiar a PBLTeX a levantar, especificar e desenvolver uma
+solução computacional que viabilize a aplicação dessa técnica
+
 
 ## Cronograma:
 (está faltando)
