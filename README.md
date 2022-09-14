@@ -44,7 +44,12 @@ solução computacional que viabilize a aplicação dessa técnica
 
 
 ## Cronograma:
-(está faltando)
+
+Primeira Sprint 29/08 a 18/09
+Segunda Sprint 19/09 a 09/10
+Terceira Sprint 17/10 a 06/11
+Quarta Sprint 07/11 a 27/11
+
 
 ### Planejamento:
 (A definir)
