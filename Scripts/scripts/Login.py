@@ -43,7 +43,6 @@ class Login:
         
         else:
             self.Mensagem_erro()
-            
 
     def Mensagem_erro(self):
         messagebox.showerror(title='ERROR', message='Algo deu errado, verifique seu usuario e sua senha')

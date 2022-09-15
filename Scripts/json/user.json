@@ -8,8 +8,9 @@
     "Lukas": 
     {   
         "nome": "Lukas",
-        "idade": 22, 
         "cargo": "Desenvolvedor",
-        "senha": "blabla"
+        "senha": "blabla",
+        "email": "blabla@gmail.com",
+        "acesso":"Aluno"
     }
 }

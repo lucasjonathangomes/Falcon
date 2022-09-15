@@ -7,7 +7,12 @@ import awesometkinter as atk
 from tkinter import messagebox
 from random import randrange, choice
 
-
+class Declarar_user: 
+    def __init__(self, user, email:str|None=None, cargo:str|None=None, acesso:str|None=None):
+        self.user = user 
+        self.email = email
+        self.cargo = cargo
+        self.acesso = acesso 
 
 def Retorna_imagem(nome):
     '''Retorna a imagem da pasta "fotos"'''
@@ -49,6 +54,7 @@ def Criar_Perguntas(frame:Frame, perguntas:list, cor_fund:str|None=None, cor_let
     Retorna a lista com os elementos (Label) que foram criados.
     '''
     list_label_perguntas = []
+    list_entry_perguntas = []
 
     for pergunta in perguntas:
         p = Label(frame, text=pergunta, font=font)
@@ -56,8 +62,9 @@ def Criar_Perguntas(frame:Frame, perguntas:list, cor_fund:str|None=None, cor_let
         r = Entry(frame, width=5)
         r.pack()
         list_label_perguntas.append(p)
-        list_label_perguntas.append(r)
+        list_entry_perguntas.append(r)
     
-    return list_label_perguntas
+    return list_label_perguntas, list_entry_perguntas
+
 
 

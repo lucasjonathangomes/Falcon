@@ -20,8 +20,8 @@ class AvaliacaoFK:
             'Competência técnica:'
         ]
 
-        label_nm = Label(jan, text='Avaliação Fake Client', font=('Helvetica', 30), fg='blue')
-        label_nm.pack()
+        self.label_title = Label(jan, text='Avaliação Fake Client', font=('Helvetica', 30), fg='blue')
+        self.label_title.pack()
 
         self.info_turma = [*self.json_info]
         self.info_time = ['None']
@@ -33,9 +33,81 @@ class AvaliacaoFK:
         self.frame_direito.place(x=500,y=80)
 
         self.Criar_labels()
-        self.lista_perguntas_itens = Criar_Perguntas(self.frame_direito, self.perguntas, font=('Arial', 15))
+        self.lista_perguntas_label, self.lista_perguntas_entry = Criar_Perguntas(self.frame_direito, self.perguntas, font=('Arial', 15))
+        
+        self.espaco = Label(self.frame_direito)
+        self.espaco.pack()
+        self.enviar = Button(self.frame_direito, text='Enviar Avaliação', command=lambda:self.Salvar_avaliacao())
+        self.enviar.pack()
 
-        Button(self.frame_direito, text='aperte aqui', command=lambda:Destruir_itens(self.lista_perguntas_itens)).pack()
+        # Apagando todos os itens
+        self.all_itens = self.lista_label_info + self.lista_perguntas_label + self.lista_perguntas_entry + [self.label_title, self.espaco, self.enviar]
+
+    def Salvar_avaliacao(self):
+        empty_list = ['None', None, '', ' ']
+        tudo_respondido = True
+        for resposta in self.lista_perguntas_entry:              
+            if resposta.get().strip() in empty_list:
+                tudo_respondido = False 
+                break 
+        
+        if self.label_po_nm['text'] == '--':
+            tudo_respondido = False 
+
+        if tudo_respondido:
+            # Salvar e apagar os Label, Entry e Button
+            self.Salvar_no_JSON()
+            Destruir_itens(self.all_itens)
+        
+        else: 
+            messagebox.showerror('Erro ao salvar', 'Todas as perguntas devem ser respondidas e/ou não foi escolhido o PO')
+    
+    def Salvar_no_JSON(self):
+        def get_key():
+            try:
+                key = int(max(list(historico[user.user][nome_do_PO]))) + 1
+            except:
+                key = 1
+            
+            return str(key) 
+
+        historico = Ler_JSON('histrc.json')
+        user = Declarar_user('lukas', 'Desenvolvedor', 'Aluno')
+        nome_do_PO = self.label_po_nm['text']
+
+        if not user.user in historico:
+            historico[user.user] = {}
+        
+        if not nome_do_PO in historico[user.user]:
+            historico[user.user][nome_do_PO] = {}
+        
+        key = get_key()
+        dict_perguntas = self.QnA_como_dict(self.lista_perguntas_label, self.lista_perguntas_entry)
+        historico[user.user][nome_do_PO][key] = dict_perguntas
+
+        Salvar_JSON('histrc.json', historico)
+
+
+    def QnA_como_dict(dict, perguntas, respostas):
+        cont = 0
+        dict_QnA = {}
+        for pergunta in perguntas:
+            try:
+                resposta = respostas[cont]
+
+                if str(type(pergunta)) == "<class 'tkinter.Label'>":
+                    pergunta = pergunta['text']
+                
+                if str(type(resposta)) == "<class 'tkinter.Entry'>":
+                    resposta = resposta.get()
+                
+                dict_QnA[pergunta] = resposta
+            except:
+                pass 
+
+            cont += 1
+
+        return dict_QnA
 
     def Criar_labels(self):
         ##########
@@ -75,6 +147,9 @@ class AvaliacaoFK:
 
         self.label_po_nm = Label(self.jan, text='--', font=self.font)
         self.label_po_nm.place(x=220, y=250)
+
+        self.lista_label_info = [self.label_sprt, self.labelScale_sprt, self.label_turm, self.label_turm_nm, 
+                                self.label_time, self.label_time_nm, self.label_po, self.label_po_nm]
 
     def Mudar_times(self, key=None):
         try:
