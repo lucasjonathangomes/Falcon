@@ -8,11 +8,13 @@ from tkinter import messagebox
 from random import randrange, choice
 
 class Declarar_user: 
-    def __init__(self, user, email:str|None=None, cargo:str|None=None, acesso:str|None=None):
-        self.user = user 
-        self.email = email
-        self.cargo = cargo
-        self.acesso = acesso 
+    def __init__(self, user):
+        json_info = Ler_JSON('user.json')
+        user_info = json_info[user] 
+        self.user = user
+        self.email = user_info['email']
+        self.cargo = user_info['cargo']
+        self.acesso = user_info['acesso'] 
 
 def Retorna_imagem(nome):
     '''Retorna a imagem da pasta "fotos"'''
@@ -46,7 +48,7 @@ def Salvar_JSON(nome:str, novo_json:dict):
 
 def Caminho_ate_Scripts():
     '''Retorna o caminho completo até a pasta Scripts'''
-    return findall(r'.*Scripts', os.path.dirname(__file__))[0]
+    return findall(r'.*Falcon', os.path.dirname(__file__))[0]
 
 def Criar_Perguntas(frame:Frame, perguntas:list, cor_fund:str|None=None, cor_letr:str|None=None, font:tuple|None=None):
     '''

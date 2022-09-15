@@ -7,10 +7,11 @@
 
     "Lukas": 
     {   
-        "nome": "Lukas",
+        "nome": "Lukas Fernando",
         "cargo": "Desenvolvedor",
-        "senha": "blabla",
         "email": "blabla@gmail.com",
-        "acesso":"Aluno"
+        "acesso":"Aluno",
+
+        "senha": "blabla"
     }
 }

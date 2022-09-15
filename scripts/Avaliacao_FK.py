@@ -7,11 +7,11 @@ from tkinter import ttk
 from support import * 
 
 class AvaliacaoFK:
-    def __init__(self, jan):
+    def __init__(self, jan, user):
         '''Criando os elementos (Botões, Labels,...)'''
         self.jan = jan
         self.json_info = Ler_JSON('turma.json')
-
+        self.user = user
         self.perguntas = [
             'Trabelho em equipe, cooperação e descentralização de conhecimento:',
             'Iniciativa e proatividade:',
@@ -65,25 +65,25 @@ class AvaliacaoFK:
     def Salvar_no_JSON(self):
         def get_key():
             try:
-                key = int(max(list(historico[user.user][nome_do_PO]))) + 1
+                key = int(max(list(historico[self.user.user][nome_do_PO]))) + 1
             except:
                 key = 1
             
             return str(key) 
 
         historico = Ler_JSON('histrc.json')
-        user = Declarar_user('lukas', 'Desenvolvedor', 'Aluno')
+        
         nome_do_PO = self.label_po_nm['text']
 
-        if not user.user in historico:
-            historico[user.user] = {}
+        if not self.user.user in historico:
+            historico[self.user.user] = {}
         
-        if not nome_do_PO in historico[user.user]:
-            historico[user.user][nome_do_PO] = {}
+        if not nome_do_PO in historico[self.user.user]:
+            historico[self.user.user][nome_do_PO] = {}
         
         key = get_key()
         dict_perguntas = self.QnA_como_dict(self.lista_perguntas_label, self.lista_perguntas_entry)
-        historico[user.user][nome_do_PO][key] = dict_perguntas
+        historico[self.user.user][nome_do_PO][key] = dict_perguntas
 
         Salvar_JSON('histrc.json', historico)
 
@@ -188,7 +188,7 @@ class AvaliacaoFK:
         
 
 
-jan = Tk()
-AvaliacaoFK(jan)
-jan.mainloop()
+# jan = Tk()
+# AvaliacaoFK(jan)
+# jan.mainloop()
 

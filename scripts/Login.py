@@ -1,4 +1,5 @@
 
+from Avaliacao_FK import *
 from support import *
 
 
@@ -37,6 +38,8 @@ class Login:
             passw = users[user]['senha']
             if passw == psw:
                 Destruir_itens(self.lista_itens)
+                user_info = Declarar_user(user)
+                AvaliacaoFK(self.jan, user_info)
             
             else:
                 self.Mensagem_erro()
@@ -44,11 +47,11 @@ class Login:
         else:
             self.Mensagem_erro()
 
-    def Mensagem_erro(self):
-        messagebox.showerror(title='ERROR', message='Algo deu errado, verifique seu usuario e sua senha')
-
     def Sing_up(self, user, psw):
         pass 
+
+    def Mensagem_erro(self):
+        messagebox.showerror(title='ERROR', message='Algo deu errado, verifique seu usuario e/ou sua senha')
 
 
 
