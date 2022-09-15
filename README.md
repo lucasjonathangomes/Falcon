@@ -1,21 +1,24 @@
+<div align="center">
+
 # FATEC-API-2022.2-FALCON
 Projeto desenvolvido no 2° Semestre/2022 de BD (Banco de Dados) na Fatec São José dos Campos - Prof. Jessen Vidal
 
-### Equipe:
-* PRODUCT OWNER: Lucas Henrique Costa de Oliveira 
-* SCRUM MASTER: Lucas Jonathan Cordeiro Gomes 
-* DEVELOPER: Lucas Augusto Oliveira de Souza
-* DEVELOPER: Lukas Fernando Berto
-* DEVELOPER: Igor Cerutti Lima
-* DEVELOPER: Matheus Estevam de Castro
-* DEVELOPER: Mateus Pereira Cesare
-* DEVELOPER: Renato Costa de Moura Mendes
+</div>
 
-Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto Oliveira de Souza | Lukas Fernando Berto | Igor Cerutti Lima | Matheus Estevam de Castro | Mateus Pereira Cesare | Renato Costa de Moura Mendes
+<div align="center">
+
+<br>
+
+## EQUIPE DE DESENVOLVIMENTO
+
+PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER
 -----|-----|-----|-----|-----|-----|-----|-----|
-PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER 
+Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto Oliveira de Souza | Lukas Fernando Berto | Igor Cerutti Lima | Matheus Estevam de Castro | Mateus Pereira Cesare | Renato Costa de Moura Mendes 
  <a href="https://github.com/LucasHCOliveira7" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=" https://github.com/lucasjonathangomes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/LucasOliveira321" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/LukasFernando" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/IgorCerruti96" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | - | <a href="https://github.com/MateusPCesare" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/RenatoCMMendes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
 
+</div>
+
+<br>
 
 [![Git](Scripts/git.png)](https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open)
 
