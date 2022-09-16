@@ -40,13 +40,32 @@ solução computacional que viabilize a aplicação dessa técnica
 ![▶ Page 1 - TELA API_(desenvolvendo) - Google Chrome 2022-09-15 21-56-04](https://user-images.githubusercontent.com/111617449/190534679-6cd361f9-9efe-4f9b-88a4-2d273e746a1c.gif)
 
 
-### Backlog do Produto:
-(Estruturar corretamente e com as prioridades, de preferencia deixar no .MD)
+### Backlog do Produto:											
+![image](https://user-images.githubusercontent.com/81196630/190540564-f3e04b58-73d7-4a79-8176-5cf2008eee52.png)
+
 
 
 ### Sprint Backlog:
-Definido (Colocar link de acesso)
 
+<details>
+
+<summary> Sprint 1 </summary> 
+
+#### teste 1
+
+</summary>
+
+</details>
+
+<details>
+
+<summary> Sprint 2 </summary>
+
+#### teste 2
+
+</summary>
+
+</details>
 
 ### Vídeo ou gif da aplicação:
 (A definir)
