@@ -37,10 +37,7 @@ solução computacional que viabilize a aplicação dessa técnica
 
 
 ### Mockup:
-(AJUSTAR FIGMA)
-(não quer o link) 
-(Colocar o nome da seção vinculando o artefato alvo, ao inves da ferramenta) 
-##### https://www.figma.com/file/EMMqbatmZi5srT9ZyphiW8/TELA.API_(desenvolvendo)?node-id=0%3A1
+![▶ Page 1 - TELA API_(desenvolvendo) - Google Chrome 2022-09-15 21-56-04](https://user-images.githubusercontent.com/111617449/190534679-6cd361f9-9efe-4f9b-88a4-2d273e746a1c.gif)
 
 
 ### Backlog do Produto:
