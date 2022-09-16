@@ -3,7 +3,7 @@ import os
 import json
 from tkinter import *
 from re import findall
-import awesometkinter as atk
+#import awesometkinter as atk
 from tkinter import messagebox
 from random import randrange, choice
 
