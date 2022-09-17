@@ -21,7 +21,7 @@ Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto
 ## Objetivo:
 Apoiar a instituição de ensino PBLTeX, especializada em cursos práticas de ensino aplicando PBL (Problem Based Learning), a desenvolver uma dinâmica de **Avaliação
 Democratizada** baseada na técnica de Avaliação 360º. O grupo deve apoiá-la a levantar, especificar e desenvolver uma
-solução computacional que viabilize a aplicação dessa técnica
+solução computacional que viabilize a aplicação dessa técnica.
 
 </div>
 
@@ -43,6 +43,7 @@ solução computacional que viabilize a aplicação dessa técnica
 ### Backlog do Produto:											
 ![image](https://user-images.githubusercontent.com/81196630/190540564-f3e04b58-73d7-4a79-8176-5cf2008eee52.png)
 
+![image](https://user-images.githubusercontent.com/81196630/190691974-563b1890-e159-4d31-94d8-1bccca90e5d6.png)
 
 
 ### Sprint Backlog:
@@ -51,7 +52,7 @@ solução computacional que viabilize a aplicação dessa técnica
 
 <summary> Sprint 1 </summary> 
 
-#### teste 1
+![image](https://user-images.githubusercontent.com/81196630/190692279-72ee6358-91fa-4094-97a1-54ac0eb02be9.png)
 
 </summary>
 
@@ -61,7 +62,27 @@ solução computacional que viabilize a aplicação dessa técnica
 
 <summary> Sprint 2 </summary>
 
-#### teste 2
+![image](https://user-images.githubusercontent.com/81196630/190692356-5af2c0bb-9789-43bf-a7c9-595f4bde4888.png)
+
+</summary>
+
+</details>
+
+<details>
+
+<summary> Sprint 3 </summary>
+
+![image](https://user-images.githubusercontent.com/81196630/190692688-9720ed8c-3ebb-4f39-b049-db7dc0af2091.png)
+
+</summary>
+
+</details>
+
+<details>
+
+<summary> Sprint 4 </summary>
+
+![image](https://user-images.githubusercontent.com/81196630/190692868-43d7cb2d-a008-45ee-b9d3-94c825f71195.png)
 
 </summary>
 
@@ -72,4 +93,5 @@ solução computacional que viabilize a aplicação dessa técnica
 
 
 ### Tecnologias usadas:
-Python, JSON, Figma, Excel
+<img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" target="_blank"></a>
+<img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" target="_blank"></a>
