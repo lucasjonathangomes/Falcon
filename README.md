@@ -93,4 +93,5 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 
 ### Tecnologias usadas:
-Python, JSON, Figma, Excel
+<img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" target="_blank"></a>
+<img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" target="_blank"></a>
