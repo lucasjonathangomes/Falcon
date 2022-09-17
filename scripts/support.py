@@ -3,13 +3,14 @@ import os
 import json
 from tkinter import *
 from re import findall
-#import awesometkinter as atk
+from tkinter import ttk
+# import awesometkinter as atk
 from tkinter import messagebox
 from random import randrange, choice
 
 class Declarar_user: 
     def __init__(self, user):
-        json_info = Ler_JSON('user.json')
+        json_info = Ler_JSON('users.json')
         user_info = json_info[user] 
         self.user = user
         self.email = user_info['email']
@@ -18,8 +19,7 @@ class Declarar_user:
 
 def Retorna_imagem(nome):
     '''Retorna a imagem da pasta "fotos"'''
-    path = Caminho_ate_Scripts()
-    print(path)
+    path = Caminho_ate_Falcon()
     return PhotoImage(file=f'{path}\\fotos\\{nome}')
 
 def Destruir_itens(lista:list):
@@ -35,7 +35,7 @@ def Destruir_itens(lista:list):
             pass 
 
 def Ler_JSON(nome):
-    with open(Caminho_ate_Scripts()+'\\json\\'+nome, encoding="utf-8") as a:
+    with open(Caminho_ate_Falcon()+'\\json\\'+nome, encoding="utf-8") as a:
         arquivo = json.load(a) 
     return arquivo 
 
@@ -43,10 +43,10 @@ def Ler_Excel():
     pass 
 
 def Salvar_JSON(nome:str, novo_json:dict):
-    with open(Caminho_ate_Scripts()+'\\json\\'+nome, 'w') as a:
+    with open(Caminho_ate_Falcon()+'\\json\\'+nome, 'w') as a:
         json.dump(novo_json, a)
 
-def Caminho_ate_Scripts():
+def Caminho_ate_Falcon():
     '''Retorna o caminho completo até a pasta Scripts'''
     return findall(r'.*Falcon', os.path.dirname(__file__))[0]
 

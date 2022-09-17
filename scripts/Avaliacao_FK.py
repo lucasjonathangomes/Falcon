@@ -3,7 +3,7 @@
 # Tela de avaliação do Fake Client
 # --------------------------------
 
-from tkinter import ttk
+
 from support import * 
 
 class AvaliacaoFK:
@@ -86,7 +86,6 @@ class AvaliacaoFK:
         historico[self.user.user][nome_do_PO][key] = dict_perguntas
 
         Salvar_JSON('histrc.json', historico)
-
 
     def QnA_como_dict(dict, perguntas, respostas):
         cont = 0

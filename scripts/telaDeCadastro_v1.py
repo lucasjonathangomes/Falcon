@@ -10,20 +10,20 @@ def salvarUser ():
    nome = entryNome.get()
    email = entryEmail.get()
    senha = entrySenha.get()
-   #usuário
+
 
    dicionario = {
       "joão":{"cargo": cargo,"nome": nome, "email": email,"senha": senha}
       }     
    Salvar_JSON("userTest.json",dicionario)
 
-path = Caminho_ate_Scripts()+"//fotos//"
+path = Caminho_ate_Falcon()+"//fotos//"
 master = Tk()
 master.geometry("1440x1024+350+20")
 master.iconbitmap(default=path+"telaCadastro.png")
 master.resizable(width=FALSE, height=FALSE)
 
-imgFundo = PhotoImage("telaCadastro.png")
+# imgFundo = PhotoImage("telaCadastro.png")
 imgFundo = Retorna_imagem('telaCadastro.png')
 botao = Retorna_imagem("botao.png")
 
@@ -35,14 +35,14 @@ listaCargo = ["Admin", "Aluno PO", "Líder do Grupo/Instrutor","Fake Client", "L
 ComboBox_cargo = ttk.Combobox(values=listaCargo)
 ComboBox_cargo.place(width=500, height=60, x=323, y=320)
 
-entryNome = Entry(master, bd=2, font=("Calibri", 20), justify=LEFT)
+entryNome = Entry(master, bd=2, font=("Arial", 20), justify=LEFT)
 entryNome.place(width=500, height=60, x=323, y=447)
 
-entryEmail = Entry(master, bd=2, font=("Calibri", 20), justify=LEFT)
+entryEmail = Entry(master, bd=2, font=("Arial", 20), justify=LEFT)
 entryEmail.place(width=500, height=60, x=323, y=547)
 
 esconderSenha = StringVar()
-entrySenha = Entry(master, textvariable=esconderSenha, show="*", bd=2, font=("Calibri", 20), justify=LEFT)
+entrySenha = Entry(master, textvariable=esconderSenha, show="*", bd=2, font=("Arial", 20), justify=LEFT)
 entrySenha.place(width=500, height=60, x=323, y=647)
 
 # Botão
@@ -54,6 +54,7 @@ def verificaSenha():
    print("selecao", selecao)
 
 botaoCadastro = Button(master,command=salvarUser, bd=0, image=botao)
-botaoCadastro.place(width=279, height=69, x=550, y=805)
+# botaoCadastro.place(width=279, height=69, x=550, y=805)
+botaoCadastro.place(width=279, height=69, x=800, y=505)
 
 master.mainloop()

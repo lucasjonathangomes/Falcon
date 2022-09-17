@@ -1,6 +1,5 @@
 
-from support import * 
-# import Login as lg
+from support import *
 from Login import *
 
 def Main():
