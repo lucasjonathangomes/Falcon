@@ -32,10 +32,6 @@ solução computacional que viabilize a aplicação dessa técnica.
 * *Quarta Sprint 07/11 a 27/11*
 
 
-### Planejamento:
-(A definir)
-
-
 ### Mockup:
 ![▶ Page 1 - TELA API_(desenvolvendo) - Google Chrome 2022-09-15 21-56-04](https://user-images.githubusercontent.com/111617449/190534679-6cd361f9-9efe-4f9b-88a4-2d273e746a1c.gif)
 
@@ -51,8 +47,8 @@ solução computacional que viabilize a aplicação dessa técnica.
 <details>
 
 <summary> Sprint 1 </summary> 
-
-![image](https://user-images.githubusercontent.com/81196630/190692279-72ee6358-91fa-4094-97a1-54ac0eb02be9.png)
+	
+![image](https://user-images.githubusercontent.com/81196630/190876933-8f342f71-f85c-46b2-8316-bfd7f2e7ffa2.png)
 
 </summary>
 
