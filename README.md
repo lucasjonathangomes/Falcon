@@ -21,7 +21,7 @@ Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto
 ## Objetivo:
 Apoiar a instituição de ensino PBLTeX, especializada em cursos práticas de ensino aplicando PBL (Problem Based Learning), a desenvolver uma dinâmica de **Avaliação
 Democratizada** baseada na técnica de Avaliação 360º. O grupo deve apoiá-la a levantar, especificar e desenvolver uma
-solução computacional que viabilize a aplicação dessa técnica
+solução computacional que viabilize a aplicação dessa técnica.
 
 </div>
 
