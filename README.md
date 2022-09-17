@@ -31,18 +31,15 @@ solução computacional que viabilize a aplicação dessa técnica.
 * *Terceira Sprint 17/10 a 06/11*
 * *Quarta Sprint 07/11 a 27/11*
 
-
-### Mockup:
+## Mockup:
 ![▶ Page 1 - TELA API_(desenvolvendo) - Google Chrome 2022-09-15 21-56-04](https://user-images.githubusercontent.com/111617449/190534679-6cd361f9-9efe-4f9b-88a4-2d273e746a1c.gif)
 
-
-### Backlog do Produto:											
+## Backlog do Produto:											
 ![image](https://user-images.githubusercontent.com/81196630/190540564-f3e04b58-73d7-4a79-8176-5cf2008eee52.png)
 
 ![image](https://user-images.githubusercontent.com/81196630/190691974-563b1890-e159-4d31-94d8-1bccca90e5d6.png)
 
-
-### Sprint Backlog:
+## Sprint Backlog:
 
 <details>
 
@@ -84,11 +81,10 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 </details>
 
-### Vídeo ou gif da aplicação:
+## Vídeo ou gif da aplicação:
 (A definir)
 
-
-### Tecnologias usadas:
+## Tecnologias usadas:
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" target="_blank"></a>
 <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" target="_blank"></a>
 <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" target="_blank"></a>
