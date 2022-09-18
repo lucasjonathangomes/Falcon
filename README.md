@@ -31,9 +31,6 @@ solução computacional que viabilize a aplicação dessa técnica.
 * *Terceira Sprint 17/10 a 06/11*
 * *Quarta Sprint 07/11 a 27/11*
 
-## Mockup:
-![▶ Page 1 - TELA API_(desenvolvendo) - Google Chrome 2022-09-15 21-56-04](https://user-images.githubusercontent.com/111617449/190534679-6cd361f9-9efe-4f9b-88a4-2d273e746a1c.gif)
-
 ## Product Backlog:
 
 <details>
@@ -94,8 +91,14 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 </details>
 
+## Mockup:
+
+![▶ Page 1 - TELA API_(desenvolvendo) - Google Chrome 2022-09-17 21-03-59](https://user-images.githubusercontent.com/107444159/190880273-547d13ba-0dad-44bb-9aa9-0bfaf73f203e.gif)
+
+
 ## Vídeo ou gif da aplicação:
-(A definir)
+
+![Login py - Api - Visual Studio Code 2022-09-17 21-41-01](https://user-images.githubusercontent.com/107444159/190880865-68beffdd-e5e9-48d8-9dbe-76e190b5951b.gif)
 
 ## Tecnologias usadas:
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" target="_blank"></a>
