@@ -93,8 +93,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 ## Mockup:
 
-![▶ Page 1 - TELA API_(desenvolvendo) - Google Chrome 2022-09-17 21-03-59](https://user-images.githubusercontent.com/107444159/190880273-547d13ba-0dad-44bb-9aa9-0bfaf73f203e.gif)
-
+![▶ Page 1 - Tela-Login - Google Chrome 2022-09-18 20-59-59](https://user-images.githubusercontent.com/107444159/190933797-a8bb2e46-3f4d-46a8-8f0b-65103eecf98e.gif)
 
 ## Vídeo ou gif da aplicação:
 
