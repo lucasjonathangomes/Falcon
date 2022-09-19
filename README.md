@@ -97,7 +97,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 ## Vídeo ou gif da aplicação:
 
-![Login py - Api - Visual Studio Code 2022-09-17 21-41-01](https://user-images.githubusercontent.com/107444159/190880865-68beffdd-e5e9-48d8-9dbe-76e190b5951b.gif)
+![tk 2022-09-18 21-18-51](https://user-images.githubusercontent.com/107444159/190934331-e60756d6-0baf-4db4-be9e-96925e7a1a39.gif)
 
 ## Tecnologias usadas:
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" target="_blank"></a>
