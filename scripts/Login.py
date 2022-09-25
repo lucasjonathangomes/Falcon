@@ -1,6 +1,6 @@
 
 # from Avaliacao_FK import *
-from Avaliacao import * 
+from Avaliacao_FK import * 
 from Cadastrar import * 
 from support import *
 

@@ -1,4 +1,5 @@
 from cgitb import text
+from email.policy import default
 from tkinter import *
 from turtle import left
 from tkinter import ttk
@@ -24,7 +25,7 @@ master.iconbitmap(default=path+"telaCadastro.png")
 master.resizable(width=FALSE, height=FALSE)
 
 # imgFundo = PhotoImage("telaCadastro.png")
-imgFundo = Retorna_imagem('telaCadastro.png')
+imgFundo = PhotoImage(file="fotos\\telaCadastro.png")
 botao = Retorna_imagem("botao.png")
 
 label_fundo = Label(master, image=imgFundo)
