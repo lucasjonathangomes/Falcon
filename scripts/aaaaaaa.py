@@ -16,4 +16,4 @@ Criar_Perguntas(d, perguntas=p, answer_style='combobox', values=[1,2,3,4,5], fon
 
 a.mainloop()
 
-
+# heyyyyyy, olaaaa aibsbcidecubiwr
