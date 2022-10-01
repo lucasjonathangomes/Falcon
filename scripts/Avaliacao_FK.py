@@ -184,10 +184,9 @@ class AvaliacaoFK:
 
         
         
-        
 
 
-# jan = Tk()
-# AvaliacaoFK(jan)
-# jan.mainloop()
+jan = Tk()
+AvaliacaoFK(jan, "Lucas")
+jan.mainloop()
 
