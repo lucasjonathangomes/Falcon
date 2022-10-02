@@ -50,7 +50,7 @@ def Caminho_ate_Falcon():
     '''Retorna o caminho completo até a pasta Scripts'''
     return findall(r'.*Falcon', os.path.dirname(__file__))[0]
 
-def Criar_Perguntas(frame:Frame, perguntas:list, entry_width:int|None=None, values:list|None=None, answer_style:str='entry', cor_fund:str|None=None, cor_letr:str|None=None, font:tuple|None=None):
+def Criar_Perguntas(frame:Frame, perguntas:list, width:int|None=None, values:list|None=None, answer_style:str='entry', cor_fund:str|None=None, cor_letr:str|None=None, font:tuple|None=None):
     '''
     Cria as perguntas da lista "perguntas". \n
     As perguntas são criadas como Label, mas as resposta podem ser criadas como Entry ou Combobox, 
@@ -59,20 +59,23 @@ def Criar_Perguntas(frame:Frame, perguntas:list, entry_width:int|None=None, valu
     '''
     answer_style = answer_style.lower().strip()
     lista_perguntas = []
-    lista_perguntas = []
+    lista_respostas = []
 
     for pergunta in perguntas:
         p = Label(frame, text=pergunta, font=font)
         p.pack()
 
         if answer_style == 'entry':
-            r = Entry(frame, font=font, width=entry_width) 
+            r = Entry(frame, font=font, width=width) 
         elif answer_style == 'combobox':
-            r = ttk.Combobox(frame, values=values, font=font)
+            r = ttk.Combobox(frame, values=values, font=font, width=width)
         else:
             raise 'Valor invalido para o parametro answer_style. Valores esperado: (entry, combobox)'
         r.pack()
-        # Label(frame).pack()
+        Label(frame).pack()
+
+        lista_perguntas.append(p)
+        lista_respostas.append(r)
     
-    return lista_perguntas, lista_perguntas
+    return lista_perguntas, lista_respostas
 

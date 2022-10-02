@@ -3,8 +3,6 @@ from support import *
 
 path = Caminho_ate_Falcon()+"//fotos//"
 master = Tk()
-master.geometry("1440x1024+350+20")
-master.resizable(width=1, height=1)
 
 # Localizar arquivos de imagem
 img_cancelar = Retorna_imagem('bt_cancelar.png')

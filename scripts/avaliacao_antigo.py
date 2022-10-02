@@ -6,18 +6,13 @@ from support import *
 class Avaliar:
     def __init__(self, jan):
         self.jan = jan
-        self.path = Caminho_ate_Falcon()+"//fotos//"
         self.all_info = Ler_JSON('turma.json')
-
-        self.jan.geometry("1440x1024+350+20")
-        self.jan.iconbitmap(default=self.path+"avaliacao.png")
-        self.jan.resizable(width=FALSE, height=FALSE)
 
         self.Criar_Label()
 
     def Criar_Label(self):
-        self.img_fundo = Retorna_imagem('avaliacao.png')
-        self.img_botao = Retorna_imagem("botao.png")
+        self.img_fundo = Retorna_imagem('logo_fatec.png')
+        self.img_botao = Retorna_imagem("git.png")
                
         self.label_fundo = Label(self.jan, image=self.img_fundo)
         self.label_fundo.pack()
@@ -69,7 +64,6 @@ class Avaliar:
         # self.botaoCadastro.place(width=279, height=69, x=550, y=805)
         self.botaoEnviar.place(width=279, height=69, x=800, y=505)
 
-
     def Enviar(self):
         self.times.append(randint(1, 100))
         self.ComboBox_time['values'] = self.times
@@ -94,7 +88,6 @@ class Avaliar:
         except:
             messagebox.showerror(f'{oq_atualizar} invalida', f'{oq_atualizar} "{combox}" não existe. Seleciona da lista')
         
-          
     def Nivel_de_acesso(self):
         pass 
 
@@ -179,7 +172,7 @@ class Avaliar:
 
 
 
-# jan = Tk()
-# Avaliar(jan)
-# jan.mainloop()
+jan = Tk()
+Avaliar(jan)
+jan.mainloop()
 
