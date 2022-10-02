@@ -39,7 +39,7 @@ class Avaliar:
         self.img_confirmar = Retorna_imagem('bt_confirmar.png')
         self.img_icon_user = Retorna_imagem('Icon_User.png')
 
-        self.label_IconUser = Label(jan, image=self.img_icon_user)
+        self.label_IconUser = Label(self.jan, image=self.img_icon_user)
         self.label_IconUser.place(x=10, y=10)
 
         # Aluno
@@ -184,7 +184,7 @@ class Avaliar:
         self.frame_aluno.destroy()
         self.frame_avaliar.destroy()
         # Chamar o arquivo de "Menu"
-
-jan = Tk()
-Avaliar(jan, {'User': 'lukas', 'Perfil': 'Aluno'})
-jan.mainloop()
+     
+# jan = Tk()
+# Avaliar(jan, {'User': 'lukas', 'Perfil': 'Aluno'})
+# jan.mainloop()

@@ -1,45 +1,64 @@
-from support import * 
 
-jan = Tk()
+from support import *
+from Avaliacao import *
 
-# frame_dos_filtros = Frame(jan, width=500 , height=500)#, bg='blue')
-# frame_dos_filtros.place(x=190, y=10)
+class Login:
+    def __init__(self, jan):
+        self.jan = jan
 
-# frame_das_perguntas = Frame(jan, width=500 , height=500)#, bg='midnightblue')
-# frame_das_perguntas.place(x=700, y=10)
+        self.login_name = Label(self.jan, text='Login', fg='red', font=('Arial', 100))
+        self.login_name.place(x=500, y=300)
 
-# perguntas = [
-#             'Trabelho em equipe, cooperação e descentralização de conhecimento:',
-#             'Iniciativa e proatividade:',
-#             'Autodidaxia e agregação de conhecimento ao grupo:',
-#             'Entrega de resultados e participação efetiva no projeto:',
-#             'Competência técnica:'
-# ]
+        self.user = Label(self.jan, text='Usuario', font=('Arial', 20), fg='blue')
+        self.user.place(x=500, y=500)
 
-# valores = [1, 2, 3, 4, 5]
+        self.user_entry = Entry(self.jan, width=25)
+        self.user_entry.place(x=610, y=515)
 
-# def Apagar(item):
-#     item.destroy()
+        self.pasw = Label(self.jan, text='Senha', font=('Arial', 20), fg='blue')
+        self.pasw.place(x=500, y=600)
 
-# Label(frame_dos_filtros, text='Aqui é onde vai os filtros').pack()
-# Label(frame_das_perguntas, text='Aqui é onde vai sa perguntas').pack()
-# # ttk.Combobox(frame_dos_filtros, font=('Arial', 10)).pack()
-# respostas = Criar_Perguntas(frame_das_perguntas, perguntas)
-# respostas = Criar_Perguntas(frame_dos_filtros, perguntas, values=valores, answer_style='combobox')
+        self.pasw_entry = Entry(self.jan, width=25, show='*')
+        self.pasw_entry.place(x=610, y=615)
 
-def Zerar_Valores():
-    for z in lista:
-        z.delete(0, END)
+        self.login_button = Button(self.jan, text='Login', font=('Arial', 10), fg='blue', 
+                                    command=lambda:self.Sing_in(self.user_entry.get(), self.pasw_entry.get()))
+        self.login_button.place(x=820, y=580)
 
-a = ttk.Combobox(jan, font=('Arial', 10), values=[1,2,3,4,5])
-a.pack()
-b = ttk.Combobox(jan, font=('Arial', 10), values=[1,2,3,4,5])
-b.pack()
-c = ttk.Combobox(jan, font=('Arial', 10), values=[1,2,3,4,5])
-c.pack()
-lista = [a,b,c]
-Button(jan, text='Zerar valores', command=Zerar_Valores).pack()
-jan.mainloop()
+        self.register_button = Button(self.jan, text='Registrar-se', font=('Arial', 10), fg='blue', command=lambda:self.Sing_up())
+        self.register_button.place(x=820, y=610)
+
+        self.lista_itens = [self.user, self.user_entry, self.pasw,self.pasw_entry, self.login_button, self.register_button, self.login_name]
+
+    def Sing_in(self, user, psw):
+        users = Ler_JSON('users.json')
+
+        if user in users:
+            passw = users[user]['senha']
+            if passw == psw:
+                Destruir_itens(self.lista_itens)
+                # user_info = Declarar_user(user)
+                # AvaliacaoFK(self.jan, user_info)
+                Avaliar(self.jan)
+            
+            else:
+                self.Mensagem_erro()
+        
+        else:
+            self.Mensagem_erro()
+
+    def Sing_up(self):
+        Cadastrar(self.jan) 
+
+    def Mensagem_erro(self):
+        messagebox.showerror(title='ERROR', message='Algo deu errado, verifique seu usuario e/ou sua senha')
 
 
+
+
+# jan = Tk()
+
+# Login(jan)
+
+# jan.mainloop()
 
