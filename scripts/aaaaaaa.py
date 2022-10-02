@@ -15,5 +15,3 @@ Criar_Perguntas(a, perguntas=p2, answer_style='entry', font=('Bree Serif', 20, '
 Criar_Perguntas(d, perguntas=p, answer_style='combobox', values=[1,2,3,4,5], font=('Arial', 30, 'bold'))
 
 a.mainloop()
-
-# heyyyyyy, olaaaa aibsbcidecubiwr

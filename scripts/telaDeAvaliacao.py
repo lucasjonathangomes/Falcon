@@ -1,9 +1,4 @@
-from cgitb import text
-from email.policy import default
-from tkinter import *
-from turtle import left
-from tkinter import ttk
-from msilib.schema import ComboBox
+
 from support import *
 
 path = Caminho_ate_Falcon()+"//fotos//"
@@ -12,22 +7,23 @@ master.geometry("1440x1024+350+20")
 master.resizable(width=1, height=1)
 
 # Localizar arquivos de imagem
-imgBtCancelar = PhotoImage(file="fotos\\bt_cancelar.png")
-imgBtConfirmar = PhotoImage(file="fotos\\bt_confirmar.png")
-imgIconUser = PhotoImage(file="fotos\\Icon_User.png")
+img_cancelar = Retorna_imagem('bt_cancelar.png')
+img_confirmar = Retorna_imagem('bt_confirmar.png')
+img_icon_user = Retorna_imagem('Icon_User.png')
+
 
 # Frame 1 - Avaliar
 fr_quadro1=Frame(master, borderwidth=1, relief="raised")
 fr_quadro1.place(width=700, height=700, x=710, y=10)
 
-label_IconUser = Label(master, image=imgIconUser)
+label_IconUser = Label(master, image=img_icon_user)
 label_IconUser.place(width=200, height=200, x=10, y=10)
 
-label_BtCancelar = Label(fr_quadro1, image=imgBtCancelar)
+label_BtCancelar = Label(fr_quadro1, image=img_cancelar)
 label_BtCancelar.pack()
 label_BtCancelar.place(width=230, height=45, x=120, y=570)
 
-label_BtConfirmar = Label(fr_quadro1, image=imgBtConfirmar)
+label_BtConfirmar = Label(fr_quadro1, image=img_confirmar)
 label_BtConfirmar.pack()
 label_BtConfirmar.place(width=230, height=45, x=355, y=570)
 

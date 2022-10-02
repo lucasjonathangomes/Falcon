@@ -1,9 +1,4 @@
-from cgitb import text
-from email.policy import default
-from tkinter import *
-from turtle import left
-from tkinter import ttk
-from msilib.schema import ComboBox
+
 from support import *
 
 def salvarUser ():
