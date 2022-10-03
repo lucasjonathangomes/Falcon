@@ -9,10 +9,16 @@ Projeto desenvolvido no 2° Semestre/2022 de BD (Banco de Dados) na Fatec São J
 
 <br>
 
+## Objetivo:
+Apoiar a instituição de ensino PBLTeX, especializada em cursos práticas de ensino aplicando PBL (Problem Based Learning), a desenvolver uma dinâmica de **Avaliação
+Democratizada** baseada na técnica de Avaliação 360º. O grupo deve apoiá-la a levantar, especificar e desenvolver uma
+solução computacional que viabilize a aplicação dessa técnica.
+
+<br>
+
 ## EQUIPE DE DESENVOLVIMENTO
- 
-| Função | Nome | GitHub |
-| :-----------: | :------------- | :--------: |
+|     Função     |      Nome      |   GitHub   |
+| :------------: | :------------- | :--------: |
 | Product Owner | Lucas Henrique Costa de Oliveira | <a href="https://github.com/LucasHCOliveira7" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
 | Scrum Master | Lucas Jonathan Cordeiro Gomes | <a href="https://github.com/lucasjonathangomes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
 | Developer | Lucas Augusto Oliveira de Souza | <a href="https://github.com/LucasOliveira321" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
@@ -21,13 +27,6 @@ Projeto desenvolvido no 2° Semestre/2022 de BD (Banco de Dados) na Fatec São J
 | Developer | Matheus Estevam de Castro | - |
 | Developer | Mateus Pereira Cesare | <a href="https://github.com/MateusPCesare" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
 | Developer | Renato Costa de Moura Mendes |<a href="https://github.com/RenatoCMMendes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
-
-<br>
-
-## Objetivo:
-Apoiar a instituição de ensino PBLTeX, especializada em cursos práticas de ensino aplicando PBL (Problem Based Learning), a desenvolver uma dinâmica de **Avaliação
-Democratizada** baseada na técnica de Avaliação 360º. O grupo deve apoiá-la a levantar, especificar e desenvolver uma
-solução computacional que viabilize a aplicação dessa técnica.
 
 </div>
 
@@ -38,7 +37,6 @@ solução computacional que viabilize a aplicação dessa técnica.
 * *Quarta Sprint 07/11 a 27/11*
 
 ## Product Backlog:
-
 | ID | Descrição | Prioridade | Sprint | Status |
 | :-: | :-----: | :----------: | :---: | :---: |
 | 01 | Como cliente meu programa deve ter um Perfil Admin para cadastrar turmas e cadastrar perfil do instrutor | Alta | 2 | Em andamento |
