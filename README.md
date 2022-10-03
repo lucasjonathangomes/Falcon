@@ -10,11 +10,17 @@ Projeto desenvolvido no 2° Semestre/2022 de BD (Banco de Dados) na Fatec São J
 <br>
 
 ## EQUIPE DE DESENVOLVIMENTO
-
-PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER
------|-----|-----|-----|-----|-----|-----|-----|
-Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto Oliveira de Souza | Lukas Fernando Berto | Igor Cerutti Lima | Matheus Estevam de Castro | Mateus Pereira Cesare | Renato Costa de Moura Mendes 
- <a href="https://github.com/LucasHCOliveira7" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/lucasjonathangomes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/LucasOliveira321" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/LukasFernando" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/IgorCerruti96" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | - | <a href="https://github.com/MateusPCesare" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/RenatoCMMendes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
+ 
+| Função | Nome | GitHub |
+| :-----------: | :------------- | :--------: |
+| Product Owner | Lucas Henrique Costa de Oliveira | <a href="https://github.com/LucasHCOliveira7" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Scrum Master | Lucas Jonathan Cordeiro Gomes | <a href="https://github.com/lucasjonathangomes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Developer | Lucas Augusto Oliveira de Souza | <a href="https://github.com/LucasOliveira321" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Developer | Lukas Fernando Berto | <a href="https://github.com/LukasFernando" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Developer | Igor Cerutti Lima | <a href="https://github.com/IgorCerruti96" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Developer | Matheus Estevam de Castro | - |
+| Developer | Mateus Pereira Cesare | <a href="https://github.com/MateusPCesare" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Developer | Renato Costa de Moura Mendes |<a href="https://github.com/RenatoCMMendes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
 
 <br>
 
