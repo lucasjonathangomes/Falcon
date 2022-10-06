@@ -25,8 +25,8 @@ class Cadastrar:
         self.ComboBox_cargo = ttk.Combobox(values=self.listaCargo)
         self.ComboBox_cargo.place(width=500, height=60, x=323, y=320)
 
-        self.entryNome = Entry(self.jan, bd=2, font=("Arial", 20), justify=LEFT)
-        self.entryNome.place(width=500, height=60, x=323, y=447)
+       self.entryNome = Entry(self.jan, bd=2, font=("Arial", 20), justify=LEFT)
+        self.entryNome.place(width=500, height=60, x=323, y=447) 
 
         self.entryEmail = Entry(self.jan, bd=2, font=("Arial", 20), justify=LEFT)
         self.entryEmail.place(width=500, height=60, x=323, y=547)
@@ -99,4 +99,3 @@ class Cadastrar:
 # jan = Tk()
 # Cadastrar(jan)
 # jan.mainloop()
-
