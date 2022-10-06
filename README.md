@@ -1,7 +1,6 @@
 <div align="center">
 
-# FATEC-API-2022.2-FALCON
-Projeto desenvolvido no 2° Semestre/2022 de BD (Banco de Dados) na Fatec São José dos Campos - Prof. Jessen Vidal
+![Capa Falcon-API](https://user-images.githubusercontent.com/81196630/194436341-7d3a119d-992b-4526-a917-f550c4f559d8.png)
 
 </div>
 
