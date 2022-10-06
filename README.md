@@ -47,11 +47,11 @@ solução computacional que viabilize a aplicação dessa técnica.
 | 06 | Como Instrutor Líder eu quero cadastrar/excluir sprints | Alta | 2 |
 | 07 | Como Usuário eu quero avaliar outros usuários e a mim mesmo (avaliação 360°) | Média | 3| 
 | 08 | Como Instrutor Líder eu quero avaliar o aluno Líder Técnico do time | Média | 3 |
-| 09 | Como Usuário Fake Client eu quero avaliar o aluno PO do time | Média | 1 |
-| 10 | Como Usuário Fake Client eu quero avaliar o Produto/Negócio do time | Média | 3 |
+| 09 | Como Usuário Fake Client eu quero avaliar o aluno PO do time | Média | 1 | Concluido |
+| 10 | Como Usuário Fake Client eu quero avaliar o Produto/Negócio do time | Média | 3 | Concluido |
 | 11 | Como Instrutor Líder eu quero um histórico onde serão armazenados as avaliações realizadas em cada sprint | Baixa | 4 |
 | 12 | Como Instrutor Líder eu quero Dashboards para acompanhamento de sprints e avaliações | Baixa | 4 |
-| 13 | Como cliente meu programa deve ter uma tela de login para ter acesso ao sistema | Baixa | 1 |
+| 13 | Como cliente meu programa deve ter uma tela de login para ter acesso ao sistema | Baixa | 1 | Concluido |
 
 <details>
 
@@ -70,6 +70,13 @@ solução computacional que viabilize a aplicação dessa técnica.
 </details>
 
 ## Sprint Backlog:
+
+| SPRINTS | DATAS | DESCRIÇÃO |
+|:-------:|:-----:|:---------:|
+| Sprint 1 | 29/08/22 a 18/09/22 | Entrega da tela de login e da avaliação do Fake Client |
+| Sprint 2 | 19/09/22 a 09/10/22 | - |
+| Sprint 3 | 17/10/22 a 06/11/22 | - |
+| Sprint 4 | 07/11/22 a 27/11/22 | - |
 
 <details>
 
