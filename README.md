@@ -28,15 +28,9 @@ solução computacional que viabilize a aplicação dessa técnica.
 | Developer | Renato Costa de Moura Mendes |<a href="https://github.com/RenatoCMMendes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
 | Developer | Matheus Estevam de Castro | - |
 
-</div>
+<br>
 
-## Cronograma:
-* *Primeira Sprint 29/08 a 18/09*
-* *Segunda Sprint 19/09 a 09/10*
-* *Terceira Sprint 17/10 a 06/11*
-* *Quarta Sprint 07/11 a 27/11*
-
-## Product Backlog:
+## PRODUCT BACKLOG:
 | ID | Descrição | Prioridade | Sprint | Status |
 | :-: | :-----: | :----------: | :---: | :---: |
 | 01 | Como cliente eu quero que meu programa tenha um perfil Administrador para cadastrar turmas e cadastrar perfil Instrutor Líder | Alta | 2 | Em andamento |
@@ -45,13 +39,15 @@ solução computacional que viabilize a aplicação dessa técnica.
 | 04 | Como Administrador eu quero cadastrar/excluir turmas | Alta | 2 | Em andamento |
 | 05 | Como Instrutor Líder eu quero cadastrar/excluir times | Alta | 2 | Em andamento |
 | 06 | Como Instrutor Líder eu quero cadastrar/excluir sprints | Alta | 2 | Em andamento |
-| 07 | Como Usuário eu quero avaliar outros usuários e a mim mesmo (avaliação 360°) | Média | 3| 
-| 08 | Como Instrutor Líder eu quero avaliar o aluno Líder Técnico do time | Média | 3 |
+| 07 | Como Usuário eu quero avaliar outros usuários e a mim mesmo (avaliação 360°) | Média | 3| A fazer |
+| 08 | Como Instrutor Líder eu quero avaliar o aluno Líder Técnico do time | Média | 3 | A fazer |
 | 09 | Como Usuário Fake Client eu quero avaliar o aluno PO do time | Média | 1 | Concluido |
 | 10 | Como Usuário Fake Client eu quero avaliar o Produto/Negócio do time | Média | 3 | Concluido |
-| 11 | Como Instrutor Líder eu quero um histórico onde serão armazenados as avaliações realizadas em cada sprint | Baixa | 4 |
-| 12 | Como Instrutor Líder eu quero Dashboards para acompanhamento de sprints e avaliações | Baixa | 4 |
+| 11 | Como Instrutor Líder eu quero um histórico onde serão armazenados as avaliações realizadas em cada sprint | Baixa | 4 | A fazer |
+| 12 | Como Instrutor Líder eu quero Dashboards para acompanhamento de sprints e avaliações | Baixa | 4 | A fazer |
 | 13 | Como cliente meu programa deve ter uma tela de login para ter acesso ao sistema | Baixa | 1 | Concluido |
+
+</div>
 
 <details>
 
@@ -69,14 +65,18 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 </details>
 
-## Sprint Backlog:
+<div align="center">
+
+## SPRINT BACKLOG:
 
 | SPRINTS | DATAS | DESCRIÇÃO |
 |:-------:|:-----:|:---------:|
 | Sprint 1 | 29/08/22 a 18/09/22 | Entrega da tela de login e da avaliação do Fake Client |
-| Sprint 2 | 19/09/22 a 09/10/22 | - |
+| Sprint 2 | 19/09/22 a 09/10/22 | Engtrega do perfil Administrador e perfil Instrutor e das telas de cadastro |
 | Sprint 3 | 17/10/22 a 06/11/22 | - |
 | Sprint 4 | 07/11/22 a 27/11/22 | - |
+
+</div>
 
 <details>
 
@@ -118,17 +118,21 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 </details>
 
-## Mockup:
+<div align="center">
+
+## MOCKUP:
 
 ![▶ Page 1 - Tela-Login - Google Chrome 2022-09-18 20-59-59](https://user-images.githubusercontent.com/107444159/190933797-a8bb2e46-3f4d-46a8-8f0b-65103eecf98e.gif)
 
-## Vídeo ou gif da aplicação:
+## VÍDEO/GIF DA APLICAÇÃO:
 
 ![tk 2022-09-18 21-18-51](https://user-images.githubusercontent.com/107444159/190934331-e60756d6-0baf-4db4-be9e-96925e7a1a39.gif)
 
-## Tecnologias usadas:
+## TECNOLOGIAS USADAS:
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" target="_blank"></a>
 <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" target="_blank"></a>
 <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" target="_blank"></a>
 <img src="https://img.shields.io/badge/JSON-%23F24E1E.svg?style=for-the-badge&logo=JSON&logoColor=white" target="_blank"></a>
 <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" target="_blank"></a>
+
+</div>
