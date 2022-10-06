@@ -39,12 +39,12 @@ solução computacional que viabilize a aplicação dessa técnica.
 ## Product Backlog:
 | ID | Descrição | Prioridade | Sprint | Status |
 | :-: | :-----: | :----------: | :---: | :---: |
-| 01 | Como cliente eu quero que meu programa tenha um perfil Administrador para cadastrar turmas e cadastrar perfil Instrutor Líder | Alta | 2 |
-| 02 | Como cliente eu quero que meu programa tenha um perfil Instrutor Líder para cadastrar times, usuários e sprints | Alta | 2 |
-| 03 | Como Instrutor Líder eu quero cadastrar/excluir usuários | Alta | 2 |
-| 04 | Como Administrador eu quero cadastrar/excluir turmas | Alta | 2 |
-| 05 | Como Instrutor Líder eu quero cadastrar/excluir times | Alta | 2 |
-| 06 | Como Instrutor Líder eu quero cadastrar/excluir sprints | Alta | 2 |
+| 01 | Como cliente eu quero que meu programa tenha um perfil Administrador para cadastrar turmas e cadastrar perfil Instrutor Líder | Alta | 2 | Em andamento |
+| 02 | Como cliente eu quero que meu programa tenha um perfil Instrutor Líder para cadastrar times, usuários e sprints | Alta | 2 | Em andamento |
+| 03 | Como Instrutor Líder eu quero cadastrar/excluir usuários | Alta | 2 | Em andamento |
+| 04 | Como Administrador eu quero cadastrar/excluir turmas | Alta | 2 | Em andamento |
+| 05 | Como Instrutor Líder eu quero cadastrar/excluir times | Alta | 2 | Em andamento |
+| 06 | Como Instrutor Líder eu quero cadastrar/excluir sprints | Alta | 2 | Em andamento |
 | 07 | Como Usuário eu quero avaliar outros usuários e a mim mesmo (avaliação 360°) | Média | 3| 
 | 08 | Como Instrutor Líder eu quero avaliar o aluno Líder Técnico do time | Média | 3 |
 | 09 | Como Usuário Fake Client eu quero avaliar o aluno PO do time | Média | 1 | Concluido |
