@@ -33,7 +33,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 ## PRODUCT BACKLOG:
 | ID | Descrição | Prioridade | Sprint | Status |
 | :-: | :-----: | :----------: | :---: | :---: |
-| 01 | Como cliente eu quero que meu programa tenha um perfil Administrador para cadastrar turmas e cadastrar perfil Instrutor Líder | Alta | 2 | Em andamento |
+| 01 | Como cliente eu quero que meu programa tenha um perfil Administrador para cadastrar turmas e cadastrar perfil Instrutor Líder | Alta | 3 | A fazer |
 | 02 | Como cliente eu quero que meu programa tenha um perfil Instrutor Líder para cadastrar times, usuários e sprints | Alta | 2 | Em andamento |
 | 03 | Como Instrutor Líder eu quero cadastrar/excluir usuários | Alta | 2 | Em andamento |
 | 04 | Como Administrador eu quero cadastrar/excluir turmas | Alta | 2 | Em andamento |
@@ -42,7 +42,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 | 07 | Como Usuário eu quero avaliar outros usuários e a mim mesmo (avaliação 360°) | Média | 3| A fazer |
 | 08 | Como Instrutor Líder eu quero avaliar o aluno Líder Técnico do time | Média | 3 | A fazer |
 | 09 | Como Usuário Fake Client eu quero avaliar o aluno PO do time | Média | 1 | Concluido |
-| 10 | Como Usuário Fake Client eu quero avaliar o Produto/Negócio do time | Média | 3 | Concluido |
+| 10 | Como Usuário Fake Client eu quero avaliar o Produto/Negócio do time | Média | 4 | A fazer |
 | 11 | Como Instrutor Líder eu quero um histórico onde serão armazenados as avaliações realizadas em cada sprint | Baixa | 4 | A fazer |
 | 12 | Como Instrutor Líder eu quero Dashboards para acompanhamento de sprints e avaliações | Baixa | 4 | A fazer |
 | 13 | Como cliente meu programa deve ter uma tela de login para ter acesso ao sistema | Baixa | 1 | Concluido |
