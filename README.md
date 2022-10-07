@@ -4,18 +4,16 @@
 
 </div>
 
-<div align="center">
-
 <br>
 
-## Objetivo:
+# OBJETIVO
 Apoiar a instituição de ensino PBLTeX, especializada em cursos práticas de ensino aplicando PBL (Problem Based Learning), a desenvolver uma dinâmica de **Avaliação
 Democratizada** baseada na técnica de Avaliação 360º. O grupo deve apoiá-la a levantar, especificar e desenvolver uma
 solução computacional que viabilize a aplicação dessa técnica.
 
 <br>
 
-## EQUIPE DE DESENVOLVIMENTO
+# EQUIPE DE DESENVOLVIMENTO
 | **FUNÇÃO** | **NOME** | **GITHUB** |ㅤㅤㅤ-ㅤㅤㅤ| **FUNÇÃO** | **NOME** | **GITHUB** |
 |:------:|:----:|:------:|:------:|:------:|:----:|:------:|
 | Product Owner | Lucas Henrique | <a href="https://github.com/LucasHCOliveira7" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |ㅤㅤㅤ-ㅤㅤㅤ| Scrum Master | Lucas Jonathan | <a href="https://github.com/lucasjonathangomes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
@@ -25,7 +23,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 <br>
 
-## PRODUCT BACKLOG:
+# PRODUCT BACKLOG
 | ID | Descrição | Prioridade | Sprint | Status |
 | :-: | :-----: | :----------: | :---: | :---: |
 | 01 | Como cliente eu quero que meu programa tenha um perfil Administrador para cadastrar turmas e cadastrar perfil Instrutor Líder | Alta | 3 | A fazer |
@@ -42,25 +40,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 | 12 | Como Instrutor Líder eu quero Dashboards para acompanhamento de sprints e avaliações | Baixa | 4 | A fazer |
 | 13 | Como cliente meu programa deve ter uma tela de login para ter acesso ao sistema | Baixa | 1 | Concluido |
 
-</div>
-
-<details>
-
-<summary> Product Backlog </summary>
-
-<div align="center">
-
-![image](https://user-images.githubusercontent.com/81196630/190540564-f3e04b58-73d7-4a79-8176-5cf2008eee52.png)
-
-![image](https://user-images.githubusercontent.com/81196630/190691974-563b1890-e159-4d31-94d8-1bccca90e5d6.png)
-
-</div>
-
-</summary>
-
-</details>
-
-## SPRINT BACKLOG:
+# SPRINT BACKLOG
 
 | SPRINTS | DATAS | DESCRIÇÃO | STATUS |
 |:-------:|:-----:|:---------:|:------:|
@@ -111,15 +91,15 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 <div align="center">
 
-## MOCKUP:
+# MOCKUP
 
 ![▶ Page 1 - Tela-Login - Google Chrome 2022-09-18 20-59-59](https://user-images.githubusercontent.com/107444159/190933797-a8bb2e46-3f4d-46a8-8f0b-65103eecf98e.gif)
 
-## VÍDEO/GIF DA APLICAÇÃO:
+# VÍDEO/GIF DA APLICAÇÃO
 
 ![tk 2022-09-18 21-18-51](https://user-images.githubusercontent.com/107444159/190934331-e60756d6-0baf-4db4-be9e-96925e7a1a39.gif)
 
-## TECNOLOGIAS USADAS:
+# TECNOLOGIAS USADAS
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" target="_blank"></a>
 <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" target="_blank"></a>
 <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" target="_blank"></a>
