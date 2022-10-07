@@ -1,4 +1,5 @@
 
+from tkinter import font
 from support import *
 
 
@@ -10,116 +11,95 @@ class Cadastrar:
         self.imgbt_cadastrartime =Retorna_imagem("bt_cadastrar_times.png")
         self.imgIconUser = Retorna_imagem("Icon_User.png")
 
-        self.button_cadastrarsprint = Button(jan, image=self.imgbt_cadastrarsprint, command=lambda:self.CadastrarSprint())
+        self.button_cadastrarsprint = Button(jan, image=self.imgbt_cadastrarsprint, command=lambda:self.Iniciar_perguntas('sprint'))
         self.button_cadastrarsprint.place(x=50, y=180)
 
-        self.label_cadastrarusuario = Button(jan, image=self.imgbt_cadastrarusuario, command=lambda:self.CadastrarUsuario())
+        self.label_cadastrarusuario = Button(jan, image=self.imgbt_cadastrarusuario, command=lambda:self.Iniciar_perguntas('usuario'))
         self.label_cadastrarusuario.place(x=50, y=240)
 
-        self.label_cadastrartime = Button(jan, image=self.imgbt_cadastrartime, command=lambda:self.CadastrarTimes())
+        self.label_cadastrartime = Button(jan, image=self.imgbt_cadastrartime, command=lambda:self.Iniciar_perguntas('time'))
         self.label_cadastrartime.place(x=50, y=300)
 
         self.font = ("Arial", 18)
-    
-     # tirar o bg dps de ajustar a tela!
-     # usar o frame para criar as funções  
-    
 
     def CadastrarSprint(self):
-        frame = Frame(self.jan, width=800, height= 500, bg='green')
-        # frame.pack(side='right')
-        frame.place(x=400, y=200)
 
         # inicio da sprint 1
-        Label(frame, text='Sprint 1 - Início').place (x=0,y=0)
-        self.inicio_sprint1 = Entry(frame, font=self.font, width=6)
-        self.inicio_sprint1.place(x=0, y= 15)
+        Label(self.frame, text='Sprint 1 - Início', font=self.font).place(x=0,y=0)
+        self.inicio_sprint1 = Entry(self.frame, font=self.font, width=10)
+        self.inicio_sprint1.place(x=20, y= 50)
 
         # fim da sprint 1
-        Label(frame, text='Sprint 1 - Fim').place (x=100, y=0)
-        self.fim_sprint1 = Entry(frame, font=self.font, width=5)
+        Label(self.frame, text='Sprint 1 - Fim', font=self.font).place (x=250, y=0)
+        self.fim_sprint1 = Entry(self.frame, font=self.font, width=10)
         # self.fim_sprint1.pack()
-        self.fim_sprint1.place(x=100, y=15)
+        self.fim_sprint1.place(x=280, y=50)
     
+        # -----------------------------------------------------------
+        
+        # inicio da sprint 1
+        Label(self.frame, text='Sprint 1 - Início', font=self.font).place(x=0,y=100)
+        self.inicio_sprint1 = Entry(self.frame, font=self.font, width=10)
+        self.inicio_sprint1.place(x=20, y= 150)
 
-        # # inicio da Sprint 2
-        # Label(frame, text='Sprint 2 - Início').pack()
-        # self.inicio_sprint2 = Entry(frame, font=self.font)
-        # self.inicio_sprint2.pack()
+        # fim da sprint 1
+        Label(self.frame, text='Sprint 1 - Fim', font=self.font).place (x=250, y=100)
+        self.fim_sprint1 = Entry(self.frame, font=self.font, width=10)
+        # self.fim_sprint1.pack()
+        self.fim_sprint1.place(x=280, y=150)
 
-        # # Fim da Sprint 2
-        # Label(frame, text='Sprint 2 - Fim').pack()
-        # self.fim_sprint2 = Entry(frame, font=self.font, )
-        # self.fim_sprint2.pack()
+        # -----------------------------------------------------------
+    
+        # inicio da sprint 1
+        Label(self.frame, text='Sprint 1 - Início', font=self.font).place(x=0,y=200)
+        self.inicio_sprint1 = Entry(self.frame, font=self.font, width=10)
+        self.inicio_sprint1.place(x=20, y= 250)
 
-        # # inicio da Sprint 3
-        # Label(frame, text='Sprint 3 - Início').pack()
-        # self.inicio_sprint3 = Entry(frame, font=self.font)
-        # self.inicio_sprint3.pack()
+        # fim da sprint 1
+        Label(self.frame, text='Sprint 1 - Fim', font=self.font).place (x=250, y=200)
+        self.fim_sprint1 = Entry(self.frame, font=self.font, width=10)
+        # self.fim_sprint1.pack()
+        self.fim_sprint1.place(x=280, y=250)
 
-        # # Fim da Sprint 3
-        # Label(frame, text='Sprint 3 - Fim').pack()
-        # self.fim_sprint3 = Entry(frame, font=self.font, )
-        # self.fim_sprint3.pack()
+    def Iniciar_perguntas(self, cadastrar):
+        try:
+            self.frame.destroy()
+        except:
+            pass 
 
-        # # Inicio da Sprint 4
-        # Label(frame, text='Sprint 4 - Início').pack()
-        # self.inicio_sprint4 = Entry(frame, font=self.font)
-        # self.inicio_sprint4.pack()
+        self.frame = Frame(self.jan, width=800, height= 500)
+        self.frame.place(x=800, y=180)
 
-        # # fim da Sprint 4
-        # Label(frame, text='Sprint 4 - Fim').pack()
-        # self.fim_sprint4 = Entry(frame, font=self.font)
-        # self.fim_sprint4.pack()
+        if cadastrar == 'sprint':
+            self.CadastrarSprint()
+
+        elif cadastrar == 'time':
+            self.CadastrarTimes() 
+
+        elif cadastrar == 'usuario':
+            self.CadastrarUsuario() 
 
     def CadastrarUsuario(self):
-        frame = Frame(self.jan, width=800, height= 600, bg= 'yellow')
-        frame.pack(side='right')
-        # frame.place(x=500, y=200)
-
         self.listaCargo = ["Aluno PO", "Fake Client", "Líder Tecnico", "Aluno"]
 
-        self.ComboBox_cargo = ttk.Combobox(frame, values=self.listaCargo)
-        self.ComboBox_cargo.place(width=500, height=60, x=323, y=320)
+        Label (self.frame, text='Cargo', font=self.font).pack()
+        self.ComboBox_cargo = ttk.Combobox(self.frame, values=self.listaCargo, font=self.font)#, font=('Arial', 10))
+        self.ComboBox_cargo.pack()
 
-        Label (frame, text='Nome').pack()
-        self.entryNome = Entry(frame, font=self.font)
-        self.entryNome.pack() 
+        Label(self.frame).pack()
 
-        Label (frame, text='Email').pack()
-        self.entryEmail = Entry(frame, font=self.font)
-        self.entryEmail.pack()
-
-        Label (frame, text='Senha').pack()
-        self.entrySenha = Entry(frame, show="*", bd=2, font=("Arial", 20))
-        self.entrySenha.place(width=500, height=60, x=323, y=647)
-
-        self.cadastrar_fim = Button(frame, bd=0, image=self.cadastrar_fim, command=self.Salvar_user)
-        # self.botaoCadastro.place(width=279, height=69, x=550, y=805)
-        self.cadastrar_fim.place(width=279, height=69, x=800, y=505)
-
-        self.lista_itens = [self.ComboBox_cargo, self.entryNome, self.entryEmail, self.entrySenha, self.botaoCadastro]
-
-
-
+        self.per, self.re = Criar_Perguntas(self.frame, perguntas=['Nome', 'Email', 'Senha'], font=self.font)
 
     def CadastrarTimes(self):
-        x=323
-        y=647
-        frame = Frame(self.jan, width=800, height= 600, bg= 'red')
-        frame.pack(side='right')
-        self.entryTime = Entry(frame, bd=2, font=("Arial", 28))
-        Label (frame, text='Times', font=("Arial",40)).place(x = x, y = y)
-        self.entryTimes = Entry(frame, bd=2, font=("Arial",20))
+        self.entryTime = Entry(self.frame, bd=2, font=("Arial", 28))
+        Label (self.frame, text='Times', font=("Arial",40)).place(x = x, y = y)
+        self.entryTimes = Entry(self.frame, bd=2, font=("Arial",20))
         self.entryTimes.place(width=500, height=80, x=x, y=y+20)
         
         # self.entryTime.place( x=400, y=500)    
         self.entryTime.pack()
-        # frame.place(x=500, y=200)
-
 
     def CadastrarTurma(self):
-        
         self.entryTurma = Entry(self.jan, bd=4, font=("Arial", 20), justify=LEFT)
         self.entryTurma.place(width=500, height=60, x=400, y=580)   
 
@@ -141,7 +121,7 @@ class Cadastrar:
 
 
 jan = Tk()
-
+jan.geometry("%dx%d" % (jan.winfo_screenwidth(), jan.winfo_screenheight()))
 Cadastrar(jan)
 
 jan.mainloop()

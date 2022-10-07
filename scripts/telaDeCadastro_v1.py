@@ -1,8 +1,4 @@
-from cgitb import text
-from tkinter import *
-from turtle import left
-from tkinter import ttk
-from msilib.schema import ComboBox
+
 from support import *
 
 def salvarUser ():
@@ -24,7 +20,7 @@ master.iconbitmap(default=path+"telaCadastro.png")
 master.resizable(width=FALSE, height=FALSE)
 
 # imgFundo = PhotoImage("telaCadastro.png")
-imgFundo = Retorna_imagem('telaCadastro.png')
+imgFundo = PhotoImage(file="fotos\\telaCadastro.png")
 botao = Retorna_imagem("botao.png")
 
 label_fundo = Label(master, image=imgFundo)

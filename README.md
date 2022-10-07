@@ -9,19 +9,24 @@ Projeto desenvolvido no 2° Semestre/2022 de BD (Banco de Dados) na Fatec São J
 
 <br>
 
-## EQUIPE DE DESENVOLVIMENTO
-
-PRODUCT OWNER | SCRUM MASTER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER | DEVELOPER
------|-----|-----|-----|-----|-----|-----|-----|
-Lucas Henrique Costa de Oliveira | Lucas Jonathan Cordeiro Gomes | Lucas Augusto Oliveira de Souza | Lukas Fernando Berto | Igor Cerutti Lima | Matheus Estevam de Castro | Mateus Pereira Cesare | Renato Costa de Moura Mendes 
- <a href="https://github.com/LucasHCOliveira7" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/lucasjonathangomes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/LucasOliveira321" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/LukasFernando" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/IgorCerruti96" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | - | <a href="https://github.com/MateusPCesare" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://github.com/RenatoCMMendes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
-
-<br>
-
 ## Objetivo:
 Apoiar a instituição de ensino PBLTeX, especializada em cursos práticas de ensino aplicando PBL (Problem Based Learning), a desenvolver uma dinâmica de **Avaliação
 Democratizada** baseada na técnica de Avaliação 360º. O grupo deve apoiá-la a levantar, especificar e desenvolver uma
 solução computacional que viabilize a aplicação dessa técnica.
+
+<br>
+
+## EQUIPE DE DESENVOLVIMENTO
+|     Função     |      Nome      |   GitHub   |
+| :------------: | :------------- | :--------: |
+| Product Owner | Lucas Henrique Costa de Oliveira | <a href="https://github.com/LucasHCOliveira7" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Scrum Master | Lucas Jonathan Cordeiro Gomes | <a href="https://github.com/lucasjonathangomes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Developer | Lucas Augusto Oliveira de Souza | <a href="https://github.com/LucasOliveira321" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Developer | Lukas Fernando Berto | <a href="https://github.com/LukasFernando" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Developer | Igor Cerutti Lima | <a href="https://github.com/IgorCerruti96" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Developer | Matheus Estevam de Castro | - |
+| Developer | Mateus Pereira Cesare | <a href="https://github.com/MateusPCesare" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
+| Developer | Renato Costa de Moura Mendes |<a href="https://github.com/RenatoCMMendes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
 
 </div>
 
@@ -32,6 +37,21 @@ solução computacional que viabilize a aplicação dessa técnica.
 * *Quarta Sprint 07/11 a 27/11*
 
 ## Product Backlog:
+| ID | Descrição | Prioridade | Sprint | Status |
+| :-: | :-----: | :----------: | :---: | :---: |
+| 01 | Como cliente eu quero que meu programa tenha um perfil Administrador para cadastrar turmas e cadastrar perfil Instrutor Líder | Alta | 2 |
+| 02 | Como cliente eu quero que meu programa tenha um perfil Instrutor Líder para cadastrar times, usuários e sprints | Alta | 2 |
+| 03 | Como Instrutor Líder eu quero cadastrar/excluir usuários | Alta | 2 |
+| 04 | Como Administrador eu quero cadastrar/excluir turmas | Alta | 2 |
+| 05 | Como Instrutor Líder eu quero cadastrar/excluir times | Alta | 2 |
+| 06 | Como Instrutor Líder eu quero cadastrar/excluir sprints | Alta | 2 |
+| 07 | Como Usuário eu quero avaliar outros usuários e a mim mesmo (avaliação 360°) | Média | 3| 
+| 08 | Como Instrutor Líder eu quero avaliar o aluno Líder Técnico do time | Média | 3 |
+| 09 | Como Usuário Fake Client eu quero avaliar o aluno PO do time | Média | 1 |
+| 10 | Como Usuário Fake Client eu quero avaliar o Produto/Negócio do time | Média | 3 |
+| 11 | Como Instrutor Líder eu quero um histórico onde serão armazenados as avaliações realizadas em cada sprint | Baixa | 4 |
+| 12 | Como Instrutor Líder eu quero Dashboards para acompanhamento de sprints e avaliações | Baixa | 4 |
+| 13 | Como cliente meu programa deve ter uma tela de login para ter acesso ao sistema | Baixa | 1 |
 
 <details>
 

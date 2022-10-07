@@ -1,9 +1,7 @@
 
 {
-    "None": {"None":"None"},
     "Banco de Dados 1":
     {
-        "None": ["None"],
         "FALCON": 
         {
             "PO": "Lucas",
@@ -26,14 +24,14 @@
         {
             "PO": "Ricardo",
             "Scrum Master": "Luana",
-            "Desenvolvedores": ["Pedro, Beatriz"]
+            "Desenvolvedores": ["Pedro", "Beatriz"]
     
         },
         "The Thunder": 
         {
             "PO": "Ana",
             "Scrum Master": "Amanda",
-            "Desenvolvedores": ["Marcos, João"]
+            "Desenvolvedores": ["Marcos", "João"]
     
         }
     }

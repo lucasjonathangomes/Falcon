@@ -44,29 +44,38 @@ def Ler_Excel():
 
 def Salvar_JSON(nome:str, novo_json:dict):
     with open(Caminho_ate_Falcon()+'\\json\\'+nome, 'w') as a:
-        json.dump(novo_json, a)
+        json.dump(novo_json, a, indent=4)
 
 def Caminho_ate_Falcon():
     '''Retorna o caminho completo até a pasta Scripts'''
     return findall(r'.*Falcon', os.path.dirname(__file__))[0]
 
-def Criar_Perguntas(frame:Frame, perguntas:list, cor_fund:str|None=None, cor_letr:str|None=None, font:tuple|None=None):
+def Criar_Perguntas(frame:Frame, perguntas:list, width:int|None=None, values:list|None=None, answer_style:str='entry', cor_fund:str|None=None, cor_letr:str|None=None, font:tuple|None=None):
     '''
-    Cria perguntas da lista "perguntas". \n
-    Retorna a lista com os elementos (Label) que foram criados.
+    Cria as perguntas da lista "perguntas". \n
+    As perguntas são criadas como Label, mas as resposta podem ser criadas como Entry ou Combobox, 
+    você escolhe no parametro "style_answer" (entry, combobox). \n
+    Retorna duas listas com os elementos das perguntas e respostas, respectivamente, que foram criados.
     '''
-    list_label_perguntas = []
-    list_entry_perguntas = []
+    answer_style = answer_style.lower().strip()
+    lista_perguntas = []
+    lista_respostas = []
 
     for pergunta in perguntas:
         p = Label(frame, text=pergunta, font=font)
         p.pack()
-        r = Entry(frame, width=5)
+
+        if answer_style == 'entry':
+            r = Entry(frame, font=font, width=width) 
+        elif answer_style == 'combobox':
+            r = ttk.Combobox(frame, values=values, font=font, width=width)
+        else:
+            raise 'Valor invalido para o parametro answer_style. Valores esperado: (entry, combobox)'
         r.pack()
-        list_label_perguntas.append(p)
-        list_entry_perguntas.append(r)
+        Label(frame).pack()
+
+        lista_perguntas.append(p)
+        lista_respostas.append(r)
     
-    return list_label_perguntas, list_entry_perguntas
-
-
+    return lista_perguntas, lista_respostas
 

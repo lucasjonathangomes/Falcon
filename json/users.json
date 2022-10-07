@@ -1,1 +1,19 @@
-{"lukas": {"nome": "Lukas", "cargo": "Aluno", "email": "lukas@gmail.com", "acesso": "Aluno", "senha": "12345"}, "aluno": {"nome": "Aluno", "cargo": "Aluno", "email": "aluno@gmail.com", "acesso": "Aluno", "senha": "12345"}, "asdsa": {"nome": "lukas", "cargo": "Fake Client", "email": "asdsa@gmail", "acesso": "Aluno", "senha": "asasasas"}}
+{
+    "lukas": 
+    {
+        "nome": "lukas", 
+        "cargo": "Aluno", 
+        "email": "lukas@gmail.com", 
+        "perfil": "Aluno", 
+        "senha": "12345"
+    },
+    
+    "aluno": 
+    {
+        "nome": "aluno", 
+        "cargo": "Aluno", 
+        "email": "aluno@gmail.com", 
+        "perfil": "Aluno", 
+        "senha": "12345"
+    }
+}
