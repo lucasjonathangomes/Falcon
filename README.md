@@ -64,24 +64,20 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 </details>
 
-<div align="center">
-
 ## SPRINT BACKLOG:
 
-| SPRINTS | DATAS | DESCRIÇÃO |
-|:-------:|:-----:|:---------:|
-| Sprint 1 | 29/08/22 a 18/09/22 | Entrega da tela de login e da avaliação do Fake Client |
-| Sprint 2 | 19/09/22 a 09/10/22 | Engtrega do perfil Administrador e perfil Instrutor e das telas de cadastro |
-| Sprint 3 | 17/10/22 a 06/11/22 | - |
-| Sprint 4 | 07/11/22 a 27/11/22 | - |
-
-</div>
+| SPRINTS | DATAS | DESCRIÇÃO | STATUS |
+|:-------:|:-----:|:---------:|:------:|
+| Sprint 1 | 29/08/22 a 18/09/22 | Entrega da tela de login e da avaliação do Fake Client | Entregue |
+| Sprint 2 | 19/09/22 a 09/10/22 | Engtrega do perfil Administrador e perfil Instrutor e das telas de cadastro | Em andamento |
+| Sprint 3 | 17/10/22 a 06/11/22 | - | - |
+| Sprint 4 | 07/11/22 a 27/11/22 | - | - |
 
 <details>
 
 <summary> Sprint 1 </summary> 
-	
-![image](https://user-images.githubusercontent.com/81196630/190876933-8f342f71-f85c-46b2-8316-bfd7f2e7ffa2.png)
+
+![image](https://user-images.githubusercontent.com/81196630/194438868-a08e7fb1-0aec-4e0e-ad65-d821a9d161a0.png)
 
 </summary>
 
@@ -91,7 +87,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 <summary> Sprint 2 </summary>
 
-![image](https://user-images.githubusercontent.com/81196630/190692356-5af2c0bb-9789-43bf-a7c9-595f4bde4888.png)
+![image](https://user-images.githubusercontent.com/81196630/194438933-f3977766-5c6f-4e5b-8667-6fb347ee8d50.png)
 
 </summary>
 
@@ -101,7 +97,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 <summary> Sprint 3 </summary>
 
-![image](https://user-images.githubusercontent.com/81196630/190692688-9720ed8c-3ebb-4f39-b049-db7dc0af2091.png)
+![image](https://user-images.githubusercontent.com/81196630/194438990-c7febb7d-d4b5-4b36-9816-f5e0989a4903.png)
 
 </summary>
 
@@ -111,7 +107,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 <summary> Sprint 4 </summary>
 
-![image](https://user-images.githubusercontent.com/81196630/190692868-43d7cb2d-a008-45ee-b9d3-94c825f71195.png)
+![image](https://user-images.githubusercontent.com/81196630/194439050-b160592f-b91f-4a33-b615-940a18b38ea2.png)
 
 </summary>
 
