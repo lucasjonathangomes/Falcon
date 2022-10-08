@@ -1,19 +1,23 @@
 {
-    "lukas": 
-    {
-        "nome": "lukas", 
-        "cargo": "Aluno", 
-        "email": "lukas@gmail.com", 
-        "perfil": "Aluno", 
+    "lukas": {
+        "nome": "lukas",
+        "cargo": "Aluno",
+        "email": "lukas@gmail.com",
+        "perfil": "Aluno",
         "senha": "12345"
     },
-    
-    "aluno": 
-    {
-        "nome": "aluno", 
-        "cargo": "Aluno", 
-        "email": "aluno@gmail.com", 
-        "perfil": "Aluno", 
+    "aluno": {
+        "nome": "aluno",
+        "cargo": "Aluno",
+        "email": "aluno@gmail.com",
+        "perfil": "Aluno",
+        "senha": "12345"
+    },
+    "lk12": {
+        "nome": "lukas",
+        "cargo": "Aluno",
+        "email": "lk12@gmail.com",
+        "acesso": "Aluno",
         "senha": "12345"
     }
 }

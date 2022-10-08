@@ -25,7 +25,7 @@ class Cadastrar:
         self.ComboBox_cargo = ttk.Combobox(values=self.listaCargo)
         self.ComboBox_cargo.place(width=500, height=60, x=323, y=320)
 
-       self.entryNome = Entry(self.jan, bd=2, font=("Arial", 20), justify=LEFT)
+        self.entryNome = Entry(self.jan, bd=2, font=("Arial", 20), justify=LEFT)
         self.entryNome.place(width=500, height=60, x=323, y=447) 
 
         self.entryEmail = Entry(self.jan, bd=2, font=("Arial", 20), justify=LEFT)
@@ -40,7 +40,7 @@ class Cadastrar:
 
         self.lista_itens = [self.label_fundo, self.ComboBox_cargo, self.entryNome, self.entryEmail, self.entrySenha, self.botaoCadastro]
 
-    def Salvar_user (self):
+    def Salvar_user(self):
         self.cargo = self.ComboBox_cargo.get()
         self.nome = self.entryNome.get().strip()
         self.email = self.entryEmail.get().strip()
