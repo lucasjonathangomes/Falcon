@@ -10,6 +10,8 @@ class Cadastrar:
         self.imgbt_cadastrarusuario = Retorna_imagem("bt_cadastrar_usuario.png")
         self.imgbt_cadastrartime =Retorna_imagem("bt_cadastrar_times.png")
         self.imgIconUser = Retorna_imagem("Icon_User.png")
+        self.imgcadastrar_fim = Retorna_imagem("cadastrar_fim.png")
+        self.imgcancelar_fim = Retorna_imagem("cancelar_fim.png")
 
         self.button_cadastrarsprint = Button(jan, image=self.imgbt_cadastrarsprint, command=lambda:self.Iniciar_perguntas('sprint'))
         self.button_cadastrarsprint.place(x=50, y=180)
@@ -19,6 +21,7 @@ class Cadastrar:
 
         self.label_cadastrartime = Button(jan, image=self.imgbt_cadastrartime, command=lambda:self.Iniciar_perguntas('time'))
         self.label_cadastrartime.place(x=50, y=300)
+
 
         self.font = ("Arial", 18)
 
@@ -37,35 +40,53 @@ class Cadastrar:
     
         # -----------------------------------------------------------
         
-        # inicio da sprint 1
-        Label(self.frame, text='Sprint 1 - Início', font=self.font).place(x=0,y=100)
+        # inicio da sprint 2
+        Label(self.frame, text='Sprint 2 - Início', font=self.font).place(x=0,y=100)
         self.inicio_sprint1 = Entry(self.frame, font=self.font, width=10)
         self.inicio_sprint1.place(x=20, y= 150)
 
-        # fim da sprint 1
-        Label(self.frame, text='Sprint 1 - Fim', font=self.font).place (x=250, y=100)
+        # fim da sprint 2
+        Label(self.frame, text='Sprint 2 - Fim', font=self.font).place (x=250, y=100)
         self.fim_sprint1 = Entry(self.frame, font=self.font, width=10)
-        # self.fim_sprint1.pack()
+        # self.fim_sprint2.pack()
         self.fim_sprint1.place(x=280, y=150)
 
         # -----------------------------------------------------------
     
-        # inicio da sprint 1
-        Label(self.frame, text='Sprint 1 - Início', font=self.font).place(x=0,y=200)
+        # inicio da sprint 3
+        Label(self.frame, text='Sprint 3 - Início', font=self.font).place(x=0,y=200)
         self.inicio_sprint1 = Entry(self.frame, font=self.font, width=10)
         self.inicio_sprint1.place(x=20, y= 250)
 
-        # fim da sprint 1
-        Label(self.frame, text='Sprint 1 - Fim', font=self.font).place (x=250, y=200)
+        # fim da sprint 3
+        Label(self.frame, text='Sprint 3 - Fim', font=self.font).place (x=250, y=200)
         self.fim_sprint1 = Entry(self.frame, font=self.font, width=10)
-        # self.fim_sprint1.pack()
+        # self.fim_sprint3.pack()
         self.fim_sprint1.place(x=280, y=250)
+         # -----------------------------------------------------------
+    
+        # inicio da sprint 4
+        Label(self.frame, text='Sprint 4 - Início', font=self.font).place(x=0,y=300)
+        self.inicio_sprint1 = Entry(self.frame, font=self.font, width=10)
+        self.inicio_sprint1.place(x=20, y= 350)
+
+        # fim da sprint 4
+        Label(self.frame, text='Sprint 4 - Fim', font=self.font).place (x=250, y=300)
+        self.fim_sprint1 = Entry(self.frame, font=self.font, width=10)
+        # self.fim_sprint4.pack()
+        self.fim_sprint1.place(x=280, y=350)
 
     def Iniciar_perguntas(self, cadastrar):
         try:
             self.frame.destroy()
         except:
             pass 
+        
+        self.label_cadastrarfim = Button(jan, image=self.imgbt_cadastrar_fim, command=lambda:self.Iniciar_perguntas('cadastro fim'))
+        self.label_cadastrarfim.place(x=280, y=500)
+
+        self.label_cancelarfim = Button(jan, image=self.imgbt_cancelar_fim, command=lambda:self.Salvar)
+        self.label_cancelarfim.place(x=0, y=500)
 
         self.frame = Frame(self.jan, width=800, height= 500)
         self.frame.place(x=800, y=180)
