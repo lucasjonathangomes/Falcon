@@ -93,11 +93,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 # MOCKUP
 
-![▶ Page 1 - Tela-Login - Google Chrome 2022-09-18 20-59-59](https://user-images.githubusercontent.com/107444159/190933797-a8bb2e46-3f4d-46a8-8f0b-65103eecf98e.gif)
-
-# VÍDEO/GIF DA APLICAÇÃO
-
-![tk 2022-09-18 21-18-51](https://user-images.githubusercontent.com/107444159/190934331-e60756d6-0baf-4db4-be9e-96925e7a1a39.gif)
+https://user-images.githubusercontent.com/107444159/194784692-b049e285-9843-4f8f-9ddf-b87942f8d8af.mp4
 
 # TECNOLOGIAS USADAS
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" target="_blank"></a>
