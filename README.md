@@ -53,7 +53,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 <summary> Sprint 1 </summary> 
 
-![image](https://user-images.githubusercontent.com/81196630/194438868-a08e7fb1-0aec-4e0e-ad65-d821a9d161a0.png)
+![image](https://user-images.githubusercontent.com/81196630/194788646-66051827-b5e1-456a-a77d-602a78839031.png)
 
 </summary>
 
@@ -63,7 +63,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 <summary> Sprint 2 </summary>
 
-![image](https://user-images.githubusercontent.com/81196630/194438933-f3977766-5c6f-4e5b-8667-6fb347ee8d50.png)
+![image](https://user-images.githubusercontent.com/81196630/194788675-14734ee5-7cfe-4da2-a573-ec40c3765040.png)
 
 </summary>
 
@@ -73,7 +73,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 <summary> Sprint 3 </summary>
 
-![image](https://user-images.githubusercontent.com/81196630/194438990-c7febb7d-d4b5-4b36-9816-f5e0989a4903.png)
+![image](https://user-images.githubusercontent.com/81196630/194788694-9a4620e6-88fc-4624-8a80-8706a46845c2.png)
 
 </summary>
 
@@ -83,7 +83,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 <summary> Sprint 4 </summary>
 
-![image](https://user-images.githubusercontent.com/81196630/194439050-b160592f-b91f-4a33-b615-940a18b38ea2.png)
+![image](https://user-images.githubusercontent.com/81196630/194788706-b87c4cf9-e7eb-414f-8b61-941ff4437967.png)
 
 </summary>
 
