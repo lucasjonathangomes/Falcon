@@ -45,7 +45,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 | SPRINTS | DATAS | DESCRIÇÃO | STATUS |
 |:-------:|:-----:|:---------:|:------:|
 | Sprint 1 | 29/08/22 a 18/09/22 | Entrega da tela de login e da avaliação do Fake Client | Entregue |
-| Sprint 2 | 19/09/22 a 09/10/22 | Engtrega do perfil Administrador e perfil Instrutor e das telas de cadastro | Em andamento |
+| Sprint 2 | 19/09/22 a 09/10/22 | Entrega do perfil Administrador e perfil Instrutor e das telas de cadastro | Em andamento |
 | Sprint 3 | 17/10/22 a 06/11/22 | - | - |
 | Sprint 4 | 07/11/22 a 27/11/22 | - | - |
 
