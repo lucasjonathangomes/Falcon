@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body{
+    margin: 0; /* Margem */
+    font-family: 'Noto Sans', sans-serif; /* Fontes */
+}
+
+body * {
+    box-sizing: border-box; /* Dimensionamento de Caixa */
+}
+
+.main-cad-inst{
+    width: 100vw; /* Largura */
+    height: 100vh; /* Altura */
+    background: #dcdcdc; /* Fundo */
+    display: center; /* Exibição */
+    justify-content: center; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+}
+
+.botoes{
+    width: 30%; /* Largura */
+    display: flex; /* Exibição */
+    justify-content: center; /* Justificar Conteúdo */
+    align-items: left; /* Itens de Alinhamento */
+    flex-direction: column; /* Direção Flexível */
+    padding: 30px 35px; /* Preenchimento */
+}
+
+.botoes > h1{
+    color: black; /* Cor */
+    font-weight: 800; /* Espessura da Fonte */
+    margin: 0; /* Margem */
+}
+
+.botao-cadastrar{
+    width: 50%; /* Largura */
+    padding: 16px 0px; /* Preenchimento */
+    margin: 3px; /* Margem */
+    border: none; /* Borda */
+    border-radius: 8px; /* Raio da Borda */
+    outline: none; /* Contorno */
+    text-transform: uppercase; /* Transformação do Texto */
+    font-weight: 800; /* Espessura da Fonte */
+    letter-spacing: 1px; /* Espaçamento entre Letras */
+    color: #000; /* Cor */
+    background: #e49632; /* Fundo */
+    cursor: pointer; /* Cursor */
+}
+
+@media only screen and (max-width: 950px){
+    .botoes{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-cad-inst{
+        flex-direction: column;
+    }
+}

@@ -1,16 +1,21 @@
 
-from support import *
-from Login import *
+import eel
+import support
 
-def Main():
-    jan = Tk()
-    jan.title('FALCON - Avaliação 360')
-    jan.configure(background='white')
-    jan.attributes('-alpha', 0.9)
-    jan.geometry("%dx%d" % (jan.winfo_screenwidth(), jan.winfo_screenheight()))
-    Login(jan)
-    jan.mainloop()
+eel.init('telas')
 
-if '__name__':
-    Main()
+@eel.expose
+def Fazer_login(user, pasw):
+	print(user)
+	print(pasw)
+	eel.go_to('menu.html')
 
+@eel.expose
+def Testar_os_botoes():
+	print('Botão Valido!')
+
+@eel.expose
+def Atualizar_pagina(nome_pagina):
+		eel.go_to(nome_pagina)
+
+eel.start("html/login.html", port=8000)

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="shortcut icon" href="../fotos/falcon-favicon.png" type="image/x-icon">
+    <title>Login</title>
+
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1> Informe seus dados<br>Para acessar o sistema</h1>
+            <img src="../fotos/logo_falcon.png" class="left-login-image" alt="Logo Falcon">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="user" name="usuário" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="pass" name="senha" placeholder="Senha">
+                </div>
+                <button class="btn-login" onclick="Fazer_login()">ACESSAR</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script>
+        eel.expose(go_to) 
+        function go_to(url) {
+            window.location.replace(url);
+        }
+
+        function Fazer_login() {
+            let user = document.getElementById('user').value;
+            let pass = document.getElementById('pass').value;
+            eel.Fazer_login(user, pass);
+        }
+    </script>
+</body>
+</html>

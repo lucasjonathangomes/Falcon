@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/menu.css">
+    <title>Meu perfil</title>
+
+</head>
+<body>
+    <div class="main-instrutor">
+        <div class="center-instrutor">
+            <div class="botoes">
+                <h1 id="nome usuário"></h1>
+                <button class="botao-cadastrar" onclick="Cadastrar()">CADASTRAR</button>
+                <button class="botao-avaliar" onclick="Esconder()">AVALIAR</button>
+                <button class="botao-historico" onclick="Teste()">HISTÓRICO</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script>
+        eel.expose(go_to) 
+        function go_to(url) {
+            window.location.replace(url);
+        }
+        function Teste(){
+            eel.Testar_os_botoes()
+        }
+
+        function Esconder(){
+            eel.Testar_os_botoes()
+            var btn = document.querySelector('.botao-avaliar');
+            var container = document.querySelector('.botao-cadastrar');                
+            if(container.style.display === 'block') {
+                container.style.display = 'none';
+            } 
+            else {
+                container.style.display = 'block';
+            };
+        }
+
+        function Cadastrar(){
+            eel.Atualizar_pagina('cadastrar.html')
+        }
+    </script>
+</body>
+</html>
