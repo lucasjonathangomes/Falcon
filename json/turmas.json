@@ -1,0 +1,41 @@
+{
+    "Banco de Dados 1": {
+        "Falcon": {
+            "PO": "Lucas",
+            "Scrum Master": "Ricardo",
+            "Desenvolvedores": [
+                "Lucas"
+            ],
+            "Alunos": [
+                "Lucas",
+                "Lucas",
+                "Ricardo"
+            ]
+        },
+        "GO BDD": {
+            "PO": "Juan",
+            "Scrum Master": "Bruna",
+            "Desenvolvedores": [
+                "Breno"
+            ]
+        }
+    },
+    "Banco de Dados 2": {
+        "The Best": {
+            "PO": "Ricardo",
+            "Scrum Master": "Luana",
+            "Desenvolvedores": [
+                "Pedro",
+                "Beatriz"
+            ]
+        },
+        "The Thunder": {
+            "PO": "Ana",
+            "Scrum Master": "Amanda",
+            "Desenvolvedores": [
+                "Marcos",
+                "Jo\u00e3o"
+            ]
+        }
+    }
+}

@@ -18,4 +18,11 @@ def Testar_os_botoes():
 def Atualizar_pagina(nome_pagina):
 		eel.go_to(nome_pagina)
 
+@eel.expose
+def Cadastrar(oq_cadastrar:str, info:dict):
+	oq_cadastrar = oq_cadastrar.strip().lower()
+	resultado = support.Cadastrar().Iniciar_cadastro(oq_cadastrar, info)
+	print(resultado)
+
+
 eel.start("html/login.html", port=8000)

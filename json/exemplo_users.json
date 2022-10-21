@@ -1,0 +1,11 @@
+
+{
+    "user (nome do email)": 
+    {
+        "nome": "nome",
+        "cargo": "cargo",
+        "email": "email",
+        "acesso":"acesso",
+        "senha": "blabla"
+    }
+}
