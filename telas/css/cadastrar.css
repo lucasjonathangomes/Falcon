@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body{
+    margin: 0; /* Margem */
+    font-family: 'Noto Sans', sans-serif; /* Fontes */
+}
+
+body * {
+    box-sizing: border-box; /* Dimensionamento de Caixa */
+}
+
+.main-cad{
+    width: 100vw; /* Largura */
+    height: 100vh; /* Altura */
+    background: #dcdcdc; /* Fundo */
+    display: flex; /* Exibição */
+    justify-content: center; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+}
+
+.botoes{
+    width: 80%; /* Largura */
+    display: flex; /* Exibição */
+    justify-content: center; /* Justificar Conteúdo */
+    align-items: left; /* Itens de Alinhamento */
+    flex-direction: column; /* Direção Flexível */
+    padding: 30px 35px; /* Preenchimento */
+}
+
+.botoes > h1{
+    color: black; /* Cor */
+    font-weight: 800; /* Espessura da Fonte */
+    margin: 0; /* Margem */
+}
+
+.botao-cadastrar{
+    width: 100%; /* Largura */
+    padding: 16px 0px; /* Preenchimento */
+    margin: 10px; /* Margem */
+    border: none; /* Borda */
+    border-radius: 8px; /* Raio da Borda */
+    outline: none; /* Contorno */
+    text-transform: uppercase; /* Transformação do Texto */
+    font-weight: 800; /* Espessura da Fonte */
+    letter-spacing: 1px; /* Espaçamento entre Letras */
+    color: #000; /* Cor */
+    background: #e49632; /* Fundo */
+    cursor: pointer; /* Cursor */
+}
+
+@media only screen and (max-width: 950px){
+    .botoes{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-cad{
+        flex-direction: column;
+    }
+}
+
+.right-cad{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastrar-turma{
+    width: 100%; /* Largura */
+    display: none; /* Exibição */
+    justify-content: right; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+    flex-direction: column; /* Direção Flexível */
+    padding: 30px 35px; /* Preenchimento */
+    background: #a9a9a9; /* Fundo */
+    border-radius: 20px; /* Raio da Borda */
+    box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+}
+
+.cadastrar-instrutor{
+    width: 100%; /* Largura */
+    display: none; /* Exibição */
+    justify-content: right; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+    flex-direction: column; /* Direção Flexível */
+    padding: 30px 35px; /* Preenchimento */
+    background: #a9a9a9; /* Fundo */
+    border-radius: 20px; /* Raio da Borda */
+    box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+}
+
+.cadastrar-time{
+    width: 100%; /* Largura */
+    display: none; /* Exibição */
+    justify-content: right; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+    flex-direction: column; /* Direção Flexível */
+    padding: 30px 35px; /* Preenchimento */
+    background: #a9a9a9; /* Fundo */
+    border-radius: 20px; /* Raio da Borda */
+    box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+}
+
+.cadastrar-usuario{
+    width: 100%; /* Largura */
+    display: none; /* Exibição */
+    justify-content: right; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+    flex-direction: column; /* Direção Flexível */
+    padding: 30px 35px; /* Preenchimento */
+    background: #a9a9a9; /* Fundo */
+    border-radius: 20px; /* Raio da Borda */
+    box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+}
+
+.cadastrar-sprint{
+    width: 100%; /* Largura */
+    display: none; /* Exibição */
+    justify-content: right; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+    flex-direction: column; /* Direção Flexível */
+    padding: 30px 35px; /* Preenchimento */
+    background: #a9a9a9; /* Fundo */
+    border-radius: 20px; /* Raio da Borda */
+    box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: white;
+    color: #000;
+    font-size: 11pt;
+    box-shadow: 0px 5px 20px #c0c0c0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label{
+    color: #000;
+    margin-bottom: 2px;
+}
+
+.textfield > input::placeholder{
+    color: #000;
+}
+
+@media only screen and (max-width: 950px){
+    .right-cad{
+        width: 85%;
+    }
+}
