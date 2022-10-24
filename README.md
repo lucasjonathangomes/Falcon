@@ -1,6 +1,6 @@
 <div align="center">
 
-![Capa Falcon-API](https://user-images.githubusercontent.com/81196630/194436341-7d3a119d-992b-4526-a917-f550c4f559d8.png)
+![Capa Falcon-API](https://user-images.githubusercontent.com/81196630/197643520-3f90b5d6-1f8a-4699-94c1-99a604473170.png)
 
 </div>
 
@@ -26,14 +26,14 @@ solução computacional que viabilize a aplicação dessa técnica.
 # PRODUCT BACKLOG
 | ID | Descrição | Prioridade | Sprint | Status |
 | :-: | :-----: | :----------: | :---: | :---: |
-| 01 | Como cliente eu quero que meu programa tenha um perfil Administrador para cadastrar turmas e cadastrar perfil Instrutor Líder | Alta | 3 | A fazer |
-| 02 | Como cliente eu quero que meu programa tenha um perfil Instrutor Líder para cadastrar times, usuários e sprints | Alta | 2 | Em andamento |
-| 03 | Como Instrutor Líder eu quero cadastrar/excluir usuários | Alta | 2 | Em andamento |
-| 04 | Como Administrador eu quero cadastrar/excluir turmas | Alta | 2 | Em andamento |
-| 05 | Como Instrutor Líder eu quero cadastrar/excluir times | Alta | 2 | Em andamento |
-| 06 | Como Instrutor Líder eu quero cadastrar/excluir sprints | Alta | 2 | Em andamento |
-| 07 | Como Usuário eu quero avaliar outros usuários e a mim mesmo (avaliação 360°) | Média | 3| A fazer |
-| 08 | Como Instrutor Líder eu quero avaliar o aluno Líder Técnico do time | Média | 3 | A fazer |
+| 01 | Como cliente eu quero que meu programa tenha um perfil Administrador para cadastrar turmas e cadastrar perfil Instrutor Líder | Alta | 3 | Em andamento |
+| 02 | Como cliente eu quero que meu programa tenha um perfil Instrutor Líder para cadastrar times, usuários e sprints | Alta | 2 | Concluido |
+| 03 | Como Instrutor Líder eu quero cadastrar/excluir usuários | Alta | 2 | Concluido |
+| 04 | Como Administrador eu quero cadastrar/excluir turmas | Alta | 2 | Concluido |
+| 05 | Como Instrutor Líder eu quero cadastrar/excluir times | Alta | 2 | Concluido |
+| 06 | Como Instrutor Líder eu quero cadastrar/excluir sprints | Alta | 2 | Concluido |
+| 07 | Como Usuário eu quero avaliar outros usuários e a mim mesmo (avaliação 360°) | Média | 3| Em andamento |
+| 08 | Como Instrutor Líder eu quero avaliar o aluno Líder Técnico do time | Média | 3 | Em andamento |
 | 09 | Como Usuário Fake Client eu quero avaliar o aluno PO do time | Média | 1 | Concluido |
 | 10 | Como Usuário Fake Client eu quero avaliar o Produto/Negócio do time | Média | 4 | A fazer |
 | 11 | Como Instrutor Líder eu quero um histórico onde serão armazenados as avaliações realizadas em cada sprint | Baixa | 4 | A fazer |
@@ -45,8 +45,8 @@ solução computacional que viabilize a aplicação dessa técnica.
 | SPRINTS | DATAS | DESCRIÇÃO | STATUS |
 |:-------:|:-----:|:---------:|:------:|
 | Sprint 1 | 29/08/22 a 18/09/22 | Entrega da tela de login e da avaliação do Fake Client | Entregue |
-| Sprint 2 | 19/09/22 a 09/10/22 | Entrega do perfil Administrador e perfil Instrutor e das telas de cadastro | Em andamento |
-| Sprint 3 | 17/10/22 a 06/11/22 | - | - |
+| Sprint 2 | 19/09/22 a 09/10/22 | Entrega do perfil Administrador e perfil Instrutor e das telas de cadastro | Entregue |
+| Sprint 3 | 17/10/22 a 06/11/22 | Entrega do perfil administrador e avaliação  | Em andamento |
 | Sprint 4 | 07/11/22 a 27/11/22 | - | - |
 
 <details>
@@ -95,11 +95,6 @@ solução computacional que viabilize a aplicação dessa técnica.
 
 https://user-images.githubusercontent.com/107444159/194784692-b049e285-9843-4f8f-9ddf-b87942f8d8af.mp4
 
-# TECNOLOGIAS USADAS
-<img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" target="_blank"></a>
-<img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" target="_blank"></a>
-<img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" target="_blank"></a>
-<img src="https://img.shields.io/badge/JSON-%23F24E1E.svg?style=for-the-badge&logo=JSON&logoColor=white" target="_blank"></a>
-<img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" target="_blank"></a>
+![Tec Usadas API](https://user-images.githubusercontent.com/81196630/197643574-49bb818a-0c68-4a91-8587-b6176c46f3f4.png)
 
 </div>
