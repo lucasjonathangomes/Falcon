@@ -7,20 +7,58 @@
     <link rel="stylesheet" href="../css/cadastrar.css">
     <title>Cadastro</title>
 </head>
-<body>
+<body>    
+    <script>
+        function mostraA(){
+            if(document.getElementById("cdTurma").style.display == 'none'){
+                document.getElementById("cdTurma").style.display = 'block';
+            }else{                
+            document.getElementById("cdTurma").style.display = 'none';
+            }
+        }
+        function mostraB(){
+            if(document.getElementById("cdInstrutor").style.display == 'none'){
+                document.getElementById("cdInstrutor").style.display = 'block';
+            }else{                
+            document.getElementById("cdInstrutor").style.display = 'none';
+            }
+        }
+        function mostraC(){
+            if(document.getElementById("cdTime").style.display == 'none'){
+                document.getElementById("cdTime").style.display = 'block';
+            }else{                
+            document.getElementById("cdTime").style.display = 'none';
+            }
+        }
+        function mostraD(){
+            if(document.getElementById("cdUsuario").style.display == 'none'){
+                document.getElementById("cdUsuario").style.display = 'block';
+            }else{                
+            document.getElementById("cdUsuario").style.display = 'none';
+            }
+        }
+        function mostraE(){
+            if(document.getElementById("cdSprint").style.display == 'none'){
+                document.getElementById("cdSprint").style.display = 'block';
+            }else{                
+            document.getElementById("cdSprint").style.display = 'none';
+            }
+        }
+    </script>
+
     <div class="main-cad">
         <div class="left-cad">
             <div class="botoes">
                 <H1>CADASTRO</H1>
-                <button class="botao-cadastrar">CADASTRAR TURMA</button>
-                <button class="botao-cadastrar">CADASTRAR INSTRUTOR</button>
-                <button class="botao-cadastrar">CADASTRAR TIME</button>
-                <button class="botao-cadastrar">CADASTRAR USUÁRIO</button>
-                <button class="botao-cadastrar">CADASTRAR SPRINT</button>
+                <button class="botao-cadastrar" onclick="mostraA()">CADASTRAR TURMA</button>
+                <button class="botao-cadastrar" onclick="mostraB()">CADASTRAR INSTRUTOR</button>
+                <button class="botao-cadastrar" onclick="mostraC()">CADASTRAR TIME</button>
+                <button class="botao-cadastrar" onclick="mostraD()">CADASTRAR USUÁRIO</button>
+                <button class="botao-cadastrar" onclick="mostraE()">CADASTRAR SPRINT</button>
             </div>
         </div>
         <div class="right-cad">
-            <div class="cadastrar-turma">
+            <div class="cadastrar-turma" id="cdTurma">
                 <h1>CADASTRAR TURMA</h1>
                 <div class="textfield">
                     <label for="nome">Nome da Turma</label>
@@ -31,7 +69,7 @@
                     <button class="bt-salvar">Salvar</button>
                 </div>
             </div>
-            <div class="cadastrar-instrutor">
+            <div class="cadastrar-instrutor" id="cdInstrutor">
                 <h1>CADASTRAR INSTRUTOR</h1>
                 <div class="textfield">
                     <label for="nome">Nome do Instrutor</label>
@@ -42,7 +80,7 @@
                     <button class="bt-salvar">Salvar</button>
                 </div>
             </div>    
-            <div class="cadastrar-time">
+            <div class="cadastrar-time" id="cdTime">
                 <h1>CADASTRAR TIME</h1>
                 <div class="textfield">
                     <label for="nome">Nome do Time</label>
@@ -53,7 +91,7 @@
                     <button class="bt-salvar">Salvar</button>
                 </div>
             </div>    
-            <div class="cadastrar-usuario">
+            <div class="cadastrar-usuario" id="cdUsuario">
                 <h1>CADASTRAR USUÁRIO</h1>
                 <div class="textfield">
                     <label for="nome">Nome do Usuário</label>
@@ -64,7 +102,7 @@
                     <button class="bt-salvar">Salvar</button>
                 </div>
             </div>    
-            <div class="cadastrar-sprint">
+            <div class="cadastrar-sprint" id="cdSprint">
                 <h1>CADASTRAR SPRINT</h1>
                 <div class="textfield">
                     <label for="nome">Sprint</label>
@@ -77,5 +115,6 @@
             </div>
         </div> 
     </div>
+    
 </body>
 </html>
