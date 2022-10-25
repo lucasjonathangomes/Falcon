@@ -19,10 +19,10 @@ body * {
 }
 
 .botoes{
-    width: 80%; /* Largura */
+    width: 100%; /* Largura */
     display: flex; /* Exibição */
     justify-content: center; /* Justificar Conteúdo */
-    align-items: left; /* Itens de Alinhamento */
+    align-items: center; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */
     padding: 30px 35px; /* Preenchimento */
 }
@@ -70,7 +70,7 @@ body * {
 
 .cadastrar-turma{
     width: 100%; /* Largura */
-    display: none; /* Exibição */
+    display: flex; /* Exibição */
     justify-content: right; /* Justificar Conteúdo */
     align-items: center; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */
@@ -126,6 +126,25 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+}
+
+.bt-cancelar-salvar{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.bt-cancelar{
+    background-color: rgb(241, 9, 9);
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.bt-salvar{
+    background-color: rgb(83, 233, 24);
+    cursor: pointer;
+    border-radius: 6px;
 }
 
 .textfield{
