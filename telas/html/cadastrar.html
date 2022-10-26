@@ -27,19 +27,20 @@
                     <input type="text" id="turma" name="Turma">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar">Cancelar</button>
-                    <button class="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>
             <div class="cadastrar-instrutor">
                 <h1>CADASTRAR INSTRUTOR</h1>
+                <button class="escolher-turma" type="submit">Escolha uma turma +</button>
                 <div class="textfield">
                     <label for="nome">Nome do Instrutor</label>
                     <input type="text" id="instrutor" name="Instrutor">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar">Cancelar</button>
-                    <button class="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>    
             <div class="cadastrar-time">
@@ -49,30 +50,63 @@
                     <input type="text" id="time" name="Time">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar">Cancelar</button>
-                    <button class="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>    
             <div class="cadastrar-usuario">
                 <h1>CADASTRAR USUÁRIO</h1>
+                <select class="textfield-cargo" name="cargo" id="cargo">
+                    <option value="Desenvolvedor">Ponto Python</option>
+                    <option value="PO">First</option>
+                    <option value="SM">Falcon</option>
+                </select>
                 <div class="textfield">
-                    <label for="nome">Nome do Usuário</label>
+                    <label for="nome">Nome do usuário:</label>
                     <input type="text" id="usuário" name="Usuário">
                 </div>
+                <div class="textfield">
+                    <label for="email">E-mail do usuário:</label>
+                    <input type="email" name="Email" id="email">
+                </div>
+                <div class="textfield">
+                    <label for="cargo">Cargo do usuário:</label>
+                    <select class="textfield-cargo" name="cargo" id="cargo">
+                        <option value="Desenvolvedor">Desenvolvedor</option>
+                        <option value="PO">PO</option>
+                        <option value="SM">SM</option>
+                    </select>
+                </div>
+                <div class="textfield">
+                    <label for="senha-do-usuário">Crie uma senha para o usuário:</label>
+                    <input type="text" id="senha-do-usuário">
+                </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar">Cancelar</button>
-                    <button class="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>    
             <div class="cadastrar-sprint">
                 <h1>CADASTRAR SPRINT</h1>
-                <div class="textfield">
-                    <label for="nome">Sprint</label>
-                    <input type="text" id="sprint" name="Sprint">
+                <div class="textfield-sprint">
+                    <label for="nome">Coloque as datas de início e fim da Sprint</label>
+                    <div class="datas">      
+                        <div class="datas-início">
+                            <label for="início">Início:</label>
+                            <input type="date" id="sprint-inicio" name="Sprint" required>
+                            <span class="validity"></span>        
+                        </div>
+                        <div class="datas-fim">
+                            <label for="fim">Fim:</label>
+                            <input type="date" id="sprint-fim" name="Sprint" required>
+                            <span class="validity"></span>
+                        </div>
+                    </div>
+                    <button class="bt-add" type="submit">+</button>
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar">Cancelar</button>
-                    <button class="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>
         </div> 

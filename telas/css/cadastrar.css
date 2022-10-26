@@ -70,7 +70,7 @@ body * {
 
 .cadastrar-turma{
     width: 100%; /* Largura */
-    display: flex; /* Exibição */
+    display: none; /* Exibição */
     justify-content: right; /* Justificar Conteúdo */
     align-items: center; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */
@@ -92,6 +92,16 @@ body * {
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
 }
 
+.escolher-turma{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-size: large;
+    cursor: pointer;
+}
+
 .cadastrar-time{
     width: 100%; /* Largura */
     display: none; /* Exibição */
@@ -106,7 +116,7 @@ body * {
 
 .cadastrar-usuario{
     width: 100%; /* Largura */
-    display: none; /* Exibição */
+    display: flex; /* Exibição */
     justify-content: right; /* Justificar Conteúdo */
     align-items: center; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */
@@ -114,6 +124,16 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+}
+
+.escolher-time{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-size: large;
+    cursor: pointer;
 }
 
 .cadastrar-sprint{
@@ -129,22 +149,53 @@ body * {
 }
 
 .bt-cancelar-salvar{
-    width: 100%;
+    width: 40%;
     justify-content: center;
     display: flex;
-    align-items: center;
+    align-items: right;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 5px;
 }
 
-.bt-cancelar{
+#bt-cancelar{
     background-color: rgb(241, 9, 9);
-    cursor: pointer;
-    border-radius: 6px;
 }
 
-.bt-salvar{
+#bt-salvar{
     background-color: rgb(83, 233, 24);
-    cursor: pointer;
-    border-radius: 6px;
+}
+
+.bt-add{
+    font-size: large;
+    margin-top: 50px;
+}
+
+.datas{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+}
+
+.datas-início{
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.datas-fim{
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 50px;
 }
 
 .textfield{
@@ -154,6 +205,22 @@ body * {
     align-items: flex-start;
     justify-content: center;
     margin: 10px 0px;
+}
+
+.textfield-sprint{
+    display: center;
+}
+
+.textfield-cargo{
+    font-size: 11pt;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    border-radius: 6px;
+    padding: 12px;
 }
 
 .textfield > input{
