@@ -88,11 +88,11 @@
                 <h1>CADASTRAR TURMA</h1>
                 <div class="textfield">
                     <label for="nome">Nome da Turma</label>
-                    <input type="text" id="turma" name="Turma">
+                    <input type="text" id="cadastrar-turma" name="Turma123">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
-                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar" onclick="cad()">Salvar</button>
                 </div>
             </div>
             <div class="cadastrar-instrutor" id="cdInstrutor">
@@ -137,7 +137,7 @@
                 <h1>CADASTRAR USUÁRIO</h1>
                 <div class="textfield">
                     <label for="turma">Escolha a turma que o usuário pertence:</label>
-                    <select class="textfield-turma" name="turma" id="turma">
+                    <select class="textfield-turma" id="turma">
                         <option value="turma1">Turma 1</option>
                         <option value="turma2">Turma 2</option>
                         <option value="turma3">BD 2022-2</option>
@@ -213,6 +213,20 @@
         const select = document.getElementById("select-turma")
 
         select.options[select.options] = new Option('My option', 'My value');
+
+        function cad(){
+            let a = document.getElementById("cadastrar-turma").value;
+            eel.Cadastrar('turma', {'Turma': a});
+            document.getElementById("cadastrar-turma").value = "";
+            
+            if(eel.Cadastrar('turma', {'Turma': a}) == true){
+                window.alert('Cadastrado com sucesso! ');
+            }else{
+                window.alert('Turma já existe!');
+            }
+            
+        }
+               
     </script>
 </body>
 </html>
