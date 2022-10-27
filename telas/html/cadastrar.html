@@ -5,41 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/cadastrar.css">
+    <script type="text\javascript" src="/eel.js"></script>
     <title>Cadastro</title>
 </head>
 <body>    
     <script>
         function mostraA(){
             if(document.getElementById("cdTurma").style.display == 'none'){
+
                 document.getElementById("cdTurma").style.display = 'block';
+                document.getElementById("cdInstrutor").style.display = 'none';
+                document.getElementById("cdTime").style.display = 'none';
+                document.getElementById("cdUsuario").style.display = 'none';
+                document.getElementById("cdSprint").style.display = 'none';
             }else{                
             document.getElementById("cdTurma").style.display = 'none';
             }
         }
         function mostraB(){
             if(document.getElementById("cdInstrutor").style.display == 'none'){
+
                 document.getElementById("cdInstrutor").style.display = 'block';
+                document.getElementById("cdTurma").style.display = 'none';
+                document.getElementById("cdTime").style.display = 'none';
+                document.getElementById("cdUsuario").style.display = 'none';
+                document.getElementById("cdSprint").style.display = 'none';
             }else{                
             document.getElementById("cdInstrutor").style.display = 'none';
             }
         }
         function mostraC(){
             if(document.getElementById("cdTime").style.display == 'none'){
+
                 document.getElementById("cdTime").style.display = 'block';
+                document.getElementById("cdInstrutor").style.display = 'none';
+                document.getElementById("cdTurma").style.display = 'none';
+                document.getElementById("cdUsuario").style.display = 'none';
+                document.getElementById("cdSprint").style.display = 'none';
             }else{                
             document.getElementById("cdTime").style.display = 'none';
             }
         }
         function mostraD(){
             if(document.getElementById("cdUsuario").style.display == 'none'){
+
                 document.getElementById("cdUsuario").style.display = 'block';
+                document.getElementById("cdTime").style.display = 'none';
+                document.getElementById("cdInstrutor").style.display = 'none';
+                document.getElementById("cdTurma").style.display = 'none';
+                document.getElementById("cdSprint").style.display = 'none';
             }else{                
             document.getElementById("cdUsuario").style.display = 'none';
             }
         }
         function mostraE(){
             if(document.getElementById("cdSprint").style.display == 'none'){
+
                 document.getElementById("cdSprint").style.display = 'block';
+                document.getElementById("cdUsuario").style.display = 'none';
+                document.getElementById("cdTime").style.display = 'none';
+                document.getElementById("cdInstrutor").style.display = 'none';
+                document.getElementById("cdTurma").style.display = 'none';
             }else{                
             document.getElementById("cdSprint").style.display = 'none';
             }
