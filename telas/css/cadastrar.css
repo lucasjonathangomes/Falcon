@@ -223,6 +223,30 @@ body * {
     padding: 12px;
 }
 
+.textfield-time{
+    font-size: 11pt;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.textfield-turma{
+    font-size: 11pt;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    border-radius: 6px;
+    padding: 12px;
+}
+
 .textfield > input{
     width: 100%;
     border: none;

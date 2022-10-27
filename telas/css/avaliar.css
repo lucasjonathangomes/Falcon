@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body{
+    margin: 0; /* Margem */
+    font-family: 'Noto Sans', sans-serif; /* Fontes */
+}
+
+body * {
+    box-sizing: border-box; /* Dimensionamento de Caixa */
+}
+
+.main-avaliar{
+    width: 100vw; /* Largura */
+    height: 100vh; /* Altura */
+    background: #dcdcdc; /* Fundo */
+    display: flex; /* Exibição */
+    justify-content: center; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+}
+
+.select{
+    width: 100%; /* Largura */
+    display: flex; /* Exibição */
+    justify-content: center; /* Justificar Conteúdo */
+    align-items: left; /* Itens de Alinhamento */
+    flex-direction: column; /* Direção Flexível */
+    padding: 30px 35px; /* Preenchimento */
+}
+
+.select > h1{
+    color: black; /* Cor */
+    font-weight: 800; /* Espessura da Fonte */
+    margin-bottom: 10px; /* Margem */
+}
+
+.select-area-avaliacao{
+    text-transform: uppercase; /* Transformação do Texto */
+    color: #000; /* Cor */
+    background: white; /* Fundo */
+    cursor: pointer; /* Cursor */
+    font-size: 11pt;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+@media only screen and (max-width: 950px){
+    .select{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-avaliar{
+        flex-direction: column;
+    }
+}
+
+.right-avaliar{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela-avaliar{
+    width: 100%; /* Largura */
+    display: flex; /* Exibição */
+    justify-content: right; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+    flex-direction: column; /* Direção Flexível */
+    padding: 30px 35px; /* Preenchimento */
+    background: #a9a9a9; /* Fundo */
+    border-radius: 20px; /* Raio da Borda */
+    box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+}

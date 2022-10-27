@@ -49,7 +49,7 @@
     <div class="main-cad">
         <div class="left-cad">
             <div class="botoes">
-                <H1>CADASTRO</H1>
+                <h1>CADASTRO</h1>
                 <button class="botao-cadastrar" onclick="mostraA()">CADASTRAR TURMA</button>
                 <button class="botao-cadastrar" onclick="mostraB()">CADASTRAR INSTRUTOR</button>
                 <button class="botao-cadastrar" onclick="mostraC()">CADASTRAR TIME</button>
@@ -71,10 +71,25 @@
             </div>
             <div class="cadastrar-instrutor" id="cdInstrutor">
                 <h1>CADASTRAR INSTRUTOR</h1>
-                <button class="escolher-turma" type="submit">Escolha uma turma +</button>
+                <div class="textfield">
+                    <label for="turma">Escolha a turma que o instrutor pertence:</label>
+                    <select class="textfield-turma" name="turma" id="select-turma">
+                        <option value="turma1">Turma 1</option>
+                        <option value="turma2">Turma 2</option>
+                        <option value="turma3">BD 2022-2</option>
+                    </select>
+                </div>
                 <div class="textfield">
                     <label for="nome">Nome do Instrutor</label>
-                    <input type="text" id="instrutor" name="Instrutor">
+                    <input type="text" id="nome-instrutor" name="nome-instrutor">
+                </div>
+                <div class="textfield">
+                    <label for="email">E-mail do instrutor:</label>
+                    <input type="text" id="email-instrutor" name="email-instrutor">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Crie uma senha para o instrutor:</label>
+                    <input type="text" id="senha-instrutor" name="senha-instrutor">
                 </div>
                 <div class="bt-cancelar-salvar">
                     <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
@@ -94,11 +109,22 @@
             </div>    
             <div class="cadastrar-usuario" id="cdUsuario">
                 <h1>CADASTRAR USUÁRIO</h1>
-                <select class="textfield-cargo" name="cargo" id="cargo">
-                    <option value="Desenvolvedor">Ponto Python</option>
-                    <option value="PO">First</option>
-                    <option value="SM">Falcon</option>
-                </select>
+                <div class="textfield">
+                    <label for="turma">Escolha a turma que o usuário pertence:</label>
+                    <select class="textfield-turma" name="turma" id="turma">
+                        <option value="turma1">Turma 1</option>
+                        <option value="turma2">Turma 2</option>
+                        <option value="turma3">BD 2022-2</option>
+                    </select>
+                </div>
+                <div class="textfield">
+                    <label for="time">Escolha o time que o usuário pertence:</label>
+                    <select class="textfield-time" name="time" id="time">
+                        <option value="time1">Time 1</option>
+                        <option value="time2">Time 2</option>
+                        <option value="time3">Falcon</option>
+                    </select>
+                </div>
                 <div class="textfield">
                     <label for="nome">Nome do usuário:</label>
                     <input type="text" id="usuário" name="Usuário">
@@ -149,6 +175,18 @@
             </div>
         </div> 
     </div>
-    
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script>
+        eel.expose(go_to) 
+        function go_to(url) {
+            window.location.replace(url);
+        }
+        var turma = document.getElementById("select-turma")
+
+        const select = document.getElementById("select-turma")
+
+        select.options[select.options] = new Option('My option', 'My value');
+    </script>
 </body>
 </html>
