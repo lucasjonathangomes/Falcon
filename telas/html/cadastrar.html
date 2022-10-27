@@ -75,7 +75,7 @@
     <div class="main-cad">
         <div class="left-cad">
             <div class="botoes">
-                <H1>CADASTRO</H1>
+                <h1>CADASTRO</h1>
                 <button class="botao-cadastrar" onclick="mostraA()">CADASTRAR TURMA</button>
                 <button class="botao-cadastrar" onclick="mostraB()">CADASTRAR INSTRUTOR</button>
                 <button class="botao-cadastrar" onclick="mostraC()">CADASTRAR TIME</button>
@@ -91,19 +91,35 @@
                     <input type="text" id="turma" name="Turma">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar">Cancelar</button>
-                    <button class="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>
             <div class="cadastrar-instrutor" id="cdInstrutor">
                 <h1>CADASTRAR INSTRUTOR</h1>
                 <div class="textfield">
+                    <label for="turma">Escolha a turma que o instrutor pertence:</label>
+                    <select class="textfield-turma" name="turma" id="select-turma">
+                        <option value="turma1">Turma 1</option>
+                        <option value="turma2">Turma 2</option>
+                        <option value="turma3">BD 2022-2</option>
+                    </select>
+                </div>
+                <div class="textfield">
                     <label for="nome">Nome do Instrutor</label>
-                    <input type="text" id="instrutor" name="Instrutor">
+                    <input type="text" id="nome-instrutor" name="nome-instrutor">
+                </div>
+                <div class="textfield">
+                    <label for="email">E-mail do instrutor:</label>
+                    <input type="text" id="email-instrutor" name="email-instrutor">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Crie uma senha para o instrutor:</label>
+                    <input type="text" id="senha-instrutor" name="senha-instrutor">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar">Cancelar</button>
-                    <button class="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>    
             <div class="cadastrar-time" id="cdTime">
@@ -113,34 +129,90 @@
                     <input type="text" id="time" name="Time">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar">Cancelar</button>
-                    <button class="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>    
             <div class="cadastrar-usuario" id="cdUsuario">
                 <h1>CADASTRAR USUÁRIO</h1>
                 <div class="textfield">
-                    <label for="nome">Nome do Usuário</label>
+                    <label for="turma">Escolha a turma que o usuário pertence:</label>
+                    <select class="textfield-turma" name="turma" id="turma">
+                        <option value="turma1">Turma 1</option>
+                        <option value="turma2">Turma 2</option>
+                        <option value="turma3">BD 2022-2</option>
+                    </select>
+                </div>
+                <div class="textfield">
+                    <label for="time">Escolha o time que o usuário pertence:</label>
+                    <select class="textfield-time" name="time" id="time">
+                        <option value="time1">Time 1</option>
+                        <option value="time2">Time 2</option>
+                        <option value="time3">Falcon</option>
+                    </select>
+                </div>
+                <div class="textfield">
+                    <label for="nome">Nome do usuário:</label>
                     <input type="text" id="usuário" name="Usuário">
                 </div>
+                <div class="textfield">
+                    <label for="email">E-mail do usuário:</label>
+                    <input type="email" name="Email" id="email">
+                </div>
+                <div class="textfield">
+                    <label for="cargo">Cargo do usuário:</label>
+                    <select class="textfield-cargo" name="cargo" id="cargo">
+                        <option value="Desenvolvedor">Desenvolvedor</option>
+                        <option value="PO">PO</option>
+                        <option value="SM">SM</option>
+                    </select>
+                </div>
+                <div class="textfield">
+                    <label for="senha-do-usuário">Crie uma senha para o usuário:</label>
+                    <input type="text" id="senha-do-usuário">
+                </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar">Cancelar</button>
-                    <button class="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>    
             <div class="cadastrar-sprint" id="cdSprint">
                 <h1>CADASTRAR SPRINT</h1>
-                <div class="textfield">
-                    <label for="nome">Sprint</label>
-                    <input type="text" id="sprint" name="Sprint">
+                <div class="textfield-sprint">
+                    <label for="nome">Coloque as datas de início e fim da Sprint</label>
+                    <div class="datas">      
+                        <div class="datas-início">
+                            <label for="início">Início:</label>
+                            <input type="date" id="sprint-inicio" name="Sprint" required>
+                            <span class="validity"></span>        
+                        </div>
+                        <div class="datas-fim">
+                            <label for="fim">Fim:</label>
+                            <input type="date" id="sprint-fim" name="Sprint" required>
+                            <span class="validity"></span>
+                        </div>
+                    </div>
+                    <button class="bt-add" type="submit">+</button>
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar">Cancelar</button>
-                    <button class="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>
         </div> 
     </div>
-    
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script>
+        eel.expose(go_to) 
+        function go_to(url) {
+            window.location.replace(url);
+        }
+        var turma = document.getElementById("select-turma")
+
+        const select = document.getElementById("select-turma")
+
+        select.options[select.options] = new Option('My option', 'My value');
+    </script>
 </body>
 </html>
