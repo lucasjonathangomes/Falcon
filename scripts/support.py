@@ -3,18 +3,27 @@ import os
 import json
 import hashlib
 from re import findall
-from random import randrange, choice
 
 class Cadastrar:
     def Iniciar_cadastro(self, oq_cadastrar:str, info:dict):
-        self.info = info 
+        '''
+        Recebe dois parametros. \n
+        oq_cadastrar: O que quer cadastrar - turma; time; sprint; aluno \n
+        info: Todas as informações necessarias para cadastrar o que você escolheu (tem que ser em dicionario) \n
+        Retorna: Uma lista. \n
+        1° item: True ou False (se conseguiu ou não cadastrar) \n
+        2° item: Uma mensagem, se não conseguiu cadastrar essa mensagem fala o porque \n
+        Exemplo: [True, "Aluno salvo com sucesso!"] \n
+        Exemplo: [False, "Ja existe esse time na turma Falcon"]
+        '''
+        self.info = info
 
-        if oq_cadastrar == 'usuario':
-            self.json_user = Ler_JSON('users.json')
-            return self.Cadastrar_usuario()
+        if oq_cadastrar == 'aluno':
+            self.json_user = Arquivos().Ler_JSON('users.json')
+            return self.Cadastrar_aluno()
 
         else:
-            self.json_turmas = Ler_JSON('turmas.json')
+            self.json_turmas = Arquivos().Ler_JSON('turmas.json')
             
             if oq_cadastrar == 'turma':
                 return self.Cadastrar_turma() 
@@ -32,32 +41,74 @@ class Cadastrar:
         
         else:
             self.json_turmas[turma_nome] = {}
-            Salvar_JSON('turmas.json', self.json_turmas)
+
+            Arquivos().Salvar_JSON('turmas.json', self.json_turmas)
             return [True, f'Turma "{turma_nome}" salvo com sucesso!']
 
     def Cadastrar_time(self):
-        pass 
+        turma = self.info['Turma'].strip()
+        time = self.info['Time'].strip()
 
-    def Cadastrar_usuario(self):
-        pasw = self.info['Senha']
-        senha = hashlib.md5(bytes(pasw, encoding="utf-8")).hexdigest()
+        if time.lower() in [nome.lower() for nome in self.json_turmas[turma]]:
+            # Ja existe o nome do time escolhido no banco de dados
+            return [False, f'O time {time} já existe na turma {turma}. Escolha outro nome para o time ou use o time que já existe']
+
+        else:
+            self.info[turma][time] = time
+            return [True, f'Time {time} salvo com sucesso na turma {turma}']
+
+    def Cadastrar_aluno(self):
+        def Criar_nome_user(user):
+            cont = 1
+            while True:
+                novo_user = user + str(cont)
+                if not novo_user in self.json_user:
+                    return novo_user
+
+        senha = hashlib.md5(bytes(self.info['Senha'], encoding="utf-8")).hexdigest()
+        email = self.info['Email'].strip()
+        user = email.split('@')[0].strip()
+
+        if user in self.json_user:
+            user = Criar_nome_user(user)
         
+        self.info['Senha'] = senha 
+        self.json_user[user] = self.info 
 
+        Arquivos().Salvar_JSON('users.json', self.json_user)
+
+        return [True, f'Aluno salvo com sucesso! Nome de usuario e senha serão enviado para {email}']
+   
     def Cadastrar_sprint(self):
         pass 
 
-def Ler_JSON(nome):
-    with open(Caminho_ate_Falcon()+'\\json\\'+nome, encoding="utf-8") as a:
-        arquivo = json.load(a) 
-    return arquivo 
+class Arquivos:
+    def Ler_JSON(self, nome):
+        with open(Caminho_ate_Falcon()+'\\json\\'+nome, encoding="utf-8") as a:
+            arquivo = json.load(a) 
+        return arquivo 
 
-def Ler_Excel():
-    pass 
+    def Salvar_JSON(self, nome:str, novo_json:dict):
+        with open(Caminho_ate_Falcon()+'\\json\\'+nome, 'w') as a:
+            json.dump(novo_json, a, indent=4)
 
-def Salvar_JSON(nome:str, novo_json:dict):
-    with open(Caminho_ate_Falcon()+'\\json\\'+nome, 'w') as a:
-        json.dump(novo_json, a, indent=4)
+    def Ler_Excel(self):
+        pass 
+
+def Login(user, senha):
+    todos_users = Arquivos().Ler_JSON('users.json')
+    user = user.strip()
+
+    if user in todos_users:
+        senha = hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
+        if senha == todos_users[user]['Senha']:
+            return True 
+    
+    return False 
+
+
 
 def Caminho_ate_Falcon():
     '''Retorna o caminho completo até a pasta Scripts'''
     return findall(r'.*Falcon', os.path.dirname(__file__))[0]
+

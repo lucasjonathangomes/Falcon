@@ -1,23 +1,6 @@
 {
     "lukas": {
-        "nome": "lukas",
-        "cargo": "Aluno",
-        "email": "lukas@gmail.com",
-        "perfil": "Aluno",
-        "senha": "12345"
-    },
-    "aluno": {
-        "nome": "aluno",
-        "cargo": "Aluno",
-        "email": "aluno@gmail.com",
-        "perfil": "Aluno",
-        "senha": "12345"
-    },
-    "lk12": {
-        "nome": "lukas",
-        "cargo": "Aluno",
-        "email": "lk12@gmail.com",
-        "acesso": "Aluno",
-        "senha": "12345"
+        "Email": "lukas@gmail.com",
+        "Senha": "827ccb0eea8a706c4c34a16891f84e7b"
     }
 }
