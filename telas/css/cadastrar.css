@@ -18,13 +18,40 @@ body * {
     align-items: center; /* Itens de Alinhamento */
 }
 
+.home{
+    width: 100%; /* Largura */
+    display: flex; /* Exibição */
+    justify-content: right; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+    flex-direction: inline; /* Direção Flexível */
+    background: #a9a9a9; /* Fundo */
+}
+
+.img-home{
+    margin-right: 1300px;
+}
+
+.bt-voltar{
+    width: 10%;
+    padding: 10px;
+}
+
+.bt-sair{
+    width: 10%;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
 .botoes{
-    width: 80%; /* Largura */
+    width: 100%; /* Largura */
     display: flex; /* Exibição */
     justify-content: center; /* Justificar Conteúdo */
-    align-items: left; /* Itens de Alinhamento */
+    align-items: center; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */
     padding: 30px 35px; /* Preenchimento */
+    margin-bottom: 250px;
 }
 
 .botoes > h1{
@@ -78,6 +105,7 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+    margin-bottom: 200px;
 }
 
 .cadastrar-instrutor{
@@ -90,6 +118,17 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+    margin-bottom: 200px;
+}
+
+.escolher-turma{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-size: large;
+    cursor: pointer;
 }
 
 .cadastrar-time{
@@ -102,11 +141,12 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+    margin-bottom: 200px;
 }
 
 .cadastrar-usuario{
     width: 100%; /* Largura */
-    display: none; /* Exibição */
+    display: flex; /* Exibição */
     justify-content: right; /* Justificar Conteúdo */
     align-items: center; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */
@@ -114,6 +154,17 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+    margin-bottom: 100px;
+}
+
+.escolher-time{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-size: large;
+    cursor: pointer;
 }
 
 .cadastrar-sprint{
@@ -126,6 +177,57 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+    margin-bottom: 200px;
+}
+
+.bt-cancelar-salvar{
+    width: 40%;
+    justify-content: center;
+    display: flex;
+    align-items: right;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+#bt-cancelar{
+    background-color: rgb(241, 9, 9);
+}
+
+#bt-salvar{
+    background-color: rgb(83, 233, 24);
+}
+
+.bt-add{
+    font-size: large;
+    margin-top: 50px;
+}
+
+.datas{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+}
+
+.datas-início{
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.datas-fim{
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 50px;
 }
 
 .textfield{
@@ -135,6 +237,42 @@ body * {
     align-items: flex-start;
     justify-content: center;
     margin: 10px 0px;
+}
+
+.textfield-cargo{
+    font-size: 11pt;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.textfield-time{
+    font-size: 11pt;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.textfield-turma{
+    font-size: 11pt;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    border-radius: 6px;
+    padding: 12px;
 }
 
 .textfield > input{

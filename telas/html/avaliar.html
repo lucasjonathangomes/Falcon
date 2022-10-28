@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/avaliar.css">
+    <link rel="shortcut icon" href="../fotos/falcon-favicon.png" type="image/x-icon">
+    <title>Avaliação</title>
+</head>
+<body>
+    <div class="home">
+        <div class="img-home">
+            <img src="../fotos/logo_falcon.png" alt="logo_falcon_200" width="180px" height="160px">
+        </div>
+        <button class="bt-voltar">Voltar</button>
+        <button class="bt-sair">Sair</button>
+    </div>
+    <div class="main-avaliar">
+        <div class="left-avaliar">
+            <div class="select">
+                <h1>USUÁRIO</h1>
+                <div class="select-info">
+                    <label for="select-turma">Selecione a turma do usuário:</label>
+                    <select class="select-area-avaliacao">
+                        <option value="turma1">Turma 1</option>
+                        <option value="turma2">Turma 2</option>
+                        <option value="turma3">BD 2022-2</option>
+                    </select>
+                </div>
+                <div class="select-info">
+                    <label for="select-time">Selecione o time do usuário:</label>
+                    <select class="select-area-avaliacao">
+                        <option value="time1">Time 1</option>
+                        <option value="time2">Time 2</option>
+                        <option value="time3">Falcon</option>
+                    </select>
+                </div>
+                <div class="select-info">
+                    <label for="select-usuario">Selecione o usuário:</label>
+                    <select class="select-area-avaliacao">
+                        <option value="usuário1">Lucas Augusto</option>
+                        <option value="usuário2">Lukas Fernando</option>
+                        <option value="usuário3">Lucas Henrique</option>
+                        <option value="usuário4">Lucas Jonathan</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="right-avaliar">
+            <div class="tela-avaliar" id="tela-avaliar">
+                <h1>FAÇA SUA AVALIAÇÃO</h1>
+                <div class="pergunta">
+                    <label class="label-pergunta" for="pergunta1">Trabalho em equipe, cooperação e descentralização de conhecimento</label>
+                    <div>
+                        <input type="radio" name="pergunta1" value="Ruim"> Ruim
+                        <input type="radio" name="pergunta1" value="Regular"> Regular
+                        <input type="radio" name="pergunta1" value="Bom"> Bom
+                        <input type="radio" name="pergunta1" value="Muito Bom"> Muito Bom
+                        <input type="radio" name="pergunta1" value="Excelente"> Excelente
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <label class="label-pergunta" for="pergunta2">Iniciativa e proatividade</label>
+                    <div>
+                        <input type="radio" name="pergunta2" value="Ruim"> Ruim
+                        <input type="radio" name="pergunta2" value="Regular"> Regular
+                        <input type="radio" name="pergunta2" value="Bom"> Bom
+                        <input type="radio" name="pergunta2" value="Muito Bom"> Muito Bom
+                        <input type="radio" name="pergunta2" value="Excelente"> Excelente
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <label class="label-pergunta" for="pergunta3">Autodidaxia e agregação de conhecimento ao grupo</label>
+                    <div>
+                        <input type="radio" name="pergunta3" value="Ruim"> Ruim
+                        <input type="radio" name="pergunta3" value="Regular"> Regular
+                        <input type="radio" name="pergunta3" value="Bom"> Bom
+                        <input type="radio" name="pergunta3" value="Muito Bom"> Muito Bom
+                        <input type="radio" name="pergunta3" value="Excelente"> Excelente
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <label class="label-pergunta" for="pergunta4">Entrega de resultados e participação efetiva no projeto</label>
+                    <div>
+                        <input type="radio" name="pergunta4" value="Ruim"> Ruim
+                        <input type="radio" name="pergunta4" value="Regular"> Regular
+                        <input type="radio" name="pergunta4" value="Bom"> Bom
+                        <input type="radio" name="pergunta4" value="Muito Bom"> Muito Bom
+                        <input type="radio" name="pergunta4" value="Excelente"> Excelente
+                    </div>
+                    <!-- <div>
+                        <input type="radio" name="pergunta4" value="0"> 0
+                        <input type="radio" name="pergunta4" value="1"> 1
+                        <input type="radio" name="pergunta4" value="2"> 2
+                        <input type="radio" name="pergunta4" value="3"> 3
+                        <input type="radio" name="pergunta4" value="4"> 4
+                        <input type="radio" name="pergunta4" value="5"> 5
+                        <input type="radio" name="pergunta4" value="6"> 6
+                        <input type="radio" name="pergunta4" value="7"> 7
+                        <input type="radio" name="pergunta4" value="8"> 8
+                        <input type="radio" name="pergunta4" value="9"> 9
+                        <input type="radio" name="pergunta4" value="10"> 10
+                    </div> -->
+                </div>
+                <div class="pergunta">
+                    <label class="label-pergunta" for="pergunta5">Competência Técnica</label>
+                    <div>
+                        <input type="radio" name="pergunta5" value="Ruim"> Ruim
+                        <input type="radio" name="pergunta5" value="Regular"> Regular
+                        <input type="radio" name="pergunta5" value="Bom"> Bom
+                        <input type="radio" name="pergunta5" value="Muito Bom"> Muito Bom
+                        <input type="radio" name="pergunta5" value="Excelente"> Excelente
+                    </div>
+                    <!-- <div>
+                        <input type="radio" name="pergunta5" value="0"> 0
+                        <input type="radio" name="pergunta5" value="1"> 1
+                        <input type="radio" name="pergunta5" value="2"> 2
+                        <input type="radio" name="pergunta5" value="3"> 3
+                        <input type="radio" name="pergunta5" value="4"> 4
+                        <input type="radio" name="pergunta5" value="5"> 5
+                        <input type="radio" name="pergunta5" value="6"> 6
+                        <input type="radio" name="pergunta5" value="7"> 7
+                        <input type="radio" name="pergunta5" value="8"> 8
+                        <input type="radio" name="pergunta5" value="9"> 9
+                        <input type="radio" name="pergunta5" value="10"> 10
+                    </div> -->
+                </div>
+                <div class="bt-cancelar-avaliar">
+                    <button class="bt-cancelar-avaliar" id="bt-cancelar" onclick="">Cancelar</button>
+                    <button class="bt-cancelar-avaliar" id="bt-avaliar" onclick="cad()">Avaliar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
