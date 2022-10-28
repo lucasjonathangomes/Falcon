@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/avaliar.css">
+    <link rel="shortcut icon" href="../fotos/falcon-favicon.png" type="image/x-icon">
     <title>Avaliação</title>
 </head>
 <body>
+    <div class="home">
+        <div class="img-home">
+            <img src="../fotos/logo_falcon.png" alt="logo_falcon_200" width="180px" height="160px">
+        </div>
+        <button class="bt-voltar">Voltar</button>
+        <button class="bt-sair">Sair</button>
+    </div>
     <div class="main-avaliar">
         <div class="left-avaliar">
             <div class="select">
@@ -74,14 +82,14 @@
                 </div>
                 <div class="pergunta">
                     <label class="label-pergunta" for="pergunta4">Entrega de resultados e participação efetiva no projeto</label>
-                    <!-- <div>
+                    <div>
                         <input type="radio" name="pergunta4" value="Ruim"> Ruim
                         <input type="radio" name="pergunta4" value="Regular"> Regular
                         <input type="radio" name="pergunta4" value="Bom"> Bom
                         <input type="radio" name="pergunta4" value="Muito Bom"> Muito Bom
                         <input type="radio" name="pergunta4" value="Excelente"> Excelente
-                    </div> -->
-                    <div>
+                    </div>
+                    <!-- <div>
                         <input type="radio" name="pergunta4" value="0"> 0
                         <input type="radio" name="pergunta4" value="1"> 1
                         <input type="radio" name="pergunta4" value="2"> 2
@@ -93,30 +101,34 @@
                         <input type="radio" name="pergunta4" value="8"> 8
                         <input type="radio" name="pergunta4" value="9"> 9
                         <input type="radio" name="pergunta4" value="10"> 10
-                    </div>
+                    </div> -->
                 </div>
                 <div class="pergunta">
                     <label class="label-pergunta" for="pergunta5">Competência Técnica</label>
-                    <!-- <div>
+                    <div>
                         <input type="radio" name="pergunta5" value="Ruim"> Ruim
                         <input type="radio" name="pergunta5" value="Regular"> Regular
                         <input type="radio" name="pergunta5" value="Bom"> Bom
                         <input type="radio" name="pergunta5" value="Muito Bom"> Muito Bom
                         <input type="radio" name="pergunta5" value="Excelente"> Excelente
-                    </div> -->
-                    <div>
-                        <input type="radio" name="pergunta4" value="0"> 0
-                        <input type="radio" name="pergunta4" value="1"> 1
-                        <input type="radio" name="pergunta4" value="2"> 2
-                        <input type="radio" name="pergunta4" value="3"> 3
-                        <input type="radio" name="pergunta4" value="4"> 4
-                        <input type="radio" name="pergunta4" value="5"> 5
-                        <input type="radio" name="pergunta4" value="6"> 6
-                        <input type="radio" name="pergunta4" value="7"> 7
-                        <input type="radio" name="pergunta4" value="8"> 8
-                        <input type="radio" name="pergunta4" value="9"> 9
-                        <input type="radio" name="pergunta4" value="10"> 10
                     </div>
+                    <!-- <div>
+                        <input type="radio" name="pergunta5" value="0"> 0
+                        <input type="radio" name="pergunta5" value="1"> 1
+                        <input type="radio" name="pergunta5" value="2"> 2
+                        <input type="radio" name="pergunta5" value="3"> 3
+                        <input type="radio" name="pergunta5" value="4"> 4
+                        <input type="radio" name="pergunta5" value="5"> 5
+                        <input type="radio" name="pergunta5" value="6"> 6
+                        <input type="radio" name="pergunta5" value="7"> 7
+                        <input type="radio" name="pergunta5" value="8"> 8
+                        <input type="radio" name="pergunta5" value="9"> 9
+                        <input type="radio" name="pergunta5" value="10"> 10
+                    </div> -->
+                </div>
+                <div class="bt-cancelar-avaliar">
+                    <button class="bt-cancelar-avaliar" id="bt-cancelar" onclick="">Cancelar</button>
+                    <button class="bt-cancelar-avaliar" id="bt-avaliar" onclick="cad()">Avaliar</button>
                 </div>
             </div>
         </div>

@@ -18,6 +18,32 @@ body * {
     align-items: center; /* Itens de Alinhamento */
 }
 
+.home{
+    width: 100%; /* Largura */
+    display: flex; /* Exibição */
+    justify-content: right; /* Justificar Conteúdo */
+    align-items: center; /* Itens de Alinhamento */
+    flex-direction: inline; /* Direção Flexível */
+    background: #a9a9a9; /* Fundo */
+}
+
+.img-home{
+    margin-right: 1300px;
+}
+
+.bt-voltar{
+    width: 10%;
+    padding: 10px;
+}
+
+.bt-sair{
+    width: 10%;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
 .botoes{
     width: 100%; /* Largura */
     display: flex; /* Exibição */
@@ -25,6 +51,7 @@ body * {
     align-items: center; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */
     padding: 30px 35px; /* Preenchimento */
+    margin-bottom: 250px;
 }
 
 .botoes > h1{
@@ -78,6 +105,7 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+    margin-bottom: 200px;
 }
 
 .cadastrar-instrutor{
@@ -90,6 +118,7 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+    margin-bottom: 200px;
 }
 
 .escolher-turma{
@@ -112,6 +141,7 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+    margin-bottom: 200px;
 }
 
 .cadastrar-usuario{
@@ -124,6 +154,7 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+    margin-bottom: 100px;
 }
 
 .escolher-time{
@@ -146,6 +177,7 @@ body * {
     background: #a9a9a9; /* Fundo */
     border-radius: 20px; /* Raio da Borda */
     box-shadow: 0px 10px 40px #c0c0c0; /* Sombra da Caixa */
+    margin-bottom: 200px;
 }
 
 .bt-cancelar-salvar{
@@ -205,10 +237,6 @@ body * {
     align-items: flex-start;
     justify-content: center;
     margin: 10px 0px;
-}
-
-.textfield-sprint{
-    display: center;
 }
 
 .textfield-cargo{
