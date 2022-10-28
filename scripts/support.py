@@ -1,6 +1,7 @@
 
 import os
 import json
+import hashlib
 from re import findall
 from random import randrange, choice
 
@@ -38,12 +39,12 @@ class Cadastrar:
         pass 
 
     def Cadastrar_usuario(self):
-        pass 
+        pasw = self.info['Senha']
+        senha = hashlib.md5(bytes(pasw, encoding="utf-8")).hexdigest()
+        
 
     def Cadastrar_sprint(self):
         pass 
-
-
 
 def Ler_JSON(nome):
     with open(Caminho_ate_Falcon()+'\\json\\'+nome, encoding="utf-8") as a:
