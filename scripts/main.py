@@ -18,6 +18,10 @@ def Testar_os_botoes():
 
 @eel.expose
 def Cadastrar(oq_cadastrar:str, info:dict):
+	'''
+	oq_cadastrar: O que você desja cadastrar \n
+	info: dicionario das informações. Obs - As chaves tem que ter a primeira letra maiuscula
+	'''
 	oq_cadastrar = oq_cadastrar.strip().lower()
 	return support.Cadastrar().Iniciar_cadastro(oq_cadastrar, info)
 
