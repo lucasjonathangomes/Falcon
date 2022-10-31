@@ -19,8 +19,7 @@ def Testar_os_botoes():
 @eel.expose
 def Cadastrar(oq_cadastrar:str, info:dict):
 	oq_cadastrar = oq_cadastrar.strip().lower()
-	resultado = support.Cadastrar().Iniciar_cadastro(oq_cadastrar, info)
-	print(resultado)
+	return support.Cadastrar().Iniciar_cadastro(oq_cadastrar, info)
 
 
 eel.start("html/login.html", port=8000)

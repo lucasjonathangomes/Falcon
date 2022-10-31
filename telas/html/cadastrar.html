@@ -224,15 +224,13 @@
 
         function cad(){
             let a = document.getElementById("cadastrar-turma").value;
-            eel.Cadastrar('turma', {'Turma': a});
-            document.getElementById("cadastrar-turma").value = "";
-            
-            if(eel.Cadastrar('turma', {'Turma': a}) == true){
-                window.alert('Cadastrado com sucesso! ');
-            }else{
-                window.alert('Turma já existe!');
-            }
-            
+
+            eel.Cadastrar('turma', {'Turma': a}) (function(result){
+                window.alert(result[1])
+                if (result[0]) {
+                    document.getElementById("cadastrar-turma").value = ""
+                }
+            });            
         }
                
     </script>

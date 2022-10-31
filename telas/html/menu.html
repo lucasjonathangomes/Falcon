@@ -38,20 +38,8 @@
             eel.Testar_os_botoes()
         }
 
-        function Esconder(){
-            eel.Testar_os_botoes()
-            var btn = document.querySelector('.botao-avaliar');
-            var container = document.querySelector('.botao-cadastrar');                
-            if(container.style.display === 'block') {
-                container.style.display = 'none';
-            } 
-            else {
-                container.style.display = 'block';
-            };
-        }
-
         function Cadastrar(){
-            eel.Atualizar_pagina('cadastrar.html')
+            go_to('cadastrar.html')
         }
     </script>
 </body>
