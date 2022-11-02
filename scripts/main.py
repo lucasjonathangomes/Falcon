@@ -25,5 +25,11 @@ def Cadastrar(oq_cadastrar:str, info:dict):
 	oq_cadastrar = oq_cadastrar.strip().lower()
 	return support.Cadastrar().Iniciar_cadastro(oq_cadastrar, info)
 
+@eel.expose
+def Retorna_info(qual_info):
+	
+	pass 
 
 eel.start("html/login.html", port=8000)
+
+
