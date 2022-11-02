@@ -1,6 +1,12 @@
 {
     "Banco de Dados 1": {
         "Falcon": {
+            "Sprint": {
+                "Sprint 1": {
+                    "Inicio": "10/10/2022",
+                    "Fim": "25/10/2022"
+                }
+            },
             "PO": "Lucas",
             "Scrum Master": "Ricardo",
             "Desenvolvedores": [
@@ -11,32 +17,6 @@
                 "Lucas",
                 "Ricardo"
             ]
-        },
-        "GO BDD": {
-            "PO": "Juan",
-            "Scrum Master": "Bruna",
-            "Desenvolvedores": [
-                "Breno"
-            ]
         }
-    },
-    "Banco de Dados 2": {
-        "The Best": {
-            "PO": "Ricardo",
-            "Scrum Master": "Luana",
-            "Desenvolvedores": [
-                "Pedro",
-                "Beatriz"
-            ]
-        },
-        "The Thunder": {
-            "PO": "Ana",
-            "Scrum Master": "Amanda",
-            "Desenvolvedores": [
-                "Marcos",
-                "Jo\u00e3o"
-            ]
-        }
-    },
-    "Marmota": {}
+    }
 }

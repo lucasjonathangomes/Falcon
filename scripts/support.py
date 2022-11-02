@@ -4,6 +4,15 @@ import json
 import hashlib
 from re import findall
 
+class DeclararUser: 
+    def __init__(self, user):
+        json_info = Arquivos().Ler_JSON('users.json')
+        user_info = json_info[user] 
+        self.user = user
+        self.email = user_info['Email']
+        self.cargo = user_info['Cargo']
+        self.acesso = user_info['Acesso'] 
+
 class Cadastrar:
     def Iniciar_cadastro(self, oq_cadastrar:str, info:dict):
         '''
@@ -95,6 +104,26 @@ class Arquivos:
     def Ler_Excel(self):
         pass 
 
+class RetornaInfo:
+    def __init__(self, qual_info, turma='None', time='None'):
+        qual_info = qual_info.lower().strip()
+        self.turma = turma.strip()
+        self.time = time.strip()
+
+        if qual_info in ['turmas', 'times']:
+            self.arquivo = Arquivos().Ler_JSON('turmas.json')
+        else:
+            self.arquivo = Arquivos().Ler_JSON('users.json') 
+
+    def Turmas(self):
+        return list(self.arquivo) 
+
+    def Times(self):
+        return list(self.arquivo[self.turma])
+
+    def Alunos(self):
+        return self.arquivo[self.turma][self.time]['Alunos']
+
 def Login(user, senha):
     todos_users = Arquivos().Ler_JSON('users.json')
     user = user.strip()
@@ -105,8 +134,6 @@ def Login(user, senha):
             return True 
     
     return False 
-
-
 
 def Caminho_ate_Falcon():
     '''Retorna o caminho completo até a pasta Scripts'''
