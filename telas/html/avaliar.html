@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/avaliar.css">
     <link rel="shortcut icon" href="../fotos/falcon-favicon.png" type="image/x-icon">
+    <script type="text\javascript" src="/eel.js"></script>
     <title>Avaliação</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
         <div class="img-home">
             <img src="../fotos/logo_falcon.png" alt="logo_falcon_200" width="180px" height="160px">
         </div>
-        <button class="bt-voltar">Voltar</button>
+        <button class="bt-voltar" onclick="home()">Voltar</button>
         <button class="bt-sair">Sair</button>
     </div>
     <div class="main-avaliar">
@@ -133,5 +134,12 @@
             </div>
         </div>
     </div>
+    <script>
+        
+        function home(){
+            go_to('menu.html')
+        }
+        
+    </script>
 </body>
 </html>

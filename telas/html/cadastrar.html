@@ -14,7 +14,7 @@
         <div class="img-home">
             <img src="../fotos/logo_falcon.png" alt="logo_falcon_200" width="180px" height="160px">
         </div>
-        <button class="bt-voltar">Voltar</button>
+        <button class="bt-voltar" onclick="home()">Voltar</button>
         <button class="bt-sair">Sair</button>
     </div>   
     <script>
@@ -99,8 +99,8 @@
                     <input type="text" id="cadastrar-turma" name="Turma123">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="">Cancelar</button>
-                    <button class="bt-cancelar-salvar" id="bt-salvar" onclick="cad()">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaA()">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar" onclick="cadTurma()">Salvar</button>
                 </div>
             </div>
             <div class="cadastrar-instrutor" id="cdInstrutor">
@@ -126,7 +126,7 @@
                     <input type="text" id="senha-instrutor" name="senha-instrutor">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaB()">Cancelar</button>
                     <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>    
@@ -134,11 +134,11 @@
                 <h1>CADASTRAR TIME</h1>
                 <div class="textfield">
                     <label for="nome">Nome do Time</label>
-                    <input type="text" id="time" name="Time">
+                    <input type="text" id="timeCad" name="Time">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
-                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaC()">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar" onclick="cadTime()">Salvar</button>
                 </div>
             </div>    
             <div class="cadastrar-usuario" id="cdUsuario">
@@ -180,7 +180,7 @@
                     <input type="text" id="senha-do-usuário">
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaD()">Cancelar</button>
                     <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>    
@@ -203,7 +203,7 @@
                     <button class="bt-add" type="submit">+</button>
                 </div>
                 <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar">Cancelar</button>
+                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaE()">Cancelar</button>
                     <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
                 </div>
             </div>
@@ -222,15 +222,47 @@
 
         select.options[select.options] = new Option('My option', 'My value');
 
-        function cad(){
+        function cadTurma(){
             let a = document.getElementById("cadastrar-turma").value;
-
-            eel.Cadastrar('turma', {'Turma': a}) (function(result){
+            
+            eel.Cadastrar('turma', {'Turma': a}) (function (result){
                 window.alert(result[1])
-                if (result[0]) {
-                    document.getElementById("cadastrar-turma").value = ""
+                if (result[0]){
+                    document.getElementById("cadastrar-turma").value=""
                 }
-            })            
+            })
+        }
+        function cadTime(){
+            let b = document.getElementById("timeCad").value;
+
+            eel.Cadastrar('time', {'Time': b}) (function (result){
+                window.alert(result[1])
+                if(result[0]){
+                    document.getElementById("timeCad").value=""
+                }
+            })
+            
+        }
+        
+
+        function cancelaA(){
+            document.getElementById("cdTurma").style.display = 'none';
+        }
+        function cancelaB(){
+            document.getElementById("cdInstrutor").style.display = 'none';
+        }
+        function cancelaC(){
+            document.getElementById("cdTime").style.display = 'none';
+        }
+        function cancelaD(){
+            document.getElementById("cdUsuario").style.display = 'none';
+        }
+        function cancelaE(){
+            document.getElementById("cdSprint").style.display = 'none';
+        }
+                       
+        function home(){
+            go_to('menu.html');
         }
                
     </script>
