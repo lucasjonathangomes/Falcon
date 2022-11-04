@@ -10,7 +10,7 @@ body * {
 }
 
 .main-cad{
-    width: 100vw; /* Largura */
+    width: 100%; /* Largura */
     height: 100vh; /* Altura */
     background: #dcdcdc; /* Fundo */
     display: flex; /* Exibição */
@@ -18,31 +18,37 @@ body * {
     align-items: center; /* Itens de Alinhamento */
 }
 
-.home{
-    width: 100%; /* Largura */
-    display: flex; /* Exibição */
-    justify-content: right; /* Justificar Conteúdo */
-    align-items: center; /* Itens de Alinhamento */
-    flex-direction: inline; /* Direção Flexível */
-    background: #a9a9a9; /* Fundo */
+.barra-home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #a9a9a9;
 }
 
-.img-home{
-    margin-right: 1300px;
+.nome-home{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.bt-home{
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
 .bt-voltar{
-    width: 10%;
+    width: 100%;
     padding: 10px;
 }
 
 .bt-sair{
-    width: 10%;
+    width: 100%;
     padding: 10px;
     margin-left: 15px;
     margin-right: 15px;
 }
-
 
 .botoes{
     width: 100%; /* Largura */
