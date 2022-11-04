@@ -14,7 +14,7 @@
         <div class="logo-home">
             <img src="../fotos/logo_falcon_200.png" alt="logo_falcon_200" width="150px" height="150px">
         </div>
-        <div class="nome-home"><h1>Nome Usuário</h1></div>
+        <div class="nome-home" id="nome_home"><h1></h1></div>
         <div class="bt-home">
             <button class="bt-voltar">Voltar</button>
             <button class="bt-sair">Sair</button>
@@ -47,9 +47,15 @@
         function Cadastrar(){
             go_to('cadastrar.html')
         }
-        // function historico(){
-        //     go_to(' .html')
-        // }
+        
+        function historico(){
+            go_to('historico.html')
+        }
+        
+        eel.Retorna_info('user')(function (info_do_usuario){
+            var nome_home = document.getElementById('nome_home')
+            nome_home.innerHTML = `<h1>${info_do_usuario['Nome']}</h1>`
+        })
 
     </script>
 </body>

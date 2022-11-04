@@ -1,7 +1,9 @@
 {
     "lulu": {
+        "Nome": "Lukas Fernando Berto",
+        "Senha": "d41d8cd98f00b204e9800998ecf8427e",
         "Email": "lukas@gmail.com",
-        "Senha": "827ccb0eea8a706c4c34a16891f84e7b"
+        "Cargo": "Desenvolvedor"
     },
     "lucas": {
         "Turma": "Banco de Dados 1",

@@ -24,7 +24,7 @@ def Cadastrar(oq_cadastrar:str, info:dict):
 @eel.expose 
 def Retorna_info(qual_info, turma='None', time='None'):
 	'''
-	qual_info: Qual informação você quer que retorne - turmas; times; alunos \n
+	qual_info: Qual informação você quer que retorne - turmas; times; alunos, user \n
 	turma: Para retornar todos os times precisa escolher uma turma \n
 	time: Para retornar todos os alunos precisa escolher uma turma e um time \n
 	Exemplo 1: Retorna_info('turmas') \n
@@ -40,6 +40,9 @@ def Retorna_info(qual_info, turma='None', time='None'):
 		elif qual_info == 'times':
 			info = inicio.Times()
 		
+		elif qual_info == 'user':
+			info = inicio.User()
+
 		else:
 			info = inicio.Alunos()
 

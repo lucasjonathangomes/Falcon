@@ -7,11 +7,13 @@ from re import findall
 class DeclararUser: 
     def __init__(self, user):
         json_info = Arquivos().Ler_JSON('users.json')
-        user_info = json_info[user] 
-        self.user = user
-        self.email = user_info['Email']
-        self.cargo = user_info['Cargo']
-        self.acesso = user_info['Acesso'] 
+        user_info = json_info[user]
+        self.user_info = {
+                            'User': user,
+                            'Nome': user_info['Nome'], 
+                            'Email': user_info['Email'],
+                            'Cargo': user_info['Cargo']
+                        }
 
 class Cadastrar:
     def Iniciar_cadastro(self, oq_cadastrar:str, info:dict):
@@ -75,15 +77,45 @@ class Cadastrar:
                 if not novo_user in self.json_user:
                     return novo_user
 
-        senha = hashlib.md5(bytes(self.info['Senha'], encoding="utf-8")).hexdigest()
-        email = self.info['Email'].strip()
+        def Validar_senha(senha):
+            todos_regex = ['[a-z]', '[A-Z]', '[!|@|#|$|%|&|*|(|)]', '[1-9]']
+
+            for regex in todos_regex:
+                if len(findall(regex, senha)) == 0 or len(senha) < 8:
+                    msg = 'A senha tem que ter no minimo 8 digitos, letras minúscula e maiúscula, '\
+                        'numeros, e um dos caracteres especiais a seguir: !, @,#, $, %, &, *, (, )'
+                    return [False, msg]
+
+            return [True]
+
+        # Padronizar as informações 
+        nome  = self.info['Nome'].strp().title()
+        email = self.info['Email'].strp()
+        senha = self.info['Senha']
+
+        # Fazer todas as validações 
+        # Turma 
+        if self.info['Turma'].strp() == '':
+            return [False, 'Seleciona uma turma para esse aluno']
         
-        ####################    Fazer todas as validações ######################
-        if not '@gmail.com' in email:
+        # Time
+        if self.info['Time'].strp() == '':
+            return [False, 'Seleciona um time para esse aluno'] 
+
+        # Nome
+        if nome == '' or len(nome.split()) < 2:
+            return [False, 'Digite o nome e o sobrenome do aluno']
+        
+        # Email 
+        if email == '' or not '@gmail.com' in email:
             return [False, 'Email inválido. Apenas @gmail.com é aceito']
 
-        ########################################
+        # Senha 
+        validar_senha = Validar_senha(senha)
+        if not validar_senha[0]:
+            return [False, validar_senha[1]]
 
+        senha = hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
         user = email.split('@')[0].strip()
 
         if user in self.json_user:
@@ -131,6 +163,9 @@ class RetornaInfo:
 
     def Alunos(self):
         return self.arquivo[self.turma][self.time]['Alunos']
+    
+    def User(self):
+        return user_info.user_info 
 
 def Login(user, senha):
     todos_users = Arquivos().Ler_JSON('users.json')
@@ -139,6 +174,8 @@ def Login(user, senha):
     if user in todos_users:
         senha = hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
         if senha == todos_users[user]['Senha']:
+            global user_info
+            user_info = DeclararUser(user)
             return True 
     
     return False 

@@ -2,6 +2,7 @@
 
 body{
     margin: 0; /* Margem */
+    background: #dcdcdc; /* Fundo */
     font-family: 'Noto Sans', sans-serif; /* Fontes */
 }
 
@@ -96,7 +97,7 @@ body * {
 .right-cad{
     width: 50vw;
     height: 100vh;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
 }
