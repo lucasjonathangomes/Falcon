@@ -33,7 +33,6 @@
     <script type="text/javascript" src="/eel.js"></script>
     <script src="../scripts/script.js"></script>
     <script>
-        eel.expose(go_to) 
         function go_to(url) {
             window.location.replace(url);
         }
@@ -41,7 +40,14 @@
         function Fazer_login() {
             let user = document.getElementById('user').value;
             let pass = document.getElementById('pass').value;
-            eel.Fazer_login(user, pass);
+            eel.Fazer_login(user, pass)(function(login_correto){
+                if (login_correto) {
+                    go_to('menu.html')
+                }
+                else {
+                    window.alert('Usuário e/ou senha incorreto')
+                }
+            });
         }
     </script>
 </body>

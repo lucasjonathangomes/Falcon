@@ -8,7 +8,7 @@ eel.init('telas')
 def Fazer_login(user, pasw):
 	login_correto = support.Login(user, pasw)
 	if login_correto:
-		eel.go_to('menu.html')
+		return True
 	else:
 		return False
 
@@ -44,7 +44,7 @@ def Retorna_info(qual_info, turma='None', time='None'):
 			info = inicio.Alunos()
 
 		return info 
-		
+
 	except:
 		return ['']
 
