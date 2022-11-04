@@ -77,6 +77,13 @@ class Cadastrar:
 
         senha = hashlib.md5(bytes(self.info['Senha'], encoding="utf-8")).hexdigest()
         email = self.info['Email'].strip()
+        
+        ####################    Fazer todas as validações ######################
+        if not '@gmail.com' in email:
+            return [False, 'Email inválido. Apenas @gmail.com é aceito']
+
+        ########################################
+
         user = email.split('@')[0].strip()
 
         if user in self.json_user:
@@ -87,7 +94,7 @@ class Cadastrar:
 
         Arquivos().Salvar_JSON('users.json', self.json_user)
 
-        return [True, f'Aluno salvo com sucesso! Nome de usuario e senha serão enviado para {email}']
+        return [True, f'Aluno salvo com sucesso! Nome de usuario é: {user}']
    
     def Cadastrar_sprint(self):
         pass

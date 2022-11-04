@@ -4,23 +4,6 @@ import support
 
 eel.init('telas')
 
-@eel.expose
-def Fazer_login(user, pasw):
-	login_correto = support.Login(user, pasw)
-	if login_correto:
-		eel.go_to('menu.html')
-	else:
-		return False
-
-@eel.expose
-def Cadastrar(oq_cadastrar:str, info:dict):
-	'''
-	oq_cadastrar: O que você desja cadastrar \n
-	info: dicionario das informações. Obs - As chaves tem que ter a primeira letra maiuscula
-	'''
-	oq_cadastrar = oq_cadastrar.strip().lower()
-	return support.Cadastrar().Iniciar_cadastro(oq_cadastrar, info)
-
 @eel.expose 
 def Retorna_info(qual_info, turma='None', time='None'):
 	'''
@@ -31,9 +14,11 @@ def Retorna_info(qual_info, turma='None', time='None'):
 	Exemplo 2: Retorna_info('times', 'Banco de Dados') \n
 	Exemplo 3: Retorna_info('alunos', turma='Banco de Dados', time='Falcon')
 	'''
+
 	try:
 		qual_info = qual_info.strip().lower()
 		inicio = support.RetornaInfo(qual_info, turma=turma, time=time)
+        
 		if qual_info == 'turmas':
 			info = inicio.Turmas()
 
@@ -44,10 +29,8 @@ def Retorna_info(qual_info, turma='None', time='None'):
 			info = inicio.Alunos()
 
 		return info 
-		
 	except:
 		return ['']
 
-eel.start("html/login.html", port=8000)
-
+eel.start("html/teste.html", port=8000)
 

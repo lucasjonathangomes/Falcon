@@ -44,6 +44,7 @@
             }else{                
             document.getElementById("cdInstrutor").style.display = 'none';
             }
+            Atualizar_turmas('select-turma')
         }
         function mostraC(){
             if(document.getElementById("cdTime").style.display == 'none'){
@@ -56,6 +57,7 @@
             }else{                
             document.getElementById("cdTime").style.display = 'none';
             }
+            Atualizar_turmas('selectTurma')
         }
         function mostraD(){
             if(document.getElementById("cdUsuario").style.display == 'none'){
@@ -68,6 +70,8 @@
             }else{                
             document.getElementById("cdUsuario").style.display = 'none';
             }
+            Atualizar_turmas('turma-usuario')
+            Atualizar_times('turma-usuario', 'time-usuario')
         }
         function mostraE(){
             if(document.getElementById("cdSprint").style.display == 'none'){
@@ -111,9 +115,6 @@
                 <div class="textfield">
                     <label for="turma">Escolha a turma que o instrutor pertence:</label>
                     <select class="textfield-turma" name="turma" id="select-turma">
-                        <option value="Banco de Dados 1">Banco de Dados 1</option>
-                        <option value="turma2">Turma 2</option>
-                        <option value="turma3">BD 2022-2</option>
                     </select>
                 </div>
                 <div class="textfield">
@@ -138,9 +139,6 @@
                 <div class="textfield">
                     <label for="turma">Escolha a turma que o instrutor pertence:</label>
                     <select class="textfield-turma" name="turma" id="selectTurma">
-                        <option value="Banco de Dados 1">Banco de Dados 1</option>
-                        <option value="turma2">Turma 2</option>
-                        <option value="turma3">BD 2022-2</option>
                     </select>
                 </div>
                 <div class="textfield">
@@ -156,18 +154,13 @@
                 <h1>CADASTRAR USUÁRIO</h1>
                 <div class="textfield">
                     <label for="turma">Escolha a turma que o usuário pertence:</label>
-                    <select class="textfield-turma" id="turma">
-                        <option value="Banco de Dados 1">Banco de Dados 1</option>
-                        <option value="turma2">Turma 2</option>
-                        <option value="turma3">BD 2022-2</option>
+                    <select class="textfield-turma" id="turma-usuario" nome="turma">
                     </select>
                 </div>
                 <div class="textfield">
                     <label for="time">Escolha o time que o usuário pertence:</label>
-                    <select class="textfield-time" name="time" id="time">
-                        <option value="time1">Time 1</option>
-                        <option value="time2">Time 2</option>
-                        <option value="time3">Falcon</option>
+                    <select class="textfield-time" id="time-usuario" name="time" >
+                        <option value="None"></option>
                     </select>
                 </div>
                 <div class="textfield">
@@ -254,7 +247,7 @@
                     document.getElementById("selectTurma").value="";
                 }
             })
-            
+        
         }
         function cadInstrutor(){
             let turma = document.getElementById("select-turma").value;
@@ -274,8 +267,8 @@
 
         }
         function cadUsuario(){
-            let turma = document.getElementById("turma").value;
-            let time = document.getElementById("time").value;
+            let turma = document.getElementById("turma-usuario").value;
+            let time = document.getElementById("time-usuario").value;
             let nome = document.getElementById("usuário").value;
             let email = document.getElementById("email").value;
             let cargo = document.getElementById("cargo").value;
@@ -284,8 +277,8 @@
             eel.Cadastrar('aluno',{'Turma': turma, 'Time': time, 'Nome': nome, 'Email': email, 'Cargo': cargo, 'Senha': senha}) (function (result){
                 window.alert(result[1])
                 if(result[0]){
-                    document.getElementById("turma").value = "";
-                    document.getElementById("time").value = "";
+                    document.getElementById("turma-usuario").value = "";
+                    document.getElementById("time-usuario").value = "";
                     document.getElementById("usuário").value = "";
                     document.getElementById("email").value = "";
                     document.getElementById("cargo").value = "";
@@ -314,7 +307,67 @@
         function home(){
             go_to('menu.html');
         }
-               
+
+ 
+        function Zerar_select(id){
+            let select  = document.getElementById(id)
+            select.innerHTML = ''
+        }
+
+        function Pegar_times(id){
+            let turma = document.getElementById(id).value
+            eel.Retorna_info('times', turma) (function (result){
+                Zerar_select("time-usuario")
+                Adicionar_item(result, 'time-usuario')
+            })
+        }
+
+        function Adicionar_item(valores, id) {
+            Zerar_select(id)
+            let select = document.getElementById(id).add(new Option('', ''))
+            valores.forEach(function(item){
+                let option = new Option(item, item);
+                let select = document.getElementById(id);
+                select.add(option);
+            })
+        }
+
+        function Atualizar_turmas(select_turma_id){
+            eel.Retorna_info('turmas') (function(todas_turmas){
+                Adicionar_item(todas_turmas, select_turma_id)
+            })
+        }
+        function Atualizar_times(turma_id, time_id){
+            let turma = document.getElementById(turma_id).value
+            let time = document.getElementById(time_id).value
+            eel.Retorna_info('times', turma=turma, time=time) (function(todas_turmas){
+                Adicionar_item(todas_turmas, time_id)
+            })
+        }
+
+        // Criando as variaveis 
+        var id_turma = 'turma-usuario'
+        var select_turma = document.getElementById(id_turma)
+
+        /*  Atualizar as turmas  */
+        // Turma de Usuario 
+        eel.Retorna_info('turmas') (function(todas_turmas){
+            Adicionar_item(todas_turmas, id_turma)
+        })
+        // Turma de Instrutor
+        eel.Retorna_info('turmas') (function(todas_turmas){
+            Adicionar_item(todas_turmas, 'select-turma')
+        })
+        // Turma de Times
+        eel.Retorna_info('turmas') (function(todas_turmas){
+            Adicionar_item(todas_turmas, 'selectTurma')
+        })   
+
+        // Eventos para sempre atualizar os selects         
+        select_turma.addEventListener('change', function(){
+            Pegar_times(id_turma)
+        })
+
     </script>
 </body>
 </html>
