@@ -111,7 +111,7 @@
                 <div class="textfield">
                     <label for="turma">Escolha a turma que o instrutor pertence:</label>
                     <select class="textfield-turma" name="turma" id="select-turma">
-                        <option value="turma1">Turma 1</option>
+                        <option value="Banco de Dados 1">Banco de Dados 1</option>
                         <option value="turma2">Turma 2</option>
                         <option value="turma3">BD 2022-2</option>
                     </select>
@@ -130,15 +130,15 @@
                 </div>
                 <div class="bt-cancelar-salvar">
                     <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaB()">Cancelar</button>
-                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar" onclick="cadInstrutor()">Salvar</button>
                 </div>
             </div>    
             <div class="cadastrar-time" id="cdTime">
                 <h1>CADASTRAR TIME</h1>
                 <div class="textfield">
                     <label for="turma">Escolha a turma que o instrutor pertence:</label>
-                    <select class="textfield-turma" name="turma" id="select-turma">
-                        <option value="turma1">Turma 1</option>
+                    <select class="textfield-turma" name="turma" id="selectTurma">
+                        <option value="Banco de Dados 1">Banco de Dados 1</option>
                         <option value="turma2">Turma 2</option>
                         <option value="turma3">BD 2022-2</option>
                     </select>
@@ -157,7 +157,7 @@
                 <div class="textfield">
                     <label for="turma">Escolha a turma que o usuário pertence:</label>
                     <select class="textfield-turma" id="turma">
-                        <option value="turma1">Turma 1</option>
+                        <option value="Banco de Dados 1">Banco de Dados 1</option>
                         <option value="turma2">Turma 2</option>
                         <option value="turma3">BD 2022-2</option>
                     </select>
@@ -192,7 +192,7 @@
                 </div>
                 <div class="bt-cancelar-salvar">
                     <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaD()">Cancelar</button>
-                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
+                    <button class="bt-cancelar-salvar" id="bt-salvar" onclick="cadUsuario()">Salvar</button>
                 </div>
             </div>    
             <div class="cadastrar-sprint" id="cdSprint">
@@ -244,16 +244,55 @@
             })
         }
         function cadTime(){
-            let b = document.getElementById("timeCad").value;
+            let nomeTurma = document.getElementById("selectTurma").value;
+            let nomeTime = document.getElementById("timeCad").value;
 
-            eel.Cadastrar('time', {'Time': b}) (function (result){
+            eel.Cadastrar('time', {'Turma': nomeTurma, 'Time': nomeTime}) (function (result){
                 window.alert(result[1])
                 if(result[0]){
-                    document.getElementById("timeCad").value=""
+                    document.getElementById("timeCad").value="";
+                    document.getElementById("selectTurma").value="";
                 }
             })
             
         }
+        function cadInstrutor(){
+            let turma = document.getElementById("select-turma").value;
+            let nomeInstrutor = document.getElementById("nome-instrutor").value;
+            let email = document.getElementById("email-instrutor").value;
+            let senha = document.getElementById("senha-instrutor").value;
+
+            eel.Cadastrar('aluno', {'Turma': turma, 'Nome': nomeInstrutor ,'Cargo': 'Instrutor', 'Email': email, 'Senha': senha}) (function (result){
+                window.alert(result[1])
+                if(result[0]){
+                    document.getElementById("select-turma").value = "";
+                    document.getElementById("nome-instrutor").value = "";
+                    document.getElementById("email-instrutor").value = "";
+                    document.getElementById("senha-instrutor").value = "";
+                }
+            })
+
+        }
+        function cadUsuario(){
+            let turma = document.getElementById("turma").value;
+            let time = document.getElementById("time").value;
+            let nome = document.getElementById("usuário").value;
+            let email = document.getElementById("email").value;
+            let cargo = document.getElementById("cargo").value;
+            let senha = document.getElementById("senha-do-usuário").value;
+
+            eel.Cadastrar('aluno',{'Turma': turma, 'Time': time, 'Nome': nome, 'Email': email, 'Cargo': cargo, 'Senha': senha}) (function (result){
+                window.alert(result[1])
+                if(result[0]){
+                    document.getElementById("turma").value = "";
+                    document.getElementById("time").value = "";
+                    document.getElementById("usuário").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("cargo").value = "";
+                    document.getElementById("senha-do-usuário").value = "";
+                }
+            })
+        } 
         
 
         function cancelaA(){

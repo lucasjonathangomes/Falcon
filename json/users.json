@@ -2,5 +2,21 @@
     "lukas": {
         "Email": "lukas@gmail.com",
         "Senha": "827ccb0eea8a706c4c34a16891f84e7b"
+    },
+    "JOAO": {
+        "Turma": "Banco de Dados 1",
+        "Time": "time1",
+        "Nome": "JOAO",
+        "Email": "JOAO@GMAIL.COM",
+        "Cargo": "Desenvolvedor",
+        "Senha": "caf1a3dfb505ffed0d024130f58c5cfa"
+    },
+    "lucas": {
+        "Turma": "Banco de Dados 1",
+        "Time": "time3",
+        "Nome": "lucas",
+        "Email": "lucas@gmail.com",
+        "Cargo": "Desenvolvedor",
+        "Senha": "caf1a3dfb505ffed0d024130f58c5cfa"
     }
 }

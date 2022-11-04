@@ -60,11 +60,12 @@ class Cadastrar:
 
         if time.lower() in [nome.lower() for nome in self.json_turmas[turma]]:
             # Ja existe o nome do time escolhido no banco de dados
-            return [False, f'O time {time} já existe na turma {turma}. Escolha outro nome para o time ou use o time que já existe']
+            return [False, f'O time "{time}" já existe na turma {turma}. Escolha outro nome para o time ou use o time que já existe']
 
         else:
-            self.info[turma][time] = time
-            return [True, f'Time {time} salvo com sucesso na turma {turma}']
+            self.json_turmas[turma][time] = {}
+            Arquivos().Salvar_JSON('turmas.json', self.json_turmas)
+            return [True, f'Time "{time}" salvo com sucesso na turma {turma}']
 
     def Cadastrar_aluno(self):
         def Criar_nome_user(user):
@@ -89,8 +90,8 @@ class Cadastrar:
         return [True, f'Aluno salvo com sucesso! Nome de usuario e senha serão enviado para {email}']
    
     def Cadastrar_sprint(self):
-        pass 
-
+        pass
+       
 class Arquivos:
     def Ler_JSON(self, nome):
         with open(Caminho_ate_Falcon()+'\\json\\'+nome, encoding="utf-8") as a:
