@@ -34,3 +34,5 @@ def Retorna_info(qual_info, turma='None', time='None'):
 
 eel.start("html/teste.html", port=8000)
 
+
+

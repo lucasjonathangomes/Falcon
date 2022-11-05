@@ -201,12 +201,62 @@ class RetornaInfo:
         return list(self.arquivo[self.turma])
 
     def Alunos(self):
-        print('turma:', self.turma)
-        print('time:', self.time)
         return self.arquivo[self.turma][self.time]['Alunos']
     
     def User(self):
         return user_info.user_info 
+
+class Avaliar:
+    def Salvar_avaiacao(self, info:dict):
+        self.info = info
+        print('Salvo!') 
+        tudo_respondido = self.__Conferir_info()
+
+        if tudo_respondido:
+            self.__Criar_dict_avaliacao
+            return True  
+        
+        else:
+            return False 
+
+    def __Conferir_info(self):
+
+        for info_respondido in self.info.values():
+            if info_respondido.strip() == '':
+                return False
+
+        return True
+    
+    def __Criar_dict_avaliacao(self):
+        pass 
+
+
+    def __Salvar(self):
+        def get_key():
+            try:
+                key = int(max(list(historico_do_user))) + 1
+            except:
+                key = 1
+            
+            return str(key) 
+
+        historico = Arquivos().Ler_JSON('histrc.json')
+        
+        nome_usuario = user_info['User']
+        avaliado = self.info['Avaliado']
+
+        if not nome_usuario in historico:
+            historico[nome_usuario] = {}
+
+        if not avaliado in historico[nome_usuario]:
+            historico[nome_usuario][avaliado] = {}
+
+        historico_do_user = historico[nome_usuario][avaliado]
+        key = get_key()
+        self.info['Sprint'] = 'Sprint 1'
+        historico_do_user[key] = self.info
+        Arquivos().Salvar_JSON('histrc.json', historico)
+
 
 def Login(user, senha):
     todos_users = Arquivos().Ler_JSON('users.json')

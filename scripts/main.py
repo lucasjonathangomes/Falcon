@@ -52,8 +52,12 @@ def Retorna_info(qual_info, turma='None', time='None'):
 		return []
 
 @eel.expose
-def Avaliacao():
-	pass 
+def Avaliacao(info:dict):
+	'''
+	info: Todas as informações para salvar a avaliação. As informações são: turma, time, avaliado, pergunta 1, resposta 1,...
+	retorna: True ou False
+	'''
+	return support.Avaliar().Salvar_avaiacao(info) 
 
 eel.start("html/login.html", port=8001)
 

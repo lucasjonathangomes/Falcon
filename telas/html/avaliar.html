@@ -192,6 +192,7 @@
         // Eventos para sempre atualizar os selects         
         select_turma.addEventListener('change', function(){
             Atualizar_times(id_turma, id_time)
+            Atualizar_integrante(id_turma, id_time, id_user)
         })
 
         select_time.addEventListener('change', function(){
