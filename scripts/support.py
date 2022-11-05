@@ -62,12 +62,12 @@ class Cadastrar:
 
         if time.lower() in [nome.lower() for nome in self.json_turmas[turma]]:
             # Ja existe o nome do time escolhido no banco de dados
-            return [False, f'O time "{time}" já existe na turma {turma}. Escolha outro nome para o time ou use o time que já existe']
+            return [False, f'O time "{time}" já existe na turma "{turma}". Escolha outro nome para o time ou use o time que já existe']
 
         else:
             self.json_turmas[turma][time] = {}
             Arquivos().Salvar_JSON('turmas.json', self.json_turmas)
-            return [True, f'Time "{time}" salvo com sucesso na turma {turma}']
+            return [True, f'Time "{time}" salvo com sucesso na turma "{turma}"']
 
     def Cadastrar_aluno(self):
         def Criar_nome_user(user):
@@ -89,17 +89,17 @@ class Cadastrar:
             return [True]
 
         # Padronizar as informações 
-        nome  = self.info['Nome'].strp().title()
-        email = self.info['Email'].strp()
+        nome  = self.info['Nome'].strip().title()
+        email = self.info['Email'].strip()
         senha = self.info['Senha']
 
         # Fazer todas as validações 
         # Turma 
-        if self.info['Turma'].strp() == '':
+        if self.info['Turma'].strip() == '':
             return [False, 'Seleciona uma turma para esse aluno']
         
         # Time
-        if self.info['Time'].strp() == '':
+        if self.info['Time'].strip() == '':
             return [False, 'Seleciona um time para esse aluno'] 
 
         # Nome
@@ -121,8 +121,16 @@ class Cadastrar:
         if user in self.json_user:
             user = Criar_nome_user(user)
         
-        self.info['Senha'] = senha 
-        self.json_user[user] = self.info 
+        deixar_sequencial = {
+                'Nome' : nome,
+                'Email': email,
+                'Turma': self.info['Turma'],
+                'Time' : self.info['Time'],
+                'Cargo': self.info['Cargo'],
+                'Senha': senha 
+        }
+
+        self.json_user[user] = deixar_sequencial 
 
         Arquivos().Salvar_JSON('users.json', self.json_user)
 

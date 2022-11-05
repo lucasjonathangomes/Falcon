@@ -51,6 +51,10 @@ def Retorna_info(qual_info, turma='None', time='None'):
 	except:
 		return ['']
 
+@eel.expose
+def Avaliacao():
+	pass 
+
 eel.start("html/login.html", port=8000)
 
 
