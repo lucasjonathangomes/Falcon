@@ -9,13 +9,25 @@
             },
             "PO": "Lucas",
             "Scrum Master": "Ricardo",
-            "Desenvolvedores": [
+            "Desenvolvedor": [
                 "Lucas"
             ],
             "Alunos": [
                 "Lucas",
                 "Lucas",
                 "Ricardo"
+            ]
+        }
+    },
+    "Teste": {
+        "Teste": {
+            "PO": "",
+            "Scrum Master": "",
+            "Desenvolvedor": [
+                "Teste Teste"
+            ],
+            "Alunos": [
+                "Teste Teste"
             ]
         }
     }

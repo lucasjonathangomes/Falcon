@@ -12,5 +12,21 @@
         "Email": "lucas@gmail.com",
         "Cargo": "Desenvolvedor",
         "Senha": "caf1a3dfb505ffed0d024130f58c5cfa"
+    },
+    "qw": {
+        "Nome": "Qw Qw",
+        "Email": "qw@gmail.com",
+        "Turma": "Lukas",
+        "Time": "Lukas",
+        "Cargo": "Desenvolvedor",
+        "Senha": "02757f1f2a47840603d7a89c2a8e6152"
+    },
+    "teste": {
+        "Nome": "Teste Teste",
+        "Email": "teste@gmail.com",
+        "Turma": "Teste",
+        "Time": "Teste",
+        "Cargo": "Desenvolvedor",
+        "Senha": "d0b64856506e5dbac2daa60d3a3e9eb5"
     }
 }

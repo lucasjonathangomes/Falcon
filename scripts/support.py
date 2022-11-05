@@ -46,7 +46,7 @@ class Cadastrar:
                 return self.Cadastrar_sprint() 
 
     def Cadastrar_turma(self):
-        turma_nome = self.info['Turma'].strip()
+        turma_nome = self.info['Turma'].strip().title()
         if turma_nome in self.json_turmas:
             return [False, f'Turma "{turma_nome}" já existe']
         
@@ -56,16 +56,21 @@ class Cadastrar:
             Arquivos().Salvar_JSON('turmas.json', self.json_turmas)
             return [True, f'Turma "{turma_nome}" salvo com sucesso!']
 
-    def Cadastrar_time(self):
-        turma = self.info['Turma'].strip()
-        time = self.info['Time'].strip()
+    def Cadastrar_time(self): 
+        turma = self.info['Turma'].strip().title()
+        time = self.info['Time'].strip().title()
 
         if time.lower() in [nome.lower() for nome in self.json_turmas[turma]]:
             # Ja existe o nome do time escolhido no banco de dados
             return [False, f'O time "{time}" já existe na turma "{turma}". Escolha outro nome para o time ou use o time que já existe']
 
         else:
-            self.json_turmas[turma][time] = {}
+            self.json_turmas[turma][time] = {
+                    'PO': '',
+                    'Scrum Master': '',
+                    'Desenvolvedor': [],
+                    'Alunos': []
+            }
             Arquivos().Salvar_JSON('turmas.json', self.json_turmas)
             return [True, f'Time "{time}" salvo com sucesso na turma "{turma}"']
 
@@ -88,18 +93,38 @@ class Cadastrar:
 
             return [True]
 
+        def Salvar_aluno_no_time(turma, time, cargo, nome):
+            turmas = Arquivos().Ler_JSON('turmas.json')
+            if cargo == 'Desenvolvedor':
+                turmas[turma][time][cargo].append(nome)
+            
+            else:
+                if turmas[turma][time][cargo] != '':
+                    return [False, turmas[turma][time][cargo]]
+                
+                else:
+                    turmas[turma][time][cargo] = nome
+            
+            turmas[turma][time]['Alunos'].append(nome)
+            Arquivos().Salvar_JSON('turmas.json', turmas)
+
+            return [True]
+
         # Padronizar as informações 
+        turma = self.info['Turma'].strip()
+        time  = self.info['Time'].strip()
         nome  = self.info['Nome'].strip().title()
         email = self.info['Email'].strip()
         senha = self.info['Senha']
+        cargo = self.info['Cargo']
 
         # Fazer todas as validações 
         # Turma 
-        if self.info['Turma'].strip() == '':
+        if turma == '':
             return [False, 'Seleciona uma turma para esse aluno']
         
         # Time
-        if self.info['Time'].strip() == '':
+        if time == '':
             return [False, 'Seleciona um time para esse aluno'] 
 
         # Nome
@@ -124,15 +149,21 @@ class Cadastrar:
         deixar_sequencial = {
                 'Nome' : nome,
                 'Email': email,
-                'Turma': self.info['Turma'],
-                'Time' : self.info['Time'],
-                'Cargo': self.info['Cargo'],
+                'Turma': turma,
+                'Time' : time,
+                'Cargo': cargo,
                 'Senha': senha 
         }
 
         self.json_user[user] = deixar_sequencial 
 
+        usuario_salvo_no_time = Salvar_aluno_no_time(turma, time, cargo, nome)
+        if not usuario_salvo_no_time[0]:
+                return [False, f'O cargo "{cargo}" já esta preenchido pelo aluno "{usuario_salvo_no_time[1]}" para essa turma e time escolhido']
+
         Arquivos().Salvar_JSON('users.json', self.json_user)
+
+        
 
         return [True, f'Aluno salvo com sucesso! Nome de usuario é: {user}']
 
@@ -155,10 +186,10 @@ class Arquivos:
 class RetornaInfo:
     def __init__(self, qual_info, turma='None', time='None'):
         qual_info = qual_info.lower().strip()
-        self.turma = turma.strip()
-        self.time = time.strip()
+        self.turma = turma.strip().title()
+        self.time = time.strip().title()
 
-        if qual_info in ['turmas', 'times']:
+        if qual_info in ['turmas', 'times', 'alunos']:
             self.arquivo = Arquivos().Ler_JSON('turmas.json')
         else:
             self.arquivo = Arquivos().Ler_JSON('users.json') 
@@ -170,6 +201,8 @@ class RetornaInfo:
         return list(self.arquivo[self.turma])
 
     def Alunos(self):
+        print('turma:', self.turma)
+        print('time:', self.time)
         return self.arquivo[self.turma][self.time]['Alunos']
     
     def User(self):

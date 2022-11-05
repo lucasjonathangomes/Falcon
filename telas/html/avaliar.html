@@ -141,14 +141,6 @@
             select.innerHTML = ''
         }
 
-        function Pegar_times(id){
-            let turma = document.getElementById(id).value
-            eel.Retorna_info('times', turma) (function (result){
-                Zerar_select("time-usuario")
-                Adicionar_item(result, 'time-usuario')
-            })
-        }
-
         function Adicionar_item(valores, id) {
             Zerar_select(id)
             let select = document.getElementById(id).add(new Option('', ''))
@@ -164,46 +156,46 @@
                 Adicionar_item(todas_turmas, select_turma_id)
             })
         }
+        
         function Atualizar_times(turma_id, time_id){
             let turma = document.getElementById(turma_id).value
             let time = document.getElementById(time_id).value
-            eel.Retorna_info('times', turma=turma, time=time) (function(todas_turmas){
+            eel.Retorna_info('times', turma=turma) (function(todas_turmas){
                 Adicionar_item(todas_turmas, time_id)
             })
         }
-        function Atualizar_integrante(time_id,user_id){
+        function Atualizar_integrante(turma_id, time_id, user_id){
+            let turma = document.getElementById(turma_id).value
             let time = document.getElementById(time_id).value
-            let user = document.getElementById(user_id).value
-            eel.Retorna_info('times',time=time, user=user) (function(todas_turmas){
-                Adicionar_item(todas_turmas, user_id)
+
+            eel.Retorna_info('alunos', turma=turma, time=time) (function(todos_alunos){
+                Adicionar_item(todos_alunos, user_id)
             })
         }
 
-        Atualizar_turmas('turma-usuario')
-        Atualizar_times('turma-usuario', 'time-usuario')
-        Atualizar_integrante('time-usuario', 'usuario')
-
         // Criando as variaveis 
         var id_turma = 'turma-usuario'
+        var id_time  = 'time-usuario'
+        var id_user  = 'usuario'
         var select_turma = document.getElementById(id_turma)
+        var select_time = document.getElementById(id_time)
 
         /*  Atualizar as turmas  */
         // Turma de Usuario 
         eel.Retorna_info('turmas') (function(todas_turmas){
             Adicionar_item(todas_turmas, id_turma)
         })
-        // Turma de Instrutor
-        eel.Retorna_info('turmas') (function(todas_turmas){
-            Adicionar_item(todas_turmas, 'select-turma')
-        })
-        // Turma de Times
-        eel.Retorna_info('turmas') (function(todas_turmas){
-            Adicionar_item(todas_turmas, 'selectTurma')
-        })   
+        
+        //Adicionar_item(todas_turmas, 'selectTurma')
+
 
         // Eventos para sempre atualizar os selects         
         select_turma.addEventListener('change', function(){
-            Pegar_times(id_turma)
+            Atualizar_times(id_turma, id_time)
+        })
+
+        select_time.addEventListener('change', function(){
+            Atualizar_integrante(id_turma, id_time, id_user)
         })
     </script>
 </body>

@@ -49,12 +49,11 @@ def Retorna_info(qual_info, turma='None', time='None'):
 		return info 
 
 	except:
-		return ['']
+		return []
 
 @eel.expose
 def Avaliacao():
 	pass 
 
-eel.start("html/login.html", port=8000)
-
+eel.start("html/login.html", port=8001)
 
