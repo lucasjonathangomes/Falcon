@@ -14,8 +14,8 @@
         </div>
         <div class="nome-home"><h1>Nome Usuário</h1></div>
         <div class="bt-home">
-            <button class="bt-voltar">Voltar</button>
-            <button class="bt-sair">Sair</button>
+            <button class="bt-voltar" onclick="go_to('menu.html')">Voltar</button>
+            <button class="bt-sair" onclick="go_to('login.html')">Sair</button>
         </div>
     </div>
     <div class="menu-historico">
@@ -29,5 +29,11 @@
             <h1>Histórico de avaliações</h1>
         </div>
     </div>
+
+    <script>
+        function go_to(url) {
+            window.location.replace(url);
+        }
+    </script>
 </body>
 </html>

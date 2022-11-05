@@ -127,7 +127,7 @@ class Cadastrar:
         Arquivos().Salvar_JSON('users.json', self.json_user)
 
         return [True, f'Aluno salvo com sucesso! Nome de usuario é: {user}']
-   
+
     def Cadastrar_sprint(self):
         pass
        

@@ -17,28 +17,24 @@
         <div class="nome-home" id="nome_home"><h1></h1></div>
         <div class="bt-home">
             <button class="bt-voltar">Voltar</button>
-            <button class="bt-sair">Sair</button>
+            <button class="bt-sair" onclick="go_to('login.html')">Sair</button>
         </div>
     </div>
     <div class="main-instrutor">
         <div class="center-instrutor">
             <div class="botoes">
                 <h1 id="nome usuário"></h1>
-                <button class="botao-cadastrar" onclick="Cadastrar()">CADASTRAR</button>
-                <button class="botao-avaliar" onclick="Avaliar()">AVALIAR</button>
-                <button class="botao-historico" onclick="Teste()">HISTÓRICO</button>
+                <button class="botao-cadastrar" onclick="go_to('cadastrar.html')">CADASTRAR</button>
+                <button class="botao-avaliar" onclick="go_to('avaliar.html')">AVALIAR</button>
+                <button class="botao-historico" onclick="go_to('historico.html')">HISTÓRICO</button>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="/eel.js"></script>
     <script src="../scripts/script.js"></script>
     <script>
-        eel.expose(go_to) 
         function go_to(url) {
             window.location.replace(url);
-        }
-        function Teste(){
-            eel.Testar_os_botoes()
         }
 
         function Avaliar(){

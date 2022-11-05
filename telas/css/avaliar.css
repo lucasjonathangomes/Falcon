@@ -100,7 +100,7 @@ body * {
 .right-avaliar{
     width: 60vw;
     height: 100vh;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     margin-left: 100px;
@@ -109,7 +109,7 @@ body * {
 
 .tela-avaliar{
     width: 100%; /* Largura */
-    display: flex; /* Exibição */
+    display: block; /* Exibição */
     justify-content: center; /* Justificar Conteúdo */
     align-items: flex; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */
