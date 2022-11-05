@@ -209,27 +209,21 @@ class RetornaInfo:
 class Avaliar:
     def Salvar_avaiacao(self, info:dict):
         self.info = info
-        print('Salvo!') 
         tudo_respondido = self.__Conferir_info()
 
         if tudo_respondido:
-            self.__Criar_dict_avaliacao
+            self.__Salvar()
             return True  
         
         else:
             return False 
 
     def __Conferir_info(self):
-
         for info_respondido in self.info.values():
             if info_respondido.strip() == '':
                 return False
 
         return True
-    
-    def __Criar_dict_avaliacao(self):
-        pass 
-
 
     def __Salvar(self):
         def get_key():
@@ -242,7 +236,7 @@ class Avaliar:
 
         historico = Arquivos().Ler_JSON('histrc.json')
         
-        nome_usuario = user_info['User']
+        nome_usuario = user_info.user_info['User']
         avaliado = self.info['Avaliado']
 
         if not nome_usuario in historico:

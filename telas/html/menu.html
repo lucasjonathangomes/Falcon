@@ -33,25 +33,15 @@
     <script type="text/javascript" src="/eel.js"></script>
     <script src="../scripts/script.js"></script>
     <script>
-        function go_to(url) {
-            window.location.replace(url);
-        }
-
-        function Avaliar(){
-            go_to('avaliar.html')
-        }
-        function Cadastrar(){
-            go_to('cadastrar.html')
-        }
-        
-        function historico(){
-            go_to('historico.html')
-        }
-        
+        // Para colocar o nome na Barra de Menu
         eel.Retorna_info('user')(function (info_do_usuario){
             var nome_home = document.getElementById('nome_home')
             nome_home.innerHTML = `<h1>${info_do_usuario['Nome']}</h1>`
         })
+        
+        function go_to(url) {
+            window.location.replace(url);
+        }
 
     </script>
 </body>

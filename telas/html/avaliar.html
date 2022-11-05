@@ -14,7 +14,7 @@
         <div class="logo-home">
             <img src="../fotos/logo_falcon_200.png" alt="logo_falcon_200" width="150px" height="150px">
         </div>
-        <div class="nome-home"><h1></h1></div>
+        <div class="nome-home" id="nome_home"></div>
         <div class="bt-home">
             <button class="bt-voltar" onclick="go_to('menu.html')">Voltar</button>
             <button class="bt-sair" onclick="go_to('login.html')">Sair</button>
@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div class="pergunta">
-                    <label class="label-pergunta" for="pergunta4">Entrega de resultados e participação efetiva no projeto</label>
+                    <label class="label-pergunta" for="pergunta4" id="testando">Entrega de resultados e participação efetiva no projeto</label>
                     <div>
                         <input type="radio" name="pergunta4" value="Ruim"> Ruim
                         <input type="radio" name="pergunta4" value="Regular"> Regular
@@ -124,7 +124,7 @@
                 </div>
                 <div class="bt-cancelar-avaliar">
                     <button class="bt-cancelar-avaliar" id="bt-cancelar" onclick="">Cancelar</button>
-                    <button class="bt-cancelar-avaliar" id="bt-avaliar" onclick="Avaliacao()">Avaliar</button>
+                    <button class="bt-cancelar-avaliar" id="bt-avaliar" onclick="Salvar_avaliacao()">Avaliar</button>
                 </div>
             </div>
         </div>
@@ -132,6 +132,12 @@
 
     <script type="text/javascript" src="/eel.js"></script>
     <script>
+        // Para colocar o nome na Barra de Menu
+        eel.Retorna_info('user')(function (info_do_usuario){
+            var nome_home = document.getElementById('nome_home')
+            nome_home.innerHTML = `<h1>${info_do_usuario['Nome']}</h1>`
+        })
+
         function go_to(url) {
             window.location.replace(url);
         }
@@ -185,9 +191,6 @@
         eel.Retorna_info('turmas') (function(todas_turmas){
             Adicionar_item(todas_turmas, id_turma)
         })
-        
-        //Adicionar_item(todas_turmas, 'selectTurma')
-
 
         // Eventos para sempre atualizar os selects         
         select_turma.addEventListener('change', function(){
@@ -198,84 +201,133 @@
         select_time.addEventListener('change', function(){
             Atualizar_integrante(id_turma, id_time, id_user)
         })
+
+        function Zerar_input_radio(todos_name){
+            todos_name.forEach(function(name){
+                let input_radio = document.getElementsByName(name);
+
+                for(let i=0; i < input_radio.length; i++)
+                    input_radio[i].checked = false;
+            })
+        }
         
-    function pergunta1(){
-        let a = document.querySelectorAll("input[name='pergunta1']");
-        let result = document.getElementById("result");
+        function Salvar_avaliacao() {
+            try {
+                let turmaSelect = document.getElementById("turma-usuario").value;
+                let timeSelect = document.getElementById("time-usuario").value;
+                let alunoAvaliado = document.getElementById("usuario").value;
+                let pergunta1 = document.querySelector("input[name = pergunta1]:checked").value
+                let pergunta2 = document.querySelector("input[name = pergunta2]:checked").value
+                let pergunta3 = document.querySelector("input[name = pergunta3]:checked").value
+                let pergunta4 = document.querySelector("input[name = pergunta4]:checked").value
+                let pergunta5 = document.querySelector("input[name = pergunta5]:checked").value
 
-        let findSelected = () => {
-            let selected = document.querySelector("input[name = pergunta1]:checked").value;
-            console.log(selected)
+                eel.Avaliacao({
+                    'Turma': turmaSelect,
+                    'Time': timeSelect,
+                    'Avaliado': alunoAvaliado,
+                    'Trabalho em equipe, cooperação e descentralização de conhecimento': pergunta1,
+                    'Iniciativa e proatividade':pergunta2,
+                    'Autodidaxia e agregação de conhecimento ao grupo': pergunta3,
+                    'Entrega de resultados e participação efetiva no projeto': pergunta4,
+                    'Competência Técnica': pergunta5}) (function(avaliacao_valida){
+                        if (avaliacao_valida){
+                            window.alert('Avaliação concluida!')
+                            let lista_de_name = [
+                                'pergunta1',
+                                'pergunta2',
+                                'pergunta3',
+                                'pergunta4',
+                                'pergunta5'
+                            ]
+                            let lista_de_id = [
+                                'turma-usuario',
+                                'time-usuario',
+                                'usuario'
+                            ]
+                            
+                            Zerar_input_radio(lista_de_name)
+                            
+                            lista_de_id.forEach(function(id){
+                                Zerar_select(id)
+                            })
+                        }
+                        else {
+                            window.alert('Erro ao salvar a avaliação. Por favor, verifique se tem alguma pergunta que não foi respondida e/ou se esqueceu de selecionar um aluno')
+                        }
+                    })
+                }
+                catch (erro) {
+                    window.alert('Erro ao salvar a avaliação. Por favor, verifique se tem alguma pergunta que não foi respondida e/ou se esqueceu de selecionar um aluno')
+                }
         }
 
-        a.forEach(radio => {
-            radio.addEventListener("change", findSelected)
-        });
-    }
-    function pergunta2(){
-        let a = document.querySelectorAll("input[name='pergunta2']");
-        let result = document.getElementById("result");
+        function pergunta1(){
+            let a = document.querySelectorAll("input[name='pergunta1']");
+            let result = document.getElementById("result");
 
-        let findSelected = () => {
-            let selected = document.querySelector("input[name = pergunta2]:checked").value;
-            console.log(selected)
+            let findSelected = () => {
+                let selected = document.querySelector("input[name = pergunta1]:checked").value;
+                console.log(selected)
+            }
+
+            a.forEach(radio => {
+                radio.addEventListener("change", findSelected)
+            });
+        }
+        function pergunta2(){
+            let a = document.querySelectorAll("input[name='pergunta2']");
+            let result = document.getElementById("result");
+
+            let findSelected = () => {
+                let selected = document.querySelector("input[name = pergunta2]:checked").value;
+                console.log(selected)
+            }
+
+            a.forEach(radio => {
+                radio.addEventListener("change", findSelected)
+            });
+        }
+        function pergunta3(){
+            let a = document.querySelectorAll("input[name='pergunta3']");
+            let result = document.getElementById("result");
+
+            let findSelected = () => {
+                let selected = document.querySelector("input[name = pergunta3]:checked").value;
+                console.log(selected)
+            }
+
+            a.forEach(radio => {
+                radio.addEventListener("change", findSelected)
+            });
+        }
+        function pergunta4(){
+            let a = document.querySelectorAll("input[name='pergunta4']");
+            let result = document.getElementById("result");
+
+            let findSelected = () => {
+                let selected = document.querySelector("input[name = pergunta4]:checked").value;
+                console.log(selected)
+            }
+
+            a.forEach(radio => {
+                radio.addEventListener("change", findSelected)
+            });
+        }
+        function pergunta5(){
+            let a = document.querySelectorAll("input[name='pergunta5']");
+            let result = document.getElementById("result");
+
+            let findSelected = () => {
+                let selected = document.querySelector("input[name = pergunta5]:checked").value;
+                console.log(selected)
+            }
+
+            a.forEach(radio => {
+                radio.addEventListener("change", findSelected)
+            });
         }
 
-        a.forEach(radio => {
-            radio.addEventListener("change", findSelected)
-        });
-    }
-    function pergunta3(){
-        let a = document.querySelectorAll("input[name='pergunta3']");
-        let result = document.getElementById("result");
-
-        let findSelected = () => {
-            let selected = document.querySelector("input[name = pergunta3]:checked").value;
-            console.log(selected)
-        }
-
-        a.forEach(radio => {
-            radio.addEventListener("change", findSelected)
-        });
-    }
-    function pergunta4(){
-        let a = document.querySelectorAll("input[name='pergunta4']");
-        let result = document.getElementById("result");
-
-        let findSelected = () => {
-            let selected = document.querySelector("input[name = pergunta4]:checked").value;
-            console.log(selected)
-        }
-
-        a.forEach(radio => {
-            radio.addEventListener("change", findSelected)
-        });
-    }
-    function pergunta5(){
-        let a = document.querySelectorAll("input[name='pergunta5']");
-        let result = document.getElementById("result");
-
-        let findSelected = () => {
-            let selected = document.querySelector("input[name = pergunta5]:checked").value;
-            console.log(selected)
-        }
-
-        a.forEach(radio => {
-            radio.addEventListener("change", findSelected)
-        });
-    }
-
-    // pergunta1();
-    // pergunta2();
-    // pergunta3();
-    // pergunta4();
-    // pergunta5();
-
-    let turmaSelect = document.getElementById("turma-usuario").value;
-    let timeSelect = document.getElementById("time-usuario").value;
-    let alunoAvaliado = document.getElementById("usuario").value;
-
-    eel.Avaliacao({'Turma':turmaSelect,'Time':timeSelect,'Avaliado': alunoAvaliado,'Trabalho em equipe, cooperação e descentralização de conhecimento': pergunta1(),'Iniciativa e proatividade':pergunta2(),'Autodidaxia e agregação de conhecimento ao grupo': pergunta3(),'Entrega de resultados e participação efetiva no projeto': pergunta4(),'Competência Técnica': pergunta5()})
 
 
     </script>
