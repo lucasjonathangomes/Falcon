@@ -26,27 +26,19 @@
                 <h1>USUÁRIO</h1>
                 <div class="select-info">
                     <label for="select-turma">Selecione a turma do usuário:</label>
-                    <select class="select-area-avaliacao">
-                        <option value="turma1">Turma 1</option>
-                        <option value="turma2">Turma 2</option>
-                        <option value="turma3">BD 2022-2</option>
+                    <select class="select-area-avaliacao" id="turma-usuario" nome="turma">
                     </select>
                 </div>
                 <div class="select-info">
                     <label for="select-time">Selecione o time do usuário:</label>
-                    <select class="select-area-avaliacao">
-                        <option value="time1">Time 1</option>
-                        <option value="time2">Time 2</option>
-                        <option value="time3">Falcon</option>
+                    <select class="select-area-avaliacao" id="time-usuario" name="time" >
+                        <option value="None"></option>
                     </select>
                 </div>
                 <div class="select-info">
                     <label for="select-usuario">Selecione o usuário:</label>
-                    <select class="select-area-avaliacao">
-                        <option value="usuário1">Lucas Augusto</option>
-                        <option value="usuário2">Lukas Fernando</option>
-                        <option value="usuário3">Lucas Henrique</option>
-                        <option value="usuário4">Lucas Jonathan</option>
+                    <select class="select-area-avaliacao" id="usuario">
+                        <option value="None"></option>
                     </select>
                 </div>
             </div>
@@ -143,6 +135,76 @@
         function go_to(url) {
             window.location.replace(url);
         }
+
+        function Zerar_select(id){
+            let select  = document.getElementById(id)
+            select.innerHTML = ''
+        }
+
+        function Pegar_times(id){
+            let turma = document.getElementById(id).value
+            eel.Retorna_info('times', turma) (function (result){
+                Zerar_select("time-usuario")
+                Adicionar_item(result, 'time-usuario')
+            })
+        }
+
+        function Adicionar_item(valores, id) {
+            Zerar_select(id)
+            let select = document.getElementById(id).add(new Option('', ''))
+            valores.forEach(function(item){
+                let option = new Option(item, item);
+                let select = document.getElementById(id);
+                select.add(option);
+            })
+        }
+
+        function Atualizar_turmas(select_turma_id){
+            eel.Retorna_info('turmas') (function(todas_turmas){
+                Adicionar_item(todas_turmas, select_turma_id)
+            })
+        }
+        function Atualizar_times(turma_id, time_id){
+            let turma = document.getElementById(turma_id).value
+            let time = document.getElementById(time_id).value
+            eel.Retorna_info('times', turma=turma, time=time) (function(todas_turmas){
+                Adicionar_item(todas_turmas, time_id)
+            })
+        }
+        function Atualizar_integrante(time_id,user_id){
+            let time = document.getElementById(time_id).value
+            let user = document.getElementById(user_id).value
+            eel.Retorna_info('times',time=time, user=user) (function(todas_turmas){
+                Adicionar_item(todas_turmas, user_id)
+            })
+        }
+
+        Atualizar_turmas('turma-usuario')
+        Atualizar_times('turma-usuario', 'time-usuario')
+        Atualizar_integrante('time-usuario', 'usuario')
+
+        // Criando as variaveis 
+        var id_turma = 'turma-usuario'
+        var select_turma = document.getElementById(id_turma)
+
+        /*  Atualizar as turmas  */
+        // Turma de Usuario 
+        eel.Retorna_info('turmas') (function(todas_turmas){
+            Adicionar_item(todas_turmas, id_turma)
+        })
+        // Turma de Instrutor
+        eel.Retorna_info('turmas') (function(todas_turmas){
+            Adicionar_item(todas_turmas, 'select-turma')
+        })
+        // Turma de Times
+        eel.Retorna_info('turmas') (function(todas_turmas){
+            Adicionar_item(todas_turmas, 'selectTurma')
+        })   
+
+        // Eventos para sempre atualizar os selects         
+        select_turma.addEventListener('change', function(){
+            Pegar_times(id_turma)
+        })
     </script>
 </body>
 </html>
