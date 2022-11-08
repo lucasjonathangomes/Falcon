@@ -35,7 +35,7 @@ body{
     margin-right: 15px;
 }
 
-.menu-historico{
+.menu-historico1{
     display: flex;
 }
 
@@ -44,7 +44,13 @@ body{
     height: 49vw;
     background: red;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+}
+
+.menu-historico2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .graficos{
@@ -52,10 +58,12 @@ body{
     width: 100%;
     height: 30vw;
     display: flex;
-    justify-content: right;
-    
+    justify-content: center;
 }
 
 .historico{
-    
+    width: 100%;
+    height: 19vw;
+    display: flex;
+    justify-content: center;
 }

@@ -55,6 +55,54 @@
                 "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Ruim",
                 "Compet\u00eancia T\u00e9cnica": "Ruim",
                 "Sprint": "Sprint 1"
+            },
+            "6": {
+                "Turma": "Teste",
+                "Time": "Teste",
+                "Avaliado": "Teste Teste",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Muito Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
+                "Compet\u00eancia T\u00e9cnica": "Regular",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lucas Berto": {
+            "1": {
+                "Turma": "Turma 1",
+                "Time": "Time 1",
+                "Avaliado": "Lucas Berto",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Regular",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
+                "Compet\u00eancia T\u00e9cnica": "Muito Bom",
+                "Sprint": "Sprint 1"
+            },
+            "2": {
+                "Turma": "Turma 1",
+                "Time": "Time 1",
+                "Avaliado": "Lucas Berto",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Muito Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Regular",
+                "Compet\u00eancia T\u00e9cnica": "Ruim",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lucas Fernando": {
+            "1": {
+                "Turma": "Banco De Dados 2",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Fernando",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
+                "Compet\u00eancia T\u00e9cnica": "Regular",
+                "Sprint": "Sprint 1"
             }
         }
     }
