@@ -13,20 +13,20 @@
         "Cargo": "Administrador",
         "Senha": "caf1a3dfb505ffed0d024130f58c5cfa"
     },
-    "qw": {
-        "Nome": "Qw Qw",
-        "Email": "qw@gmail.com",
-        "Turma": "Lukas",
-        "Time": "Lukas",
-        "Cargo": "Desenvolvedor",
-        "Senha": "02757f1f2a47840603d7a89c2a8e6152"
-    },
     "teste": {
         "Nome": "Teste Teste",
         "Email": "teste@gmail.com",
-        "Turma": "Teste",
-        "Time": "Teste",
-        "Cargo": "Desenvolvedor",
-        "Senha": "d0b64856506e5dbac2daa60d3a3e9eb5"
+        "Turma": "Banco De Dados 1",
+        "Time": "Falcon",
+        "Cargo": "PO",
+        "Senha": "e78e25f23ab84c7466249c5c788cc2d1"
+    },
+    "lucasf": {
+        "Nome": "Lucas Fernando",
+        "Email": "lucasf@gmail.com",
+        "Turma": "Banco De Dados 2",
+        "Time": "Falcon",
+        "Cargo": "PO",
+        "Senha": "82ccda5ca5fb02039d4f49dfdad65d7f"
     }
 }
