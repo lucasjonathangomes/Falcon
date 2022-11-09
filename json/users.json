@@ -3,14 +3,14 @@
         "Nome": "Lukas Fernando Berto",
         "Senha": "d41d8cd98f00b204e9800998ecf8427e",
         "Email": "lukas@gmail.com",
-        "Cargo": "Desenvolvedor"
+        "Cargo": "Instrutor"
     },
     "lucas": {
         "Turma": "Banco de Dados 1",
         "Time": "time3",
         "Nome": "lucas",
         "Email": "lucas@gmail.com",
-        "Cargo": "Desenvolvedor",
+        "Cargo": "Administrador",
         "Senha": "caf1a3dfb505ffed0d024130f58c5cfa"
     },
     "qw": {

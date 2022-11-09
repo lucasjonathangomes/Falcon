@@ -24,7 +24,7 @@
         <div class="center-instrutor">
             <div class="botoes">
                 <h1 id="nome usuário"></h1>
-                <button class="botao-cadastrar" onclick="go_to('cadastrar.html')">CADASTRAR</button>
+                <button class="botao-cadastrar" onclick="VerificaAcesso('cadastrar')">CADASTRAR</button>
                 <button class="botao-avaliar" onclick="go_to('avaliar.html')">AVALIAR</button>
                 <button class="botao-historico" onclick="go_to('historico.html')">HISTÓRICO</button>
             </div>
@@ -33,6 +33,7 @@
     <script type="text/javascript" src="/eel.js"></script>
     <script src="../scripts/script.js"></script>
     <script>
+        
         // Para colocar o nome na Barra de Menu
         eel.Retorna_info('user')(function (info_do_usuario){
             var nome_home = document.getElementById('nome_home')
@@ -41,6 +42,19 @@
         
         function go_to(url) {
             window.location.replace(url);
+        }
+
+        function VerificaAcesso(botao){
+            eel.Retorna_info("user")(function(userInfo){         
+               
+                if(userInfo['Cargo'] == 'Instrutor' && botao == "cadastrar" || userInfo['Cargo'] == 'Administrador' && botao == "cadastrar" ){
+                    go_to(botao+'.html');
+                }else if(botao == "cadastrar" || botao == "historico"){
+                    go_to(botao+'.html');
+                }else{
+                    window.alert('Você não tem acesso a esta tela!')
+                }                           
+            });
         }
 
     </script>

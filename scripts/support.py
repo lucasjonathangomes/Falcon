@@ -83,7 +83,7 @@ class Cadastrar:
                     return novo_user
 
         def Validar_senha(senha):
-            todos_regex = ['[a-z]', '[A-Z]', '[!|@|#|$|%|&|*|(|)]', '[1-9]']
+            todos_regex = ['[a-z]', '[A-Z]', '[!|@$|%|&|*|(|)]', '[1-9]']
 
             for regex in todos_regex:
                 if len(findall(regex, senha)) == 0 or len(senha) < 8:

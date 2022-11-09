@@ -10,71 +10,40 @@
     <title>Cadastro</title>
 </head>
 <body>  
-    <script>
-        function mostraA(){
-            if(document.getElementById("cdTurma").style.display == 'none'){
+    <script>          
+            
+            function ValidaAcesso(id){
+                              
+                eel.Retorna_info('user')(function(userInfo){
+                    let usuarioAcesso = userInfo['Cargo'];
 
-                document.getElementById("cdTurma").style.display = 'block';
-                document.getElementById("cdInstrutor").style.display = 'none';
-                document.getElementById("cdTime").style.display = 'none';
-                document.getElementById("cdUsuario").style.display = 'none';
-                document.getElementById("cdSprint").style.display = 'none';
-            }else{                
-            document.getElementById("cdTurma").style.display = 'none';
-            }
-        }
-        function mostraB(){
-            if(document.getElementById("cdInstrutor").style.display == 'none'){
+                    if(id == 'cdTurma' || id == 'cdUsuario' || id == 'cdSprint' && usuarioAcesso == 'Instrutor'){
+                        EsconderElementos(id);
+                    }else{
+                        window.alert('Você não tem acesso!')
+                    }
+                });  
+            }               
+                                                      
+               
+            
+            function EsconderElementos(id){
+                              
+                var lista_id = ['cdTurma','cdInstrutor', 'cdTime', 'cdSprint', 'cdUsuario'];              
 
-                document.getElementById("cdInstrutor").style.display = 'block';
-                document.getElementById("cdTurma").style.display = 'none';
-                document.getElementById("cdTime").style.display = 'none';
-                document.getElementById("cdUsuario").style.display = 'none';
-                document.getElementById("cdSprint").style.display = 'none';
-            }else{                
-            document.getElementById("cdInstrutor").style.display = 'none';
+                    for(let posicao = 0; posicao <= 4; posicao++){
+                                        
+                        if(lista_id[posicao] === id){
+                            document.getElementById(id).style.display = 'block';
+                                    
+                        }else{
+                            document.getElementById(lista_id[posicao]).style.display = "none";
+                        }
+                    }
             }
-            Atualizar_turmas('select-turma')
-        }
-        function mostraC(){
-            if(document.getElementById("cdTime").style.display == 'none'){
+                        
 
-                document.getElementById("cdTime").style.display = 'block';
-                document.getElementById("cdInstrutor").style.display = 'none';
-                document.getElementById("cdTurma").style.display = 'none';
-                document.getElementById("cdUsuario").style.display = 'none';
-                document.getElementById("cdSprint").style.display = 'none';
-            }else{                
-            document.getElementById("cdTime").style.display = 'none';
-            }
-            Atualizar_turmas('selectTurma')
-        }
-        function mostraD(){
-            if(document.getElementById("cdUsuario").style.display == 'none'){
 
-                document.getElementById("cdUsuario").style.display = 'block';
-                document.getElementById("cdTime").style.display = 'none';
-                document.getElementById("cdInstrutor").style.display = 'none';
-                document.getElementById("cdTurma").style.display = 'none';
-                document.getElementById("cdSprint").style.display = 'none';
-            }else{                
-            document.getElementById("cdUsuario").style.display = 'none';
-            }
-            Atualizar_turmas('turma-usuario')
-            Atualizar_times('turma-usuario', 'time-usuario')
-        }
-        function mostraE(){
-            if(document.getElementById("cdSprint").style.display == 'none'){
-
-                document.getElementById("cdSprint").style.display = 'block';
-                document.getElementById("cdUsuario").style.display = 'none';
-                document.getElementById("cdTime").style.display = 'none';
-                document.getElementById("cdInstrutor").style.display = 'none';
-                document.getElementById("cdTurma").style.display = 'none';
-            }else{                
-            document.getElementById("cdSprint").style.display = 'none';
-            }
-        }
     </script>
     <div class="barra-home">
         <div class="logo-home">
@@ -90,11 +59,11 @@
         <div class="left-cad">
             <div class="botoes">
                 <h1>CADASTRO</h1>
-                <button class="botao-cadastrar" onclick="mostraA()">CADASTRAR TURMA</button>
-                <button class="botao-cadastrar" onclick="mostraB()">CADASTRAR INSTRUTOR</button>
-                <button class="botao-cadastrar" onclick="mostraC()">CADASTRAR TIME</button>
-                <button class="botao-cadastrar" onclick="mostraD()">CADASTRAR USUÁRIO</button>
-                <button class="botao-cadastrar" onclick="mostraE()">CADASTRAR SPRINT</button>
+                <button class="botao-cadastrar" id="btnTurma" onclick="ValidaAcesso('cdTurma')">CADASTRAR TURMA</button>
+                <button class="botao-cadastrar" id="btnInstrutor" onclick="ValidaAcesso('cdInstrutor')">CADASTRAR INSTRUTOR</button>
+                <button class="botao-cadastrar" id="btnTime" onclick="ValidaAcesso('cdTime')">CADASTRAR TIME</button>
+                <button class="botao-cadastrar" id="btnUsuario" onclick="ValidaAcesso('cdUsuario')">CADASTRAR USUÁRIO</button>
+                <button class="botao-cadastrar" id="btnSprint" onclick="ValidaAcesso('cdSprint')">CADASTRAR SPRINT</button>
             </div>
         </div>
         <div class="right-cad">

@@ -45,7 +45,7 @@ def Retorna_info(qual_info, turma='None', time='None'):
 
 		else:
 			info = inicio.Alunos()
-
+		
 		return info 
 
 	except:
