@@ -10,39 +10,55 @@
     <title>Cadastro</title>
 </head>
 <body>  
-    <script>          
+    <script> 
             
-            function ValidaAcesso(id){
-                              
-                eel.Retorna_info('user')(function(userInfo){
-                    let usuarioAcesso = userInfo['Cargo'];
-
-                    if(id == 'cdTurma' || id == 'cdUsuario' || id == 'cdSprint' && usuarioAcesso == 'Instrutor'){
-                        EsconderElementos(id);
-                    }else{
-                        window.alert('Você não tem acesso!')
-                    }
-                });  
-            }               
-                                                      
-               
-            
-            function EsconderElementos(id){
-                              
-                var lista_id = ['cdTurma','cdInstrutor', 'cdTime', 'cdSprint', 'cdUsuario'];              
-
-                    for(let posicao = 0; posicao <= 4; posicao++){
-                                        
-                        if(lista_id[posicao] === id){
-                            document.getElementById(id).style.display = 'block';
-                                    
-                        }else{
-                            document.getElementById(lista_id[posicao]).style.display = "none";
-                        }
-                    }
-            }
+    function ValidaAcesso(id){
                         
+        eel.Retorna_info('user')(function(userInfo){
+            let usuarioAcesso = userInfo['Cargo'];
 
+            if(usuarioAcesso == 'Administrador'){
+                if(id == 'cdTurma' || id == "cdInstrutor"){
+                    EsconderElementos(id);
+                }else{
+                    window.alert("Com o seu cargo de "+usuarioAcesso+" você não pode acessar esta funcionalidade!");
+                }
+            }
+            if(usuarioAcesso == 'Instrutor'){
+                if(id == 'cdTime' || id == "cdSprint" || id == 'cdUsuario'){
+                    EsconderElementos(id);
+                }else{
+                    window.alert("Com o seu cargo de "+usuarioAcesso+" você não pode acessar esta funcionalidade!");
+                }
+            }
+            
+        });  
+    }                  
+    
+    function EsconderElementos(id){
+                        
+        var lista_id = ['cdTurma','cdInstrutor', 'cdTime', 'cdSprint', 'cdUsuario'];              
+
+            for(let posicao = 0; posicao <= 4; posicao++){
+                                
+                if(lista_id[posicao] === id){
+                    document.getElementById(id).style.display = 'block';
+                            
+                }else{
+                    document.getElementById(lista_id[posicao]).style.display = "none";
+                }
+            }
+    }
+
+    // function showButtons(){
+    //     eel.Retorna_info('user')(function(userInfo){
+    //         let usuarioAcesso = userInfo['Cargo'];
+
+    //     window.alert(usuarioAcesso);
+
+    //     });
+    // }
+    // showButtons();
 
     </script>
     <div class="barra-home">

@@ -80,6 +80,7 @@ body * {
     color: #000; /* Cor */
     background: #e49632; /* Fundo */
     cursor: pointer; /* Cursor */
+    display: block;
 }
 
 @media only screen and (max-width: 950px){

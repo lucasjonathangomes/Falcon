@@ -45,15 +45,16 @@
         }
 
         function VerificaAcesso(botao){
-            eel.Retorna_info("user")(function(userInfo){         
+            eel.Retorna_info("user")(function(userInfo){
+                let usuarioAcesso = userInfo['Cargo'];
                
-                if(userInfo['Cargo'] == 'Instrutor' && botao == "cadastrar" || userInfo['Cargo'] == 'Administrador' && botao == "cadastrar" ){
-                    go_to(botao+'.html');
-                }else if(botao == "cadastrar" || botao == "historico"){
-                    go_to(botao+'.html');
+                if(usuarioAcesso == 'Instrutor' || usuarioAcesso == 'Administrador'){
+                    if(botao == "cadastrar"){
+                        go_to(botao+'.html');
+                    }
                 }else{
-                    window.alert('Você não tem acesso a esta tela!')
-                }                           
+                    window.alert("Com o seu cargo de " + usuarioAcesso + " você não pode acessar a tela de Cadastro!")
+                }                 
             });
         }
 
