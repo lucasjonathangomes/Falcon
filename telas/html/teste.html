@@ -9,7 +9,24 @@
 <body>
         <canvas id="primeiroGrafico"></canvas>
 
+        <h1>h1 pelo html</h1>
+        <p>p pelo html</p>
+
+        <div id="teste">
+
+        </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+        <script type="text/javascript" src="/eel.js"></script>
+        <script>
         
+            eel.Teste()(function(html){
+                var id = document.getElementById('teste')
+                //id.innerHTML += '<p> Teste p <\p> <h1> Teste h1 <\h1>'
+                id.innerHTML += html
+            })
+
+
+        </script>
 </body>
 </html>

@@ -32,7 +32,13 @@ def Retorna_info(qual_info, turma='None', time='None'):
 	except:
 		return ['']
 
-eel.start("html/teste.html", port=8000)
+@eel.expose
+def Teste():
+	a = '<h1> Testando o h1 </h1> <p> Testado o p </p>'
+	a += ''
+	return a
 
+
+eel.start("html/teste.html", port=8000)
 
 

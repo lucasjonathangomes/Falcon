@@ -6,6 +6,10 @@ body{
     font-family: 'Noto Sans', sans-serif; /* Fontes */
 }
 
+/* #btnSprint {
+    cursor: not-allowed;
+} */
+
 body * {
     box-sizing: border-box; /* Dimensionamento de Caixa */
 }

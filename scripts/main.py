@@ -59,5 +59,9 @@ def Avaliacao(info:dict):
 	'''
 	return support.Avaliar().Salvar_avaiacao(info) 
 
+@eel.expose
+def Historico(user):
+	pass 
+
 eel.start("html/login.html", port=8001)
 

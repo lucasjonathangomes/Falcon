@@ -6,6 +6,10 @@ from re import findall
 
 class DeclararUser: 
     def __init__(self, user):
+        '''
+        Esse metodo vai salvar o user em uma instancia para que posa ser usado depois as infomações do usuário 
+        '''
+
         json_info = Arquivos().Ler_JSON('users.json')
         user_info = json_info[user]
         self.user_info = {
@@ -18,34 +22,38 @@ class DeclararUser:
 class Cadastrar:
     def Iniciar_cadastro(self, oq_cadastrar:str, info:dict):
         '''
-        Recebe dois parametros. \n
-        oq_cadastrar: O que quer cadastrar - turma; time; sprint; aluno \n
-        info: Todas as informações necessarias para cadastrar o que você escolheu (tem que ser em dicionario) \n
-        Retorna: Uma lista. \n
-        1° item: True ou False (se conseguiu ou não cadastrar) \n
-        2° item: Uma mensagem, se não conseguiu cadastrar essa mensagem fala o porque \n
-        Exemplo: [True, "Aluno salvo com sucesso!"] \n
-        Exemplo: [False, "Ja existe esse time na turma Falcon"]
+        input:
+                oq_cadastrar: O que quer cadastrar - turma; time; sprint; aluno 
+                info: Todas as informações necessarias para cadastrar o que você escolheu (tem que ser em dicionario)
+        
+        return:
+                Uma lista, onde:
+                1° item: True ou False (se conseguiu ou não cadastrar) \n
+                2° item: Uma mensagem, se não conseguiu cadastrar essa mensagem fala o porque \n
+
+        exemplos:
+                Exemplo: [True, "Aluno salvo com sucesso!"] 
+                Exemplo: [False, "Ja existe esse time na turma Falcon"]
         '''
         self.info = info
 
         if oq_cadastrar == 'aluno':
             self.json_user = Arquivos().Ler_JSON('users.json')
-            return self.Cadastrar_aluno()
+            return self.__Cadastrar_aluno()
 
         else:
             self.json_turmas = Arquivos().Ler_JSON('turmas.json')
             
             if oq_cadastrar == 'turma':
-                return self.Cadastrar_turma() 
+                return self.__Cadastrar_turma() 
 
             elif oq_cadastrar == 'time':
-                return self.Cadastrar_time() 
+                return self.__Cadastrar_time() 
                 
             elif oq_cadastrar == 'sprint':
-                return self.Cadastrar_sprint() 
+                return self.__Cadastrar_sprint() 
 
-    def Cadastrar_turma(self):
+    def __Cadastrar_turma(self):
         turma_nome = self.info['Turma'].strip().title()
         if turma_nome in self.json_turmas:
             return [False, f'Turma "{turma_nome}" já existe']
@@ -56,7 +64,7 @@ class Cadastrar:
             Arquivos().Salvar_JSON('turmas.json', self.json_turmas)
             return [True, f'Turma "{turma_nome}" salvo com sucesso!']
 
-    def Cadastrar_time(self): 
+    def __Cadastrar_time(self): 
         turma = self.info['Turma'].strip().title()
         time = self.info['Time'].strip().title()
 
@@ -65,6 +73,7 @@ class Cadastrar:
             return [False, f'O time "{time}" já existe na turma "{turma}". Escolha outro nome para o time ou use o time que já existe']
 
         else:
+            # No time vai ter as seguintes informações
             self.json_turmas[turma][time] = {
                     'PO': '',
                     'Scrum Master': '',
@@ -74,8 +83,14 @@ class Cadastrar:
             Arquivos().Salvar_JSON('turmas.json', self.json_turmas)
             return [True, f'Time "{time}" salvo com sucesso na turma "{turma}"']
 
-    def Cadastrar_aluno(self):
+    def __Cadastrar_aluno(self):
         def Criar_nome_user(user):
+            '''
+            Se tiver mais de um user com o mesmo nome então vai ser adicionado uma contagem no fim do nome
+            
+            exemplo:
+                        user1 
+            '''
             cont = 1
             while True:
                 novo_user = user + str(cont)
@@ -83,6 +98,7 @@ class Cadastrar:
                     return novo_user
 
         def Validar_senha(senha):
+            '''Vai verificar se está de acordo com o esperado - quantidade de digitos; letras; numeros; caracteres especiais'''
             todos_regex = ['[a-z]', '[A-Z]', '[!|@$|%|&|*|(|)]', '[1-9]']
 
             for regex in todos_regex:
@@ -95,16 +111,22 @@ class Cadastrar:
 
         def Salvar_aluno_no_time(turma, time, cargo, nome):
             turmas = Arquivos().Ler_JSON('turmas.json')
+
             if cargo == 'Desenvolvedor':
+                # Se for desenvolvedor apenas adicionamos o nome do aluno na lista
                 turmas[turma][time][cargo].append(nome)
             
             else:
                 if turmas[turma][time][cargo] != '':
+                    # Se o cargo escolhido para esse aluno já estiver ocupado, então vamos retornar False 
+                    # e o nome do aluno que está no cargo escolhido
                     return [False, turmas[turma][time][cargo]]
                 
                 else:
+                    # Se não tiver ocupado então salvamos o aluno nesse cargo
                     turmas[turma][time][cargo] = nome
             
+            # Adicionamos esse aluno na lista de alunos
             turmas[turma][time]['Alunos'].append(nome)
             Arquivos().Salvar_JSON('turmas.json', turmas)
 
@@ -118,7 +140,8 @@ class Cadastrar:
         senha = self.info['Senha']
         cargo = self.info['Cargo']
 
-        # Fazer todas as validações 
+        ## Fazer todas as validações ##
+
         # Turma 
         if turma == '':
             return [False, 'Seleciona uma turma para esse aluno']
@@ -139,6 +162,8 @@ class Cadastrar:
         validar_senha = Validar_senha(senha)
         if not validar_senha[0]:
             return [False, validar_senha[1]]
+
+        ## Fim das validações ## 
 
         senha = hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
         user = email.split('@')[0].strip()
@@ -163,11 +188,9 @@ class Cadastrar:
 
         Arquivos().Salvar_JSON('users.json', self.json_user)
 
-        
-
         return [True, f'Aluno salvo com sucesso! Nome de usuario é: {user}']
 
-    def Cadastrar_sprint(self):
+    def __Cadastrar_sprint(self):
         pass
        
 class Arquivos:
@@ -227,6 +250,7 @@ class Avaliar:
 
     def __Salvar(self):
         def get_key():
+            '''Para salvar mais de uma avaliação do mesmo aluno'''
             try:
                 key = int(max(list(historico_do_user))) + 1
             except:
@@ -251,6 +275,16 @@ class Avaliar:
         historico_do_user[key] = self.info
         Arquivos().Salvar_JSON('histrc.json', historico)
 
+class Historico:
+    def Retorna_historico(self, user):
+        self.user = user.title()
+
+    def __Pegar_historico(self):
+        histrc = Arquivos().Ler_JSON('histrc.json')
+        return histrc[self.user]
+
+
+
 
 def Login(user, senha):
     todos_users = Arquivos().Ler_JSON('users.json')
@@ -259,6 +293,7 @@ def Login(user, senha):
     if user in todos_users:
         senha = hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
         if senha == todos_users[user]['Senha']:
+            # Salvando algumas informações do aluno para usar depois como o cargo e nome
             global user_info
             user_info = DeclararUser(user)
             return True 
