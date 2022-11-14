@@ -108,6 +108,21 @@ body * {
     color: #000; /* Cor */
 }
 
+.botao-meu-perfil{
+        width: 50%; /* Largura */
+    padding: 16px 0px; /* Preenchimento */
+    margin: 15px; /* Margem */
+    border: none; /* Borda */
+    border-radius: 8px; /* Raio da Borda */
+    outline: none; /* Contorno */
+    text-transform: uppercase; /* Transformação do Texto */
+    font-weight: 800; /* Espessura da Fonte */
+    letter-spacing: 2px; /* Espaçamento entre Letras */
+    color: #000; /* Cor */
+    background: #e49632; /* Fundo */
+    cursor: pointer; /* Cursor */
+}
+
 .botao-cadastrar{
     width: 50%; /* Largura */
     padding: 16px 0px; /* Preenchimento */
