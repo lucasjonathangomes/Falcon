@@ -13,36 +13,85 @@
         <div class="logo-home">
             <img src="../fotos/logo_falcon_200.png" alt="logo_falcon_200" width="150px" height="150px">
         </div>
-        <div class="nome-home"><h1>Nome Usuário</h1></div>
+        <div class="nome-home" id="nome_home"><h1></h1></div>
         <div class="bt-home">
             <button class="bt-voltar" onclick="go_to('menu.html')">Voltar</button>
             <button class="bt-sair" onclick="go_to('login.html')">Sair</button>
         </div>
     </div>
-    <div class="menu-historico1">
+    
+    <div class="menu-historico">
         <div class="nome-alunos">
             <h1>Alunos</h1>
         </div>
-            <div class="menu-historico2">
-            <div class="graficos">
-                    <canvas id="primeiroGrafico" width="300" height="300"></canvas>
-                    <span id="procent"></span>
-            </div>
-            <div class="historico">
+
+        <div class="graficos">
+                <canvas id="primeiroGrafico" width="300" height="300"></canvas>
+                <span id="procent"></span>
+        </div>
+       
+        <div class="historico">
+            <div class="historico-texto">
                 <h1>Histórico de avaliações</h1>
             </div>
-        </div>
 
+            <div class="historico-info" id="historico_info">
+                <!-- <div class="info-left-and-right">
+                    <div class="info-left">
+                        <p class="info" id="info-70px">1 - Esse é um texto para teste, mas afinal, qual é o teste? Bom, o teste é para saber se o item vai ficar centalizado:</p>
+                    </div>
+                    <div class="info-right">
+                        <p class="info" id="info-70px">Muito Bom</p>
+                    </div>
+                </div>
+
+                <div class="info-left-and-right">
+                    <div class="info-left">
+                        <p class="info" id="info-20px">1 - teste:</p>
+                    </div>
+                    <div class="info-right">
+                        <p class="info" id="info-20px">resposta</p>
+                    </div>
+                </div> -->
+
+                <!-- <div class="info-left-and-right">
+                    <div class="info-left-teste">
+                        <p class="info-l">2 - Sei la, pense em uma pergunta boa, então é isso que era para estar aqui :D</p>
+                        <p class="info-r">A resposta da pergunta</p>
+                    </div>      
+                </div>
+                <div class="info-left-and-right">
+                    <div class="info-left-teste">
+                        <p class="info-l">2 - Teste</p>
+                        <p class="info-r">Teste</p>
+                    </div>      
+                </div> -->
+            </div>
+        </div>
     </div>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/chart.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script type="text/javascript" src="/eel.js"></script>
+
     <script>
         function go_to(url) {
             window.location.replace(url);
         }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/chart.min.js"></script> -->
+        eel.Retorna_info('user')(function(user_info){
+            var nome_home = document.getElementById('nome_home')
+            nome_home.innerHTML = `<h1>${user_info['Nome']}</h1>`
+
+            eel.Historico(user_info['User'])(function(html){
+                var historico = document.getElementById('historico_info')
+                historico.innerHTML = html
+            })
+        })
+        
+        //eel.Historico()
+    </script>    
     
     <script>
         const labels = [1, 2, 3, 4, 5, 6];

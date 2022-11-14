@@ -277,11 +277,51 @@ class Avaliar:
 
 class Historico:
     def Retorna_historico(self, user):
-        self.user = user.title()
+        self.user = user.lower()
+        self.nome = Arquivos().Ler_JSON('users.json')[user]['Nome']
+
+        self.info = self.__Pegar_historico()
+
+        return self.__Deixar_em_html()
 
     def __Pegar_historico(self):
         histrc = Arquivos().Ler_JSON('histrc.json')
         return histrc[self.user]
+    
+    def __Deixar_em_html(self):
+        def Definir_pixel_div(item):
+            lista_20px = [
+                            'Turma',
+                            'Time',
+                            'Avaliado',
+                            'Sprint'
+                        ]
+            px = 70
+            if item in lista_20px:
+                px = 20 
+            
+            return px
+
+
+
+        html = f'<h2> Avaliador: {self.nome} </h2> \n'
+
+        for id in self.info: 
+            # Vai percorrer todos os alunos que o usuario avaliou
+            # então a variavel "id" vai ser o nome do aluno que foi avaliado
+            html += f'<h3> Avaliado: {id} </h3> \n'
+
+            for id_avaliacao in self.info[id]:
+                info_avaliacao = self.info[id][id_avaliacao]
+                
+                for info in info_avaliacao:
+                    pixels = Definir_pixel_div(info)
+                    html += '<div class="info-left-and-right"> \n'
+                    html += f'<div class="info-left"> <p class="info" id="info-{pixels}px"> {info}: </p> </div> \n'
+                    html += f'<div class="info-left"> <p class="info" id="info-{pixels}px"> {info_avaliacao[info]} </p> </div> \n'
+                    html += '</div>'
+        
+        return html
 
 
 
@@ -304,3 +344,5 @@ def Caminho_ate_Falcon():
     '''Retorna o caminho completo até a pasta Scripts'''
     return findall(r'.*Falcon', os.path.dirname(__file__))[0]
 
+
+# print(Historico().Retorna_historico('lu'))
