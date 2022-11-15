@@ -21,8 +21,10 @@
     </div>
     
     <div class="menu-historico">
-        <div class="nome-alunos">
-            <h1>Alunos</h1>
+        <div class="nome-alunos" id="nome_alunos">
+            <div><h1>Alunos</h1></div>
+            <div id="todos_alunos">
+            </div>
         </div>
 
         <div class="graficos">
@@ -84,11 +86,30 @@
             var nome_home = document.getElementById('nome_home')
             nome_home.innerHTML = `<h1>${user_info['Nome']}</h1>`
 
+            let eh_PO = user_info['Cargo'] === 'PO' ? true : false 
+            
+            if (eh_PO === false){
+                document.getElementById('nome_alunos').style.display = 'none'
+            }
+
             eel.Historico(user_info['User'])(function(html){
                 var historico = document.getElementById('historico_info')
                 historico.innerHTML = html
             })
         })
+
+        eel.Retorna_info('alunos historico')(function(alunos){
+            var campo_alunos = document.getElementById('todos_alunos')
+
+            for (let cont = 0; cont < alunos.length; cont ++){
+                campo_alunos.innerHTML += `<button id="${alunos[cont]}" onclick="clickTeclado('${alunos[cont]}')"> ${alunos[cont]} </button>`
+            }
+        })
+
+        function clickTeclado(id){
+            let texto = document.getElementById(id).textContent
+            window.alert(texto)
+        }
         
         //eel.Historico()
     </script>    

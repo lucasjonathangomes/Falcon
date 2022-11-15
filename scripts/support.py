@@ -99,14 +99,14 @@ class Cadastrar:
 
         def Validar_senha(senha):
             '''Vai verificar se está de acordo com o esperado - quantidade de digitos; letras; numeros; caracteres especiais'''
-            todos_regex = ['[a-z]', '[A-Z]', '[!|@$|%|&|*|(|)]', '[1-9]']
+            todos_regex = ['[a-z]', '[A-Z]', '[!|@|#|$|%|&|*|(|)]', '[1-9]']
 
             for regex in todos_regex:
                 if len(findall(regex, senha)) == 0 or len(senha) < 8:
                     msg = 'A senha tem que ter no minimo 8 digitos, letras minúscula e maiúscula, '\
                         'numeros, e um dos caracteres especiais a seguir: !, @,#, $, %, &, *, (, )'
                     return [False, msg]
-
+            
             return [True]
 
         def Salvar_aluno_no_time(turma, time, cargo, nome):
@@ -132,6 +132,9 @@ class Cadastrar:
 
             return [True]
 
+        # Lendo arquivos 
+        todas_turmas = Arquivos().Ler_JSON('turmas.json')
+
         # Padronizar as informações 
         turma = self.info['Turma'].strip()
         time  = self.info['Time'].strip()
@@ -141,7 +144,6 @@ class Cadastrar:
         cargo = self.info['Cargo']
 
         ## Fazer todas as validações ##
-
         # Turma 
         if turma == '':
             return [False, 'Seleciona uma turma para esse aluno']
@@ -151,8 +153,11 @@ class Cadastrar:
             return [False, 'Seleciona um time para esse aluno'] 
 
         # Nome
-        if nome == '' or len(nome.split()) < 2:
+        if nome == '' or len(nome.split()) < 2:                
             return [False, 'Digite o nome e o sobrenome do aluno']
+
+        if nome in todas_turmas[turma][time]['Alunos']:
+            return [False, 'Esse nome já existe nesse time. Por favor, digite seu nome completo para evitar erros']
         
         # Email 
         if email == '' or not '@gmail.com' in email:
@@ -165,7 +170,7 @@ class Cadastrar:
 
         ## Fim das validações ## 
 
-        senha = hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
+        senha = Criptografar(senha)
         user = email.split('@')[0].strip()
 
         if user in self.json_user:
@@ -212,9 +217,10 @@ class RetornaInfo:
         self.turma = turma.strip().title()
         self.time = time.strip().title()
 
-        if qual_info in ['turmas', 'times', 'alunos']:
+        if qual_info in ['turmas', 'times', 'alunos', 'alunos historico']:
             self.arquivo = Arquivos().Ler_JSON('turmas.json')
-        else:
+        
+        else: # user 
             self.arquivo = Arquivos().Ler_JSON('users.json') 
 
     def Turmas(self):
@@ -225,6 +231,15 @@ class RetornaInfo:
 
     def Alunos(self):
         return self.arquivo[self.turma][self.time]['Alunos']
+    
+    def Alunos_historico(self):
+        alunos = []
+        for id in self.arquivo:
+            for times in self.arquivo[id]:
+                alunos += self.arquivo[id][times]['Alunos']
+        
+        return alunos
+
     
     def User(self):
         return user_info.user_info 
@@ -324,14 +339,15 @@ class Historico:
         return html
 
 
-
+def Criptografar(senha):
+    return hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
 
 def Login(user, senha):
     todos_users = Arquivos().Ler_JSON('users.json')
     user = user.strip()
 
     if user in todos_users:
-        senha = hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
+        senha = Criptografar(senha)
         if senha == todos_users[user]['Senha']:
             # Salvando algumas informações do aluno para usar depois como o cargo e nome
             global user_info

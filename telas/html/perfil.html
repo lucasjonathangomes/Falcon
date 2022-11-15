@@ -15,7 +15,7 @@
         </div>
         <div class="nome-home" id="nome_home"><h1></h1></div>
         <div class="bt-home">
-            <button class="bt-voltar">Voltar</button>
+            <button class="bt-voltar" onclick="go_to('menu.html')">Voltar</button>
             <button class="bt-sair" onclick="go_to('login.html')">Sair</button>
         </div>
     </div>
@@ -37,5 +37,12 @@
             </div>
         </div>
     </div>
+    
+    <script type="text/javascript" src="/eel.js"></script>
+    <script>
+        function go_to(url) {
+            window.location.replace(url);
+        }
+    </script>
 </body>
 </html>

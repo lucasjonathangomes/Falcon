@@ -43,9 +43,12 @@ def Retorna_info(qual_info, turma='None', time='None'):
 		elif qual_info == 'user':
 			info = inicio.User()
 
-		else:
+		elif qual_info == 'alunos historico':
+			info = inicio.Alunos_historico()
+
+		else: # Alunos
 			info = inicio.Alunos()
-		
+
 		return info 
 
 	except:
@@ -63,5 +66,5 @@ def Avaliacao(info:dict):
 def Historico(user):
 	return support.Historico().Retorna_historico(user) 
 
-eel.start("html/login.html", port=8001)
+eel.start("html/login.html", port=8000)
 

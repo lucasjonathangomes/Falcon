@@ -7,12 +7,13 @@
                     "Fim": "25/10/2022"
                 }
             },
-            "PO": "",
+            "PO": "Lukas",
             "Scrum Master": "Ricardo",
             "Desenvolvedor": [
                 "Lucas"
             ],
             "Alunos": [
+                "Lukas",
                 "Lucas",
                 "Ricardo"
             ]
@@ -20,11 +21,14 @@
     },
     "Banco De Dados 2": {
         "Falcon": {
-            "PO": "Lucas Fernando",
+            "PO": "Lukas Fernando",
             "Scrum Master": "",
-            "Desenvolvedor": [],
+            "Desenvolvedor": [
+                "Lukas Fernandes"
+            ],
             "Alunos": [
-                "Lucas Fernando"
+                "Lukas Fernando",
+                "Lukas Fernandes"
             ]
         }
     }

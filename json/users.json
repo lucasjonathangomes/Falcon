@@ -3,7 +3,7 @@
         "Nome": "Lukas Fernando Berto",
         "Senha": "d41d8cd98f00b204e9800998ecf8427e",
         "Email": "lukas@gmail.com",
-        "Cargo": "Instrutor"
+        "Cargo": "PO"
     },
     "lucas": {
         "Turma": "Banco de Dados 1",
@@ -21,12 +21,20 @@
         "Cargo": "PO",
         "Senha": "e78e25f23ab84c7466249c5c788cc2d1"
     },
-    "lucasf": {
-        "Nome": "Lucas Fernando",
-        "Email": "lucasf@gmail.com",
+    "lukasf": {
+        "Nome": "Lukas Fernando",
+        "Email": "lukasf@gmail.com",
         "Turma": "Banco De Dados 2",
         "Time": "Falcon",
         "Cargo": "PO",
         "Senha": "82ccda5ca5fb02039d4f49dfdad65d7f"
+    },
+    "lukasf1": {
+        "Nome": "Lukas Fernandes",
+        "Email": "lukasf@gmail.com",
+        "Turma": "Banco De Dados 2",
+        "Time": "Falcon",
+        "Cargo": "Desenvolvedor",
+        "Senha": "3d6d7511403d79077f39ca53db187dea"
     }
 }

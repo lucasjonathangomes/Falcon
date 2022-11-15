@@ -185,7 +185,7 @@ body * {
 
 .cadastrar-sprint{
     width: 100%; /* Largura */
-    display: flex; /* Exibição */
+    display: none; /* Exibição */
     justify-content: right; /* Justificar Conteúdo */
     align-items: center; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */

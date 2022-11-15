@@ -10,10 +10,8 @@
     <title>Cadastro</title>
 </head>
 <body>  
-    <script> 
-            
+    <script>         
     function ValidaAcesso(id){
-                        
         eel.Retorna_info('user')(function(userInfo){
             let usuarioAcesso = userInfo['Cargo'];
 
@@ -36,18 +34,15 @@
     }                  
     
     function EsconderElementos(id){
-                        
-        var lista_id = ['cdTurma','cdInstrutor', 'cdTime', 'cdSprint', 'cdUsuario'];              
-
-            for(let posicao = 0; posicao <= 4; posicao++){
-                                
-                if(lista_id[posicao] === id){
-                    document.getElementById(id).style.display = 'block';
-                            
-                }else{
-                    document.getElementById(lista_id[posicao]).style.display = "none";
-                }
+        var lista_id = ['cdTurma','cdInstrutor', 'cdTime', 'cdSprint', 'cdUsuario'];
+        for(let posicao = 0; posicao <= 4; posicao++){
+            if(lista_id[posicao] === id){
+                document.getElementById(id).style.display = 'block';
             }
+            else{
+                document.getElementById(lista_id[posicao]).style.display = "none";
+            }
+        }
     }
 
     // function showButtons(){
@@ -160,7 +155,7 @@
                     <select class="textfield-cargo" name="cargo" id="cargo">
                         <option value="Desenvolvedor">Desenvolvedor</option>
                         <option value="PO">PO</option>
-                        <option value="SM">SM</option>
+                        <option value="Scrum Master">Scrum Master</option>
                     </select>
                 </div>
                 <div class="textfield">
@@ -211,9 +206,9 @@
         
         var turma = document.getElementById("select-turma")
 
-        const select = document.getElementById("select-turma")
+        //const select = document.getElementById("select-turma")
 
-        select.options[select.options] = new Option('My option', 'My value');
+        //select.options[select.options] = new Option('My option', 'My value');
 
         function cadTurma(){
             let a = document.getElementById("cadastrar-turma").value;
@@ -276,7 +271,6 @@
             })
         } 
         
-
         function cancelaA(){
             document.getElementById("cdTurma").style.display = 'none';
         }
@@ -296,7 +290,6 @@
         function home(){
             go_to('menu.html');
         }
-
  
         function Zerar_select(id){
             let select  = document.getElementById(id)
@@ -326,6 +319,7 @@
                 Adicionar_item(todas_turmas, select_turma_id)
             })
         }
+        
         function Atualizar_times(turma_id, time_id){
             let turma = document.getElementById(turma_id).value
             let time = document.getElementById(time_id).value
