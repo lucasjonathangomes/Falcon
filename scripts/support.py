@@ -39,9 +39,9 @@ class Cadastrar:
         self.instrutor = instrutor
 
         if oq_cadastrar == 'instrutor':
-            oq_cadastrar = 'alunos'
+            oq_cadastrar = 'aluno'
             self.instrutor = True 
-        
+            
         if oq_cadastrar == 'aluno':
             self.json_user = Arquivos().Ler_JSON('users.json')
             return self.__Cadastrar_aluno()
@@ -138,7 +138,8 @@ class Cadastrar:
             return [True]
 
         # Lendo arquivos 
-        todas_turmas = Arquivos().Ler_JSON('turmas.json')
+        # todas_turmas = Arquivos().Ler_JSON('turmas.json')
+        print('entrou dentro de alunos')
 
         # Padronizar as informações 
         turma = self.info['Turma'].strip()
@@ -160,10 +161,7 @@ class Cadastrar:
         # Nome
         if nome == '' or len(nome.split()) < 2:                
             return [False, 'Digite o nome e o sobrenome do aluno']
-
-        if nome in todas_turmas[turma][time]['Alunos']:
-            return [False, 'Esse nome já existe nesse time. Por favor, digite seu nome completo para evitar erros']
-        
+ 
         # Email 
         if email == '' or not '@gmail.com' in email:
             return [False, 'Email inválido. Apenas @gmail.com é aceito']

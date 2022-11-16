@@ -1,8 +1,16 @@
 {
     "lu": {
-        "Nome": "Lukas Fernando Bert",
+        "Nome": "Lukas Fernando Berto",
         "Senha": "d41d8cd98f00b204e9800998ecf8427e",
         "Email": "lukas@gmail.com",
         "Cargo": "Administrador"
+    },
+    "lucas": {
+        "Nome": "Lucas Augusto",
+        "Email": "lucas@gmail.com",
+        "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+        "Time": "Falcon",
+        "Cargo": "Desenvolvedor",
+        "Senha": "b9bb2af1b75e826fb82cedabd4f3fa8b"
     }
 }
