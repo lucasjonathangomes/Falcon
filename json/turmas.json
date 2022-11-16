@@ -1,35 +1,3 @@
 {
-    "Banco De Dados 1": {
-        "Falcon": {
-            "Sprint": {
-                "Sprint 1": {
-                    "Inicio": "10/10/2022",
-                    "Fim": "25/10/2022"
-                }
-            },
-            "PO": "Lukas",
-            "Scrum Master": "Ricardo",
-            "Desenvolvedor": [
-                "Lucas"
-            ],
-            "Alunos": [
-                "Lukas",
-                "Lucas",
-                "Ricardo"
-            ]
-        }
-    },
-    "Banco De Dados 2": {
-        "Falcon": {
-            "PO": "Lukas Fernando",
-            "Scrum Master": "",
-            "Desenvolvedor": [
-                "Lukas Fernandes"
-            ],
-            "Alunos": [
-                "Lukas Fernando",
-                "Lukas Fernandes"
-            ]
-        }
-    }
+    "Banco De Dados - 2\u00ba Sem 2022": {}
 }

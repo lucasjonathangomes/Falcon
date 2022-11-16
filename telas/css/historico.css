@@ -40,27 +40,42 @@ body{
     display: flex;
 }
 
-.nome-alunos{
-    width: 20%;
-    display: flex;
+.alunos{
+    width: 30%;
     justify-content: center;
-    overflow-y: scroll;
 }
 
-.graficos{
+.alunos-texto{
+    text-align: center;
+}
+
+.nome-alunos{
+    height: 695px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.bt-alunos{
+    padding: 8px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+/* .graficos{
     width: 450px;
     height: 450px;
     display: block;
     justify-content: center;
     position: relative;
-}
+} */
 
 .historico {
-    width: 50%;
+    width: 100%;
 }
 
 .historico-info {
-    max-height: 400px;
+    height: 695px;
     display: block;
     overflow-y: scroll;
 }
@@ -73,7 +88,6 @@ body{
     margin-top: 8px;
     display: flex;
     align-self: center;
-    /* margin: 25px 0; */
 }
 
 .info-left {
@@ -105,25 +119,4 @@ body{
 #info-20px {
     height: 20px;
 }
-
-
-/* Não esta sendo mais usado 
-.info-left-teste {
-    width: 100%;
-    background: #a9a9a9;
-    align-items: center;
-    font-size: 20px;
-    text-align: center;
-    display: flex;
-}
-
-.info-l {
-    margin-left: 20px;
-    margin-right: 50px;
-}
-
-.info-r {
-    margin-right: 80px;
-}
-*/
 
