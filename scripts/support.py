@@ -361,4 +361,4 @@ def Caminho_ate_Falcon():
     return findall(r'.*Falcon', os.path.dirname(__file__))[0]
 
 
-# print(Historico().Retorna_historico('lu'))
+
