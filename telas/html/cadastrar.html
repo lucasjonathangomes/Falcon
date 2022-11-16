@@ -239,7 +239,7 @@
             let email = document.getElementById("email-instrutor").value;
             let senha = document.getElementById("senha-instrutor").value;
 
-            eel.Cadastrar('aluno', {'Turma': turma, 'Nome': nomeInstrutor ,'Cargo': 'Instrutor', 'Email': email, 'Senha': senha}) (function (result){
+            eel.Cadastrar('aluno', {'Turma': turma, "Time": "", 'Nome': nomeInstrutor ,'Cargo': 'Instrutor', 'Email': email, 'Senha': senha}) (function (result){
                 window.alert(result[1])
                 if(result[0]){
                     document.getElementById("select-turma").value = "";
