@@ -100,15 +100,14 @@
 
         eel.Retorna_info('alunos historico')(function(alunos){
             var campo_alunos = document.getElementById('todos_alunos')
-
-            for (let cont = 0; cont < alunos.length; cont ++){
-                campo_alunos.innerHTML += `<button id="${alunos[cont]}" onclick="clickTeclado('${alunos[cont]}')"> ${alunos[cont]} </button>`
-            }
+            Object.keys(alunos).forEach(function(user){
+                campo_alunos.innerHTML += `<button id="${user}" onclick="clickTeclado('${user}')"> ${alunos[user]} </button>`
+            })
         })
 
         function clickTeclado(id){
             let texto = document.getElementById(id).textContent
-            window.alert(texto)
+            window.alert(texto + 'e o id é: ' + id)
         }
         
         //eel.Historico()

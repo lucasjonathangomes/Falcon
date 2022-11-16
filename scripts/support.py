@@ -217,10 +217,10 @@ class RetornaInfo:
         self.turma = turma.strip().title()
         self.time = time.strip().title()
 
-        if qual_info in ['turmas', 'times', 'alunos', 'alunos historico']:
+        if qual_info in ['turmas', 'times', 'alunos']:
             self.arquivo = Arquivos().Ler_JSON('turmas.json')
         
-        else: # user 
+        else: # user; alunos historico
             self.arquivo = Arquivos().Ler_JSON('users.json') 
 
     def Turmas(self):
@@ -233,14 +233,13 @@ class RetornaInfo:
         return self.arquivo[self.turma][self.time]['Alunos']
     
     def Alunos_historico(self):
-        alunos = []
-        for id in self.arquivo:
-            for times in self.arquivo[id]:
-                alunos += self.arquivo[id][times]['Alunos']
-        
+        alunos = {}
+
+        for user in self.arquivo:
+            alunos[user] = self.arquivo[user]['Nome']
+
         return alunos
 
-    
     def User(self):
         return user_info.user_info 
 
