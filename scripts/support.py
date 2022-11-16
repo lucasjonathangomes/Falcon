@@ -20,7 +20,7 @@ class DeclararUser:
                         }
 
 class Cadastrar:
-    def Iniciar_cadastro(self, oq_cadastrar:str, info:dict):
+    def Iniciar_cadastro(self, oq_cadastrar:str, info:dict, instrutor=False):
         '''
         input:
                 oq_cadastrar: O que quer cadastrar - turma; time; sprint; aluno 
@@ -36,7 +36,12 @@ class Cadastrar:
                 Exemplo: [False, "Ja existe esse time na turma Falcon"]
         '''
         self.info = info
+        self.instrutor = instrutor
 
+        if oq_cadastrar == 'instrutor':
+            oq_cadastrar = 'alunos'
+            self.instrutor = True 
+        
         if oq_cadastrar == 'aluno':
             self.json_user = Arquivos().Ler_JSON('users.json')
             return self.__Cadastrar_aluno()
@@ -149,7 +154,7 @@ class Cadastrar:
             return [False, 'Seleciona uma turma para esse aluno']
         
         # Time
-        if time == '':
+        if time == '' and not self.instrutor:
             return [False, 'Seleciona um time para esse aluno'] 
 
         # Nome
@@ -194,6 +199,10 @@ class Cadastrar:
         Arquivos().Salvar_JSON('users.json', self.json_user)
 
         return [True, f'Aluno salvo com sucesso! Nome de usuario é: {user}']
+
+    def __Cadastrar_instrutor(self):
+        pass 
+
 
     def __Cadastrar_sprint(self):
         pass
