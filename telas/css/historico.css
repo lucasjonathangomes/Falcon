@@ -112,11 +112,17 @@ body{
     align-items: center;
 }
 
-#info-70px {
-    height: 70px;
+.sprints{
+    margin-top: 5px;
+    display: flex;
+    align-self: center;
 }
 
-#info-20px {
-    height: 20px;
+.info-sprint{
+    width: 100%;
+    background: #a9a9a9;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
 }
 
