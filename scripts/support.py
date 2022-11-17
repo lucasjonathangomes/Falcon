@@ -137,16 +137,13 @@ class Cadastrar:
 
             return [True, f'Aluno salvo com sucesso! Nome de usuario é: {user}']
 
-        def Salvar_instrutor_no_time(turma, user):
-            print(self.json_user)
+        def Salvar_instrutor_no_time(turma, user_name):
             for user in self.json_user:
                 aluno = self.json_user[user]
                 if aluno['Cargo'] == 'Instrutor' and aluno['Turma'] == turma:
-                    print(user, turma)
                     return [False, f'Já existe instrutor para a turma "{turma}"']
-                print(user, turma)
 
-            return [True, f'Instrutor salvo com sucesso! Nome de usuario é: {user}']  
+            return [True, f'Instrutor salvo com sucesso! Nome de usuario é: {user_name}']  
 
 
         # Padronizar as informações 
@@ -194,9 +191,10 @@ class Cadastrar:
                 'Time' : time,
                 'Cargo': cargo,
                 'Senha': senha 
-        } 
+        }
 
         if self.instrutor:
+            print('Teste: ', user)
             usuario_salvo = Salvar_instrutor_no_time(turma, user)
         
         else:
@@ -207,10 +205,6 @@ class Cadastrar:
             Arquivos().Salvar_JSON('users.json', self.json_user)
 
         return usuario_salvo
-
-    def __Cadastrar_instrutor(self):
-        pass 
-
 
     def __Cadastrar_sprint(self):
         pass

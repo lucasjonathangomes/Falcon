@@ -12,5 +12,13 @@
         "Time": "Falcon",
         "Cargo": "Desenvolvedor",
         "Senha": "b9bb2af1b75e826fb82cedabd4f3fa8b"
+    },
+    "teste": {
+        "Nome": "Teste Teste",
+        "Email": "teste@gmail.com",
+        "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+        "Time": "",
+        "Cargo": "Instrutor",
+        "Senha": "ef396e29371883f43aeb08b30236a47a"
     }
 }
