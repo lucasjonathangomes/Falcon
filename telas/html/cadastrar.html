@@ -72,6 +72,7 @@
                 <h1>CADASTRO</h1>
                 <button class="botao-cadastrar" id="btnTurma" onclick="ValidaAcesso('cdTurma')">CADASTRAR TURMA</button>
                 <button class="botao-cadastrar" id="btnInstrutor" onclick="ValidaAcesso('cdInstrutor')">CADASTRAR INSTRUTOR</button>
+                <button class="botao-cadastrar" id="btnFakeclient">CADASTRAR FAKE CLIENT</button>
                 <button class="botao-cadastrar" id="btnTime" onclick="ValidaAcesso('cdTime')">CADASTRAR TIME</button>
                 <button class="botao-cadastrar" id="btnUsuario" onclick="ValidaAcesso('cdUsuario')">CADASTRAR USUÁRIO</button>
                 <button class="botao-cadastrar" id="btnSprint" onclick="ValidaAcesso('cdSprint')">CADASTRAR SPRINT</button>
@@ -132,6 +133,15 @@
             <div class="cadastrar-usuario" id="cdUsuario">
                 <h1>CADASTRAR USUÁRIO</h1>
                 <div class="textfield">
+                    <label for="cargo">Cargo do usuário:</label>
+                    <select class="textfield-cargo" name="cargo" id="cargo">
+                        <option value="Desenvolvedor">Desenvolvedor</option>
+                        <option value="Product Owner">Product Owner</option>
+                        <option value="Scrum Master">Scrum Master</option>
+                        <option value="Fake Client">Fake Client</option>
+                    </select>
+                </div>
+                <div class="textfield">
                     <label for="turma">Escolha a turma que o usuário pertence:</label>
                     <select class="textfield-turma" id="turma-usuario" nome="turma">
                     </select>
@@ -149,14 +159,6 @@
                 <div class="textfield">
                     <label for="email">E-mail do usuário:</label>
                     <input type="email" name="Email" id="email">
-                </div>
-                <div class="textfield">
-                    <label for="cargo">Cargo do usuário:</label>
-                    <select class="textfield-cargo" name="cargo" id="cargo">
-                        <option value="Desenvolvedor">Desenvolvedor</option>
-                        <option value="PO">PO</option>
-                        <option value="Scrum Master">Scrum Master</option>
-                    </select>
                 </div>
                 <div class="textfield">
                     <label for="senha-do-usuário">Crie uma senha para o usuário:</label>

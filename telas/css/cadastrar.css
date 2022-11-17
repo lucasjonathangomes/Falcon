@@ -161,7 +161,7 @@ body * {
 
 .cadastrar-usuario{
     width: 100%; /* Largura */
-    display: none; /* Exibição 11111 */
+    display: flex; /* Exibição */
     justify-content: right; /* Justificar Conteúdo */
     align-items: center; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */
