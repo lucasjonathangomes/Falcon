@@ -125,7 +125,7 @@ class Cadastrar:
                 if turmas[turma][time][cargo] != '':
                     # Se o cargo escolhido para esse aluno já estiver ocupado, então vamos retornar False 
                     # e o nome do aluno que está no cargo escolhido
-                    return [False, turmas[turma][time][cargo]]
+                    return [False, f'O cargo "{cargo}" já esta preenchido pelo aluno "{turmas[turma][time][cargo]}" para essa turma e time escolhido']
                 
                 else:
                     # Se não tiver ocupado então salvamos o aluno nesse cargo
@@ -135,11 +135,19 @@ class Cadastrar:
             turmas[turma][time]['Alunos'].append(nome)
             Arquivos().Salvar_JSON('turmas.json', turmas)
 
-            return [True]
+            return [True, f'Aluno salvo com sucesso! Nome de usuario é: {user}']
 
-        # Lendo arquivos 
-        # todas_turmas = Arquivos().Ler_JSON('turmas.json')
-        print('entrou dentro de alunos')
+        def Salvar_instrutor_no_time(turma, user):
+            print(self.json_user)
+            for user in self.json_user:
+                aluno = self.json_user[user]
+                if aluno['Cargo'] == 'Instrutor' and aluno['Turma'] == turma:
+                    print(user, turma)
+                    return [False, f'Já existe instrutor para a turma "{turma}"']
+                print(user, turma)
+
+            return [True, f'Instrutor salvo com sucesso! Nome de usuario é: {user}']  
+
 
         # Padronizar as informações 
         turma = self.info['Turma'].strip()
@@ -186,17 +194,19 @@ class Cadastrar:
                 'Time' : time,
                 'Cargo': cargo,
                 'Senha': senha 
-        }
+        } 
 
-        self.json_user[user] = deixar_sequencial 
+        if self.instrutor:
+            usuario_salvo = Salvar_instrutor_no_time(turma, user)
+        
+        else:
+            usuario_salvo = Salvar_aluno_no_time(turma, time, cargo, nome)
 
-        usuario_salvo_no_time = Salvar_aluno_no_time(turma, time, cargo, nome)
-        if not usuario_salvo_no_time[0]:
-                return [False, f'O cargo "{cargo}" já esta preenchido pelo aluno "{usuario_salvo_no_time[1]}" para essa turma e time escolhido']
+        if usuario_salvo[0]:
+            self.json_user[user] = deixar_sequencial
+            Arquivos().Salvar_JSON('users.json', self.json_user)
 
-        Arquivos().Salvar_JSON('users.json', self.json_user)
-
-        return [True, f'Aluno salvo com sucesso! Nome de usuario é: {user}']
+        return usuario_salvo
 
     def __Cadastrar_instrutor(self):
         pass 
