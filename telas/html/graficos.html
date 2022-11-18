@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../fotos/falcon-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/graficos.css">
+    <title>Gráficos</title>
+</head>
+<body>
+    <div class="barra-home">
+        <div class="logo-home">
+            <img src="../fotos/logo_falcon_200.png" alt="logo_falcon_200" width="150px" height="150px">
+        </div>
+        <div class="nome-home" id="nome_home"><h1></h1></div>
+        <div class="bt-home">
+            <button class="bt-voltar" onclick="go_to('menu.html')">Voltar</button>
+            <button class="bt-sair" onclick="go_to('login.html')">Sair</button>
+        </div>
+    </div>
+    
+    <div class="menu-graficos">
+        <div class="alunos" id="nome_alunos">
+            <div class="alunos-texto">
+                <select class="filtro-grafico" name="filtro-grafico" id="filtro_grafico">
+                    <option class="" value="">TURMAS</option>
+                    <option class="" value="">TIMES</option>
+                    <option class="" value="">ALUNOS</option>
+                </select>
+            </div>
+
+            <div id="todos_alunos" class="nome-alunos">
+                <button class="bt-alunos">Lucas Henrique Costa de Oliveira</button>
+                <button class="bt-alunos">Lukas Fernando Berto</button>
+                <button class="bt-alunos">Lucas Augusto Oliveira de Souza</button>
+                <button class="bt-alunos">Lucas Jonathan Cordeiro Gomes</button>
+            </div>
+        </div>
+</body>
+</html>
