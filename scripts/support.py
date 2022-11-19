@@ -166,7 +166,7 @@ class Cadastrar:
         # Nome
         if nome == '' or len(nome.split()) < 2:                
             return [False, 'Digite o nome e o sobrenome do aluno']
- 
+
         # Email 
         if email == '' or not '@gmail.com' in email:
             return [False, 'Email inválido. Apenas @gmail.com é aceito']
@@ -327,8 +327,6 @@ class Historico:
             
             return px
 
-
-
         html = f'<h2> Avaliador: {self.nome} </h2> \n'
 
         for id in self.info: 
@@ -347,6 +345,103 @@ class Historico:
                     html += '</div>'
         
         return html
+
+class GraficoInfo:
+    def Retorna_info_pro_grafico(self, qual_filtro, quem=''):
+        self.quem = quem.title().strip()
+        self.qual_filtro = qual_filtro.capitalize().strip()
+        self.historico   = Arquivos().Ler_JSON('histrc.json')
+
+        self.perguntas = [
+            'Trabalho em equipe, cooperação e descentralização de conhecimento',
+            'Iniciativa e proatividade',
+            'Autodidaxia e agregação de conhecimento ao grupo',
+            'Entrega de resultados e participação efetiva no projeto',
+            'Competência Técnica'
+        ]
+
+        soma_e_quantidade = self.__Pegar_info()
+        self.medias = self.__Calcular_media(soma_e_quantidade)
+        # return self.__Achar_id()
+        return self.medias
+
+    def __Achar_id(self):
+        try:
+            return [True, self.medias[self.quem] ]
+        except:
+            return [False, 'Não foi encontrado nenhuma avaliação para esse aluno']
+    
+    def __Pegar_info(self):
+        info_avaliacao_dict = {}
+        for user_avaliador in self.historico:
+            info_avaliador = self.historico[user_avaliador]
+            for avaliado in info_avaliador:
+                info_avaliado = info_avaliador[avaliado]
+                for id in info_avaliado:
+                    id_info_avaliado = info_avaliado[id]
+                    # Se for time então vai pegar o time, se for turma então vai pegar a turma
+                    info = id_info_avaliado[self.qual_filtro]
+
+                    if not info in info_avaliacao_dict and self.qual_filtro == 'Avaliado':
+                        info_avaliacao_dict[info] = {
+                            self.perguntas[0]: {'Soma': 0, 'Quantidade': 0},
+                            self.perguntas[1]: {'Soma': 0, 'Quantidade': 0},
+                            self.perguntas[2]: {'Soma': 0, 'Quantidade': 0},
+                            self.perguntas[3]: {'Soma': 0, 'Quantidade': 0},
+                            self.perguntas[4]: {'Soma': 0, 'Quantidade': 0}
+                        }
+
+                    elif not info in info_avaliacao_dict:
+                        info_avaliacao_dict[info] = {'Soma': 0, 'Quantidade': 0}
+                    
+
+                    if self.qual_filtro == 'Avaliado':
+                        for cont in range(5):
+                            info_avaliacao_dict[info][self.perguntas[cont]]['Soma'] += self.__Transformar_valores(id_info_avaliado[self.perguntas[cont]])
+                            info_avaliacao_dict[info][self.perguntas[cont]]['Quantidade'] += 1
+                    
+                    else:
+                        info_avaliacao_dict[info]['Soma'] += self.__Pegar_soma_notas(id_info_avaliado)
+                        info_avaliacao_dict[info]['Quantidade'] += 5
+        
+        return info_avaliacao_dict
+
+    def __Pegar_soma_notas(self, info:dict):
+        soma = 0
+
+        for pergunta in self.perguntas:
+            soma += self.__Transformar_valores(info[pergunta])
+        
+        return soma
+        
+    def __Transformar_valores(self, valor):
+        if valor == 'Excelente':
+            novo_valor = 5
+
+        elif valor == 'Muito Bom':
+            novo_valor = 4
+
+        elif valor == 'Bom':
+            novo_valor = 3
+
+        elif valor == 'Regular':
+            novo_valor = 2
+
+        else: # Ruim
+            novo_valor = 1
+
+        return novo_valor
+
+    def __Calcular_media(self, informacoes):
+        for id in informacoes:
+            if self.qual_filtro == 'Avaliado':
+                for pergunta in informacoes[id]:
+                    informacoes[id][pergunta] = informacoes[id][pergunta]['Soma'] / informacoes[id][pergunta]['Quantidade']
+
+            else:
+                informacoes[id] = informacoes[id]['Soma'] / informacoes[id]['Quantidade']
+
+        return informacoes
 
 
 def Criptografar(senha):
@@ -371,4 +466,9 @@ def Caminho_ate_Falcon():
     return findall(r'.*Falcon', os.path.dirname(__file__))[0]
 
 
+
+
+# print(GraficoInfo().Retorna_info_pro_grafico('turma'))
+# print(GraficoInfo().Retorna_info_pro_grafico('time'))
+# print(GraficoInfo().Retorna_info_pro_grafico('avaliado', 'lucas berto'))
 
