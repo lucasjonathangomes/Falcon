@@ -45,16 +45,22 @@
         }
     }
 
-    // function showButtons(){
-    //     eel.Retorna_info('user')(function(userInfo){
-    //         let usuarioAcesso = userInfo['Cargo'];
-
-    //     window.alert(usuarioAcesso);
-
-    //     });
-    // }
-    // showButtons();
-
+    function mostraValor(valor){
+        
+        if(valor == "Instrutor"){
+            document.getElementById('usuario').style.display = 'none';
+            document.getElementById('time').style.display = 'block';
+        }
+        else if(valor == 'Fake Client'){
+            document.getElementById('usuario').style.display = 'none';
+            document.getElementById('time').style.display = 'none';
+        }
+        else{
+            document.getElementById('usuario').style.display = 'block';
+            document.getElementById('time').style.display = 'block';
+        }
+    }
+           
     </script>
     <div class="barra-home">
         <div class="logo-home">
@@ -132,21 +138,22 @@
             </div>    
             <div class="cadastrar-usuario" id="cdUsuario">
                 <h1>CADASTRAR USUÁRIO</h1>
-                <div class="textfield">
+                <div class="test">
                     <label for="cargo">Cargo do usuário:</label>
-                    <select class="textfield-cargo" name="cargo" id="cargo">
+                    <select class="textfield-cargo" name="cargo" id="cargo" onchange="mostraValor(this.value)">
                         <option value="Desenvolvedor">Desenvolvedor</option>
                         <option value="Product Owner">Product Owner</option>
                         <option value="Scrum Master">Scrum Master</option>
                         <option value="Fake Client">Fake Client</option>
+                        <option value="Instrutor">Instrutor</option>
                     </select>
                 </div>
-                <div class="textfield">
+                <div class="test" id="usuario">
                     <label for="turma">Escolha a turma que o usuário pertence:</label>
                     <select class="textfield-turma" id="turma-usuario" nome="turma">
                     </select>
                 </div>
-                <div class="textfield">
+                <div class="test1" id="time">
                     <label for="time">Escolha o time que o usuário pertence:</label>
                     <select class="textfield-time" id="time-usuario" name="time" >
                         <option value="None"></option>
@@ -208,7 +215,7 @@
         
         var turma = document.getElementById("select-turma")
 
-        //const select = document.getElementById("select-turma")
+        
 
         //select.options[select.options] = new Option('My option', 'My value');
 

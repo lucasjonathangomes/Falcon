@@ -9,350 +9,54 @@
     <script type="text\javascript" src="/eel.js"></script>
     <title>Teste</title>
 </head>
-<body>  
-    <script>         
-    function ValidaAcesso(id){
-        eel.Retorna_info('user')(function(userInfo){
-            let usuarioAcesso = userInfo['Cargo'];
-
-            if(usuarioAcesso == 'Administrador'){
-                if(id == 'cdTurma' || id == "cdInstrutor"){
-                    EsconderElementos(id);
-                }else{
-                    window.alert("Com o seu cargo de "+usuarioAcesso+" você não pode acessar esta funcionalidade!");
-                }
-            }
-            if(usuarioAcesso == 'Instrutor'){
-                if(id == 'cdTime' || id == "cdSprint" || id == 'cdUsuario'){
-                    EsconderElementos(id);
-                }else{
-                    window.alert("Com o seu cargo de "+usuarioAcesso+" você não pode acessar esta funcionalidade!");
-                }
-            }
-            
-        });  
-    }                  
-    
-    function EsconderElementos(id){
-        var lista_id = ['cdTurma','cdInstrutor', 'cdTime', 'cdSprint', 'cdUsuario'];
-        for(let posicao = 0; posicao <= 4; posicao++){
-            if(lista_id[posicao] === id){
-                document.getElementById(id).style.display = 'block';
-            }
-            else{
-                document.getElementById(lista_id[posicao]).style.display = "none";
-            }
-        }
-    }
-
-    // function showButtons(){
-    //     eel.Retorna_info('user')(function(userInfo){
-    //         let usuarioAcesso = userInfo['Cargo'];
-
-    //     window.alert(usuarioAcesso);
-
-    //     });
-    // }
-    // showButtons();
-
-    </script>
-    <div class="barra-home">
-        <div class="logo-home">
-            <img src="../fotos/logo_falcon_200.png" alt="logo_falcon_200" width="150px" height="150px">
-        </div>
-        <div class="nome-home" id="nome_home"></div>
-        <div class="bt-home">
-            <button class="bt-voltar" onclick="go_to('menu.html')">Voltar</button>
-            <button class="bt-sair" onclick="go_to('login.html')">Sair</button>
-        </div>
-    </div> 
-    <div class="main-cad">
-        <div class="left-cad">
-            <div class="botoes">
-                <h1>CADASTRO</h1>
-                <button class="botao-cadastrar" id="btnTurma" onclick="ValidaAcesso('cdTurma')">CADASTRAR TURMA</button>
-                <button class="botao-cadastrar" id="btnInstrutor" onclick="ValidaAcesso('cdInstrutor')">CADASTRAR INSTRUTOR</button>
-                <button class="botao-cadastrar" id="btnFakeclient">CADASTRAR FAKE CLIENT</button>
-                <button class="botao-cadastrar" id="btnTime" onclick="ValidaAcesso('cdTime')">CADASTRAR TIME</button>
-                <button class="botao-cadastrar" id="btnUsuario" onclick="ValidaAcesso('cdUsuario')">CADASTRAR USUÁRIO</button>
-                <button class="botao-cadastrar" id="btnSprint" onclick="ValidaAcesso('cdSprint')">CADASTRAR SPRINT</button>
-            </div>
-        </div>
-        <div class="right-cad">
-            <div class="cadastrar-turma" id="cdTurma">
-                <h1>CADASTRAR TURMA</h1>
-                <div class="textfield">
-                    <label for="nome">Nome da Turma</label>
-                    <input type="text" id="cadastrar-turma" name="Turma123">
-                </div>
-                <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaA()">Cancelar</button>
-                    <button class="bt-cancelar-salvar" id="bt-salvar" onclick="cadTurma()">Salvar</button>
-                </div>
-            </div>
-            <div class="cadastrar-instrutor" id="cdInstrutor">
-                <h1>CADASTRAR INSTRUTOR</h1>
-                <div class="textfield">
-                    <label for="turma">Escolha a turma que o instrutor pertence:</label>
-                    <select class="textfield-turma" name="turma" id="select-turma">
-                    </select>
-                </div>
-                <div class="textfield">
-                    <label for="nome">Nome do Instrutor</label>
-                    <input type="text" id="nome-instrutor" name="nome-instrutor">
-                </div>
-                <div class="textfield">
-                    <label for="email">E-mail do instrutor:</label>
-                    <input type="text" id="email-instrutor" name="email-instrutor">
-                </div>
-                <div class="textfield">
-                    <label for="senha">Crie uma senha para o instrutor:</label>
-                    <input type="text" id="senha-instrutor" name="senha-instrutor">
-                </div>
-                <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaB()">Cancelar</button>
-                    <button class="bt-cancelar-salvar" id="bt-salvar" onclick="cadInstrutor()">Salvar</button>
-                </div>
-            </div>    
-            <div class="cadastrar-time" id="cdTime">
-                <h1>CADASTRAR TIME</h1>
-                <div class="textfield">
-                    <label for="turma">Escolha a turma que o instrutor pertence:</label>
-                    <select class="textfield-turma" name="turma" id="selectTurma">
-                    </select>
-                </div>
-                <div class="textfield">
-                    <label for="nome">Nome do Time</label>
-                    <input type="text" id="timeCad" name="Time">
-                </div>
-                <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaC()">Cancelar</button>
-                    <button class="bt-cancelar-salvar" id="bt-salvar" onclick="cadTime()">Salvar</button>
-                </div>
-            </div>    
-            <div class="cadastrar-usuario" id="cdUsuario">
-                <h1>CADASTRAR USUÁRIO</h1>
-                <div class="textfield">
-                    <label for="cargo">Cargo do usuário:</label>
-                    <select class="textfield-cargo" name="cargo" id="cargo">
-                        <option value="Desenvolvedor">Desenvolvedor</option>
-                        <option value="Product Owner">Product Owner</option>
-                        <option value="Scrum Master">Scrum Master</option>
-                        <option value="Fake Client">Fake Client</option>
-                    </select>
-                </div>
-                <div class="textfield">
-                    <label for="turma">Escolha a turma que o usuário pertence:</label>
-                    <select class="textfield-turma" id="turma-usuario" nome="turma">
-                    </select>
-                </div>
-                <div class="textfield">
-                    <label for="time">Escolha o time que o usuário pertence:</label>
-                    <select class="textfield-time" id="time-usuario" name="time" >
-                        <option value="None"></option>
-                    </select>
-                </div>
-                <div class="textfield">
-                    <label for="nome">Nome do usuário:</label>
-                    <input type="text" id="usuário" name="Usuário">
-                </div>
-                <div class="textfield">
-                    <label for="email">E-mail do usuário:</label>
-                    <input type="email" name="Email" id="email">
-                </div>
-                <div class="textfield">
-                    <label for="senha-do-usuário">Crie uma senha para o usuário:</label>
-                    <input type="text" id="senha-do-usuário">
-                </div>
-                <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaD()">Cancelar</button>
-                    <button class="bt-cancelar-salvar" id="bt-salvar" onclick="cadUsuario()">Salvar</button>
-                </div>
-            </div>    
-            <div class="cadastrar-sprint" id="cdSprint">
-                <h1>CADASTRAR SPRINT</h1>
-                <div class="textfield-sprint">
-                    <label for="nome">Coloque as datas de início e fim da Sprint</label>
-                    <div class="datas">      
-                        <div class="datas-início">
-                            <label for="início">Início:</label>
-                            <input type="date" id="sprint-inicio" name="Sprint" required>
-                            <span class="validity"></span>        
-                        </div>
-                        <div class="datas-fim">
-                            <label for="fim">Fim:</label>
-                            <input type="date" id="sprint-fim" name="Sprint" required>
-                            <span class="validity"></span>
-                        </div>
-                    </div>
-                    <button class="bt-add" type="submit">+</button>
-                </div>
-                <div class="bt-cancelar-salvar">
-                    <button class="bt-cancelar-salvar" id="bt-cancelar" onclick="cancelaE()">Cancelar</button>
-                    <button class="bt-cancelar-salvar" id="bt-salvar">Salvar</button>
-                </div>
-            </div>
-        </div> 
-    </div>
+<body> 
+    <canvas id="primeiroGrafico"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script type="text/javascript" src="/eel.js"></script>
     <script>
-        // Para colocar o nome na Barra de Menu
-        eel.Retorna_info('user')(function (info_do_usuario){
-            var nome_home = document.getElementById('nome_home')
-            nome_home.innerHTML = `<h1>${info_do_usuario['Nome']}</h1>`
-        })
-        
-        function go_to(url) {
-            window.location.replace(url);
-        }
-        
-        var turma = document.getElementById("select-turma")
+        const labels = ['Sprint 1','Sprint 2','Sprint 3','Sprint 4'];
 
-        //const select = document.getElementById("select-turma")
+        let primeiroGrafico = document.getElementById('primeiroGrafico').getContext('2d');
 
-        //select.options[select.options] = new Option('My option', 'My value');
+        const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First Dataset',
+            data: [65, 59, 80, 81],
+            backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            ],
+            borderColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            ],
+            borderWidth: 1
+        }]
+        };
 
-        function cadTurma(){
-            let a = document.getElementById("cadastrar-turma").value;
-            
-            eel.Cadastrar('turma', {'Turma': a}) (function (result){
-                window.alert(result[1])
-                if (result[0]){
-                    document.getElementById("cadastrar-turma").value=""
+            const config = {
+            type: 'bar',
+            data: data,
+            options: {
+            scales: {
+                y: {
+                beginAtZero: true
                 }
-            })
-        }
-        function cadTime(){
-            let nomeTurma = document.getElementById("selectTurma").value;
-            let nomeTime = document.getElementById("timeCad").value;
+            }
+            },
+        };
 
-            eel.Cadastrar('time', {'Turma': nomeTurma, 'Time': nomeTime}) (function (result){
-                window.alert(result[1])
-                if(result[0]){
-                    document.getElementById("timeCad").value="";
-                    document.getElementById("selectTurma").value="";
-                }
-            })
-        
-        }
-        function cadInstrutor(){
-            let turma = document.getElementById("select-turma").value;
-            let nomeInstrutor = document.getElementById("nome-instrutor").value;
-            let email = document.getElementById("email-instrutor").value;
-            let senha = document.getElementById("senha-instrutor").value;
-
-            eel.Cadastrar('instrutor', {'Turma': turma, "Time": "", 'Nome': nomeInstrutor, 'Cargo': 'Instrutor', 'Email': email, 'Senha': senha}) (function (result){
-                window.alert(result[1])
-                if(result[0]){
-                    document.getElementById("select-turma").value = "";
-                    document.getElementById("nome-instrutor").value = "";
-                    document.getElementById("email-instrutor").value = "";
-                    document.getElementById("senha-instrutor").value = "";
-                }
-            })
-
-        }
-        function cadUsuario(){
-            let turma = document.getElementById("turma-usuario").value;
-            let time = document.getElementById("time-usuario").value;
-            let nome = document.getElementById("usuário").value;
-            let email = document.getElementById("email").value;
-            let cargo = document.getElementById("cargo").value;
-            let senha = document.getElementById("senha-do-usuário").value;
-
-            eel.Cadastrar('aluno',{'Turma': turma, 'Time': time, 'Nome': nome, 'Email': email, 'Cargo': cargo, 'Senha': senha}) (function (result){
-                window.alert(result[1])
-                if(result[0]){
-                    document.getElementById("turma-usuario").value = "";
-                    document.getElementById("time-usuario").value = "";
-                    document.getElementById("usuário").value = "";
-                    document.getElementById("email").value = "";
-                    document.getElementById("cargo").value = "";
-                    document.getElementById("senha-do-usuário").value = "";
-                }
-            })
-        } 
-        
-        function cancelaA(){
-            document.getElementById("cdTurma").style.display = 'none';
-        }
-        function cancelaB(){
-            document.getElementById("cdInstrutor").style.display = 'none';
-        }
-        function cancelaC(){
-            document.getElementById("cdTime").style.display = 'none';
-        }
-        function cancelaD(){
-            document.getElementById("cdUsuario").style.display = 'none';
-        }
-        function cancelaE(){
-            document.getElementById("cdSprint").style.display = 'none';
-        }
-                       
-        function home(){
-            go_to('menu.html');
-        }
- 
-        function Zerar_select(id){
-            let select  = document.getElementById(id)
-            select.innerHTML = ''
-        }
-
-        function Pegar_times(id){
-            let turma = document.getElementById(id).value
-            eel.Retorna_info('times', turma) (function (result){
-                Zerar_select("time-usuario")
-                Adicionar_item(result, 'time-usuario')
-            })
-        }
-
-        function Adicionar_item(valores, id) {
-            Zerar_select(id)
-            let select = document.getElementById(id).add(new Option('', ''))
-            valores.forEach(function(item){
-                let option = new Option(item, item);
-                let select = document.getElementById(id);
-                select.add(option);
-            })
-        }
-
-        function Atualizar_turmas(select_turma_id){
-            eel.Retorna_info('turmas') (function(todas_turmas){
-                Adicionar_item(todas_turmas, select_turma_id)
-            })
-        }
-        
-        function Atualizar_times(turma_id, time_id){
-            let turma = document.getElementById(turma_id).value
-            let time = document.getElementById(time_id).value
-            eel.Retorna_info('times', turma=turma) (function(todas_turmas){
-                Adicionar_item(todas_turmas, time_id)
-            })
-        }
-
-        // Criando as variaveis 
-        var id_turma = 'turma-usuario'
-        var select_turma = document.getElementById(id_turma)
-
-        /*  Atualizar as turmas  */
-        // Turma de Usuario 
-        eel.Retorna_info('turmas') (function(todas_turmas){
-            Adicionar_item(todas_turmas, id_turma)
-        })
-        // Turma de Instrutor
-        eel.Retorna_info('turmas') (function(todas_turmas){
-            Adicionar_item(todas_turmas, 'select-turma')
-        })
-        // Turma de Times
-        eel.Retorna_info('turmas') (function(todas_turmas){
-            Adicionar_item(todas_turmas, 'selectTurma')
-        })   
-
-        // Eventos para sempre atualizar os selects         
-        select_turma.addEventListener('change', function(){
-            Pegar_times(id_turma)
-        })
+        let chart = new Chart(
+            primeiroGrafico, 
+            config
+        )        
 
     </script>
+
 </body>
 </html>
