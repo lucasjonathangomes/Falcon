@@ -415,11 +415,11 @@ class Historico:
         return html
 
 class GraficoInfo:
-    def Retorna_info_pro_grafico(self, qual_filtro, aluno=''):
+    def Retorna_info_pro_grafico(self, qual_filtro, filtro=''):
         '''
         qual_filtro: Turma; Time; Avaliado
         '''
-        self.aluno = aluno.title().strip()
+        self.filtro = filtro.title().strip()
         self.qual_filtro = qual_filtro.capitalize().strip()
         self.historico   = Arquivos().Ler_JSON('histrc.json')
 
@@ -431,17 +431,19 @@ class GraficoInfo:
             'Competência Técnica'
         ]
 
-        soma_e_quantidade = self.__Pegar_info()
-        self.medias = self.__Calcular_media(soma_e_quantidade)
-        resultado =  self.__Achar_id()
+        # soma_e_quantidade = self.__Pegar_info()
+        # self.medias = self.__Calcular_media(soma_e_quantidade)
+        soma_e_quantidade = self.__Test()
+        self.medias = self.__Calcular_media_test(soma_e_quantidade)
+        self.medias_filtrado =  self.__Achar_id()
 
-        if resultado[0]:
+        if self.medias_filtrado[0]:
             config = self.__Padronizar()
             return [True, config]
         
         # Se não entrou no if então não achou o aluno, 
         # então iremos retornar uma mensgem que foi escrita no metodo __Achar_id()
-        return resultado
+        return self.medias_filtrado
 
     def __Padronizar(self):
         def Cores_aleatoria(qntd):
@@ -456,9 +458,10 @@ class GraficoInfo:
 
             return cores, borda
 
+        informacoes  = self.medias_filtrado[1]
         label        = f'Gráfico filtrado por {self.qual_filtro}'
-        labels       = list(self.medias)
-        data         = list(self.medias.values())
+        labels       = list(informacoes)
+        data         = list(informacoes.values())
         cores, borda = Cores_aleatoria(len(labels))
         background   = cores
         border       = borda
@@ -475,7 +478,7 @@ class GraficoInfo:
         }
 
         config = {
-            'type': 'line',
+            'type': 'bar',
             'data': data,
             'options': {
                 'scales': {
@@ -489,14 +492,14 @@ class GraficoInfo:
         return config 
 
     def __Achar_id(self):
-        if self.qual_filtro == 'Avaliado':
-            try:
-                return [True, self.medias[self.aluno]]
-            except:
-                return [False, 'Não foi encontrado nenhuma avaliação para esse aluno']
+        # if self.qual_filtro == 'Avaliado':
+        try:
+            return [True, self.medias[self.filtro]]
+        except:
+            return [False, 'Não foi encontrado nenhuma avaliação para esse aluno']
         
-        else:
-            return [True, self.medias]
+        # else:
+        #     return [True, self.medias]
 
     def __Pegar_info(self):
         info_avaliacao_dict = {}
@@ -533,6 +536,38 @@ class GraficoInfo:
         
         return info_avaliacao_dict
 
+    def __Test(self):
+        info_avaliacao_dict = {}
+        for user_avaliador in self.historico:
+            info_avaliador = self.historico[user_avaliador]
+            for avaliado in info_avaliador:
+                info_avaliado = info_avaliador[avaliado]
+                for id in info_avaliado:
+                    id_info_avaliado = info_avaliado[id]
+                    # Se for time então vai pegar o time, se for turma então vai pegar a turma
+                    filtro = id_info_avaliado[self.qual_filtro]
+
+                    if self.qual_filtro == 'Time':
+                        filtro = id_info_avaliado['Turma'] + ' / ' + filtro
+                    
+                    elif self.qual_filtro == 'Avaliado':
+                        filtro = id_info_avaliado['Turma'] + ' / ' + id_info_avaliado['Time'] + ' / ' + filtro
+
+                    if not filtro in info_avaliacao_dict:
+                        info_avaliacao_dict[filtro] = {
+                            self.perguntas[0]: {'Soma': 0, 'Quantidade': 0},
+                            self.perguntas[1]: {'Soma': 0, 'Quantidade': 0},
+                            self.perguntas[2]: {'Soma': 0, 'Quantidade': 0},
+                            self.perguntas[3]: {'Soma': 0, 'Quantidade': 0},
+                            self.perguntas[4]: {'Soma': 0, 'Quantidade': 0}
+                        }
+
+                    for cont in range(5):
+                        info_avaliacao_dict[filtro][self.perguntas[cont]]['Soma'] += self.__Transformar_valores(id_info_avaliado[self.perguntas[cont]])
+                        info_avaliacao_dict[filtro][self.perguntas[cont]]['Quantidade'] += 1
+                    
+        return info_avaliacao_dict
+
     def __Pegar_soma_notas(self, info:dict):
         soma = 0
 
@@ -559,6 +594,13 @@ class GraficoInfo:
 
         return novo_valor
 
+    def __Calcular_media_test(self, informacoes):
+        for id in informacoes:
+            for pergunta in informacoes[id]:
+                informacoes[id][pergunta] = informacoes[id][pergunta]['Soma'] / informacoes[id][pergunta]['Quantidade']
+        
+        return informacoes
+
     def __Calcular_media(self, informacoes):
         for id in informacoes:
             if self.qual_filtro == 'Avaliado':
@@ -570,6 +612,13 @@ class GraficoInfo:
 
         return informacoes
 
+
+# class Login:
+#     def __Login(self):
+#         pass # Retorna True
+
+#     def __Login_go_to(self):
+#         self.Login()
 
 def Criptografar(senha):
     return hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
@@ -595,7 +644,7 @@ def Caminho_ate_Falcon():
 
 
 
-# print(GraficoInfo().Retorna_info_pro_grafico('turma'))
+# print(GraficoInfo().Retorna_info_pro_grafico('time', 'Banco De Dados 2 / First'))
 # print(GraficoInfo().Retorna_info_pro_grafico('time'))
 # print(GraficoInfo().Retorna_info_pro_grafico('avaliado', 'lucas berto'))
 # info = { 
