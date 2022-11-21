@@ -66,6 +66,10 @@ def Avaliacao(info:dict):
 def Historico(user):
 	return support.Historico().Retorna_historico(user) 
 
+@eel.expose 
+def Grafico_info(qual_grafico, nome_aluno=''):
+	return support.GraficoInfo().Retorna_info_pro_grafico(qual_grafico, aluno= nome_aluno)
+
 eel.start("html/login.html", port=8000)
 
 
