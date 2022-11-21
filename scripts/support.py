@@ -598,7 +598,7 @@ def Caminho_ate_Falcon():
 # print(GraficoInfo().Retorna_info_pro_grafico('turma'))
 # print(GraficoInfo().Retorna_info_pro_grafico('time'))
 # print(GraficoInfo().Retorna_info_pro_grafico('avaliado', 'lucas berto'))
-# info = {
+# info = { 
 #     'Turma': 'Banco De Dados - 2° Sem 2022',
 #     'Nome': 'Lukas 2',
 #     'Email': 'luk2323@gmail.com',
