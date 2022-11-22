@@ -68,3 +68,11 @@ body{
     height: 30px;
     font-size: larger;
 }
+
+.graficos{
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
