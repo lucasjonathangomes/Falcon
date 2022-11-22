@@ -439,14 +439,14 @@ class GraficoInfo:
 
         if self.medias_filtrado[0]:
             novo_dict = self.__Muduar_id(self.medias_filtrado[1])
-            config = self.__Padronizar()
+            config = self.__Padronizar(novo_dict)
             return [True, config]
         
         # Se não entrou no if então não achou o aluno, 
         # então iremos retornar uma mensgem que foi escrita no metodo __Achar_id()
         return self.medias_filtrado
 
-    def __Padronizar(self):
+    def __Padronizar(self, informacoes:dict):
         def Cores_aleatoria(qntd):
             lista_de_cores = [
                     'rgba(255, 99, 132, 0.2)',
@@ -459,7 +459,7 @@ class GraficoInfo:
 
             return cores, borda
 
-        informacoes  = self.medias_filtrado
+        # informacoes  = self.medias_filtrado
         label        = f'Gráfico filtrado por {self.qual_filtro}'
         labels       = list(informacoes)
         data         = list(informacoes.values())
