@@ -69,10 +69,8 @@ body{
     font-size: larger;
 }
 
-.graficos{
-    width: 450px;
-    height: 450px;
+.grafico{
+    width: 800px;
+    height: 400px;
     display: flex;
-    justify-content: center;
-    position: relative;
 }
