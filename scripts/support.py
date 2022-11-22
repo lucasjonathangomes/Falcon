@@ -320,6 +320,13 @@ class RetornaInfo:
         return alunos
 
     def Alunos_graficos(self):
+        alunos = []
+        for turmas in self.arquivo:
+            for times in self.arquivo[turmas]:
+                alunos += self.arquivo[turmas][times]['Alunos']
+        return alunos 
+        
+    def Alunos_graficos_antigo(self):
         lista_de_alunos = []
 
         for turmas in self.arquivo:
@@ -329,8 +336,14 @@ class RetornaInfo:
         
         return lista_de_alunos
 
+    def Times_grafico(self):
+        todos_times = []
+        for turma in self.arquivo:
+            todos_times += list(self.arquivo[turma])
+        
+        return todos_times 
 
-    def Times_graficos(self):
+    def Times_graficos_antigo(self):
         lista_de_times = []
         for turmas in self.arquivo:
             for times in self.arquivo[turmas]:

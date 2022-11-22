@@ -76,7 +76,6 @@ def Historico(user):
 def RetornaInfoAcesso(qual_info):
 	return support.RetornaInfoAcesso().Inicio(qual_info)
 
-
 @eel.expose 
 def Grafico_info(qual_grafico, filtro=''):
 	return support.GraficoInfo().Retorna_info_pro_grafico(qual_grafico, filtro=filtro)
