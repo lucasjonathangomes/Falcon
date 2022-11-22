@@ -438,6 +438,7 @@ class GraficoInfo:
         self.medias_filtrado =  self.__Achar_id()
 
         if self.medias_filtrado[0]:
+            novo_dict = self.__Muduar_id(self.medias_filtrado[1])
             config = self.__Padronizar()
             return [True, config]
         
@@ -458,7 +459,7 @@ class GraficoInfo:
 
             return cores, borda
 
-        informacoes  = self.medias_filtrado[1]
+        informacoes  = self.medias_filtrado
         label        = f'Gráfico filtrado por {self.qual_filtro}'
         labels       = list(informacoes)
         data         = list(informacoes.values())
@@ -491,6 +492,16 @@ class GraficoInfo:
 
         return config 
 
+    def __Muduar_id(self, dict:dict):
+        skills = ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4', 'Skill 5']
+        valores = list(dict.values())
+        novo_dict = {}
+        for cont in range(5):
+            novo_dict[skills[cont]] = valores[cont]
+        
+        return novo_dict
+
+
     def __Achar_id(self):
         # if self.qual_filtro == 'Avaliado':
         try:
@@ -501,40 +512,40 @@ class GraficoInfo:
         # else:
         #     return [True, self.medias]
 
-    def __Pegar_info(self):
-        info_avaliacao_dict = {}
-        for user_avaliador in self.historico:
-            info_avaliador = self.historico[user_avaliador]
-            for avaliado in info_avaliador:
-                info_avaliado = info_avaliador[avaliado]
-                for id in info_avaliado:
-                    id_info_avaliado = info_avaliado[id]
-                    # Se for time então vai pegar o time, se for turma então vai pegar a turma
-                    info = id_info_avaliado[self.qual_filtro]
+    # def __Pegar_info(self):
+    #     info_avaliacao_dict = {}
+    #     for user_avaliador in self.historico:
+    #         info_avaliador = self.historico[user_avaliador]
+    #         for avaliado in info_avaliador:
+    #             info_avaliado = info_avaliador[avaliado]
+    #             for id in info_avaliado:
+    #                 id_info_avaliado = info_avaliado[id]
+    #                 # Se for time então vai pegar o time, se for turma então vai pegar a turma
+    #                 info = id_info_avaliado[self.qual_filtro]
 
-                    if not info in info_avaliacao_dict and self.qual_filtro == 'Avaliado':
-                        info_avaliacao_dict[info] = {
-                            self.perguntas[0]: {'Soma': 0, 'Quantidade': 0},
-                            self.perguntas[1]: {'Soma': 0, 'Quantidade': 0},
-                            self.perguntas[2]: {'Soma': 0, 'Quantidade': 0},
-                            self.perguntas[3]: {'Soma': 0, 'Quantidade': 0},
-                            self.perguntas[4]: {'Soma': 0, 'Quantidade': 0}
-                        }
+    #                 if not info in info_avaliacao_dict and self.qual_filtro == 'Avaliado':
+    #                     info_avaliacao_dict[info] = {
+    #                         self.perguntas[0]: {'Soma': 0, 'Quantidade': 0},
+    #                         self.perguntas[1]: {'Soma': 0, 'Quantidade': 0},
+    #                         self.perguntas[2]: {'Soma': 0, 'Quantidade': 0},
+    #                         self.perguntas[3]: {'Soma': 0, 'Quantidade': 0},
+    #                         self.perguntas[4]: {'Soma': 0, 'Quantidade': 0}
+    #                     }
 
-                    elif not info in info_avaliacao_dict:
-                        info_avaliacao_dict[info] = {'Soma': 0, 'Quantidade': 0}
+    #                 elif not info in info_avaliacao_dict:
+    #                     info_avaliacao_dict[info] = {'Soma': 0, 'Quantidade': 0}
                     
 
-                    if self.qual_filtro == 'Avaliado':
-                        for cont in range(5):
-                            info_avaliacao_dict[info][self.perguntas[cont]]['Soma'] += self.__Transformar_valores(id_info_avaliado[self.perguntas[cont]])
-                            info_avaliacao_dict[info][self.perguntas[cont]]['Quantidade'] += 1
+    #                 if self.qual_filtro == 'Avaliado':
+    #                     for cont in range(5):
+    #                         info_avaliacao_dict[info][self.perguntas[cont]]['Soma'] += self.__Transformar_valores(id_info_avaliado[self.perguntas[cont]])
+    #                         info_avaliacao_dict[info][self.perguntas[cont]]['Quantidade'] += 1
                     
-                    else:
-                        info_avaliacao_dict[info]['Soma'] += self.__Pegar_soma_notas(id_info_avaliado)
-                        info_avaliacao_dict[info]['Quantidade'] += 5
+    #                 else:
+    #                     info_avaliacao_dict[info]['Soma'] += self.__Pegar_soma_notas(id_info_avaliado)
+    #                     info_avaliacao_dict[info]['Quantidade'] += 5
         
-        return info_avaliacao_dict
+    #     return info_avaliacao_dict
 
     def __Test(self):
         info_avaliacao_dict = {}
@@ -568,13 +579,13 @@ class GraficoInfo:
                     
         return info_avaliacao_dict
 
-    def __Pegar_soma_notas(self, info:dict):
-        soma = 0
+    # def __Pegar_soma_notas(self, info:dict):
+    #     soma = 0
 
-        for pergunta in self.perguntas:
-            soma += self.__Transformar_valores(info[pergunta])
+    #     for pergunta in self.perguntas:
+    #         soma += self.__Transformar_valores(info[pergunta])
         
-        return soma
+    #     return soma
         
     def __Transformar_valores(self, valor):
         if valor == 'Excelente':
@@ -601,16 +612,16 @@ class GraficoInfo:
         
         return informacoes
 
-    def __Calcular_media(self, informacoes):
-        for id in informacoes:
-            if self.qual_filtro == 'Avaliado':
-                for pergunta in informacoes[id]:
-                    informacoes[id][pergunta] = informacoes[id][pergunta]['Soma'] / informacoes[id][pergunta]['Quantidade']
+    # def __Calcular_media(self, informacoes):
+    #     for id in informacoes:
+    #         if self.qual_filtro == 'Avaliado':
+    #             for pergunta in informacoes[id]:
+    #                 informacoes[id][pergunta] = informacoes[id][pergunta]['Soma'] / informacoes[id][pergunta]['Quantidade']
 
-            else:
-                informacoes[id] = informacoes[id]['Soma'] / informacoes[id]['Quantidade']
+    #         else:
+    #             informacoes[id] = informacoes[id]['Soma'] / informacoes[id]['Quantidade']
 
-        return informacoes
+    #     return informacoes
 
 
 # class Login:
