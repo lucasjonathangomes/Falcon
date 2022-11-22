@@ -46,6 +46,12 @@ def Retorna_info(qual_info, turma='None', time='None'):
 		elif qual_info == 'alunos historico':
 			info = inicio.Alunos_historico()
 
+		elif qual_info == 'alunos grafico':
+			return inicio.Alunos_graficos()
+		
+		elif qual_info == 'times grafico':
+			return inicio.Times_graficos()
+		
 		else: # Alunos
 			info = inicio.Alunos()
 
@@ -66,10 +72,15 @@ def Avaliacao(info:dict):
 def Historico(user):
 	return support.Historico().Retorna_historico(user) 
 
+@eel.expose
+def RetornaInfoAcesso(qual_info):
+	return support.RetornaInfoAcesso().Inicio(qual_info)
+
+
 @eel.expose 
 def Grafico_info(qual_grafico, filtro=''):
 	return support.GraficoInfo().Retorna_info_pro_grafico(qual_grafico, filtro=filtro)
 
-eel.start("html/login.html", port=8000)
+# eel.start("html/login.html", port=8000)
 
-
+print(Retorna_info('times grafico'))

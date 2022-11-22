@@ -295,8 +295,8 @@ class RetornaInfo:
         qual_info = qual_info.lower().strip()
         self.turma = turma.strip().title()
         self.time = time.strip().title()
-
-        if qual_info in ['turmas', 'times', 'alunos']:
+        
+        if qual_info in ['turmas', 'times', 'alunos', 'alunos grafico', 'times grafico']:
             self.arquivo = Arquivos().Ler_JSON('turmas.json')
         
         else: # user; alunos historico
@@ -319,8 +319,59 @@ class RetornaInfo:
 
         return alunos
 
+    def Alunos_graficos(self):
+        lista_de_alunos = []
+
+        for turmas in self.arquivo:
+            for times in self.arquivo[turmas]:
+                for alunos in self.arquivo[turmas][times]['Alunos']:
+                    lista_de_alunos.append(f'{turmas} / {times} / {alunos}')
+        
+        return lista_de_alunos
+
+
+    def Times_graficos(self):
+        lista_de_times = []
+        for turmas in self.arquivo:
+            for times in self.arquivo[turmas]:
+                lista_de_times.append(f'{turmas} / {times}')
+        
+        return lista_de_times
+
+
+
     def User(self):
         return user_info.user_info 
+
+class RetornaInfoAcesso:
+    def Inicio(self, qual_info):
+        self.arquivo = Arquivos().Ler_JSON('turmas.json')
+
+        if qual_info == 'alunos':
+            return self.Retorna_alunos()
+
+    def Retorna_alunos(self):
+        user_turma = user_info.user_info['Turma']
+        user_time  = user_info.user_info['Time']
+        user_cargo = user_info.user_info['Cargo']
+        
+        if user_cargo == 'Instrutor' or user_cargo == 'Scrum Master':
+            if user_cargo == 'Instrutor':
+                id = 'Scrum Master'
+            else:
+                id = 'PO'
+            
+            alunos = []
+            for turmas in self.arquivo:
+                for times in self.arquivo[turmas]:
+                    aluno = self.arquivo[turmas][times][id].strip()
+                    if not aluno == '':
+                        alunos.append(aluno)
+
+            return alunos
+        
+        else:
+            return self.arquivo[user_turma][user_time]['Alunos']
 
 class Avaliar:
     def Salvar_avaiacao(self, info:dict):
@@ -501,7 +552,6 @@ class GraficoInfo:
         
         return novo_dict
 
-
     def __Achar_id(self):
         # if self.qual_filtro == 'Avaliado':
         try:
@@ -653,22 +703,7 @@ def Caminho_ate_Falcon():
     return findall(r'.*Falcon', os.path.dirname(__file__))[0]
 
 
-
-
-# print(GraficoInfo().Retorna_info_pro_grafico('time', 'Banco De Dados 2 / First'))
-# print(GraficoInfo().Retorna_info_pro_grafico('time'))
-# print(GraficoInfo().Retorna_info_pro_grafico('avaliado', 'lucas berto'))
-# info = { 
-#     'Turma': 'Banco De Dados - 2° Sem 2022',
-#     'Nome': 'Lukas 2',
-#     'Email': 'luk2323@gmail.com',
-#     'Senha': 'teswesS2@3',
-#     'Cargo': 'Fake Client'
-# }
-# print(Cadastrar().Iniciar_cadastro('Fake Client', info))
-# info = {
-#     'Turma': 'Tesntando 2',
-#     'Sprint Inicio': ['25/11/2022', '15/12/2022'],
-#     'Sprint Fim': ['12/12/2022', '05/01/2023']
-# }
-# print(Cadastrar().Iniciar_cadastro('sprint', info))
+# user  = 'admin'
+# senha = ''
+# Login(user, senha)
+# print(RetornaInfoAcesso().Inicio('alunos'))
