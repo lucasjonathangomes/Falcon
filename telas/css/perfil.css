@@ -96,3 +96,23 @@ body * {
     width: 100%;
     padding: 10px;
 }
+
+.bt-cancelar-salvar{
+    width: 40%;
+    justify-content: center;
+    display: flex;
+    align-items: right;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#bt-cancelar{
+    background-color: rgb(241, 9, 9);
+}
+
+#bt-salvar{
+    background-color: rgb(83, 233, 24);
+}
