@@ -68,3 +68,9 @@ body{
     height: 30px;
     font-size: larger;
 }
+
+.grafico{
+    width: 800px;
+    height: 400px;
+    display: flex;
+}

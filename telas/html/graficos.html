@@ -37,5 +37,28 @@
                 <button class="bt-alunos">Lucas Jonathan Cordeiro Gomes</button>
             </div>
         </div>
+        <div class="grafico"><canvas id="primeiroGrafico"></canvas></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script>
+
+        eel.Grafico_info('Turma', 'Banco De Dados 2') (function (config){
+            if (config[0]){
+                let primeiroGrafico = document.getElementById('primeiroGrafico').getContext('2d');
+                let chart = new Chart(
+                    primeiroGrafico, 
+                    config[1]
+                )
+            }
+            else {
+                window.alert(config[1])
+            }
+
+        })
+
+    </script>
+    
 </body>
 </html>
