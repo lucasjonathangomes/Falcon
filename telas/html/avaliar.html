@@ -148,9 +148,14 @@
             let turma = document.getElementById(turma_id).value
             let time = document.getElementById(time_id).value
 
-            eel.Retorna_info('alunos', turma=turma, time=time) (function(todos_alunos){
+            //eel.Retorna_info('alunos', turma=turma, time=time) (function(todos_alunos){
+            //    Adicionar_item(todos_alunos, user_id)
+            //})
+
+            eel.RetornaInfoAcesso('alunos') (function(todos_alunos){
                 Adicionar_item(todos_alunos, user_id)
             })
+
         }
 
         // Criando as variaveis 

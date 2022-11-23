@@ -1,9 +1,11 @@
 {
     "admin": {
         "Nome": "Admin",
-        "Senha": "d41d8cd98f00b204e9800998ecf8427e",
-        "Email": "admin@gmail.com",
-        "Cargo": "Administrador"
+        "Email": "walmirduque@gmail.com",
+        "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+        "Time": "Falcon",
+        "Cargo": "Instrutor",
+        "Senha": "d41d8cd98f00b204e9800998ecf8427e"
     },
     "fabianosabha": {
         "Nome": "Fabiano Sabha",

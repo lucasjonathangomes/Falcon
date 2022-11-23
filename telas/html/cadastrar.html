@@ -48,15 +48,15 @@
     function mostraValor(valor){
         
         if(valor == "Instrutor"){
-            document.getElementById('usuario').style.display = 'none';
-            document.getElementById('time').style.display = 'block';
+            document.getElementById('turma').style.display = 'block';
+            document.getElementById('time').style.display = 'none';
         }
         else if(valor == 'Fake Client'){
-            document.getElementById('usuario').style.display = 'none';
+            document.getElementById('turma').style.display = 'none';
             document.getElementById('time').style.display = 'none';
         }
         else{
-            document.getElementById('usuario').style.display = 'block';
+            document.getElementById('turma').style.display = 'block';
             document.getElementById('time').style.display = 'block';
         }
     }
@@ -122,8 +122,8 @@
                         <option value="Instrutor">Instrutor</option>
                     </select>
                 </div>
-                <div class="test" id="usuario">
-                    <label for="turma">Escolha a turma que pertence:</label>
+                <div class="test" id="turma">
+                    <label for="turma">Escolha a turma que o usuário pertence:</label>
                     <select class="textfield-turma" id="turma-usuario" nome="turma">
                     </select>
                 </div>
