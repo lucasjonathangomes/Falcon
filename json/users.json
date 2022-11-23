@@ -2,8 +2,8 @@
     "admin": {
         "Nome": "Admin",
         "Senha": "d41d8cd98f00b204e9800998ecf8427e",
-        "Email": "walmirduque@gmail.com",
-        "Cargo": "Instrutor"
+        "Email": "admin@gmail.com",
+        "Cargo": "Administrador"
     },
     "fabianosabha": {
         "Nome": "Fabiano Sabha",
