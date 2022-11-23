@@ -325,7 +325,7 @@ class RetornaInfo:
             for times in self.arquivo[turmas]:
                 alunos += self.arquivo[turmas][times]['Alunos']
         return alunos 
-        
+
     def Alunos_graficos_antigo(self):
         lista_de_alunos = []
 
@@ -350,8 +350,6 @@ class RetornaInfo:
                 lista_de_times.append(f'{turmas} / {times}')
         
         return lista_de_times
-
-
 
     def User(self):
         return user_info.user_info 
@@ -434,12 +432,15 @@ class Avaliar:
 
 class Historico:
     def Retorna_historico(self, user):
-        self.user = user.lower()
-        self.nome = Arquivos().Ler_JSON('users.json')[user]['Nome']
+        try:
+            self.user = user.lower()
+            self.nome = Arquivos().Ler_JSON('users.json')[user]['Nome']
 
-        self.info = self.__Pegar_historico()
+            self.info = self.__Pegar_historico()
 
-        return self.__Deixar_em_html()
+            return self.__Deixar_em_html()
+        except:
+            return ['<h1> Não tem nenhuma avaliação desse usuario </h1>']
 
     def __Pegar_historico(self):
         histrc = Arquivos().Ler_JSON('histrc.json')
@@ -459,21 +460,32 @@ class Historico:
             
             return px
 
-        html = f'<h2> Avaliador: {self.nome} </h2> \n'
+        '''
+        
+
+        
+            <div class="info-left">
+                <p class="info">Trabalho em equipe, cooperação e descentralização de conhecimento:</p>
+            </div>
+            <div class="info-right">
+                <p class="info">Muito Bom</p>
+            </div>
+        </div>
+        '''
+
+        html = f'<div class="sprints"> <div class="info-sprint"> <p class="info"> Sprint 1 </p> </div> </div> \n'
 
         for id in self.info: 
             # Vai percorrer todos os alunos que o usuario avaliou
             # então a variavel "id" vai ser o nome do aluno que foi avaliado
-            html += f'<h3> Avaliado: {id} </h3> \n'
-
             for id_avaliacao in self.info[id]:
                 info_avaliacao = self.info[id][id_avaliacao]
                 
                 for info in info_avaliacao:
                     pixels = Definir_pixel_div(info)
                     html += '<div class="info-left-and-right"> \n'
-                    html += f'<div class="info-left"> <p class="info" id="info-{pixels}px"> {info}: </p> </div> \n'
-                    html += f'<div class="info-left"> <p class="info" id="info-{pixels}px"> {info_avaliacao[info]} </p> </div> \n'
+                    html += f'<div class="info-left"> <p class="info"> {info}: </p> </div> \n'
+                    html += f'<div class="info-right"> <p class="info"> {info_avaliacao[info]} </p> </div> \n'
                     html += '</div>'
         
         return html

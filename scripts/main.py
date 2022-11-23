@@ -80,6 +80,4 @@ def RetornaInfoAcesso(qual_info):
 def Grafico_info(qual_grafico, filtro=''):
 	return support.GraficoInfo().Retorna_info_pro_grafico(qual_grafico, filtro=filtro)
 
-# eel.start("html/login.html", port=8000)
-
-print(Retorna_info('times grafico'))
+eel.start("html/login.html", port=8000)

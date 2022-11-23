@@ -27,10 +27,10 @@
             </div>
 
             <div id="todos_alunos" class="nome-alunos">
-                <button class="bt-alunos">Lucas Henrique Costa de Oliveira</button>
+                <!-- <button class="bt-alunos">Lucas Henrique Costa de Oliveira</button>
                 <button class="bt-alunos">Lukas Fernando Berto</button>
                 <button class="bt-alunos">Lucas Augusto Oliveira de Souza</button>
-                <button class="bt-alunos">Lucas Jonathan Cordeiro Gomes</button>
+                <button class="bt-alunos">Lucas Jonathan Cordeiro Gomes</button> -->
             </div>
         </div>
 
@@ -46,7 +46,7 @@
 
             <div class="historico-info" id="historico_info">
 
-                <div class="sprints">
+                <!-- <div class="sprints">
                     <div class="info-sprint">
                         <p class="info">Sprint 1</p>
                     </div>
@@ -95,7 +95,7 @@
                     <div class="info-right">
                         <p class="info">Regular</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -110,6 +110,13 @@
             window.location.replace(url);
         }
 
+        function Atualizar_historico(user) {
+            eel.Historico(user)(function(html){
+                var historico = document.getElementById('historico_info')
+                historico.innerHTML = html
+            })
+        }
+
         eel.Retorna_info('user')(function(user_info){
             var nome_home = document.getElementById('nome_home')
             nome_home.innerHTML = `<h1>${user_info['Nome']}</h1>`
@@ -118,18 +125,16 @@
             
             if (eh_PO === false){
                 document.getElementById('nome_alunos').style.display = 'none'
+                
+                Atualizar_historico(user_info['User'])
             }
 
-            eel.Historico(user_info['User'])(function(html){
-                var historico = document.getElementById('historico_info')
-                historico.innerHTML = html
-            })
         })
 
         eel.Retorna_info('alunos historico')(function(alunos){
             var campo_alunos = document.getElementById('todos_alunos')
             Object.keys(alunos).forEach(function(user){
-                campo_alunos.innerHTML += `<button id="${user}" onclick="clickTeclado('${user}')"> ${alunos[user]} </button>`
+                campo_alunos.innerHTML += `<button id="${user}" onclick="Atualizar_historico('${user}')"> ${alunos[user]} </button>`
             })
         })
 
@@ -138,7 +143,7 @@
             window.alert(texto + 'e o id é: ' + id)
         }
         
-        //eel.Historico()
+        eel.Historico()
     </script>    
     
     <!-- <script>
