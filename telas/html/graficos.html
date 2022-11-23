@@ -53,20 +53,46 @@
     <script type="text/javascript" src="/eel.js"></script>
     <script>
 
+        var primeiroGrafico = document.getElementById('primeiroGrafico').getContext('2d')
+        var select = document.getElementById("filtro_grafico")
+
+        function Atualizar_dados_grafico(dados){
+            let chart = new Chart(
+                primeiroGrafico, 
+                dados
+            )
+        }
+
+        function Mudar_grafico(){
+            let valor_select = select.value
+            if (valor_select == 'Turmas'){
+                var oq_retornar = 'turmas'
+            }
+
+            else if (valor_select == 'Times'){
+                var oq_retornar = 'times grafico'
+            }
+
+            else {
+                // valor_select == Alunos
+                var oq_retornar = 'alunos gtafico'
+            }
+
+            eel.Retorna_info(oq_retornar)(function(info){
+                
+            })
+        }
+
         eel.Grafico_info('Turma', 'Banco De Dados 2') (function (config){
             if (config[0]){
-                let primeiroGrafico = document.getElementById('primeiroGrafico').getContext('2d');
-                let chart = new Chart(
-                    primeiroGrafico, 
-                    config[1]
-                )
+                Atualizar_dados_grafico(config[1])
             }
             else {
                 window.alert(config[1])
             }
-
         })
 
+        select.addEventListener('change', Mudar_grafico())
     </script>
     
 </body>

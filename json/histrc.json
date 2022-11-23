@@ -133,5 +133,20 @@
                 "Sprint": "Sprint 1"
             }
         }
+    },
+    "admin": {
+        "Lucas Augusto": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Augusto",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Muito Bom",
+                "Iniciativa e proatividade": "Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
+                "Compet\u00eancia T\u00e9cnica": "Regular",
+                "Sprint": "Sprint 1"
+            }
+        }
     }
 }

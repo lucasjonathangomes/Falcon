@@ -50,7 +50,7 @@ def Retorna_info(qual_info, turma='None', time='None'):
 			return inicio.Alunos_graficos()
 		
 		elif qual_info == 'times grafico':
-			return inicio.Times_graficos()
+			return inicio.Times_grafico()
 		
 		else: # Alunos
 			info = inicio.Alunos()
@@ -76,7 +76,7 @@ def Historico(user):
 def RetornaInfoAcesso(qual_info):
 	return support.RetornaInfoAcesso().Inicio(qual_info)
 
-@eel.expose 
+@eel.expose
 def Grafico_info(qual_grafico, filtro=''):
 	return support.GraficoInfo().Retorna_info_pro_grafico(qual_grafico, filtro=filtro)
 

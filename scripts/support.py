@@ -440,7 +440,7 @@ class Historico:
 
             return self.__Deixar_em_html()
         except:
-            return ['<h1> Não tem nenhuma avaliação desse usuario </h1>']
+            return ['<h1 class="sem-avaliacao"> Não tem nenhuma avaliação desse usuario </h1>']
 
     def __Pegar_historico(self):
         histrc = Arquivos().Ler_JSON('histrc.json')
@@ -494,6 +494,7 @@ class GraficoInfo:
     def Retorna_info_pro_grafico(self, qual_filtro, filtro=''):
         '''
         qual_filtro: Turma; Time; Avaliado
+        filtro: Nome da Turma, Time ou Avaliado
         '''
         self.filtro = filtro.title().strip()
         self.qual_filtro = qual_filtro.capitalize().strip()
