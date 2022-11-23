@@ -184,8 +184,8 @@ body * {
 }
 
 .cadastrar-sprint{
-    width: 100%; /* Largura */
-    display: flex; /* Exibição */
+    width: 80%; /* Largura */
+    display: none; /* Exibição */
     justify-content: right; /* Justificar Conteúdo */
     align-items: center; /* Itens de Alinhamento */
     flex-direction: column; /* Direção Flexível */
@@ -223,28 +223,28 @@ body * {
 }
 
 .datas{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
-    margin-left: 60px;
 }
 
 .datas-início{
-    width: 30px;
-    height: 30px;
-    border-radius: 30%;
+    width: 50%;
     line-height: 30px;
-    text-align: center;
-    margin-right: 100px;
+    margin-right: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }
 
 .datas-fim{
-    width: 30px;
-    height: 30px;
-    border-radius: 30%;
+    width: 50%;
     line-height: 30px;
-    text-align: center;
-    margin-right: 50px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }
 
 .textfield{
@@ -255,6 +255,7 @@ body * {
     justify-content: center;
     margin: 10px 0px;
 }
+
 .test{
     width: 100%;
     display: block;
@@ -263,6 +264,7 @@ body * {
     justify-content: center;
     margin: 10px 0px;
 }
+
 .test1{
     width: 100%;
     display: block;
@@ -270,6 +272,13 @@ body * {
     align-items: flex-start;
     justify-content: center;
     margin: 10px 0px;
+}
+
+.test2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
 
 .textfield-cargo{
@@ -319,6 +328,14 @@ body * {
     box-shadow: 0px 5px 20px #c0c0c0;
     outline: none;
     box-sizing: border-box;
+}
+
+.textfield-sprint{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
 .textfield > label{

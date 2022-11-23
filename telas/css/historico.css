@@ -62,14 +62,6 @@ body{
     font-size: larger;
 }
 
-/* .graficos{
-    width: 450px;
-    height: 450px;
-    display: block;
-    justify-content: center;
-    position: relative;
-} */
-
 .historico {
     width: 100%;
 }
@@ -126,3 +118,7 @@ body{
     text-align: center;
 }
 
+.sem-avaliacao{
+    display: flex;
+    justify-content: center;
+}
