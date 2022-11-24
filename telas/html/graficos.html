@@ -23,10 +23,10 @@
     <div class="menu-graficos">
         <div class="alunos" id="nome_alunos">
             <div class="alunos-texto">
-                <select class="filtro-grafico" name="filtro-grafico" id="filtro_grafico">
-                    <option class="" value="">TURMAS</option>
-                    <option class="" value="">TIMES</option>
-                    <option class="" value="">ALUNOS</option>
+                <select class="filtro-grafico" name="filtro-grafico" id="filtro_grafico" onchange="selecionado()">
+                    <option class="" value="turmas">TURMAS</option>
+                    <option class="" value="times">TIMES</option>
+                    <option class="" value="alunos">ALUNOS</option>
                 </select>
             </div>
 
@@ -52,6 +52,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script type="text/javascript" src="/eel.js"></script>
     <script>
+
+    function selecionado(){
+        let valor = document.getElementById("filtro_grafico").value;
+        mostraBTN(valor)    
+    }
+        
+    function mostraBTN(id){
+        
+        let limpa = document.getElementById("todos_alunos")
+            limpa.innerHTML = "";
+        
+        if(id == 'alunos'){             
+            eel.Retorna_info('alunos grafico')(function(alunos){
+                for(let i = 0 ; i < alunos.length; i++){
+
+                    document.getElementById("todos_alunos").innerHTML += `<button class="bt-alunos" id="${alunos[i]}" onclick="pega_valor('${alunos[i]}')" value="${alunos[i]}" >${alunos[i]}</button>`;
+                }
+            })
+        }else if(id == 'turmas'){
+            eel.Retorna_info('turmas')(function(todas_turma){
+                for(let i = 0 ; i < todas_turma.length; i++){
+                    document.getElementById("todos_alunos").innerHTML += `<button class="bt-alunos" id="${todas_turma[i]}" onclick="pega_valor('${todas_turma[i]}')" value="${todas_turma[i]}" >${todas_turma[i]}</button>`;
+                }
+            });
+        }else{
+            eel.Retorna_info('times grafico')(function(times_mostra){
+                for(let i = 0 ; i < times_mostra.length; i++){
+                document.getElementById("todos_alunos").innerHTML += `<button class="bt-alunos" id="${times_mostra[i]}" onclick="pega_valor('${times_mostra[i]}')" value="${times_mostra[i]}" >${times_mostra[i]}</button>`;
+                }
+            });
+        }
+    }
+    // eel.Grafico_info('Turma', 'Banco De Dados 2') (function (config){
+    //             if (config[0]){
+    //                 let primeiroGrafico = document.getElementById('primeiroGrafico').getContext('2d');
+    //                 let chart = new Chart(
+    //                     primeiroGrafico, 
+    //                     config[1]
+    //                 )
+    //             }
+    //             else {
+    //                 window.alert(config[1])
+    //             }
+
+    //         })
 
         var primeiroGrafico = document.getElementById('primeiroGrafico').getContext('2d')
         var select = document.getElementById("filtro_grafico")
