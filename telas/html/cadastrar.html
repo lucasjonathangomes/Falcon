@@ -16,7 +16,7 @@
             let usuarioAcesso = userInfo['Cargo'];
 
             if(usuarioAcesso == 'Administrador'){
-                if(id == 'cdTurma' || id == "cdInstrutor"){
+                if(id == 'cdTurma' || id == "cdUsuario"){
                     EsconderElementos(id);
                 }else{
                     window.alert("Com o seu cargo de "+usuarioAcesso+" você não pode acessar esta funcionalidade!");
@@ -34,7 +34,7 @@
     }                  
     
     function EsconderElementos(id){
-        var lista_id = ['cdTurma','cdInstrutor', 'cdTime', 'cdSprint', 'cdUsuario'];
+        var lista_id = ['cdTurma', 'cdTime', 'cdSprint', 'cdUsuario'];
         for(let posicao = 0; posicao <= 4; posicao++){
             if(lista_id[posicao] === id){
                 document.getElementById(id).style.display = 'block';
@@ -76,10 +76,10 @@
         <div class="left-cad">
             <div class="botoes">
                 <h1>CADASTRO</h1>
-                <button class="botao-cadastrar" id="btnTurma" onclick="ValidaAcesso('cdTurma')">CADASTRAR TURMA</button>
-                <button class="botao-cadastrar" id="btnTime" onclick="ValidaAcesso('cdTime')">CADASTRAR TIME</button>
-                <button class="botao-cadastrar" id="btnUsuario" onclick="ValidaAcesso('cdUsuario')">CADASTRAR USUÁRIO</button>
-                <button class="botao-cadastrar" id="btnSprint" onclick="ValidaAcesso('cdSprint')">CADASTRAR SPRINT</button>
+                <button class="botao-cadastrar" id="btnTurma" onclick="EsconderElementos('cdTurma')">CADASTRAR TURMA</button>
+                <button class="botao-cadastrar" id="btnTime" onclick="EsconderElementos('cdTime')">CADASTRAR TIME</button>
+                <button class="botao-cadastrar" id="btnUsuario" onclick="EsconderElementos('cdUsuario')">CADASTRAR USUÁRIO</button>
+                <button class="botao-cadastrar" id="btnSprint" onclick="EsconderElementos('cdSprint')">CADASTRAR SPRINT</button>
             </div>
         </div>
         <div class="right-cad">
@@ -182,10 +182,24 @@
     </div>
     <script type="text/javascript" src="/eel.js"></script>
     <script>
+        function Esconder_elementos(lista_de_id){
+            lista_de_id.forEach(function(id){
+                document.getElementById(id).style.display = 'none'
+            })
+        }
+
         // Para colocar o nome na Barra de Menu
         eel.Retorna_info('user')(function (info_do_usuario){
             var nome_home = document.getElementById('nome_home')
             nome_home.innerHTML = `<h1>${info_do_usuario['Nome']}</h1>`
+
+            if (info_do_usuario['Cargo'] == 'Administrador'){
+                Esconder_elementos(['btnTime', 'btnSprint'])
+            }
+
+            else{// info_do_usuario['Cargo'] == 'Instrutor'
+                Esconder_elementos(['btnTurma'])
+            }
         })
         
         function go_to(url) {
@@ -193,8 +207,6 @@
         }
         
         var turma = document.getElementById("select-turma")
-
-        
 
         //select.options[select.options] = new Option('My option', 'My value');
 
@@ -246,7 +258,7 @@
             let cargo = document.getElementById("cargo").value;
             let senha = document.getElementById("senha-do-usuário").value;
 
-            eel.Cadastrar('aluno',{'Turma': turma, 'Time': time, 'Nome': nome, 'Email': email, 'Cargo': cargo, 'Senha': senha}) (function (result){
+            eel.Cadastrar(cargo,{'Turma': turma, 'Time': time, 'Nome': nome, 'Email': email, 'Cargo': cargo, 'Senha': senha}) (function (result){
                 window.alert(result[1])
                 if(result[0]){
                     document.getElementById("turma-usuario").value = "";
@@ -274,32 +286,10 @@
         function cancelaE(){
             document.getElementById("cdSprint").style.display = 'none';
         }
-                       
-        function home(){
-            go_to('menu.html');
-        }
- 
+        
         function Zerar_select(id){
             let select  = document.getElementById(id)
             select.innerHTML = ''
-        }
-
-        function Pegar_times(id){
-            let turma = document.getElementById(id).value
-            eel.Retorna_info('times', turma) (function (result){
-                Zerar_select("time-usuario")
-                Adicionar_item(result, 'time-usuario')
-            })
-        }
-
-        function Adicionar_item(valores, id) {
-            Zerar_select(id)
-            let select = document.getElementById(id).add(new Option('', ''))
-            valores.forEach(function(item){
-                let option = new Option(item, item);
-                let select = document.getElementById(id);
-                select.add(option);
-            })
         }
 
         function Atualizar_turmas(select_turma_id){
@@ -316,6 +306,24 @@
             })
         }
 
+        function Adicionar_item(valores, id) {
+            Zerar_select(id)
+            let select = document.getElementById(id).add(new Option('', ''))
+            valores.forEach(function(item){
+                let option = new Option(item, item);
+                let select = document.getElementById(id);
+                select.add(option);
+            })
+        }
+        
+        function Pegar_times(id){
+            let turma = document.getElementById(id).value
+            eel.Retorna_info('times', turma) (function (result){
+                Zerar_select("time-usuario")
+                Adicionar_item(result, 'time-usuario')
+            })
+        }
+
         // Criando as variaveis 
         var id_turma = 'turma-usuario'
         var select_turma = document.getElementById(id_turma)
@@ -324,10 +332,6 @@
         // Turma de Usuario 
         eel.Retorna_info('turmas') (function(todas_turmas){
             Adicionar_item(todas_turmas, id_turma)
-        })
-        // Turma de Instrutor
-        eel.Retorna_info('turmas') (function(todas_turmas){
-            Adicionar_item(todas_turmas, 'select-turma')
         })
         // Turma de Times
         eel.Retorna_info('turmas') (function(todas_turmas){

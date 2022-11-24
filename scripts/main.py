@@ -20,6 +20,7 @@ def Cadastrar(oq_cadastrar:str, info:dict):
 	'''
 	oq_cadastrar = oq_cadastrar.strip().lower()
 	return support.Cadastrar().Iniciar_cadastro(oq_cadastrar, info)
+	# print('info que retorna:  ',support.Cadastrar().Iniciar_cadastro(oq_cadastrar, info))
 
 @eel.expose 
 def Retorna_info(qual_info, turma='None', time='None'):

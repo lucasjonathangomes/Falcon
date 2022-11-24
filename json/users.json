@@ -46,5 +46,13 @@
         "Time": "Falcon",
         "Cargo": "Desenvolvedor",
         "Senha": "4aa5d62f2436403d3da7aa4dc80a17f5"
+    },
+    "Lukas_Teste": {
+        "Nome": "Lukas Teste",
+        "Email": "Lukas_Teste@gmail.com",
+        "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+        "Time": "Falcon",
+        "Cargo": "Desenvolvedor",
+        "Senha": "673625af6f64b4d6e2e069373bf0a0af"
     }
 }

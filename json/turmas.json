@@ -6,14 +6,16 @@
             "Desenvolvedor": [
                 "Lucas Augusto",
                 "Lukas Fernando Berto",
-                "Lucas Augusto Oliveira De Souza"
+                "Lucas Augusto Oliveira De Souza",
+                "Lukas Teste"
             ],
             "Alunos": [
                 "Lucas Augusto",
                 "Lucas Henrique Costa De Oliveira",
                 "Lukas Fernando Berto",
                 "Lucas Jonathan Cordeiro Gomes",
-                "Lucas Augusto Oliveira De Souza"
+                "Lucas Augusto Oliveira De Souza",
+                "Lukas Teste"
             ]
         },
         "First": {
@@ -28,5 +30,6 @@
             "Desenvolvedor": [],
             "Alunos": []
         }
-    }
+    },
+    "Testando": {}
 }

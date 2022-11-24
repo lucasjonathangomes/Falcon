@@ -41,16 +41,8 @@ class Cadastrar:
         '''
         self.info = info
         oq_cadastrar = oq_cadastrar.lower()
-  
-        if oq_cadastrar in ['aluno', 'instrutor', 'fake client']:
-            self.json_user = Arquivos().Ler_JSON('users.json')
-            return self.__Cadastrar_usuario()
 
-        elif oq_cadastrar == 'sprint':
-            self.json_sprints = Arquivos().Ler_JSON('sprints.json')
-            return self.__Cadastrar_sprint()
-
-        else:
+        if oq_cadastrar in ['turma', ' time']:
             self.json_turmas = Arquivos().Ler_JSON('turmas.json')
             
             if oq_cadastrar == 'turma':
@@ -58,6 +50,24 @@ class Cadastrar:
 
             elif oq_cadastrar == 'time':
                 return self.__Cadastrar_time() 
+
+        elif oq_cadastrar == 'sprint':
+            self.json_sprints = Arquivos().Ler_JSON('sprints.json')
+            return self.__Cadastrar_sprint()
+
+        else:
+            '''
+            Aqui vai cadastrar:
+
+            Fake Client
+            Instrutor
+            Product Owner
+            Scrum Master
+            Desenvolvedor'''
+            
+            self.json_user = Arquivos().Ler_JSON('users.json')
+            return self.__Cadastrar_usuario()
+
 
     def __Cadastrar_turma(self):
         turma_nome = self.info['Turma'].strip().title()
@@ -149,7 +159,7 @@ class Cadastrar:
         resultado = self.__Validar_info_padrao(nome, email, senha)
 
         if not resultado[0]:
-            return resultado[1]
+            return resultado
         
         senha = Criptografar(senha)
         user = email.split('@')[0].strip()
@@ -162,12 +172,25 @@ class Cadastrar:
 
         elif cargo == 'Instrutor':
             turma = self.info['Turma'].strip()
-            usuario_salvo = Salvar_instrutor_e_fk(self.turma, cargo, user) 
+            validado = self.__Validar_turma_e_time(turma, time, validar_time=False)
+
+            if validado[0]:
+                usuario_salvo = Salvar_instrutor_e_fk(turma, cargo, user) 
+
+            else:
+                return validado
 
         else:
             turma = self.info['Turma'].strip()
             time = self.info['Time'].strip()
-            usuario_salvo = Salvar_aluno(turma, time, cargo)  
+            validado = self.__Validar_turma_e_time(turma, time)
+
+            if validado[0]:
+                usuario_salvo = Salvar_aluno(turma, time, cargo)
+
+            else:
+                return validado
+
 
 
         deixar_info_sequencial = {
@@ -184,6 +207,16 @@ class Cadastrar:
             Arquivos().Salvar_JSON('users.json', self.json_user)
 
         return usuario_salvo
+
+    def __Validar_turma_e_time(self, turma, time, validar_turma=True, validar_time=True):
+        if turma == '' and validar_turma:
+            return [False, 'Seleciona uma turma para esse usuario']
+
+        if time == '' and validar_time:
+            return [False, 'Seleciona um time para esse usuario']
+
+        return [True] 
+        
 
     def __Validar_info_padrao(self, nome, email, senha):
         def Validar_senha(senha):
