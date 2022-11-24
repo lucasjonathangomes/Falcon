@@ -132,7 +132,7 @@
         }
 
         function Atualizar_turmas(select_turma_id){
-            eel.Retorna_info('turmas') (function(todas_turmas){
+            eel.RetornaInfoAcesso('turma') (function(todas_turmas){
                 Adicionar_item(todas_turmas, select_turma_id)
             })
         }
@@ -140,10 +140,11 @@
         function Atualizar_times(turma_id, time_id){
             let turma = document.getElementById(turma_id).value
             let time = document.getElementById(time_id).value
-            eel.Retorna_info('times', turma=turma) (function(todas_turmas){
+            eel.RetornaInfoAcesso('time', turma=turma) (function(todas_turmas){
                 Adicionar_item(todas_turmas, time_id)
             })
         }
+     
         function Atualizar_integrante(turma_id, time_id, user_id){
             let turma = document.getElementById(turma_id).value
             let time = document.getElementById(time_id).value
@@ -167,7 +168,7 @@
 
         /*  Atualizar as turmas  */
         // Turma de Usuario 
-        eel.Retorna_info('turmas') (function(todas_turmas){
+        eel.RetornaInfoAcesso('turma') (function(todas_turmas){
             Adicionar_item(todas_turmas, id_turma)
         })
 

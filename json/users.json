@@ -1,10 +1,18 @@
 {
     "admin": {
         "Nome": "Admin",
+        "Email": "admin@gmail.com",
+        "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+        "Time": "Falcon",
+        "Cargo": "Fake Client",
+        "Senha": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "walmirduque": {
+        "Nome": "Admin",
         "Email": "walmirduque@gmail.com",
         "Turma": "Banco De Dados - 2\u00ba Sem 2022",
         "Time": "Falcon",
-        "Cargo": "Administrador",
+        "Cargo": "PO",
         "Senha": "d41d8cd98f00b204e9800998ecf8427e"
     },
     "fabianosabha": {

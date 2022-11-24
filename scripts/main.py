@@ -20,7 +20,6 @@ def Cadastrar(oq_cadastrar:str, info:dict):
 	'''
 	oq_cadastrar = oq_cadastrar.strip().lower()
 	return support.Cadastrar().Iniciar_cadastro(oq_cadastrar, info)
-	# print('info que retorna:  ',support.Cadastrar().Iniciar_cadastro(oq_cadastrar, info))
 
 @eel.expose 
 def Retorna_info(qual_info, turma='None', time='None'):
@@ -74,8 +73,8 @@ def Historico(user):
 	return support.Historico().Retorna_historico(user) 
 
 @eel.expose
-def RetornaInfoAcesso(qual_info):
-	return support.RetornaInfoAcesso().Inicio(qual_info)
+def RetornaInfoAcesso(qual_info, turma=''):
+	return support.RetornaInfoAcesso().Inicio(qual_info, turma)
 
 @eel.expose
 def Grafico_info(qual_grafico, filtro=''):

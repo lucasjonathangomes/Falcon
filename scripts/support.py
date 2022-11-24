@@ -303,8 +303,6 @@ class Cadastrar:
         if not validar_datas[0]:
             return [False, validar_datas[1]]
         
-        # self.json_turmas[turma] = validar_datas[1]
-
         self.json_sprints[turma] = validar_datas[1]
         Arquivos().Salvar_JSON('sprints.json', self.json_sprints)
 
@@ -388,19 +386,41 @@ class RetornaInfo:
         return user_info.user_info 
 
 class RetornaInfoAcesso:
-    def Inicio(self, qual_info):
+    def Inicio(self, qual_info, turma=''):
+        qual_info = qual_info.lower()
+        self.turma = turma.title()
+
+        # Informações do usuario
+        self.user_turma = user_info.user_info['Turma']
+        self.user_time  = user_info.user_info['Time']
+        self.user_cargo = user_info.user_info['Cargo']
+
         self.arquivo = Arquivos().Ler_JSON('turmas.json')
-
-        if qual_info == 'alunos':
-            return self.Retorna_alunos()
-
-    def Retorna_alunos(self):
-        user_turma = user_info.user_info['Turma']
-        user_time  = user_info.user_info['Time']
-        user_cargo = user_info.user_info['Cargo']
         
-        if user_cargo == 'Instrutor' or user_cargo == 'Scrum Master':
-            if user_cargo == 'Instrutor':
+        if qual_info == 'turma':
+            return self.Retorna_turma()
+
+        elif qual_info == 'time':
+            return self.Retorna_time()
+
+        else: # alunos
+            return self.Retorna_alunos()
+            
+    def Retorna_turma(self):
+        if self.user_cargo == 'Fake Client':
+            return list(self.arquivo)
+        
+        return [self.user_turma]
+
+    def Retorna_time(self):
+        if self.user_cargo == 'Fake Client':
+            return list(self.arquivo[self.turma])
+
+        return [self.user_time]
+
+    def Retorna_alunos(self):        
+        if self.user_cargo == 'Instrutor' or self.user_cargo == 'Fake Client':
+            if self.user_cargo == 'Instrutor':
                 id = 'Scrum Master'
             else:
                 id = 'PO'
@@ -415,7 +435,12 @@ class RetornaInfoAcesso:
             return alunos
         
         else:
-            return self.arquivo[user_turma][user_time]['Alunos']
+            return self.arquivo[self.user_turma][self.user_time]['Alunos']
+
+    
+     
+
+
 
 class Avaliar:
     def Salvar_avaiacao(self, info:dict):
@@ -765,4 +790,4 @@ def Caminho_ate_Falcon():
 # user  = 'admin'
 # senha = ''
 # Login(user, senha)
-# print(RetornaInfoAcesso().Inicio('alunos'))
+# print(RetornaInfo('times grafico').Times_grafico())
