@@ -38,7 +38,10 @@
             </div>
         </div>
         
-        <div class="grafico"><canvas id="primeiroGrafico"></canvas></div>
+        <div class="grafico" id="grafico">
+            <canvas id="primeiroGrafico">
+            </canvas>
+        </div>
 
         <div class="info-skills">
             <div class="text-skill"><b>Skill 1:</b> Trabalho em equipe, cooperação e descentralização de conhecimento</div>
@@ -52,38 +55,69 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script type="text/javascript" src="/eel.js"></script>
     <script>
+        function go_to(url) {
+            window.location.replace(url);
+        }
 
-    function selecionado(){
-        let valor = document.getElementById("filtro_grafico").value;
-        mostraBTN(valor)    
-    }
-        
-    function mostraBTN(id){
-        
-        let limpa = document.getElementById("todos_alunos")
-            limpa.innerHTML = "";
-        
-        if(id == 'alunos'){             
-            eel.Retorna_info('alunos grafico')(function(alunos){
-                for(let i = 0 ; i < alunos.length; i++){
+        function selecionado(){
+            let valor = document.getElementById("filtro_grafico").value;
+            mostraBTN(valor)    
+        }
+            
+        function mostraBTN(id){
 
-                    document.getElementById("todos_alunos").innerHTML += `<button class="bt-alunos" id="${alunos[i]}" onclick="pega_valor('${alunos[i]}')" value="${alunos[i]}" >${alunos[i]}</button>`;
+            let limpa = document.getElementById("todos_alunos")
+                limpa.innerHTML = "";
+            
+            if(id == 'alunos'){             
+                eel.Retorna_info('alunos grafico')(function(alunos){
+                    for(let i = 0 ; i < alunos.length; i++){
+
+                        document.getElementById("todos_alunos").innerHTML += `<button class="bt-alunos" id="${alunos[i]}" onclick="Pegar_info_grafico('${alunos[i]}')" value="${alunos[i]}" >${alunos[i]}</button>`;
+                    }
+                })
+            }else if(id == 'turmas'){
+                eel.Retorna_info('turmas')(function(todas_turma){
+                    for(let i = 0 ; i < todas_turma.length; i++){
+                        document.getElementById("todos_alunos").innerHTML += `<button class="bt-alunos" id="${todas_turma[i]}" onclick="Pegar_info_grafico('${todas_turma[i]}')" value="${todas_turma[i]}" >${todas_turma[i]}</button>`;
+                    }
+                });
+            }else{
+                eel.Retorna_info('times grafico')(function(times_mostra){
+                    for(let i = 0 ; i < times_mostra.length; i++){
+                    document.getElementById("todos_alunos").innerHTML += `<button class="bt-alunos" id="${times_mostra[i]}" onclick="Pegar_info_grafico('${times_mostra[i]}')" value="${times_mostra[i]}" >${times_mostra[i]}</button>`;
+                    }
+                });
+            }
+        }
+
+        function Atualizar_dados_grafico(dados){
+            document.getElementById('grafico').innerHTML = '<canvas id="primeiroGrafico"></canvas>'
+            let primeiroGrafico = document.getElementById('primeiroGrafico').getContext('2d')
+            let chart = new Chart(
+                primeiroGrafico, 
+                dados
+            )
+        }
+
+        function Pegar_info_grafico(id_selecionado){
+            let valor_filtro = document.getElementById("filtro_grafico").value
+            let valor_selecionado = document.getElementById(id_selecionado).value
+            
+            eel.Grafico_info(valor_filtro, valor_selecionado) (function (config){
+                if (config[0]){
+                    Atualizar_dados_grafico(config[1])
+                }
+                else {
+                    window.alert(config[1])
                 }
             })
-        }else if(id == 'turmas'){
-            eel.Retorna_info('turmas')(function(todas_turma){
-                for(let i = 0 ; i < todas_turma.length; i++){
-                    document.getElementById("todos_alunos").innerHTML += `<button class="bt-alunos" id="${todas_turma[i]}" onclick="pega_valor('${todas_turma[i]}')" value="${todas_turma[i]}" >${todas_turma[i]}</button>`;
-                }
-            });
-        }else{
-            eel.Retorna_info('times grafico')(function(times_mostra){
-                for(let i = 0 ; i < times_mostra.length; i++){
-                document.getElementById("todos_alunos").innerHTML += `<button class="bt-alunos" id="${times_mostra[i]}" onclick="pega_valor('${times_mostra[i]}')" value="${times_mostra[i]}" >${times_mostra[i]}</button>`;
-                }
-            });
         }
-    }
+
+        // Chamando essa função para atualizar o select ja no inicio mesmo sem mudar o select
+        selecionado()
+
+
     // eel.Grafico_info('Turma', 'Banco De Dados 2') (function (config){
     //             if (config[0]){
     //                 let primeiroGrafico = document.getElementById('primeiroGrafico').getContext('2d');
@@ -98,8 +132,8 @@
 
     //         })
 
-        var primeiroGrafico = document.getElementById('primeiroGrafico').getContext('2d')
-        var select = document.getElementById("filtro_grafico")
+        
+        /*var select = document.getElementById("filtro_grafico")
 
         function Atualizar_dados_grafico(dados){
             let chart = new Chart(
@@ -137,7 +171,7 @@
             }
         })
 
-        select.addEventListener('change', Mudar_grafico())
+        select.addEventListener('change', Mudar_grafico())*/
     </script>
     
 </body>

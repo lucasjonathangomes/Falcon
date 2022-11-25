@@ -555,9 +555,14 @@ class GraficoInfo:
         filtro: Nome da Turma, Time ou Avaliado
         '''
         self.filtro = filtro.title().strip()
-        self.qual_filtro = qual_filtro.capitalize().strip()
         self.historico   = Arquivos().Ler_JSON('histrc.json')
-
+        
+        if qual_filtro.lower() in ['turmas', 'times']:
+            self.qual_filtro = qual_filtro.capitalize().strip('s')
+        
+        else:
+            self.qual_filtro = 'Avaliado'
+            
         self.perguntas = [
             'Trabalho em equipe, cooperação e descentralização de conhecimento',
             'Iniciativa e proatividade',
@@ -588,6 +593,7 @@ class GraficoInfo:
                     'rgba(255, 159, 64, 0.2)',
                     'rgba(255, 205, 86, 0.2)',
                     'rgba(75, 192, 192, 0.2)',
+                    'rgba(151, 187, 205, 0.2)'
             ]
             cores  = choices(lista_de_cores, k=qntd)
             borda = [cor[:-6]+')' for cor in cores]
@@ -641,7 +647,7 @@ class GraficoInfo:
         try:
             return [True, self.medias[self.filtro]]
         except:
-            return [False, 'Não foi encontrado nenhuma avaliação para esse aluno']
+            return [False, f'Não foi encontrado nenhuma avaliação para esse(a) {self.qual_filtro}']
         
         # else:
         #     return [True, self.medias]
@@ -692,11 +698,11 @@ class GraficoInfo:
                     # Se for time então vai pegar o time, se for turma então vai pegar a turma
                     filtro = id_info_avaliado[self.qual_filtro]
 
-                    if self.qual_filtro == 'Time':
-                        filtro = id_info_avaliado['Turma'] + ' / ' + filtro
+                    # if self.qual_filtro == 'Time':
+                    #     filtro = id_info_avaliado['Turma'] + ' / ' + filtro
                     
-                    elif self.qual_filtro == 'Avaliado':
-                        filtro = id_info_avaliado['Turma'] + ' / ' + id_info_avaliado['Time'] + ' / ' + filtro
+                    # elif self.qual_filtro == 'Avaliado':
+                    #     filtro = id_info_avaliado['Turma'] + ' / ' + id_info_avaliado['Time'] + ' / ' + filtro
 
                     if not filtro in info_avaliacao_dict:
                         info_avaliacao_dict[filtro] = {
