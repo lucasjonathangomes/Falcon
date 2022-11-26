@@ -437,11 +437,6 @@ class RetornaInfoAcesso:
         else:
             return self.arquivo[self.user_turma][self.user_time]['Alunos']
 
-    
-     
-
-
-
 class Avaliar:
     def Salvar_avaiacao(self, info:dict):
         self.info = info
@@ -571,10 +566,8 @@ class GraficoInfo:
             'Competência Técnica'
         ]
 
-        # soma_e_quantidade = self.__Pegar_info()
-        # self.medias = self.__Calcular_media(soma_e_quantidade)
-        soma_e_quantidade = self.__Test()
-        self.medias = self.__Calcular_media_test(soma_e_quantidade)
+        soma_e_quantidade = self.__Pegar_info()
+        self.medias = self.__Calcular_media(soma_e_quantidade)
         self.medias_filtrado =  self.__Achar_id()
 
         if self.medias_filtrado[0]:
@@ -603,7 +596,7 @@ class GraficoInfo:
         # informacoes  = self.medias_filtrado
         label        = f'Gráfico filtrado por {self.qual_filtro}'
         labels       = list(informacoes)
-        data         = list(informacoes.values())
+        data         = [round(valor, 1) for valor in list(informacoes.values())]
         cores, borda = Cores_aleatoria(len(labels))
         background   = cores
         border       = borda
@@ -618,17 +611,23 @@ class GraficoInfo:
                 'borderWidth': 1
             }]
         }
+        options = {
+            'scales': {
+                'y': {
+                    'beginAtZero': True,
+                    'min': 0,
+                    'max': 5,
+                    'ticks': {
+                        'stepSize': 0.5
+                    }
+                }
+            }
+        }
 
         config = {
             'type': 'bar',
             'data': data,
-            'options': {
-                'scales': {
-                    'y': {
-                        'beginAtZero': True
-                    }
-                }
-            }
+            'options': options
         }
 
         return config 
@@ -643,51 +642,12 @@ class GraficoInfo:
         return novo_dict
 
     def __Achar_id(self):
-        # if self.qual_filtro == 'Avaliado':
         try:
             return [True, self.medias[self.filtro]]
         except:
             return [False, f'Não foi encontrado nenhuma avaliação para esse(a) {self.qual_filtro}']
         
-        # else:
-        #     return [True, self.medias]
-
-    # def __Pegar_info(self):
-    #     info_avaliacao_dict = {}
-    #     for user_avaliador in self.historico:
-    #         info_avaliador = self.historico[user_avaliador]
-    #         for avaliado in info_avaliador:
-    #             info_avaliado = info_avaliador[avaliado]
-    #             for id in info_avaliado:
-    #                 id_info_avaliado = info_avaliado[id]
-    #                 # Se for time então vai pegar o time, se for turma então vai pegar a turma
-    #                 info = id_info_avaliado[self.qual_filtro]
-
-    #                 if not info in info_avaliacao_dict and self.qual_filtro == 'Avaliado':
-    #                     info_avaliacao_dict[info] = {
-    #                         self.perguntas[0]: {'Soma': 0, 'Quantidade': 0},
-    #                         self.perguntas[1]: {'Soma': 0, 'Quantidade': 0},
-    #                         self.perguntas[2]: {'Soma': 0, 'Quantidade': 0},
-    #                         self.perguntas[3]: {'Soma': 0, 'Quantidade': 0},
-    #                         self.perguntas[4]: {'Soma': 0, 'Quantidade': 0}
-    #                     }
-
-    #                 elif not info in info_avaliacao_dict:
-    #                     info_avaliacao_dict[info] = {'Soma': 0, 'Quantidade': 0}
-                    
-
-    #                 if self.qual_filtro == 'Avaliado':
-    #                     for cont in range(5):
-    #                         info_avaliacao_dict[info][self.perguntas[cont]]['Soma'] += self.__Transformar_valores(id_info_avaliado[self.perguntas[cont]])
-    #                         info_avaliacao_dict[info][self.perguntas[cont]]['Quantidade'] += 1
-                    
-    #                 else:
-    #                     info_avaliacao_dict[info]['Soma'] += self.__Pegar_soma_notas(id_info_avaliado)
-    #                     info_avaliacao_dict[info]['Quantidade'] += 5
-        
-    #     return info_avaliacao_dict
-
-    def __Test(self):
+    def __Pegar_info(self):
         info_avaliacao_dict = {}
         for user_avaliador in self.historico:
             info_avaliador = self.historico[user_avaliador]
@@ -719,14 +679,6 @@ class GraficoInfo:
                     
         return info_avaliacao_dict
 
-    # def __Pegar_soma_notas(self, info:dict):
-    #     soma = 0
-
-    #     for pergunta in self.perguntas:
-    #         soma += self.__Transformar_valores(info[pergunta])
-        
-    #     return soma
-        
     def __Transformar_valores(self, valor):
         if valor == 'Excelente':
             novo_valor = 5
@@ -745,31 +697,14 @@ class GraficoInfo:
 
         return novo_valor
 
-    def __Calcular_media_test(self, informacoes):
+    def __Calcular_media(self, informacoes):
         for id in informacoes:
             for pergunta in informacoes[id]:
                 informacoes[id][pergunta] = informacoes[id][pergunta]['Soma'] / informacoes[id][pergunta]['Quantidade']
         
         return informacoes
 
-    # def __Calcular_media(self, informacoes):
-    #     for id in informacoes:
-    #         if self.qual_filtro == 'Avaliado':
-    #             for pergunta in informacoes[id]:
-    #                 informacoes[id][pergunta] = informacoes[id][pergunta]['Soma'] / informacoes[id][pergunta]['Quantidade']
 
-    #         else:
-    #             informacoes[id] = informacoes[id]['Soma'] / informacoes[id]['Quantidade']
-
-    #     return informacoes
-
-
-# class Login:
-#     def __Login(self):
-#         pass # Retorna True
-
-#     def __Login_go_to(self):
-#         self.Login()
 
 def Criptografar(senha):
     return hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
@@ -793,7 +728,6 @@ def Caminho_ate_Falcon():
     return findall(r'.*Falcon', os.path.dirname(__file__))[0]
 
 
-# user  = 'admin'
-# senha = ''
-# Login(user, senha)
-# print(RetornaInfo('times grafico').Times_grafico())
+
+
+# print(GraficoInfo().Retorna_info_pro_grafico('turmas', 'Banco De Dados - 2º Sem 2022'))
