@@ -4,18 +4,14 @@
             "PO": "Lucas Henrique Costa De Oliveira",
             "Scrum Master": "Lucas Jonathan Cordeiro Gomes",
             "Desenvolvedor": [
-                "Lucas Augusto",
                 "Lukas Fernando Berto",
-                "Lucas Augusto Oliveira De Souza",
-                "Lukas Teste"
+                "Lucas Augusto Oliveira De Souza"
             ],
             "Alunos": [
-                "Lucas Augusto",
                 "Lucas Henrique Costa De Oliveira",
                 "Lukas Fernando Berto",
                 "Lucas Jonathan Cordeiro Gomes",
-                "Lucas Augusto Oliveira De Souza",
-                "Lukas Teste"
+                "Lucas Augusto Oliveira De Souza"
             ]
         },
         "First": {
@@ -30,6 +26,5 @@
             "Desenvolvedor": [],
             "Alunos": []
         }
-    },
-    "Testando": {}
+    }
 }

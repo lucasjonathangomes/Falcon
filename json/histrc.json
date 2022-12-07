@@ -1,163 +1,82 @@
 {
-    "lu": {
-        "Teste Teste": {
+    "lukas": {
+        "Lucas Henrique Costa De Oliveira": {
             "1": {
-                "Turma": "Teste",
-                "Time": "Teste",
-                "Avaliado": "Teste Teste",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Regular",
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Henrique Costa De Oliveira",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Bom",
                 "Iniciativa e proatividade": "Muito Bom",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Excelente",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Excelente",
-                "Compet\u00eancia T\u00e9cnica": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
+                "Compet\u00eancia T\u00e9cnica": "Excelente",
                 "Sprint": "Sprint 1"
-            },
-            "2": {
-                "Turma": "Teste",
-                "Time": "Teste",
-                "Avaliado": "Teste Teste",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Regular",
+            }
+        },
+        "Lukas Fernando Berto": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lukas Fernando Berto",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Muito Bom",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
+                "Compet\u00eancia T\u00e9cnica": "Excelente",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lucas Jonathan Cordeiro Gomes": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Jonathan Cordeiro Gomes",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Bom",
                 "Iniciativa e proatividade": "Regular",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Regular",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Regular",
-                "Compet\u00eancia T\u00e9cnica": "Regular",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Muito Bom",
+                "Compet\u00eancia T\u00e9cnica": "Excelente",
                 "Sprint": "Sprint 1"
-            },
-            "3": {
-                "Turma": "Teste",
-                "Time": "Teste",
-                "Avaliado": "Teste Teste",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Regular",
-                "Iniciativa e proatividade": "Regular",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Regular",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Regular",
-                "Compet\u00eancia T\u00e9cnica": "Regular",
-                "Sprint": "Sprint 1"
-            },
-            "4": {
-                "Turma": "Teste",
-                "Time": "Teste",
-                "Avaliado": "Teste Teste",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Regular",
+            }
+        },
+        "Lucas Augusto Oliveira De Souza": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Augusto Oliveira De Souza",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Ruim",
                 "Iniciativa e proatividade": "Bom",
                 "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
                 "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Muito Bom",
                 "Compet\u00eancia T\u00e9cnica": "Excelente",
                 "Sprint": "Sprint 1"
-            },
-            "5": {
-                "Turma": "Teste",
-                "Time": "Teste",
-                "Avaliado": "Teste Teste",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Ruim",
-                "Iniciativa e proatividade": "Ruim",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Ruim",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Ruim",
-                "Compet\u00eancia T\u00e9cnica": "Ruim",
-                "Sprint": "Sprint 1"
-            },
-            "6": {
-                "Turma": "Teste",
-                "Time": "Teste",
-                "Avaliado": "Teste Teste",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
-                "Iniciativa e proatividade": "Muito Bom",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Muito Bom",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
-                "Compet\u00eancia T\u00e9cnica": "Regular",
-                "Sprint": "Sprint 1"
-            }
-        },
-        "Lucas Berto": {
-            "1": {
-                "Turma": "Turma 1",
-                "Time": "Time 1",
-                "Avaliado": "Lucas Berto",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
-                "Iniciativa e proatividade": "Muito Bom",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Regular",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
-                "Compet\u00eancia T\u00e9cnica": "Muito Bom",
-                "Sprint": "Sprint 1"
-            },
-            "2": {
-                "Turma": "Turma 1",
-                "Time": "Time 1",
-                "Avaliado": "Lucas Berto",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
-                "Iniciativa e proatividade": "Muito Bom",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Muito Bom",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Regular",
-                "Compet\u00eancia T\u00e9cnica": "Ruim",
-                "Sprint": "Sprint 1"
-            }
-        },
-        "Lukas Fernando": {
-            "1": {
-                "Turma": "Banco De Dados 2",
-                "Time": "Falcon",
-                "Avaliado": "Lucas Fernando",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
-                "Iniciativa e proatividade": "Muito Bom",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
-                "Compet\u00eancia T\u00e9cnica": "Regular",
-                "Sprint": "Sprint 1"
-            }
-        },
-        "Lucas Fernando": {
-            "1": {
-                "Turma": "Banco De Dados 2",
-                "Time": "Falcon",
-                "Avaliado": "Lucas Fernando",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Ruim",
-                "Iniciativa e proatividade": "Regular",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Regular",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Regular",
-                "Compet\u00eancia T\u00e9cnica": "Bom",
-                "Sprint": "Sprint 1"
             }
         }
     },
-    "lukas": {
-        "Lukas Fernando": {
-            "1": {
-                "Turma": "Banco De Dados 2",
-                "Time": "Falcon",
-                "Avaliado": "Lucas Fernando",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
-                "Iniciativa e proatividade": "Muito Bom",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
-                "Compet\u00eancia T\u00e9cnica": "Regular",
-                "Sprint": "Sprint 1"
-            }
-        }
-    },
-    "admin": {
-        "Lucas Augusto": {
-            "1": {
-                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
-                "Time": "Falcon",
-                "Avaliado": "Lucas Augusto",
-                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Muito Bom",
-                "Iniciativa e proatividade": "Bom",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
-                "Compet\u00eancia T\u00e9cnica": "Regular",
-                "Sprint": "Sprint 1"
-            }
-        },
+    "lucash": {
         "Lucas Henrique Costa De Oliveira": {
             "1": {
                 "Turma": "Banco De Dados - 2\u00ba Sem 2022",
                 "Time": "Falcon",
                 "Avaliado": "Lucas Henrique Costa De Oliveira",
                 "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Regular",
-                "Iniciativa e proatividade": "Ruim",
-                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
-                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Excelente",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Excelente",
                 "Compet\u00eancia T\u00e9cnica": "Bom",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lucas Jonathan Cordeiro Gomes": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Jonathan Cordeiro Gomes",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Bom",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Excelente",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Regular",
+                "Compet\u00eancia T\u00e9cnica": "Ruim",
                 "Sprint": "Sprint 1"
             }
         },
@@ -167,9 +86,160 @@
                 "Time": "Falcon",
                 "Avaliado": "Lukas Fernando Berto",
                 "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Regular",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Bom",
+                "Compet\u00eancia T\u00e9cnica": "Regular",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lucas Augusto Oliveira De Souza": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Augusto Oliveira De Souza",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Muito Bom",
+                "Iniciativa e proatividade": "Regular",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Excelente",
+                "Compet\u00eancia T\u00e9cnica": "Muito Bom",
+                "Sprint": "Sprint 1"
+            }
+        }
+    },
+    "lucasj": {
+        "Lucas Jonathan Cordeiro Gomes": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Jonathan Cordeiro Gomes",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
                 "Iniciativa e proatividade": "Excelente",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Muito Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Muito Bom",
+                "Compet\u00eancia T\u00e9cnica": "Muito Bom",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lucas Augusto Oliveira De Souza": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Augusto Oliveira De Souza",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Bom",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Ruim",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Excelente",
+                "Compet\u00eancia T\u00e9cnica": "Muito Bom",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lukas Fernando Berto": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lukas Fernando Berto",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Bom",
+                "Iniciativa e proatividade": "Regular",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Muito Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Excelente",
+                "Compet\u00eancia T\u00e9cnica": "Excelente",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lucas Henrique Costa De Oliveira": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Henrique Costa De Oliveira",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Regular",
+                "Iniciativa e proatividade": "Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Muito Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Excelente",
+                "Compet\u00eancia T\u00e9cnica": "Bom",
+                "Sprint": "Sprint 1"
+            }
+        }
+    },
+    "lucasa": {
+        "Lucas Henrique Costa De Oliveira": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Henrique Costa De Oliveira",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Regular",
+                "Compet\u00eancia T\u00e9cnica": "Muito Bom",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lukas Fernando Berto": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lukas Fernando Berto",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Regular",
+                "Iniciativa e proatividade": "Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Muito Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Excelente",
+                "Compet\u00eancia T\u00e9cnica": "Bom",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lucas Jonathan Cordeiro Gomes": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Jonathan Cordeiro Gomes",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Ruim",
+                "Iniciativa e proatividade": "Bom",
                 "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Excelente",
                 "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Excelente",
+                "Compet\u00eancia T\u00e9cnica": "Muito Bom",
+                "Sprint": "Sprint 1"
+            }
+        },
+        "Lucas Augusto Oliveira De Souza": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Augusto Oliveira De Souza",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Muito Bom",
+                "Iniciativa e proatividade": "Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Excelente",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Muito Bom",
+                "Compet\u00eancia T\u00e9cnica": "Regular",
+                "Sprint": "Sprint 1"
+            }
+        }
+    },
+    "nadalete": {
+        "Lucas Henrique Costa De Oliveira": {
+            "1": {
+                "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+                "Time": "Falcon",
+                "Avaliado": "Lucas Henrique Costa De Oliveira",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Muito Bom",
+                "Compet\u00eancia T\u00e9cnica": "Bom",
+                "Sprint": "Sprint 1"
+            }
+        }
+    },
+    "joao": {
+        "Jo\u00e3o J": {
+            "1": {
+                "Turma": "Turma 1",
+                "Time": "Time 1",
+                "Avaliado": "Jo\u00e3o J",
+                "Trabalho em equipe, coopera\u00e7\u00e3o e descentraliza\u00e7\u00e3o de conhecimento": "Excelente",
+                "Iniciativa e proatividade": "Muito Bom",
+                "Autodidaxia e agrega\u00e7\u00e3o de conhecimento ao grupo": "Bom",
+                "Entrega de resultados e participa\u00e7\u00e3o efetiva no projeto": "Muito Bom",
                 "Compet\u00eancia T\u00e9cnica": "Excelente",
                 "Sprint": "Sprint 1"
             }

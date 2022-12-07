@@ -61,9 +61,11 @@
         eel.Retorna_info("user")(function(userInfo){
             cadastrar_lista = ['Administrador', 'Instrutor']
             graficos_lista  = ['Administrador', 'Fake Client']
+            avaliar_lista   = ['Administrador']
             let cargo = userInfo['Cargo']
             var acesso_cadastrar = cadastrar_lista.includes(cargo) ? true : false
             var acesso_grafico   = graficos_lista.includes(cargo) ? true : false
+            var acesso_avaliar   = avaliar_lista.includes(cargo) ? true : false
             
             if (acesso_cadastrar == false){
                 document.getElementById('botao-cadastrar').style.display = 'none'
@@ -71,6 +73,10 @@
 
             if (acesso_grafico == false){
                 document.getElementById('botao-grafico').style.display = 'none'
+            }
+
+            if (acesso_avaliar == true){
+                document.getElementById('botao-avaliar').style.display = 'none'
             }
         })
 

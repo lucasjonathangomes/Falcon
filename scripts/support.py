@@ -42,7 +42,7 @@ class Cadastrar:
         self.info = info
         oq_cadastrar = oq_cadastrar.lower()
 
-        if oq_cadastrar in ['turma', ' time']:
+        if oq_cadastrar in ['turma', 'time']:
             self.json_turmas = Arquivos().Ler_JSON('turmas.json')
             
             if oq_cadastrar == 'turma':
@@ -705,7 +705,6 @@ class GraficoInfo:
         return informacoes
 
 
-
 def Criptografar(senha):
     return hashlib.md5(bytes(senha, encoding="utf-8")).hexdigest()
 
@@ -728,6 +727,3 @@ def Caminho_ate_Falcon():
     return findall(r'.*Falcon', os.path.dirname(__file__))[0]
 
 
-
-
-# print(GraficoInfo().Retorna_info_pro_grafico('turmas', 'Banco De Dados - 2º Sem 2022'))

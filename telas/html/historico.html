@@ -121,7 +121,7 @@
             var nome_home = document.getElementById('nome_home')
             nome_home.innerHTML = `<h1>${user_info['Nome']}</h1>`
 
-            let eh_PO = user_info['Cargo'] === 'PO' ? true : false 
+            let eh_PO = user_info['Cargo'] === 'Administrador' ? true : false 
             
             if (eh_PO === false){
                 document.getElementById('nome_alunos').style.display = 'none'

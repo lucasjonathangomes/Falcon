@@ -4,63 +4,55 @@
         "Email": "admin@gmail.com",
         "Turma": "Banco De Dados - 2\u00ba Sem 2022",
         "Time": "Falcon",
-        "Cargo": "Fake Client",
+        "Cargo": "Administrador",
         "Senha": "d41d8cd98f00b204e9800998ecf8427e"
     },
-    "walmirduque": {
-        "Nome": "Admin",
-        "Email": "walmirduque@gmail.com",
-        "Turma": "Banco De Dados - 2\u00ba Sem 2022",
-        "Time": "Falcon",
-        "Cargo": "PO",
-        "Senha": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "fabianosabha": {
+    "sabha": {
         "Nome": "Fabiano Sabha",
-        "Email": "fabianosabha@gmail.com",
+        "Email": "sabha@gmail.com",
         "Turma": "Banco De Dados - 2\u00ba Sem 2022",
         "Time": "",
         "Cargo": "Instrutor",
-        "Senha": "372eaf46dc3f15bcf00eab30aa9b6bc2"
+        "Senha": "d41d8cd98f00b204e9800998ecf8427e"
     },
-    "lucashenrique": {
-        "Nome": "Lucas Henrique Costa De Oliveira",
-        "Email": "lucashenrique@gmail.com",
+    "nadalete": {
+        "Nome": "Nadalete",
+        "Email": "nadalete@gmail.com",
         "Turma": "Banco De Dados - 2\u00ba Sem 2022",
         "Time": "Falcon",
-        "Cargo": "PO",
-        "Senha": "f4e72f4e237bcf6204b8199cd1f99502"
+        "Cargo": "Fake Client",
+        "Senha": "d41d8cd98f00b204e9800998ecf8427e"
     },
-    "lukasfernando": {
+    "lukas": {
         "Nome": "Lukas Fernando Berto",
         "Email": "lukasfernando@gmail.com",
         "Turma": "Banco De Dados - 2\u00ba Sem 2022",
         "Time": "Falcon",
         "Cargo": "Desenvolvedor",
-        "Senha": "76081081cf54a6d34ac8e103bfc53901"
+        "Senha": "d41d8cd98f00b204e9800998ecf8427e"
     },
-    "lucasjonathan": {
+    "lucash": {
+        "Nome": "Lucas Henrique Costa De Oliveira",
+        "Email": "lucashenrique@gmail.com",
+        "Turma": "Banco De Dados - 2\u00ba Sem 2022",
+        "Time": "Falcon",
+        "Cargo": "PO",
+        "Senha": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "lucasj": {
         "Nome": "Lucas Jonathan Cordeiro Gomes",
         "Email": "lucasjonathan@gmail.com",
         "Turma": "Banco De Dados - 2\u00ba Sem 2022",
         "Time": "Falcon",
         "Cargo": "Scrum Master",
-        "Senha": "a43b91044f7d941553bc4f2fe51cb858"
+        "Senha": "d41d8cd98f00b204e9800998ecf8427e"
     },
-    "lucasaugusto": {
+    "lucasa": {
         "Nome": "Lucas Augusto Oliveira De Souza",
         "Email": "lucasaugusto@gmail.com",
         "Turma": "Banco De Dados - 2\u00ba Sem 2022",
         "Time": "Falcon",
         "Cargo": "Desenvolvedor",
-        "Senha": "4aa5d62f2436403d3da7aa4dc80a17f5"
-    },
-    "Lukas_Teste": {
-        "Nome": "Lukas Teste",
-        "Email": "Lukas_Teste@gmail.com",
-        "Turma": "Banco De Dados - 2\u00ba Sem 2022",
-        "Time": "Falcon",
-        "Cargo": "Desenvolvedor",
-        "Senha": "673625af6f64b4d6e2e069373bf0a0af"
+        "Senha": "d41d8cd98f00b204e9800998ecf8427e"
     }
 }

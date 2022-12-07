@@ -115,11 +115,11 @@
                 <div class="test">
                     <label for="cargo">Cargo:</label>
                     <select class="textfield-cargo" name="cargo" id="cargo" onchange="mostraValor(this.value)">
-                        <option value="Desenvolvedor">Desenvolvedor</option>
+                        <!-- <option value="Desenvolvedor">Desenvolvedor</option>
                         <option value="Product Owner">Product Owner</option>
                         <option value="Scrum Master">Scrum Master</option>
                         <option value="Fake Client">Fake Client</option>
-                        <option value="Instrutor">Instrutor</option>
+                        <option value="Instrutor">Instrutor</option> -->
                     </select>
                 </div>
                 <div class="test" id="turma">
@@ -217,6 +217,8 @@
                 window.alert(result[1])
                 if (result[0]){
                     document.getElementById("cadastrar-turma").value=""
+                    Atualizar_turmas('selectTurma')
+                    Atualizar_turmas('turma-usuario')
                 }
             })
         }
@@ -229,6 +231,7 @@
                 if(result[0]){
                     document.getElementById("timeCad").value="";
                     document.getElementById("selectTurma").value="";
+                    Atualizar_times('time-usuario')
                 }
             })
         
@@ -324,6 +327,12 @@
             })
         }
 
+        function AdicionarOptionsSelect(listaOptions){
+            listaOptions.forEach(function(Option){
+                document.getElementById("cargo").innerHTML += `<option value="${Option}">${Option}</option>`;
+            })
+        }
+        
         // Criando as variaveis 
         var id_turma = 'turma-usuario'
         var select_turma = document.getElementById(id_turma)
@@ -343,6 +352,16 @@
             Pegar_times(id_turma)
         })
 
+        eel.Retorna_info('user') (function(usuario){
+
+            if(usuario['Cargo'] == 'Administrador'){
+                AdicionarOptionsSelect(['Instrutor'])
+                mostraValor('Instrutor');
+            }else if(usuario['Cargo'] == 'Instrutor'){
+                AdicionarOptionsSelect(['Desenvolvedor','Product Owner','Scrum Master']);
+                mostraValor('Desenvolvedor');
+            }
+        })
     </script>
 </body>
 </html>
