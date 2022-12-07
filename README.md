@@ -18,8 +18,8 @@ solução computacional que viabilize a aplicação dessa técnica.
 |:------:|:----:|:------:|:------:|:------:|:----:|:------:|
 | Product Owner | Lucas Henrique | <a href="https://github.com/LucasHCOliveira7" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |ㅤㅤㅤ-ㅤㅤㅤ| Scrum Master | Lucas Jonathan | <a href="https://github.com/lucasjonathangomes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
 | Developer | Lucas Augusto | <a href="https://github.com/LucasOliveira321" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |ㅤㅤㅤ-ㅤㅤㅤ| Developer | Lukas Fernando | <a href="https://github.com/LukasFernando" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
-| Developer | Igor Cerutti | <a href="https://github.com/IgorCerruti96" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |ㅤㅤㅤ-ㅤㅤㅤ| Developer | Mateus Pereira | <a href="https://github.com/MateusPCesare" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |
-| Developer | Renato Mendes |<a href="https://github.com/RenatoCMMendes" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a> |ㅤㅤㅤ-ㅤㅤㅤ| Developer | Matheus Estevam | - |
+| Developer | Igor Cerutti |ㅤㅤㅤ-ㅤㅤㅤ|ㅤㅤㅤ-ㅤㅤㅤ| Developer | Mateus Pereira |ㅤㅤㅤ-ㅤㅤㅤ|
+| Developer | Renato Mendes |ㅤㅤㅤ-ㅤㅤㅤ|ㅤㅤㅤ-ㅤㅤㅤ| Developer | Matheus Estevam |ㅤㅤㅤ-ㅤㅤㅤ|
 
 <br>
 
@@ -35,11 +35,10 @@ solução computacional que viabilize a aplicação dessa técnica.
 | 07 | Como Usuário eu quero avaliar outros usuários e a mim mesmo (avaliação 360°) | Média | 3| Concluído |
 | 08 | Como Instrutor Líder eu quero avaliar o aluno Líder Técnico do time | Média | 3 | Concluído |
 | 09 | Como Usuário Fake Client eu quero avaliar o aluno PO do time | Média | 1 | Concluido |
-| 10 | Como Usuário Fake Client eu quero avaliar o Produto/Negócio do time | Média | 4 | Em Andamento |
-| 11 | Como Instrutor Líder eu quero um histórico onde serão armazenados as avaliações realizadas em cada sprint | Baixa | 4 | Em Andamento |
-| 12 | Como Instrutor Líder eu quero Dashboards para acompanhamento de sprints e avaliações | Baixa | 4 | Em Andamento |
-| 13 | Como cliente meu programa deve ter uma tela de login para ter acesso ao sistema | Baixa | 1 | Concluido |
-| 14 | Atualizar todo o sistema para HTML, CSS e JavaScript | Alta | 4 | Em Andamento |
+| 10 | Como Instrutor Líder eu quero um histórico onde serão armazenados as avaliações realizadas em cada sprint | Baixa | 4 | Concluído |
+| 11 | Como Instrutor Líder eu quero Dashboards para acompanhamento de sprints e avaliações | Baixa | 4 | Concluído |
+| 12 | Como cliente meu programa deve ter uma tela de login para ter acesso ao sistema | Baixa | 1 | Concluido |
+| 13 | Atualizar todo o sistema para HTML, CSS e JavaScript | Alta | 4 | Concluído |
 
 # SPRINT BACKLOG
 
@@ -48,7 +47,7 @@ solução computacional que viabilize a aplicação dessa técnica.
 | Sprint 1 | 29/08/22 a 18/09/22 | Entrega da tela de login e da avaliação do Fake Client | Entregue |
 | Sprint 2 | 19/09/22 a 09/10/22 | Entrega do perfil Administrador e perfil Instrutor e das telas de cadastro | Entregue |
 | Sprint 3 | 17/10/22 a 06/11/22 | Atualizar o que foi entregue até a 3º Sprint e entregar o perfil administrador e parte de avaliação | Entregue |
-| Sprint 4 | 07/11/22 a 27/11/22 | Atualizar todo o sistema para HTML, CSS e JavaScript e finalizar as entregas | Em Andamento |
+| Sprint 4 | 07/11/22 a 27/11/22 | Atualizar todo o sistema para HTML, CSS e JavaScript e finalizar as entregas | Entregue |
 
 <details>
 
